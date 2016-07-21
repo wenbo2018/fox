@@ -8,13 +8,23 @@
 
     <parent>
         <groupId>com.spring-rpc</groupId>
-        <artifactId>spring-rpc</artifactId>
+        <artifactId>fox-parent</artifactId>
         <version>1.3.0</version>
     </parent>
 
-    <artifactId>rpc-client</artifactId>
+    <artifactId>fox-server</artifactId>
 
     <dependencies>
+        <!-- Spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <!-- CGLib -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+        </dependency>
         <!-- RPC Common -->
         <dependency>
             <groupId>com.spring-rpc</groupId>
