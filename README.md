@@ -1,1 +1,1 @@
-spring-rpc
+fox is a simple rpc framework;

@@ -28,13 +28,13 @@
         <!-- RPC Common -->
         <dependency>
             <groupId>com.spring-rpc</groupId>
-            <artifactId>rpc-common</artifactId>
+            <artifactId>fox-common</artifactId>
             <version>${project.version}</version>
         </dependency>
         <!-- RPC Registry with ZooKeeper -->
         <dependency>
             <groupId>com.spring-rpc</groupId>
-            <artifactId>rpc-registry-zookeeper</artifactId>
+            <artifactId>fox-registry-zookeeper</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
