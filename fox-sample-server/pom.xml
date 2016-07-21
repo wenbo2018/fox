@@ -8,7 +8,7 @@
 
     <parent>
         <groupId>com.spring-rpc</groupId>
-        <artifactId>spring-rpc</artifactId>
+        <artifactId>fox-parent</artifactId>
         <version>1.3.0</version>
     </parent>
 
@@ -18,13 +18,13 @@
         <!-- RPC Sample API -->
         <dependency>
             <groupId>com.spring-rpc</groupId>
-            <artifactId>rpc-sample-api</artifactId>
+            <artifactId>fox-sample-api</artifactId>
             <version>${project.version}</version>
         </dependency>
         <!-- RPC Server -->
         <dependency>
             <groupId>com.spring-rpc</groupId>
-            <artifactId>rpc-server</artifactId>
+            <artifactId>fox-server</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
