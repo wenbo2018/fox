@@ -7,11 +7,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>spring-rpc</groupId>
-        <artifactId>spring-rpc</artifactId>
+        <groupId>com.spring-rpc</groupId>
+        <artifactId>fox-parent</artifactId>
         <version>1.3.0</version>
     </parent>
 
-    <artifactId>rpc-sample-api</artifactId>
+    <artifactId>fox-sample-api</artifactId>
 
 </project>

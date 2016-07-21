@@ -179,11 +179,14 @@
     </profiles>
 
     <modules>
-        <module>rpc-common</module>
-        <module>rpc-server</module>
-        <module>rpc-client</module>
-        <module>rpc-registry</module>
-        <module>rpc-registry-zookeeper</module>
+        <module>fox-common</module>
+        <module>fox-server</module>
+        <module>fox-client</module>
+        <module>fox-registry</module>
+        <module>fox-registry-zookeeper</module>
+         <module>fox-sample-api</module>
+        <module>fox-sample-client</module>
+        <module>fox-sample-server</module>
     </modules>
 
 </project>
