@@ -1,6 +1,6 @@
 package com.xxx.rpc.sample.client;
 
-import com.xxx.rpc.client.RpcProxy;
+import com.fox.rpc.client.RpcProxy;
 import com.xxx.rpc.sample.api.HelloService;
 import com.xxx.rpc.sample.api.Person;
 import org.springframework.context.ApplicationContext;

@@ -1,4 +1,4 @@
-package com.xxx.rpc.client;
+package com.fox.rpc.client;
 
 import com.xxx.rpc.common.bean.RpcRequest;
 import com.xxx.rpc.common.bean.RpcResponse;
