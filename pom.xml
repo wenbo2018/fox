@@ -187,6 +187,7 @@
          <module>fox-sample-api</module>
         <module>fox-sample-client</module>
         <module>fox-sample-server</module>
+        <module>../fox-remoting</module>
     </modules>
 
 </project>

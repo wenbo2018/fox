@@ -2,7 +2,7 @@ package com.xxx.rpc.sample.server;
 
 import com.xxx.rpc.sample.api.HelloService;
 import com.xxx.rpc.sample.api.Person;
-import com.xxx.rpc.server.RpcService;
+import com.fox.rpc.server.RpcService;
 
 @RpcService(HelloService.class)
 public class HelloServiceImpl implements HelloService {
