@@ -1,9 +1,9 @@
 package com.fox.rpc.client;
 
-import com.xxx.rpc.common.bean.RpcRequest;
-import com.xxx.rpc.common.bean.RpcResponse;
-import com.xxx.rpc.common.codec.RpcDecoder;
-import com.xxx.rpc.common.codec.RpcEncoder;
+import com.fox.rpc.common.bean.RpcRequest;
+import com.fox.rpc.common.bean.RpcResponse;
+import com.fox.rpc.common.codec.RpcDecoder;
+import com.fox.rpc.common.codec.RpcEncoder;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;

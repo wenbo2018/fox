@@ -1,9 +1,9 @@
 package com.fox.rpc.client;
 
-import com.xxx.rpc.common.bean.RpcRequest;
-import com.xxx.rpc.common.bean.RpcResponse;
-import com.xxx.rpc.common.util.StringUtil;
-import com.xxx.rpc.registry.ServiceDiscovery;
+import com.fox.rpc.common.bean.RpcRequest;
+import com.fox.rpc.common.bean.RpcResponse;
+import com.fox.rpc.common.util.StringUtil;
+import com.fox.rpc.registry.ServiceDiscovery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

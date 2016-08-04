@@ -1,8 +1,8 @@
 package com.fox.rpc.server;
 
-import com.xxx.rpc.common.bean.RpcRequest;
-import com.xxx.rpc.common.bean.RpcResponse;
-import com.xxx.rpc.common.util.StringUtil;
+import com.fox.rpc.common.bean.RpcRequest;
+import com.fox.rpc.common.bean.RpcResponse;
+import com.fox.rpc.common.util.StringUtil;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
