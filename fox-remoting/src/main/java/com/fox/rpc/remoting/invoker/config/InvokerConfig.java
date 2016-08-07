@@ -1,4 +1,4 @@
-package com.fox.rpc.client;
+package com.fox.rpc.remoting.invoker.config;
 
 import com.fox.rpc.registry.ServiceDiscovery;
 

@@ -1,7 +1,7 @@
-package com.fox.rpc.client.spring;
+package com.fox.rpc.spring;
 
-import com.fox.rpc.client.InvokerConfig;
-import com.fox.rpc.client.ServiceFactory;
+import com.fox.rpc.InvokerConfig;
+import com.fox.rpc.ServiceFactory;
 import com.fox.rpc.registry.ServiceDiscovery;
 import org.apache.commons.lang3.StringUtils;
 

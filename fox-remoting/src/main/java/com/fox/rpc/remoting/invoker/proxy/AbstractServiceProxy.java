@@ -1,5 +1,6 @@
-package com.fox.rpc.client;
+package com.fox.rpc.remoting.invoker.proxy;
 
+import com.fox.rpc.InvokerConfig;
 import com.fox.rpc.common.bean.RpcRequest;
 import com.fox.rpc.common.bean.RpcResponse;
 import com.fox.rpc.common.util.StringUtil;
@@ -17,7 +18,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Created by shenwenbo on 16/8/6.
  */
-public abstract class AbstractServiceProxy implements  ServiceProxy{
+public abstract class AbstractServiceProxy implements ServiceProxy {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AbstractServiceProxy.class);
     /***缓存服务***/
