@@ -1,9 +1,11 @@
-package com.fox.rpc.client;
+package com.fox.rpc.remoting.invoker.proxy;
 
 import com.fox.rpc.common.bean.RpcRequest;
 import com.fox.rpc.common.bean.RpcResponse;
 import com.fox.rpc.common.util.StringUtil;
 import com.fox.rpc.registry.ServiceDiscovery;
+import com.fox.rpc.remoting.invoker.RpcClient;
+import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,7 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Created by shenwenbo on 16/8/6.
  */
-public abstract class AbstractServiceProxy implements  ServiceProxy{
+public abstract class AbstractServiceProxy implements ServiceProxy {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AbstractServiceProxy.class);
     /***缓存服务***/
@@ -40,7 +42,6 @@ public abstract class AbstractServiceProxy implements  ServiceProxy{
 
     @SuppressWarnings("unchecked")
     public <T> T create(final InvokerConfig<T> invokerConfig) {
-
         Object service = null;
         /****从缓存中拿服务***/
         service=services.get(invokerConfig);

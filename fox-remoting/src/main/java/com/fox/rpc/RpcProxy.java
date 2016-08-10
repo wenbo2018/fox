@@ -1,9 +1,10 @@
-package com.fox.rpc.client;
+package com.fox.rpc;
 
 import com.fox.rpc.common.bean.RpcRequest;
 import com.fox.rpc.common.bean.RpcResponse;
 import com.fox.rpc.common.util.StringUtil;
 import com.fox.rpc.registry.ServiceDiscovery;
+import com.fox.rpc.remoting.invoker.RpcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

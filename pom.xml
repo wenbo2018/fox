@@ -181,13 +181,9 @@
     <modules>
         <module>fox-common</module>
         <module>fox-server</module>
-        <module>fox-client</module>
+        <module>fox-remoting</module>
         <module>fox-registry</module>
         <module>fox-registry-zookeeper</module>
-         <module>fox-sample-api</module>
-        <module>fox-sample-client</module>
-        <module>fox-sample-server</module>
-        <module>../fox-remoting</module>
     </modules>
 
 </project>

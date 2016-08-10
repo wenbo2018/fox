@@ -1,8 +1,7 @@
-package com.fox.rpc.client;
+package com.fox.rpc.remoting.invoker.proxy;
 
+import com.fox.rpc.ExtensionLoader;
 import org.slf4j.LoggerFactory;
-
-import java.util.logging.Logger;
 
 /**
  * Created by shenwenbo on 16/8/6.

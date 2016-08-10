@@ -1,4 +1,4 @@
-package com.fox.rpc.client;
+package com.fox.rpc;
 
 import java.util.ArrayList;
 import java.util.List;
