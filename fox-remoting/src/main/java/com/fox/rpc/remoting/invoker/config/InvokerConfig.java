@@ -4,7 +4,7 @@ import com.fox.rpc.registry.ServiceDiscovery;
 
 /**
  * Created by shenwenbo on 16/8/6.
- * 服务调用参数
+ * RPC 协议
  */
 public class InvokerConfig<T> {
 
