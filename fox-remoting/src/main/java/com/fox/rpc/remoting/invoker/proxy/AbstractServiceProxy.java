@@ -29,7 +29,6 @@ public abstract class AbstractServiceProxy implements ServiceProxy {
 
     private ServiceDiscovery serviceDiscovery;
 
-
     @Override
     public void init() {
 

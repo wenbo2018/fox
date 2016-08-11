@@ -6,6 +6,7 @@ import com.fox.rpc.common.codec.RpcDecoder;
 import com.fox.rpc.common.codec.RpcEncoder;
 import com.fox.rpc.common.util.StringUtil;
 import com.fox.rpc.registry.ServiceRegistry;
+import com.fox.rpc.server.RpcServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -21,7 +22,7 @@ import java.util.Map;
 /**
  * Created by shenwenbo on 16/8/7.
  */
-public class RpcServer implements ApplicationContextAware, InitializingBean {
+public class RpcServer  {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RpcServer.class);
 
@@ -43,24 +44,8 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
         this.serviceRegistry = serviceRegistry;
     }
 
-    @Override
-    public void setApplicationContext(ApplicationContext ctx) throws BeansException {
-        // 扫描带有 RpcService 注解的类并初始化 handlerMap 对象
-        Map<String, Object> serviceBeanMap = ctx.getBeansWithAnnotation(RpcService.class);
-        if (MapUtils.isNotEmpty(serviceBeanMap)) {
-            for (Object serviceBean : serviceBeanMap.values()) {
-                RpcService rpcService = serviceBean.getClass().getAnnotation(RpcService.class);
-                String serviceName = rpcService.value().getName();
-                String serviceVersion = rpcService.version();
-                if (StringUtil.isNotEmpty(serviceVersion)) {
-                    serviceName += "-" + serviceVersion;
-                }
-                handlerMap.put(serviceName, serviceBean);
-            }
-        }
-    }
-    @Override
-    public void afterPropertiesSet() throws Exception {
+
+    public void star() throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {

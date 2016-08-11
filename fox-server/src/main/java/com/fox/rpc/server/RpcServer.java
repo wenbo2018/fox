@@ -36,7 +36,7 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
     /**
      * 存放 服务名 与 服务对象 之间的映射关系
      */
-    private Map<String, Object> handlerMap = new HashMap<>();
+    private Map<String, Object> handlerMap = new HashMap<String, Object>();
 
     public RpcServer(String serviceAddress) {
         this.serviceAddress = serviceAddress;

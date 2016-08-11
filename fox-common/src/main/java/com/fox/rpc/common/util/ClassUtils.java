@@ -8,6 +8,7 @@ public class ClassUtils {
         if (classLoader == null) {
             classLoader = Thread.currentThread().getContextClassLoader();
         }
-        return org.apache.commons.lang.ClassUtils.getClass(classLoader, className);
+
+        return org.apache.commons.lang3.ClassUtils.getClass(classLoader, className);
     }
 }

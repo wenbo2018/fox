@@ -38,11 +38,11 @@
                 <version>${version.slf4j}</version>
             </dependency>
             <!-- Spring -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>${version.spring}</version>
-            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>org.springframework</groupId>-->
+                <!--<artifactId>spring-context</artifactId>-->
+                <!--<version>${version.spring}</version>-->
+            <!--</dependency>-->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
@@ -102,81 +102,98 @@
                 <artifactId>commons-collections4</artifactId>
                 <version>${version.commons-collections}</version>
             </dependency>
+
+            <!--Spring依赖-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>3.1.2.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>3.1.2.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>3.1.2.RELEASE</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <!-- Compiler -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${version.maven-compiler-plugin}</version>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-            <!-- Test -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${version.maven-surefire-plugin}</version>
-                <configuration>
-                    <skipTests>true</skipTests>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <!--<build>-->
+        <!--<plugins>-->
+            <!--&lt;!&ndash; Compiler &ndash;&gt;-->
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-compiler-plugin</artifactId>-->
+                <!--<version>${version.maven-compiler-plugin}</version>-->
+                <!--<configuration>-->
+                    <!--<source>1.7</source>-->
+                    <!--<target>1.7</target>-->
+                    <!--<encoding>UTF-8</encoding>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+            <!--&lt;!&ndash; Test &ndash;&gt;-->
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-surefire-plugin</artifactId>-->
+                <!--<version>${version.maven-surefire-plugin}</version>-->
+                <!--<configuration>-->
+                    <!--<skipTests>true</skipTests>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</build>-->
 
-    <profiles>
-        <profile>
-            <id>release</id>
-            <build>
-                <plugins>
-                    <!-- Source -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>${version.maven-source-plugin}</version>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <!-- Javadoc -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>${version.maven-javadoc-plugin}</version>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-            <distributionManagement>
-                <repository>
-                    <id>nexus-releases</id>
-                    <url>http://nexus.ycmsh.com/content/repositories/releases/</url>
-                </repository>
-                <snapshotRepository>
-                    <id>nexus-snapshots</id>
-                    <url>http://nexus.ycmsh.com/content/repositories/snapshots/</url>
-                </snapshotRepository>
-            </distributionManagement>
-        </profile>
-    </profiles>
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--<id>release</id>-->
+            <!--<build>-->
+                <!--<plugins>-->
+                    <!--&lt;!&ndash; Source &ndash;&gt;-->
+                    <!--<plugin>-->
+                        <!--<groupId>org.apache.maven.plugins</groupId>-->
+                        <!--<artifactId>maven-source-plugin</artifactId>-->
+                        <!--<version>${version.maven-source-plugin}</version>-->
+                        <!--<executions>-->
+                            <!--<execution>-->
+                                <!--<phase>package</phase>-->
+                                <!--<goals>-->
+                                    <!--<goal>jar-no-fork</goal>-->
+                                <!--</goals>-->
+                            <!--</execution>-->
+                        <!--</executions>-->
+                    <!--</plugin>-->
+                    <!--&lt;!&ndash; Javadoc &ndash;&gt;-->
+                    <!--<plugin>-->
+                        <!--<groupId>org.apache.maven.plugins</groupId>-->
+                        <!--<artifactId>maven-javadoc-plugin</artifactId>-->
+                        <!--<version>${version.maven-javadoc-plugin}</version>-->
+                        <!--<executions>-->
+                            <!--<execution>-->
+                                <!--<phase>package</phase>-->
+                                <!--<goals>-->
+                                    <!--<goal>jar</goal>-->
+                                <!--</goals>-->
+                            <!--</execution>-->
+                        <!--</executions>-->
+                    <!--</plugin>-->
+                <!--</plugins>-->
+            <!--</build>-->
+            <!--<distributionManagement>-->
+                <!--<repository>-->
+                    <!--<id>nexus-releases</id>-->
+                    <!--<url>http://nexus.ycmsh.com/content/repositories/releases/</url>-->
+                <!--</repository>-->
+                <!--<snapshotRepository>-->
+                    <!--<id>nexus-snapshots</id>-->
+                    <!--<url>http://nexus.ycmsh.com/content/repositories/snapshots/</url>-->
+                <!--</snapshotRepository>-->
+            <!--</distributionManagement>-->
+        <!--</profile>-->
+    <!--</profiles>-->
 
     <modules>
         <module>fox-common</module>

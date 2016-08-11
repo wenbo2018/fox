@@ -15,10 +15,8 @@ import java.util.Map;
 public class ServiceRegistry {
     /*****配置需要发布的服务******/
     private Map<String, Object> services;
-
     /**发布端口***/
     private String port;
-
 
     public void init() {
         ServerConfig serverConfig = new ServerConfig();
