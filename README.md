@@ -16,3 +16,15 @@ fox主要由四部分构成,服务消费者,服务提供者,服务监控以及�
  zk实现,服务提供者将服务注册到zk上,消费者向zk订阅服务,一旦服务发生变化消费者能自动感知;
 
  4.监控,服务监控主要是用于监控服务调用情况;
+
+
+fox基于Spring配置,如果要使用必须要依赖Spring,客户端需要使用fox时只需要在Spring 配置文件按照如下格式配置即可配置:
+
+ <bean id="userService" class="com.fox.rpc.spring.ProxyBeanFactory" init-method="init">
+ 		<property name="serviceName"
+ 			value="http://service.fox.com/userService/userService_1.0.0" />
+ 		<property name="iface"
+ 			value="com.dianping.combiz.decorator.remote.DecoratorService" />
+ </bean>
+
+ 使用时直接可以按照使用Spring 普通bean一样直接使用。
