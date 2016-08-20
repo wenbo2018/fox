@@ -37,6 +37,11 @@
             <artifactId>fox-registry-zookeeper</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.spring-rpc</groupId>
+            <artifactId>fox-remoting</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

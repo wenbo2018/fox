@@ -25,9 +25,7 @@
     <orderEntry type="library" name="Maven: org.apache.zookeeper:zookeeper:3.4.6" level="project" />
     <orderEntry type="library" name="Maven: jline:jline:0.9.94" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:3.8.1" level="project" />
-    <orderEntry type="module" module-name="netty" />
-    <orderEntry type="library" name="Maven: com.dianping:mocksocks-client:0.0.2-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.1-GA" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty:3.7.0.Final" level="project" />
     <orderEntry type="library" name="Maven: com.101tec:zkclient:0.4" level="project" />
     <orderEntry type="module" module-name="fox-registry" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.0.0.M1" level="project" />
