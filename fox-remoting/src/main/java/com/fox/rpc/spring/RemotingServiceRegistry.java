@@ -5,7 +5,7 @@ import com.fox.rpc.common.util.StringUtil;
 import com.fox.rpc.remoting.ServiceFactory;
 import com.fox.rpc.remoting.provider.api.Server;
 import com.fox.rpc.remoting.provider.config.ProviderCfg;
-import com.fox.rpc.server.RpcService;
+import com.fox.rpc.server.Service;
 import org.apache.commons.collections4.MapUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -28,10 +28,10 @@ public class RemotingServiceRegistry implements ApplicationContextAware{
         cfg.setPort(this.port);
         Map<String, Object> handlerMap = new HashMap<>();
         Server server= SpiServiceLoader.newExtension(Server.class);
-        Map<String, Object> serviceBeanMap = ctx.getBeansWithAnnotation(RpcService.class);
+        Map<String, Object> serviceBeanMap = ctx.getBeansWithAnnotation(Service.class);
         if (MapUtils.isNotEmpty(serviceBeanMap)) {
             for (Object serviceBean : serviceBeanMap.values()) {
-                RpcService rpcService = serviceBean.getClass().getAnnotation(RpcService.class);
+                Service rpcService = serviceBean.getClass().getAnnotation(Service.class);
                 String serviceName = rpcService.value().getName();
                 String serviceVersion = rpcService.version();
                 if (StringUtil.isNotEmpty(serviceVersion)) {
