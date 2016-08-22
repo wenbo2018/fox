@@ -1,4 +1,4 @@
-package com.fox.rpc.remoting.invoker.proxy;
+package com.fox.rpc.remoting.invoker.api;
 
 
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;

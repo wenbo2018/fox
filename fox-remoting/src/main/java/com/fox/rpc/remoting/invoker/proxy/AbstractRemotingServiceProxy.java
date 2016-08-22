@@ -1,14 +1,15 @@
 package com.fox.rpc.remoting.invoker.proxy;
 
+import com.fox.rpc.SpiServiceLoader;
 import com.fox.rpc.common.bean.RpcRequest;
 import com.fox.rpc.common.bean.RpcResponse;
 import com.fox.rpc.common.util.StringUtil;
-import com.fox.rpc.registry.ServiceDiscovery;
-import com.fox.rpc.remoting.invoker.RpcClient;
+import com.fox.rpc.registry.RemotingServiceDiscovery;
+import com.fox.rpc.remoting.invoker.api.Client;
+import com.fox.rpc.remoting.invoker.api.ServiceProxy;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -19,29 +20,27 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Created by shenwenbo on 16/8/6.
  */
-public abstract class AbstractServiceProxy implements ServiceProxy {
+public abstract class AbstractRemotingServiceProxy implements ServiceProxy {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(AbstractServiceProxy.class);
-    /***缓存服务***/
+    private static final Logger LOGGER = LoggerFactory.getLogger(AbstractRemotingServiceProxy.class);
+
     protected static Map<InvokerConfig<?>, Object> services = new ConcurrentHashMap<InvokerConfig<?>, Object>();
 
     private String serviceAddress;
 
-    private ServiceDiscovery serviceDiscovery;
-
+    private RemotingServiceDiscovery serviceDiscovery;
 
     @Override
     public void init() {
-
     }
 
     @Override
     public <T> T getProxy(InvokerConfig<T> invokerConfig) {
-        return create(invokerConfig);
+        return createRpcProxy(invokerConfig);
     }
 
     @SuppressWarnings("unchecked")
-    public <T> T create(final InvokerConfig<T> invokerConfig) {
+    public <T> T createRpcProxy(final InvokerConfig<T> invokerConfig) {
         Object service = null;
         /****从缓存中拿服务***/
         service=services.get(invokerConfig);
@@ -80,7 +79,8 @@ public abstract class AbstractServiceProxy implements ServiceProxy {
                             String host = array[0];
                             int port = Integer.parseInt(array[1]);
                             // 创建 RPC 客户端对象并发送 RPC 请求
-                            RpcClient client = new RpcClient(host, port);
+                            Client client = SpiServiceLoader.newExtension(Client.class);
+                            client.setContext(host,port);
                             long time = System.currentTimeMillis();
                             RpcResponse response = client.send(request);
                             LOGGER.debug("time: {}ms", System.currentTimeMillis() - time);

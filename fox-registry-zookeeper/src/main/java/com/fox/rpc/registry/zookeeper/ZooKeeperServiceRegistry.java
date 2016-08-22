@@ -1,6 +1,6 @@
 package com.fox.rpc.registry.zookeeper;
 
-import com.fox.rpc.registry.ServiceRegistry;
+import com.fox.rpc.registry.RemotingServiceRegistry;
 import org.I0Itec.zkclient.ZkClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 基于 ZooKeeper 的服务注册接口实现
  */
-public class ZooKeeperServiceRegistry implements ServiceRegistry {
+public class ZooKeeperServiceRegistry implements RemotingServiceRegistry {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ZooKeeperServiceRegistry.class);
 

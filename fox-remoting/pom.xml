@@ -20,6 +20,11 @@
             <artifactId>fox-common</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.spring-rpc</groupId>
+            <artifactId>fox-server</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!-- RPC Registry with ZooKeeper -->
         <dependency>
             <groupId>com.spring-rpc</groupId>

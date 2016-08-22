@@ -39,7 +39,7 @@
         <!-- RPC Registry -->
         <dependency>
             <groupId>com.spring-rpc</groupId>
-            <artifactId>fox-registry</artifactId>
+            <artifactId>fox-remoting</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

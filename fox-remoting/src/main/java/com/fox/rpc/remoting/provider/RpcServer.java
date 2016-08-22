@@ -5,7 +5,7 @@ import com.fox.rpc.common.bean.RpcResponse;
 import com.fox.rpc.common.codec.RpcDecoder;
 import com.fox.rpc.common.codec.RpcEncoder;
 import com.fox.rpc.common.util.StringUtil;
-import com.fox.rpc.registry.ServiceRegistry;
+import com.fox.rpc.registry.RemotingServiceRegistry;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -27,7 +27,7 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
 
     private String serviceAddress;
 
-    private ServiceRegistry serviceRegistry;
+    private RemotingServiceRegistry serviceRegistry;
 
     /**
      * 存放 服务名 与 服务对象 之间的映射关系
@@ -38,7 +38,7 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
         this.serviceAddress = serviceAddress;
     }
 
-    public RpcServer(String serviceAddress, ServiceRegistry serviceRegistry) {
+    public RpcServer(String serviceAddress, RemotingServiceRegistry serviceRegistry) {
         this.serviceAddress = serviceAddress;
         this.serviceRegistry = serviceRegistry;
     }

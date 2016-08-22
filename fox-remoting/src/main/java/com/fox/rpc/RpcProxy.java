@@ -3,7 +3,7 @@ package com.fox.rpc;
 import com.fox.rpc.common.bean.RpcRequest;
 import com.fox.rpc.common.bean.RpcResponse;
 import com.fox.rpc.common.util.StringUtil;
-import com.fox.rpc.registry.ServiceDiscovery;
+import com.fox.rpc.registry.RemotingServiceDiscovery;
 import com.fox.rpc.remoting.invoker.RpcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,13 +22,13 @@ public class RpcProxy {
 
     private String serviceAddress;
 
-    private ServiceDiscovery serviceDiscovery;
+    private RemotingServiceDiscovery serviceDiscovery;
 
     public RpcProxy(String serviceAddress) {
         this.serviceAddress = serviceAddress;
     }
 
-    public RpcProxy(ServiceDiscovery serviceDiscovery) {
+    public RpcProxy(RemotingServiceDiscovery serviceDiscovery) {
         this.serviceDiscovery = serviceDiscovery;
     }
 

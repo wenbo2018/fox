@@ -36,7 +36,6 @@
     <orderEntry type="library" name="Maven: junit:junit:3.8.1" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty:3.7.0.Final" level="project" />
     <orderEntry type="library" name="Maven: com.101tec:zkclient:0.4" level="project" />
-    <orderEntry type="module" module-name="fox-registry" />
     <orderEntry type="module" module-name="fox-remoting" />
   </component>
 </module>

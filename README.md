@@ -20,7 +20,7 @@ fox主要由四部分构成,服务消费者,服务提供者,服务监控以及�
 
 fox基于Spring配置,如果要使用必须要依赖Spring,客户端需要使用fox时只需要在Spring 配置文件按照如下格式配置即可配置:
 
- <bean id="userService" class="com.fox.rpc.spring.ProxyBeanFactory" init-method="init">
+ <bean id="userService" class="com.fox.rpc.spring.RemotingServiceProxy" init-method="init">
  		<property name="serviceName"
  			value="http://service.fox.com/userService/userService_1.0.0" />
  		<property name="iface"

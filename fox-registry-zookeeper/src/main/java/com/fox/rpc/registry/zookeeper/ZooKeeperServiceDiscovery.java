@@ -1,7 +1,7 @@
 package com.fox.rpc.registry.zookeeper;
 
 import com.fox.rpc.common.util.CollectionUtil;
-import com.fox.rpc.registry.ServiceDiscovery;
+import com.fox.rpc.registry.RemotingServiceDiscovery;
 import org.I0Itec.zkclient.ZkClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,7 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * 基于 ZooKeeper 的服务发现接口实现
  */
-public class ZooKeeperServiceDiscovery implements ServiceDiscovery {
+public class ZooKeeperServiceDiscovery implements RemotingServiceDiscovery {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ZooKeeperServiceDiscovery.class);
 

@@ -1,6 +1,6 @@
 package com.fox.rpc.remoting.invoker.config;
 
-import com.fox.rpc.registry.ServiceDiscovery;
+import com.fox.rpc.registry.RemotingServiceDiscovery;
 
 /**
  * Created by shenwenbo on 16/8/6.
@@ -13,20 +13,20 @@ public class InvokerConfig<T> {
 
     private String url;
 
-    private ServiceDiscovery serviceDiscovery;
+    private RemotingServiceDiscovery serviceDiscovery;
 
 
-    public InvokerConfig(Class<T> serviceInterface, String url, ServiceDiscovery serviceDiscovery) {
+    public InvokerConfig(Class<T> serviceInterface, String url, RemotingServiceDiscovery serviceDiscovery) {
         this.serviceInterface = serviceInterface;
         this.url = url;
         this.serviceDiscovery = serviceDiscovery;
     }
 
-    public ServiceDiscovery getServiceDiscovery() {
+    public RemotingServiceDiscovery getServiceDiscovery() {
         return serviceDiscovery;
     }
 
-    public void setServiceDiscovery(ServiceDiscovery serviceDiscovery) {
+    public void setServiceDiscovery(RemotingServiceDiscovery serviceDiscovery) {
         this.serviceDiscovery = serviceDiscovery;
     }
 
