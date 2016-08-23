@@ -14,7 +14,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.slf4j>1.7.10</version.slf4j>
-        <version.spring>4.1.5.RELEASE</version.spring>
+        <version.spring>3.1.2.RELEASE</version.spring>
         <version.netty>4.0.26.Final</version.netty>
         <version.protostuff>1.0.9</version.protostuff>
         <version.objenesis>2.1</version.objenesis>
@@ -27,6 +27,11 @@
         <version.maven-surefire-plugin>2.18.1</version.maven-surefire-plugin>
         <version.maven-source-plugin>2.4</version.maven-source-plugin>
         <version.maven-javadoc-plugin>2.10.3</version.maven-javadoc-plugin>
+
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <encoding>UTF-8</encoding>
+
     </properties>
 
     <dependencyManagement>
@@ -37,18 +42,7 @@
                 <artifactId>slf4j-log4j12</artifactId>
                 <version>${version.slf4j}</version>
             </dependency>
-            <!-- Spring -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>${version.spring}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-test</artifactId>
-                <version>${version.spring}</version>
-                <scope>test</scope>
-            </dependency>
+
             <!-- Netty -->
             <dependency>
                 <groupId>io.netty</groupId>
@@ -105,85 +99,12 @@
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <!-- Compiler -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${version.maven-compiler-plugin}</version>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-            <!-- Test -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${version.maven-surefire-plugin}</version>
-                <configuration>
-                    <skipTests>true</skipTests>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
-    <profiles>
-        <profile>
-            <id>release</id>
-            <build>
-                <plugins>
-                    <!-- Source -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>${version.maven-source-plugin}</version>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <!-- Javadoc -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>${version.maven-javadoc-plugin}</version>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-            <distributionManagement>
-                <repository>
-                    <id>nexus-releases</id>
-                    <url>http://nexus.ycmsh.com/content/repositories/releases/</url>
-                </repository>
-                <snapshotRepository>
-                    <id>nexus-snapshots</id>
-                    <url>http://nexus.ycmsh.com/content/repositories/snapshots/</url>
-                </snapshotRepository>
-            </distributionManagement>
-        </profile>
-    </profiles>
-
     <modules>
         <module>fox-common</module>
-        <module>fox-server</module>
+        <module>fox-netty</module>
         <module>fox-remoting</module>
-        <module>fox-registry</module>
         <module>fox-registry-zookeeper</module>
+        <module>fox-redistry-redis</module>
     </modules>
 
 </project>

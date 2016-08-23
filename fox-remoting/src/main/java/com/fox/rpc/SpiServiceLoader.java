@@ -11,14 +11,19 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class SpiServiceLoader {
 
-    private static Map<Class<?>, Object> extensionMap = new ConcurrentHashMap<Class<?>, Object>();
+    private static Map<Class<?>, Object> extensionServices = new ConcurrentHashMap<Class<?>, Object>();
+
+
+
+
+
 
     public static <T> T getExtension(Class<T> clazz) {
-        T extension = (T) extensionMap.get(clazz);
+        T extension = (T) extensionServices.get(clazz);
         if (extension == null) {
             extension = newExtension(clazz);
             if (extension != null) {
-                extensionMap.put(clazz, extension);
+                extensionServices.put(clazz, extension);
             }
         }
         return extension;

@@ -1,5 +1,6 @@
 package com.fox.rpc.registry.zookeeper;
 
+import com.fox.rpc.registry.RegisterCfg;
 import com.fox.rpc.registry.RemotingServiceRegistry;
 import org.I0Itec.zkclient.ZkClient;
 import org.slf4j.Logger;
@@ -12,16 +13,21 @@ public class ZooKeeperServiceRegistry implements RemotingServiceRegistry {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ZooKeeperServiceRegistry.class);
 
-    private final ZkClient zkClient;
+    private  ZkClient zkClient;
 
-    public ZooKeeperServiceRegistry(String zkAddress) {
+    private RegisterCfg cfg;
+
+
+    private void initZk() {
         // 创建 ZooKeeper 客户端
-        zkClient = new ZkClient(zkAddress, Constant.ZK_SESSION_TIMEOUT, Constant.ZK_CONNECTION_TIMEOUT);
+        this.zkClient = new ZkClient(cfg.getAddress(), Constant.ZK_SESSION_TIMEOUT, Constant.ZK_CONNECTION_TIMEOUT);
         LOGGER.debug("connect zookeeper");
     }
 
     @Override
     public void register(String serviceName, String serviceAddress) {
+        //初始化zk客户端
+        initZk();
         // 创建 registry 节点（持久）
         String registryPath = Constant.ZK_REGISTRY_PATH;
         if (!zkClient.exists(registryPath)) {
@@ -38,5 +44,10 @@ public class ZooKeeperServiceRegistry implements RemotingServiceRegistry {
         String addressPath = servicePath + "/address-";
         String addressNode = zkClient.createEphemeralSequential(addressPath, serviceAddress);
         LOGGER.debug("create address node: {}", addressNode);
+    }
+
+    @Override
+    public void setContext(RegisterCfg cfg) {
+        this.cfg=cfg;
     }
 }

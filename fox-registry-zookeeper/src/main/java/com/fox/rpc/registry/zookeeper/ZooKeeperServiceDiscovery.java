@@ -18,9 +18,6 @@ public class ZooKeeperServiceDiscovery implements RemotingServiceDiscovery {
 
     private String zkAddress;
 
-    public ZooKeeperServiceDiscovery(String zkAddress) {
-        this.zkAddress = zkAddress;
-    }
 
     @Override
     public String discover(String name) {
