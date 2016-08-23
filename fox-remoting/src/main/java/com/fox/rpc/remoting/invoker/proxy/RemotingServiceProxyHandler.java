@@ -1,18 +1,12 @@
 package com.fox.rpc.remoting.invoker.proxy;
 
-import com.fox.rpc.SpiServiceLoader;
-import com.fox.rpc.common.bean.RpcRequest;
-import com.fox.rpc.common.bean.RpcResponse;
-import com.fox.rpc.common.util.StringUtil;
 import com.fox.rpc.registry.RemotingServiceDiscovery;
-import com.fox.rpc.remoting.invoker.api.Client;
-import com.fox.rpc.remoting.invoker.config.InvokerConfig;
+import com.fox.rpc.remoting.invoker.config.InvokerCfg;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.Serializable;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.util.UUID;
 
 /**
  * Created by shenwenbo on 16/8/22.
@@ -25,7 +19,7 @@ public class RemotingServiceProxyHandler<T> implements InvocationHandler,Seriali
 
     private RemotingServiceDiscovery serviceDiscovery;
 
-    private InvokerConfig<T> invokerConfig;
+    private InvokerCfg<T> invokerConfig;
 
     private String serviceVersion;
 

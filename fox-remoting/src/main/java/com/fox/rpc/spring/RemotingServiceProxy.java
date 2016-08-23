@@ -1,10 +1,13 @@
 package com.fox.rpc.spring;
 
+import com.fox.rpc.SpiServiceLoader;
 import com.fox.rpc.common.util.ClassUtils;
 import com.fox.rpc.registry.RemotingServiceDiscovery;
 import com.fox.rpc.remoting.ServiceFactory;
-import com.fox.rpc.remoting.invoker.config.InvokerConfig;
+import com.fox.rpc.remoting.invoker.config.InvokerCfg;
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.FactoryBean;
 
 /**
@@ -12,31 +15,32 @@ import org.springframework.beans.factory.FactoryBean;
  */
 public class RemotingServiceProxy implements FactoryBean{
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(ServiceFactory.class);
+
     private String serviceName;
 
     private String iface;
 
     private Object service;
 
-    private Class<?>  objType;
+    private Class<?>  interfaceClass;
 
     private ClassLoader classLoader;
 
     private RemotingServiceDiscovery serviceDiscovery;
 
     public void init() {
+
         if (StringUtils.isBlank(iface)) {
             throw new IllegalArgumentException("invalid interface:" + iface);
         }
-        //获取接口类型
         try {
-            this.objType = ClassUtils.loadClass(classLoader, this.iface.trim());
+            this.interfaceClass = ClassUtils.loadClass(classLoader, this.iface.trim());
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error("not class found",e);
         }
-        /***封装服务调用协议***/
-        InvokerConfig invokerConfig=
-                new InvokerConfig(this.objType,this.serviceName,this.serviceDiscovery);
+        this.serviceDiscovery= SpiServiceLoader.newExtension(RemotingServiceDiscovery.class);
+        InvokerCfg invokerConfig= new InvokerCfg(this.interfaceClass,this.serviceName,this.serviceDiscovery);
         this.service= ServiceFactory.getService(invokerConfig);
     }
 
@@ -53,5 +57,53 @@ public class RemotingServiceProxy implements FactoryBean{
     @Override
     public boolean isSingleton() {
         return true;
+    }
+
+    public String getIface() {
+        return iface;
+    }
+
+    public void setIface(String iface) {
+        this.iface = iface;
+    }
+
+    public String getServiceName() {
+        return serviceName;
+    }
+
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+    }
+
+    public Object getService() {
+        return service;
+    }
+
+    public void setService(Object service) {
+        this.service = service;
+    }
+
+    public Class<?> getInterfaceClass() {
+        return interfaceClass;
+    }
+
+    public void setInterfaceClass(Class<?> interfaceClass) {
+        this.interfaceClass = interfaceClass;
+    }
+
+    public ClassLoader getClassLoader() {
+        return classLoader;
+    }
+
+    public void setClassLoader(ClassLoader classLoader) {
+        this.classLoader = classLoader;
+    }
+
+    public RemotingServiceDiscovery getServiceDiscovery() {
+        return serviceDiscovery;
+    }
+
+    public void setServiceDiscovery(RemotingServiceDiscovery serviceDiscovery) {
+        this.serviceDiscovery = serviceDiscovery;
     }
 }

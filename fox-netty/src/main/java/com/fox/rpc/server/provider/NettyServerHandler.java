@@ -1,7 +1,7 @@
 package com.fox.rpc.server.provider;
 
-import com.fox.rpc.common.bean.RpcRequest;
-import com.fox.rpc.common.bean.RpcResponse;
+import com.fox.rpc.common.bean.InvokeRequest;
+import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.common.util.StringUtil;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
@@ -17,7 +17,7 @@ import java.util.Map;
  * RPC 服务端处理器（用于处理 RPC 请求）
  *
  */
-public class NettyServerHandler extends SimpleChannelInboundHandler<RpcRequest> {
+public class NettyServerHandler extends SimpleChannelInboundHandler<InvokeRequest> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(NettyServerHandler.class);
 
@@ -28,9 +28,9 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<RpcRequest> 
     }
 
     @Override
-    public void channelRead0(final ChannelHandlerContext ctx, RpcRequest request) throws Exception {
+    public void channelRead0(final ChannelHandlerContext ctx, InvokeRequest request) throws Exception {
         // 创建并初始化 RPC 响应对象
-        RpcResponse response = new RpcResponse();
+        InvokeResponse response = new InvokeResponse();
         response.setRequestId(request.getRequestId());
         try {
             Object result = handle(request);
@@ -43,7 +43,7 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<RpcRequest> 
         ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
     }
 
-    private Object handle(RpcRequest request) throws Exception {
+    private Object handle(InvokeRequest request) throws Exception {
         // 获取服务对象
         String serviceName = request.getInterfaceName();
         String serviceVersion = request.getServiceVersion();

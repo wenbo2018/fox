@@ -3,7 +3,7 @@ package com.fox.rpc.common.bean;
 /**
  * 封装 RPC 请求
  */
-public class RpcRequest {
+public class InvokeRequest {
 
     private String requestId;
     private String interfaceName;

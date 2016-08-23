@@ -1,20 +1,12 @@
 package com.fox.rpc.remoting.invoker.proxy;
 
-import com.fox.rpc.SpiServiceLoader;
-import com.fox.rpc.common.bean.RpcRequest;
-import com.fox.rpc.common.bean.RpcResponse;
-import com.fox.rpc.common.util.StringUtil;
-import com.fox.rpc.registry.RemotingServiceDiscovery;
-import com.fox.rpc.remoting.invoker.api.Client;
 import com.fox.rpc.remoting.invoker.api.ServiceProxy;
-import com.fox.rpc.remoting.invoker.config.InvokerConfig;
+import com.fox.rpc.remoting.invoker.config.InvokerCfg;
+import com.fox.rpc.remoting.invoker.util.RpcException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Map;
-import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -24,80 +16,26 @@ public abstract class AbstractRemotingServiceProxy implements ServiceProxy {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AbstractRemotingServiceProxy.class);
 
-    protected static Map<InvokerConfig<?>, Object> services = new ConcurrentHashMap<InvokerConfig<?>, Object>();
-
-    private String serviceAddress;
-
-    private RemotingServiceDiscovery serviceDiscovery;
+    protected static Map<InvokerCfg<?>, Object> services = new ConcurrentHashMap<InvokerCfg<?>, Object>();
 
     @Override
     public void init() {
     }
 
     @Override
-    public <T> T getProxy(InvokerConfig<T> invokerConfig) {
-        return createRpcProxy(invokerConfig);
-    }
-
-    @SuppressWarnings("unchecked")
-    public <T> T createRpcProxy(final InvokerConfig<T> invokerConfig) {
+    public <T> T getProxy(InvokerCfg<T> cfg) {
         Object service = null;
-        /****从缓存中拿服务***/
-        service=services.get(invokerConfig);
+        service=services.get(cfg);
         if (service==null) {
-            // 创建动态代理对象
-            final Class<T> interfaceClass = invokerConfig.getServiceInterface();
-            final String serviceVersion = "";
-            return (T) Proxy.newProxyInstance(
-                    interfaceClass.getClassLoader(),
-                    new Class<?>[]{interfaceClass},
-                    new InvocationHandler() {
-                        @Override
-                        public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                            // 创建 RPC 请求对象并设置请求属性
-                            RpcRequest request = new RpcRequest();
-                            request.setRequestId(UUID.randomUUID().toString());
-                            request.setInterfaceName(method.getDeclaringClass().getName());
-                            request.setServiceVersion(serviceVersion);
-                            request.setMethodName(method.getName());
-                            request.setParameterTypes(method.getParameterTypes());
-                            request.setParameters(args);
-                            // 获取 RPC 服务地址
-                            if (serviceDiscovery != null) {
-                                String serviceName = interfaceClass.getName();
-                                if (StringUtil.isNotEmpty(serviceVersion)) {
-                                    serviceName += "-" + serviceVersion;
-                                }
-                                serviceAddress = serviceDiscovery.discover(serviceName);
-                                LOGGER.debug("discover service: {} => {}", serviceName, serviceAddress);
-                            }
-                            if (StringUtil.isEmpty(serviceAddress)) {
-                                throw new RuntimeException("server address is empty");
-                            }
-                            // 从 RPC 服务地址中解析主机名与端口号
-                            String[] array = StringUtil.split(serviceAddress, ":");
-                            String host = array[0];
-                            int port = Integer.parseInt(array[1]);
-                            // 创建 RPC 客户端对象并发送 RPC 请求
-                            Client client = SpiServiceLoader.newExtension(Client.class);
-                            client.setContext(host,port);
-                            long time = System.currentTimeMillis();
-                            RpcResponse response = client.send(request);
-                            LOGGER.debug("time: {}ms", System.currentTimeMillis() - time);
-                            if (response == null) {
-                                throw new RuntimeException("response is null");
-                            }
-                            // 返回 RPC 响应结果
-                            if (response.hasException()) {
-                                throw response.getException();
-                            } else {
-                                return response.getResult();
-                            }
-                        }
-                    }
-            );
+            try {
+                ServiceInvocationProxy serviceInvocationProxy=new ServiceInvocationProxy();
+                service=(T) Proxy.newProxyInstance(cfg.getClass().getClassLoader(),
+                        new Class<?>[]{ cfg.getClass() },serviceInvocationProxy);
+            } catch (Throwable e) {
+                throw new RpcException("error while trying to invoke service",e);
+            }
+            services.put(cfg,service);
         }
         return (T) service;
     }
-
 }
