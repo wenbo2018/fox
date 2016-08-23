@@ -1,18 +1,23 @@
 package com.fox.rpc.remoting;
 
 import com.fox.rpc.SpiServiceLoader;
+import com.fox.rpc.registry.RegisterCfg;
 import com.fox.rpc.registry.RemotingServiceRegistry;
 import com.fox.rpc.remoting.invoker.api.ServiceProxy;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import com.fox.rpc.remoting.invoker.proxy.ServiceProxyLoader;
 import com.fox.rpc.remoting.provider.api.Server;
 import com.fox.rpc.remoting.provider.config.ProviderCfg;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
  * Created by shenwenbo on 16/8/6.
  */
 public class ServiceFactory {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ServiceFactory.class);
 
     static ServiceProxy serviceProxy = ServiceProxyLoader.getServiceProxy();
     /**
@@ -25,14 +30,27 @@ public class ServiceFactory {
         return serviceProxy.getProxy(invokerConfig);
     }
 
-    public static void publishService(ProviderCfg cfg,String serviceAddress) {
+    public static void registryService(RegisterCfg cfg) {
+        LOGGER.info("begin registery");
+        RemotingServiceRegistry remotingServiceRegistry=SpiServiceLoader.newExtension(RemotingServiceRegistry.class);
+        remotingServiceRegistry.setContext(cfg);
+        if (remotingServiceRegistry != null) {
+            for (String interfaceName : cfg.getHandlerMap().keySet()) {
+                remotingServiceRegistry.register(interfaceName,cfg.getServiceAddress());
+                LOGGER.debug("register service: {} => {}", interfaceName,cfg.getServiceAddress());
+            }
+        } else {
+            LOGGER.error("register center fail");
+        }
+    }
+
+    public static void publishService(ProviderCfg cfg) {
         Server server= SpiServiceLoader.newExtension(Server.class);
-        server.setContext(SpiServiceLoader.getExtension(RemotingServiceRegistry.class)
-                ,cfg.getHandlerMap(),serviceAddress);
+        server.setContext(cfg);
         try {
             server.star();
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.error("Service publish fail",e);
         }
     }
 }

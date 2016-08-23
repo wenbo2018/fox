@@ -1,6 +1,7 @@
 package com.fox.rpc.remoting.provider.api;
 
 import com.fox.rpc.registry.RemotingServiceRegistry;
+import com.fox.rpc.remoting.provider.config.ProviderCfg;
 
 import java.util.Map;
 
@@ -11,7 +12,6 @@ public interface Server {
 
     public void star() throws Exception;
 
-    public void  setContext(RemotingServiceRegistry serviceRegistry,Map<String, Object> handlerMap,
-            String serviceAddress);
+    public void  setContext(ProviderCfg cfg);
 
 }

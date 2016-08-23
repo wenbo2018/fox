@@ -12,4 +12,6 @@ public interface RemotingServiceRegistry {
      * @param serviceAddress 服务地址
      */
     void register(String serviceName, String serviceAddress);
+
+    void setContext(RegisterCfg cfg);
 }
