@@ -61,19 +61,8 @@ public class NettyServer implements Server {
             });
             bootstrap.option(ChannelOption.SO_BACKLOG, 1024);
             bootstrap.childOption(ChannelOption.SO_KEEPALIVE, true);
-            // 启动 RPC 服务器
             ChannelFuture future = bootstrap.bind(serviceIp,servicePort).sync();
-            // 注册 RPC 服务地址
-//            if (serviceRegistry != null) {
-//                for (String interfaceName : handlerMap.keySet()) {
-//                    serviceRegistry.register(interfaceName, serviceAddress);
-//                    LOGGER.debug("register service: {} => {}", interfaceName, serviceAddress);
-//                }
-//            } else {
-//                LOGGER.info("register center fail");
-//            }
             LOGGER.debug("server started on port {}",serviceIp+":"+servicePort);
-            // 关闭 RPC 服务器
             future.channel().closeFuture().sync();
         } finally {
             workerGroup.shutdownGracefully();
