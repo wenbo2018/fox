@@ -71,6 +71,12 @@ public class ServiceInvocationProxy<T> implements InvocationHandler{
         }
     }
 
+    /**
+     * 封装rpc调用请求
+     * @param method
+     * @param args
+     * @return
+     */
     private InvokeRequest createInvokeRequest(Method method, Object[] args) {
         InvokeRequest request = new InvokeRequest();
         request.setRequestId(UUID.randomUUID().toString());

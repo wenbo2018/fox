@@ -28,7 +28,7 @@ public abstract class AbstractRemotingServiceProxy implements ServiceProxy {
         service=services.get(cfg);
         if (service==null) {
             try {
-                ServiceInvocationProxy serviceInvocationProxy=new ServiceInvocationProxy();
+                ServiceInvocationProxy serviceInvocationProxy=new ServiceInvocationProxy(cfg);
                 service=(T) Proxy.newProxyInstance(cfg.getClass().getClassLoader(),
                         new Class<?>[]{ cfg.getClass() },serviceInvocationProxy);
             } catch (Throwable e) {
