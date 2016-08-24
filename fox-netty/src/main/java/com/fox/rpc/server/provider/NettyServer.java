@@ -1,7 +1,7 @@
 package com.fox.rpc.server.provider;
 
-import com.fox.rpc.common.bean.RpcRequest;
-import com.fox.rpc.common.bean.RpcResponse;
+import com.fox.rpc.common.bean.InvokeRequest;
+import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.common.codec.RpcDecoder;
 import com.fox.rpc.common.codec.RpcEncoder;
 import com.fox.rpc.registry.RemotingServiceRegistry;
@@ -54,8 +54,8 @@ public class NettyServer implements Server {
                 @Override
                 public void initChannel(SocketChannel channel) throws Exception {
                     ChannelPipeline pipeline = channel.pipeline();
-                    pipeline.addLast(new RpcDecoder(RpcRequest.class)); // 解码 RPC 请求
-                    pipeline.addLast(new RpcEncoder(RpcResponse.class)); // 编码 RPC 响应
+                    pipeline.addLast(new RpcDecoder(InvokeRequest.class)); // 解码 RPC 请求
+                    pipeline.addLast(new RpcEncoder(InvokeResponse.class)); // 编码 RPC 响应
                     pipeline.addLast(new NettyServerHandler(handlerMap)); // 处理 RPC 请求
                 }
             });

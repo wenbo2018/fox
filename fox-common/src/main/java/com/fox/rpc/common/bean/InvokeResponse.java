@@ -3,7 +3,7 @@ package com.fox.rpc.common.bean;
 /**
  * 封装 RPC 响应
  */
-public class RpcResponse {
+public class InvokeResponse {
 
     private String requestId;
     private Exception exception;

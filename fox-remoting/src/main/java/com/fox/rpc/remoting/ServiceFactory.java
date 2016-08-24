@@ -4,7 +4,7 @@ import com.fox.rpc.SpiServiceLoader;
 import com.fox.rpc.registry.RegisterCfg;
 import com.fox.rpc.registry.RemotingServiceRegistry;
 import com.fox.rpc.remoting.invoker.api.ServiceProxy;
-import com.fox.rpc.remoting.invoker.config.InvokerConfig;
+import com.fox.rpc.remoting.invoker.config.InvokerCfg;
 import com.fox.rpc.remoting.invoker.proxy.ServiceProxyLoader;
 import com.fox.rpc.remoting.provider.api.Server;
 import com.fox.rpc.remoting.provider.config.ProviderCfg;
@@ -26,7 +26,7 @@ public class ServiceFactory {
      * @param <T>
      * @return
      */
-    public static <T> T getService(InvokerConfig<T> invokerConfig)  {
+    public static <T> T getService(InvokerCfg<T> invokerConfig)  {
         return serviceProxy.getProxy(invokerConfig);
     }
 

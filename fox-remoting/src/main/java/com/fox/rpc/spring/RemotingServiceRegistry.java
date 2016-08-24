@@ -43,9 +43,6 @@ public class RemotingServiceRegistry implements ApplicationContextAware{
     private  String registryPort;
 
     public void init() {
-
-
-
         LOGGER.debug("service begin");
         Map<String, Object> handlerMap = handlerServiceBeans();
         //封装服务提供信息
@@ -54,10 +51,6 @@ public class RemotingServiceRegistry implements ApplicationContextAware{
         cfg.setServiceAddress(this.serviceAddress);
         cfg.setHandlerMap(handlerMap);
         cfg.setRemotingServiceRegistry(SpiServiceLoader.getExtension(com.fox.rpc.registry.RemotingServiceRegistry.class));
-
-
-
-
         //封装注册信息
         RegisterCfg registerCfg=new RegisterCfg();
         registerCfg.setPort(registryPort);

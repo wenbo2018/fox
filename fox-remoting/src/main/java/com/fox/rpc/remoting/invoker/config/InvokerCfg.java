@@ -6,7 +6,7 @@ import com.fox.rpc.registry.RemotingServiceDiscovery;
  * Created by shenwenbo on 16/8/6.
  * RPC 协议
  */
-public class InvokerConfig<T> {
+public class InvokerCfg<T> {
 
 
     private Class<T> serviceInterface;
@@ -16,7 +16,7 @@ public class InvokerConfig<T> {
     private RemotingServiceDiscovery serviceDiscovery;
 
 
-    public InvokerConfig(Class<T> serviceInterface, String url, RemotingServiceDiscovery serviceDiscovery) {
+    public InvokerCfg(Class<T> serviceInterface, String url, RemotingServiceDiscovery serviceDiscovery) {
         this.serviceInterface = serviceInterface;
         this.url = url;
         this.serviceDiscovery = serviceDiscovery;
