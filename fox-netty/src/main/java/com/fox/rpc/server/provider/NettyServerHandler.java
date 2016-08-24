@@ -1,22 +1,13 @@
 package com.fox.rpc.server.provider;
 
 import com.fox.rpc.common.bean.InvokeRequest;
-import com.fox.rpc.common.bean.InvokeResponse;
-import com.fox.rpc.common.util.StringUtil;
-import io.netty.channel.ChannelFutureListener;
+import com.fox.rpc.server.provider.async.AsyncServiceExecutor;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import net.sf.cglib.reflect.FastClass;
-import net.sf.cglib.reflect.FastMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.Map;
 
-/**
- * RPC 服务端处理器（用于处理 RPC 请求）
- *
- */
 public class NettyServerHandler extends SimpleChannelInboundHandler<InvokeRequest> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(NettyServerHandler.class);
@@ -29,47 +20,8 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<InvokeReques
 
     @Override
     public void channelRead0(final ChannelHandlerContext ctx, InvokeRequest request) throws Exception {
-        // 创建并初始化 RPC 响应对象
-        InvokeResponse response = new InvokeResponse();
-        response.setRequestId(request.getRequestId());
-        try {
-            Object result = handle(request);
-            response.setResult(result);
-        } catch (Exception e) {
-            LOGGER.error("handle result failure", e);
-            response.setException(e);
-        }
-        // 写入 RPC 响应对象并自动关闭连接
-        ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
-    }
-
-    private Object handle(InvokeRequest request) throws Exception {
-        // 获取服务对象
-        String serviceName = request.getInterfaceName();
-        String serviceVersion = request.getServiceVersion();
-        if (StringUtil.isNotEmpty(serviceVersion)) {
-            serviceName += "-" + serviceVersion;
-        }
-        /**获取服务实现类,这里采用Spring管理,值需要直接去Spring里面拿就可以了
-         * 根基调用配置获取服务接口信息,根据接口信息直接从Spring容器中获取bean对象
-         **/
-        Object serviceBean = handlerMap.get(serviceName);
-        if (serviceBean == null) {
-            throw new RuntimeException(String.format("can not find service bean by key: %s", serviceName));
-        }
-        // 获取反射调用所需的参数
-        Class<?> serviceClass = serviceBean.getClass();
-        String methodName = request.getMethodName();
-        Class<?>[] parameterTypes = request.getParameterTypes();
-        Object[] parameters = request.getParameters();
-        // 执行反射调用
-//        Method method = serviceClass.getMethod(methodName, parameterTypes);
-//        method.setAccessible(true);
-//        return method.invoke(serviceBean, parameters);
-        // 使用 CGLib 执行反射调用
-        FastClass serviceFastClass = FastClass.create(serviceClass);
-        FastMethod serviceFastMethod = serviceFastClass.getMethod(methodName, parameterTypes);
-        return serviceFastMethod.invoke(serviceBean, parameters);
+        //线程池处理
+        AsyncServiceExecutor.submitCallback(ctx,request,handlerMap.get(request.getInterfaceName()));
     }
 
     @Override

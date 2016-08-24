@@ -5,6 +5,7 @@ import com.fox.rpc.SpiServiceLoader;
 import com.fox.rpc.common.util.StringUtil;
 import com.fox.rpc.registry.RegisterCfg;
 import com.fox.rpc.remoting.ServiceFactory;
+import com.fox.rpc.remoting.provider.api.ThreadPool;
 import com.fox.rpc.remoting.provider.config.ProviderCfg;
 import org.apache.commons.collections4.MapUtils;
 import org.slf4j.Logger;
@@ -42,6 +43,11 @@ public class RemotingServiceRegistry implements ApplicationContextAware{
      */
     private  String registryPort;
 
+
+    //线程池配置信息
+
+
+
     public void init() {
         LOGGER.debug("service begin");
         Map<String, Object> handlerMap = handlerServiceBeans();
@@ -56,6 +62,8 @@ public class RemotingServiceRegistry implements ApplicationContextAware{
         registerCfg.setPort(registryPort);
         registerCfg.setAddress(registryAddress);
         registerCfg.setHandlerMap(handlerMap);
+        ThreadPool threadPool=SpiServiceLoader.newExtension(ThreadPool.class);
+        threadPool.init();
         // 将服务注册到注册中心
         ServiceFactory.registryService(registerCfg);
         //启动服务器
