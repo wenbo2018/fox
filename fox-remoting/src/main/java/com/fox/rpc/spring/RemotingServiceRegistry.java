@@ -24,6 +24,13 @@ public class RemotingServiceRegistry implements ApplicationContextAware{
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ServiceFactory.class);
 
+    /**
+     * 保存服务信息
+     */
+    private Map<String,Object> services;
+    /**
+     * 获取Spring上下文信息
+     */
     private ApplicationContext ctx;
 
     /***
@@ -50,7 +57,16 @@ public class RemotingServiceRegistry implements ApplicationContextAware{
 
     public void init() {
         LOGGER.debug("service begin");
-        Map<String, Object> handlerMap = handlerServiceBeans();
+        Map<String, Object> handlerMap=new HashMap<String,Object>();
+        //如果没有使用注解,那么采用Spring配置进行发布服务
+        if (services!=null) {
+            for (String url : services.keySet()) {
+               handlerMap.put(url,services.get(url));
+            }
+        } else {
+            handlerMap = handlerServiceBeans();
+        }
+
         //封装服务提供信息
         ProviderCfg cfg=new ProviderCfg();
         cfg.setServicePort(this.servicePort);
@@ -62,7 +78,9 @@ public class RemotingServiceRegistry implements ApplicationContextAware{
         registerCfg.setPort(registryPort);
         registerCfg.setAddress(registryAddress);
         registerCfg.setHandlerMap(handlerMap);
-        ThreadPool threadPool=SpiServiceLoader.newExtension(ThreadPool.class);
+
+        ThreadPool threadPool=SpiServiceLoader.newExtension(com.fox.rpc.remoting.provider.api.ThreadPool.class);
+
         threadPool.init();
         // 将服务注册到注册中心
         ServiceFactory.registryService(registerCfg);
@@ -135,5 +153,13 @@ public class RemotingServiceRegistry implements ApplicationContextAware{
 
     public void setRegistryAddress(String registryAddress) {
         this.registryAddress = registryAddress;
+    }
+
+    public Map<String, Object> getServices() {
+        return services;
+    }
+
+    public void setServices(Map<String, Object> services) {
+        this.services = services;
     }
 }

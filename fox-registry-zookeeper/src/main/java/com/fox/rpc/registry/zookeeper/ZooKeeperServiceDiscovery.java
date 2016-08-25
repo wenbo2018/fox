@@ -53,4 +53,9 @@ public class ZooKeeperServiceDiscovery implements RemotingServiceDiscovery {
             zkClient.close();
         }
     }
+
+    @Override
+    public void init(String zkAddress) {
+          this.zkAddress=zkAddress;
+    }
 }

@@ -12,4 +12,6 @@ public interface RemotingServiceDiscovery {
      * @return 服务地址
      */
     String discover(String serviceName);
+
+    void init(String zkAddress);
 }

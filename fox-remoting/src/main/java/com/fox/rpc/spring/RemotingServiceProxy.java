@@ -29,6 +29,8 @@ public class RemotingServiceProxy implements FactoryBean{
 
     private RemotingServiceDiscovery serviceDiscovery;
 
+    private String zkAddress;
+
     public void init() {
 
         if (StringUtils.isBlank(iface)) {
@@ -40,6 +42,7 @@ public class RemotingServiceProxy implements FactoryBean{
             LOGGER.error("not class found",e);
         }
         this.serviceDiscovery= SpiServiceLoader.newExtension(RemotingServiceDiscovery.class);
+        serviceDiscovery.init(this.zkAddress);
         InvokerCfg invokerConfig= new InvokerCfg(this.interfaceClass,this.serviceName,this.serviceDiscovery);
         this.service= ServiceFactory.getService(invokerConfig);
     }
@@ -105,5 +108,13 @@ public class RemotingServiceProxy implements FactoryBean{
 
     public void setServiceDiscovery(RemotingServiceDiscovery serviceDiscovery) {
         this.serviceDiscovery = serviceDiscovery;
+    }
+
+    public String getZkAddress() {
+        return zkAddress;
+    }
+
+    public void setZkAddress(String zkAddress) {
+        this.zkAddress = zkAddress;
     }
 }
