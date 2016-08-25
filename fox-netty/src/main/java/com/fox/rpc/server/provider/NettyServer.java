@@ -24,7 +24,7 @@ public class NettyServer implements Server {
 
     private RemotingServiceRegistry serviceRegistry;
 
-    private Map<String, Object> handlerMap = new HashMap<>();
+    private Map<String, Object> handlerMap = new HashMap<String, Object>();
 
     private String serviceIp;
 
