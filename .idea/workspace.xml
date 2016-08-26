@@ -36,11 +36,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HelloServiceTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestRpc.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fox-demos/fox-server-demo/src/main/java/com/dianping/TestRpc.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HelloServiceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fox-demos/fox-client/src/test/java/com/dianping/HelloServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.726415" vertical-offset="147" max-vertical-offset="572">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="296" max-vertical-offset="616">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -49,11 +59,23 @@
       <file leaf-file-name="NettyClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="314" max-vertical-offset="1980">
-              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="908" max-vertical-offset="2046">
+              <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1828#2044#0" expanded="true" />
+                <element signature="e#2043#2044#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceInvocationProxy.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/fox/rpc/remoting/invoker/proxy/ServiceInvocationProxy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.88601035" vertical-offset="824" max-vertical-offset="2222">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,21 +103,11 @@
       <file leaf-file-name="NettyClientHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClientHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="1100">
+            <state vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="1100">
               <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServiceInvocationProxy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/fox/rpc/remoting/invoker/proxy/ServiceInvocationProxy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="66" max-vertical-offset="2222">
-              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -120,24 +132,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NettyClient1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClient1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2134">
-              <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="NettyClientFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClientFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="908" max-vertical-offset="1320">
-              <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1044" max-vertical-offset="1320">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#748#768#0" expanded="true" />
+                <element signature="e#645#662#0" expanded="true" />
+                <element signature="e#733#748#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,7 +174,6 @@
         <option value="$PROJECT_DIR$/fox-demos/fox-server-demo/src/main/java/com/dianping/TestRpc.java" />
         <option value="$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/provider/async/AsyncServiceRunnableExecutor.java" />
         <option value="$PROJECT_DIR$/fox-common/src/main/java/com/fox/rpc/common/bean/InvokeResponse.java" />
-        <option value="$PROJECT_DIR$/fox-demos/fox-client/src/test/java/com/dianping/HelloServiceTest.java" />
         <option value="$PROJECT_DIR$/fox-remoting/src/main/java/com/fox/rpc/remoting/invoker/ClientManager.java" />
         <option value="$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClientPipelineFactory.java" />
         <option value="$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/FutureMap.java" />
@@ -185,9 +187,10 @@
         <option value="$PROJECT_DIR$/fox-remoting/src/main/java/com/fox/rpc/remoting/invoker/api/ClientFactory.java" />
         <option value="$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClientHandler.java" />
         <option value="$PROJECT_DIR$/fox-remoting/src/main/java/com/fox/rpc/remoting/invoker/api/Client.java" />
-        <option value="$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClientFactory.java" />
         <option value="$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClient.java" />
         <option value="$PROJECT_DIR$/fox-remoting/src/main/java/com/fox/rpc/remoting/invoker/proxy/ServiceInvocationProxy.java" />
+        <option value="$PROJECT_DIR$/fox-demos/fox-client/src/test/java/com/dianping/HelloServiceTest.java" />
+        <option value="$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClientFactory.java" />
       </list>
     </option>
   </component>
@@ -1367,12 +1370,12 @@
       <workItem from="1472132741544" duration="14000" />
       <workItem from="1472132780568" duration="6287000" />
       <workItem from="1472139112141" duration="3983000" />
-      <workItem from="1472173365953" duration="24661000" />
+      <workItem from="1472173365953" duration="26680000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34945000" />
+    <option name="totallyTimeSpent" value="36964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1392,14 +1395,14 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.556962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3023426" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37188873" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.78322786" sideWeight="0.52781844" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31962025" sideWeight="0.52781844" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1425,10 +1428,24 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/fox-demos/fox-client/src/test/java/com/dianping/HelloServiceTest.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClientFactory.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="27" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1589,8 +1606,8 @@
         <state vertical-scroll-proportion="1.7322835" vertical-offset="396" max-vertical-offset="1474">
           <caret line="63" column="44" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
           <folding>
-            <element signature="e#1774#2286#0" expanded="true" />
-            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="e#1774#2286#0" expanded="false" />
+            <element signature="e#2285#2286#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1608,8 +1625,8 @@
         <state vertical-scroll-proportion="0.40419948" vertical-offset="594" max-vertical-offset="1738">
           <caret line="47" column="48" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
           <folding>
-            <element signature="e#1651#1992#0" expanded="true" />
-            <element signature="e#1991#1992#0" expanded="true" />
+            <element signature="e#1651#1992#0" expanded="false" />
+            <element signature="e#1991#1992#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1643,7 +1660,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="814">
           <caret line="27" column="11" selection-start-line="20" selection-start-column="10" selection-end-line="27" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1733,7 +1750,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="212" max-vertical-offset="1452">
           <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1751,8 +1768,8 @@
         <state vertical-scroll-proportion="0.005830904" vertical-offset="196" max-vertical-offset="726">
           <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#298#317#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#298#317#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1770,24 +1787,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="506">
           <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-demos/fox-server-demo/src/main/java/com/dianping/TestRpc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/fox/rpc/remoting/invoker/proxy/ServiceInvocationProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="66" max-vertical-offset="2222">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1815,42 +1816,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="1100">
-          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClientFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="891" max-vertical-offset="1320">
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#748#768#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/fox/rpc/remoting/invoker/api/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="572">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="314" max-vertical-offset="1980">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1862,10 +1832,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="1100">
+          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-demos/fox-server-demo/src/main/java/com/dianping/TestRpc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fox-demos/fox-client/src/test/java/com/dianping/HelloServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.726415" vertical-offset="147" max-vertical-offset="572">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="296" max-vertical-offset="616">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="776" max-vertical-offset="2046">
+          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1828#2044#0" expanded="true" />
+            <element signature="e#2043#2044#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-netty/src/main/java/com/fox/rpc/server/invoke/NettyClientFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1044" max-vertical-offset="1320">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#645#662#0" expanded="true" />
+            <element signature="e#733#748#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/fox/rpc/remoting/invoker/proxy/ServiceInvocationProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.88601035" vertical-offset="824" max-vertical-offset="2222">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
         </state>
       </provider>

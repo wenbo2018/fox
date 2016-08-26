@@ -20,6 +20,8 @@ public class HelloServiceTest {
     @Test
     public void test() {
         System.out.println(helloService.hello("shenwenbo"));
+        System.out.println("");
+        System.out.println(helloService.hello("wngayuehua"));
     }
 
 }

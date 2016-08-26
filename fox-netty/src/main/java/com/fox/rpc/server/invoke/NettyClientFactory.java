@@ -20,9 +20,9 @@ public class NettyClientFactory implements ClientFactory{
 
     EventLoopGroup group;
 
-    Map<ConnectInfo,Channel> channelMap=new ConcurrentHashMap<ConnectInfo, Channel>();
+    Map<String,Channel> channelMap=new ConcurrentHashMap<String, Channel>();
 
-    ConcurrentHashMap<ConnectInfo,Client> clients=new ConcurrentHashMap<ConnectInfo,Client>();
+    ConcurrentHashMap<String,Client> clients=new ConcurrentHashMap<String,Client>();
 
     private static volatile boolean isStartup = false;
 
@@ -36,17 +36,17 @@ public class NettyClientFactory implements ClientFactory{
     @Override
     public Client createClient(ConnectInfo connectInfo) {
         Client client=new NettyClient(this.group,connectInfo);
-        clients.put(connectInfo,client);
+        clients.put(connectInfo.getHostIp()+"-"+connectInfo.getHostPort(),client);
         return client;
     }
 
     @Override
     public Client getClient(ConnectInfo connectInfo) {
-        Client client=clients.get(connectInfo);
+        Client client=clients.get(connectInfo.getHostIp()+"-"+connectInfo.getHostPort());
         if (client==null) {
             client=new NettyClient(this.group,connectInfo);
-            client.connect();;
-            clients.put(connectInfo,client);
+            client.connect();
+            clients.put(connectInfo.getHostIp()+"-"+connectInfo.getHostPort(),client);
             return client;
         }
         return client;
