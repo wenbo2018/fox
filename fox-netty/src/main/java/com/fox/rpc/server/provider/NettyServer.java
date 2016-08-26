@@ -61,6 +61,7 @@ public class NettyServer implements Server {
             });
             bootstrap.option(ChannelOption.SO_BACKLOG, 1024);
             bootstrap.childOption(ChannelOption.SO_KEEPALIVE, true);
+            System.out.println("rpc服务已经启动");
             ChannelFuture future = bootstrap.bind(serviceIp,servicePort).sync();
             LOGGER.debug("server started on port {}",serviceIp+":"+servicePort);
             future.channel().closeFuture().sync();

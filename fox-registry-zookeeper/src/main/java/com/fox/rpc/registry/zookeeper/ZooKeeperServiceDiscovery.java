@@ -21,7 +21,8 @@ public class ZooKeeperServiceDiscovery implements RemotingServiceDiscovery {
 
     @Override
     public String discover(String name) {
-        // 创建 ZooKeeper 客户端
+        // 创建 ZooKeeper 客'户端
+        System.out.println();
         ZkClient zkClient = new ZkClient(zkAddress, Constant.ZK_SESSION_TIMEOUT, Constant.ZK_CONNECTION_TIMEOUT);
         LOGGER.debug("connect zookeeper");
         try {

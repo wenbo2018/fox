@@ -20,13 +20,15 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<InvokeReques
 
     @Override
     public void channelRead0(final ChannelHandlerContext ctx, InvokeRequest request) throws Exception {
+        System.err.println(request.toString());
         //线程池处理
-        AsyncServiceExecutor.submitCallback(ctx,request,handlerMap.get(request.getInterfaceName()));
+        AsyncServiceExecutor.submitCallback(ctx,request,handlerMap.get(request.getServiceName()));
     }
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
         LOGGER.error("server caught exception", cause);
+        System.out.println("server caught exception"+cause);
         ctx.close();
     }
 }

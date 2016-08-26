@@ -15,14 +15,14 @@
         <!-- 打开Spring的Annotation支持 -->
         <context:annotation-config />
         <bean id="helloService" class="com.dianping.HelloServiceImpl"/>
-        <bean id="registryService" class="com.fox.rpc.spring.RemotingServiceRegistry" init-method="init">
-            <property name="servicePort" value="8000"/>
-            <property name="serviceAddress" value="170.0.0.0"/>
-            <property name="registryAddress" value="170.0.0.0"/>
-            <property name="registryPort" value="8000"/>
+        <bean id="helloTestService" class="com.fox.rpc.spring.RemotingServiceRegistry" init-method="init">
+            <property name="servicePort" value="4080"/>
+            <property name="serviceAddress" value="192.168.1.101"/>
+            <property name="registryAddress" value="192.168.1.101:2181"/>
+            <property name="registryPort" value="2181"/>
             <property name="services" >
                 <map>
-                    <entry key="helloService-01" value-ref="helloService"/>
+                    <entry key="service.fox.com_helloTestService_helloService_1.0.0" value-ref="helloService"/>
                 </map>
             </property>
         </bean>

@@ -1,1 +1,1 @@
-com.fox.rpc.server.invoke.NettyServer
+com.fox.rpc.server.invoke.NettyClient

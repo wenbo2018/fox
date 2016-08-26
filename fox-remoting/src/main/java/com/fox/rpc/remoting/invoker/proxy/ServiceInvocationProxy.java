@@ -5,11 +5,15 @@ import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.common.util.StringUtil;
 import com.fox.rpc.registry.RemotingServiceDiscovery;
+import com.fox.rpc.remoting.invoker.api.CallFuture;
 import com.fox.rpc.remoting.invoker.api.Client;
+import com.fox.rpc.remoting.invoker.api.ClientFactory;
+import com.fox.rpc.remoting.invoker.config.ConnectInfo;
 import com.fox.rpc.remoting.invoker.config.InvokerCfg;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.awt.*;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.util.UUID;
@@ -30,9 +34,12 @@ public class ServiceInvocationProxy<T> implements InvocationHandler{
 
     private Class<T> interfaceClass;
 
+    private String serviceName;
+
     public ServiceInvocationProxy(InvokerCfg<T> cfg) {
         this.serviceDiscovery=cfg.getServiceDiscovery();
         this.interfaceClass=cfg.getServiceInterface();
+        this.serviceName=cfg.getServiceName();
 
     }
 
@@ -40,10 +47,9 @@ public class ServiceInvocationProxy<T> implements InvocationHandler{
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         InvokeRequest request=createInvokeRequest(method,args);
         if (serviceDiscovery != null) {
-            String serviceName = interfaceClass.getName();
-            if (StringUtil.isNotEmpty(serviceVersion)) {
-                serviceName += "-" + serviceVersion;
-            }
+//            if (StringUtil.isNotEmpty(serviceVersion)) {
+//                serviceName += "-" + serviceVersion;
+//            }
             serviceAddress = serviceDiscovery.discover(serviceName);
             LOGGER.debug("discover service: {} => {}", serviceName, serviceAddress);
         }
@@ -54,11 +60,24 @@ public class ServiceInvocationProxy<T> implements InvocationHandler{
         String[] array = StringUtil.split(serviceAddress, ":");
         String host = array[0];
         int port = Integer.parseInt(array[1]);
+
+        //启动客户端并创建连接
+        ClientFactory clientFactory= SpiServiceLoader.getExtension(ClientFactory.class);
+        clientFactory.init();
+
         // 创建 RPC 客户端对象并发送 RPC 请求
-        Client client = SpiServiceLoader.newExtension(Client.class);
-        client.setContext(host,port);
+        Client client = clientFactory.getClient(new ConnectInfo(host,port));
+        client.send(request);
+        Robot r   =   new   Robot();
+
+
+        r.delay(3000);
+        //client.setContext(host,port);
         long time = System.currentTimeMillis();
-        InvokeResponse response = client.send(request);
+        //CallFuture callFuture=client.send(request);
+//        InvokeResponse response = client.send(request);
+        InvokeResponse response=client.getResponse();
+        System.out.println();
         LOGGER.debug("time: {}ms", System.currentTimeMillis() - time);
         if (response == null) {
             throw new RuntimeException("response is null");
@@ -85,6 +104,7 @@ public class ServiceInvocationProxy<T> implements InvocationHandler{
         request.setMethodName(method.getName());
         request.setParameterTypes(method.getParameterTypes());
         request.setParameters(args);
+        request.setServiceName(this.serviceName);
         return request;
     }
 

@@ -30,14 +30,14 @@ public class ServiceFactory {
         return serviceProxy.getProxy(invokerConfig);
     }
 
-    public static void registryService(RegisterCfg cfg) {
+    public static void registryService(RegisterCfg registerCfg,ProviderCfg providerCfg) {
         LOGGER.info("begin registery");
         RemotingServiceRegistry remotingServiceRegistry=SpiServiceLoader.newExtension(RemotingServiceRegistry.class);
-        remotingServiceRegistry.setContext(cfg);
+        remotingServiceRegistry.setContext(registerCfg);
         if (remotingServiceRegistry != null) {
-            for (String interfaceName : cfg.getHandlerMap().keySet()) {
-                remotingServiceRegistry.register(interfaceName,cfg.getServiceAddress());
-                LOGGER.debug("register service: {} => {}", interfaceName,cfg.getServiceAddress());
+            for (String interfaceName : registerCfg.getHandlerMap().keySet()) {
+                remotingServiceRegistry.register(interfaceName,providerCfg.getServiceAddress()+":"+providerCfg.getServicePort());
+                LOGGER.debug("register service: {} => {}", interfaceName,providerCfg.getServiceAddress());
             }
         } else {
             LOGGER.error("register center fail");
@@ -50,6 +50,7 @@ public class ServiceFactory {
         try {
             server.star();
         } catch (Exception e) {
+            System.out.println(e);
             LOGGER.error("Service publish fail",e);
         }
     }
