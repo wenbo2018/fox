@@ -68,24 +68,24 @@ public class RemotingServiceRegistry implements ApplicationContextAware{
         }
 
         //封装服务提供信息
-        ProviderCfg cfg=new ProviderCfg();
-        cfg.setServicePort(this.servicePort);
-        cfg.setServiceAddress(this.serviceAddress);
-        cfg.setHandlerMap(handlerMap);
-        cfg.setRemotingServiceRegistry(SpiServiceLoader.getExtension(com.fox.rpc.registry.RemotingServiceRegistry.class));
+        ProviderCfg providerCfg=new ProviderCfg();
+        providerCfg.setServicePort(this.servicePort);
+        providerCfg.setServiceAddress(this.serviceAddress);
+        providerCfg.setHandlerMap(handlerMap);
+        providerCfg.setRemotingServiceRegistry(SpiServiceLoader.getExtension(com.fox.rpc.registry.RemotingServiceRegistry.class));
         //封装注册信息
         RegisterCfg registerCfg=new RegisterCfg();
-        registerCfg.setPort(registryPort);
-        registerCfg.setAddress(registryAddress);
+        registerCfg.setPort(this.registryPort);
+        registerCfg.setAddress(this.registryAddress);
         registerCfg.setHandlerMap(handlerMap);
 
         ThreadPool threadPool=SpiServiceLoader.newExtension(com.fox.rpc.remoting.provider.api.ThreadPool.class);
 
         threadPool.init();
         // 将服务注册到注册中心
-        ServiceFactory.registryService(registerCfg);
+        ServiceFactory.registryService(registerCfg,providerCfg);
         //启动服务器
-        ServiceFactory.publishService(cfg);
+        ServiceFactory.publishService(providerCfg);
     }
 
 

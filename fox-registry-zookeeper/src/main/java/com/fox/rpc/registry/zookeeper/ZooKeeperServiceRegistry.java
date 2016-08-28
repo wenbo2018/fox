@@ -39,11 +39,13 @@ public class ZooKeeperServiceRegistry implements RemotingServiceRegistry {
         if (!zkClient.exists(servicePath)) {
             zkClient.createPersistent(servicePath);
             LOGGER.debug("create service node: {}", servicePath);
+            System.out.println("创建持久节点："+servicePath);
         }
         // 创建 address 节点（临时）
         String addressPath = servicePath + "/address-";
         String addressNode = zkClient.createEphemeralSequential(addressPath, serviceAddress);
         LOGGER.debug("create address node: {}", addressNode);
+        System.out.println("创建零时节点："+addressNode);
     }
 
     @Override

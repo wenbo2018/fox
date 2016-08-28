@@ -11,15 +11,17 @@ public class InvokerCfg<T> {
 
     private Class<T> serviceInterface;
 
-    private String url;
+    private String iface;
 
     private RemotingServiceDiscovery serviceDiscovery;
 
+    private String serviceName;
 
-    public InvokerCfg(Class<T> serviceInterface, String url, RemotingServiceDiscovery serviceDiscovery) {
+    public InvokerCfg(Class<T> serviceInterface, String iface,String serviceName, RemotingServiceDiscovery serviceDiscovery) {
         this.serviceInterface = serviceInterface;
-        this.url = url;
+        this.iface = iface;
         this.serviceDiscovery = serviceDiscovery;
+        this.serviceName=serviceName;
     }
 
     public RemotingServiceDiscovery getServiceDiscovery() {
@@ -38,11 +40,19 @@ public class InvokerCfg<T> {
         this.serviceInterface = serviceInterface;
     }
 
-    public String getUrl() {
-        return url;
+    public String getIface() {
+        return iface;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setIface(String iface) {
+        this.iface = iface;
+    }
+
+    public String getServiceName() {
+        return serviceName;
+    }
+
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
     }
 }

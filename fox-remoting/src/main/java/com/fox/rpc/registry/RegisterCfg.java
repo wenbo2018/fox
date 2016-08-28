@@ -14,9 +14,6 @@ public class RegisterCfg {
 
     private Map<String, Object> handlerMap = new HashMap<String, Object>();
 
-
-    private  String serviceAddress;
-
     public String getPort() {
         return port;
     }
@@ -39,13 +36,5 @@ public class RegisterCfg {
 
     public void setHandlerMap(Map<String, Object> handlerMap) {
         this.handlerMap = handlerMap;
-    }
-
-    public String getServiceAddress() {
-        return serviceAddress;
-    }
-
-    public void setServiceAddress(String serviceAddress) {
-        this.serviceAddress = serviceAddress;
     }
 }

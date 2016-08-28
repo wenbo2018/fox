@@ -8,8 +8,14 @@ import com.fox.rpc.common.bean.InvokeResponse;
  */
 public interface Client {
 
-    public InvokeResponse send(InvokeRequest request) throws Exception;
+    public void connect();
+
+    public CallFuture send(InvokeRequest request) throws Exception;
 
     public void setContext(String host, int port);
+
+    public void processResponse(InvokeResponse invokeResponse);
+
+    public InvokeResponse getResponse();
 
 }

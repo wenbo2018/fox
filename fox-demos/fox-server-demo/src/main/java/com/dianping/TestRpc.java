@@ -7,7 +7,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class TestRpc {
     public static void main(String[] args) {
-        System.out.println("init");
         new ClassPathXmlApplicationContext("bean.xml");
     }
 }

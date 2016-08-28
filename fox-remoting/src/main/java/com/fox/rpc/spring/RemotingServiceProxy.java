@@ -43,7 +43,8 @@ public class RemotingServiceProxy implements FactoryBean{
         }
         this.serviceDiscovery= SpiServiceLoader.newExtension(RemotingServiceDiscovery.class);
         serviceDiscovery.init(this.zkAddress);
-        InvokerCfg invokerConfig= new InvokerCfg(this.interfaceClass,this.serviceName,this.serviceDiscovery);
+        InvokerCfg invokerConfig= new InvokerCfg(this.interfaceClass,this.iface,this.serviceName,this.serviceDiscovery);
+
         this.service= ServiceFactory.getService(invokerConfig);
     }
 

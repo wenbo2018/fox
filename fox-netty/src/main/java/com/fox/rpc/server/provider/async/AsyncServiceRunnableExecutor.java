@@ -40,6 +40,7 @@ public class AsyncServiceRunnableExecutor<T> implements Callable{
             Object result = handle(request);
             response.setResult(result);
         } catch (Exception e) {
+            System.out.println("handle result failure"+e);
             LOGGER.error("handle result failure", e);
             response.setException(e);
         }
@@ -48,6 +49,7 @@ public class AsyncServiceRunnableExecutor<T> implements Callable{
             @Override
             public void operationComplete(ChannelFuture channelFuture) throws Exception {
                 LOGGER.debug("Send response for request " + request.getRequestId());
+                System.out.println("Send response for request " + request.getRequestId());
             }
         });
         return null;
@@ -55,7 +57,7 @@ public class AsyncServiceRunnableExecutor<T> implements Callable{
 
     private Object handle(InvokeRequest request) throws Exception {
         // 获取服务对象
-        String serviceName = request.getInterfaceName();
+        String serviceName = request.getServiceName();
         String serviceVersion = request.getServiceVersion();
         if (StringUtil.isNotEmpty(serviceVersion)) {
             serviceName += "-" + serviceVersion;

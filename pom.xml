@@ -104,7 +104,7 @@
         <module>fox-netty</module>
         <module>fox-remoting</module>
         <module>fox-registry-zookeeper</module>
-        <module>fox-redistry-redis</module>
+        <module>fox-registry-redis</module>
         <module>fox-demos</module>
     </modules>
 

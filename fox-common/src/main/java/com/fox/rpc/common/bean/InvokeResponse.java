@@ -36,4 +36,13 @@ public class InvokeResponse {
     public void setResult(Object result) {
         this.result = result;
     }
+
+    @Override
+    public String toString() {
+        return "InvokeResponse{" +
+                "requestId='" + requestId + '\'' +
+                ", exception=" + exception +
+                ", result=" + result +
+                '}';
+    }
 }
