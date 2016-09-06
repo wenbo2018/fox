@@ -27,13 +27,10 @@
         <version.maven-surefire-plugin>2.18.1</version.maven-surefire-plugin>
         <version.maven-source-plugin>2.4</version.maven-source-plugin>
         <version.maven-javadoc-plugin>2.10.3</version.maven-javadoc-plugin>
-
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <encoding>UTF-8</encoding>
-
     </properties>
-
     <dependencyManagement>
         <dependencies>
             <!-- SLF4J -->

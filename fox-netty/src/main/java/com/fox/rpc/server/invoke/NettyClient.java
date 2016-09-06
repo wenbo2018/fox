@@ -8,8 +8,10 @@ import com.fox.rpc.remoting.invoker.config.ConnectInfo;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.util.AttributeKey;
-import java.util.concurrent.CountDownLatch;
+
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * Created by wenbo2018 on 2016/8/26.
@@ -28,14 +30,13 @@ public class NettyClient implements Client{
 
     private InvokeRequest invokeRequest;
 
-    CountDownLatch countDownLatch=new CountDownLatch(1);
+    private final ConcurrentHashMap<String, BlockingQueue<InvokeResponse>> responseMap = new ConcurrentHashMap<String, BlockingQueue<InvokeResponse>>();
 
     public NettyClient (EventLoopGroup group,ConnectInfo connectInfo) {
         bootstrap.group(group);
         bootstrap.channel(NioSocketChannel.class);
         bootstrap.handler(new ClientChannelInitializer(this));
         bootstrap.option(ChannelOption.TCP_NODELAY, true);
-
         this.connectInfo=connectInfo;
     }
 
@@ -43,9 +44,8 @@ public class NettyClient implements Client{
     public CallFuture send(InvokeRequest request) throws Exception {
         this.invokeRequest=request;
         CallFuture callFuture=new CallFuture(request);
-        FutureMap.putFuture(request.getRequestId(),callFuture);
+        //FutureMap.putFuture(request.getRequestId(),callFuture);
         if (channel.isWritable()) {
-            channel.attr(new AttributeKey<CountDownLatch>(request.getRequestId())).set(this.countDownLatch);
             channel.writeAndFlush(request);
         }
         return callFuture;
@@ -85,16 +85,27 @@ public class NettyClient implements Client{
 
     @Override
     public void processResponse(InvokeResponse invokeResponse) {
+
+        BlockingQueue<InvokeResponse> queue=new LinkedBlockingQueue<InvokeResponse>(1);
+        queue.add(invokeResponse);
+        responseMap.put(invokeResponse.getRequestId(), queue);
         this.invokeResponse=invokeResponse;
     }
 
     @Override
     public InvokeResponse getResponse() {
-        System.out.println();
+
+        String messageId=invokeRequest.getRequestId();
+        InvokeResponse invokeResponse=null;
         try {
-            channel.attr(new AttributeKey<CountDownLatch>(this.invokeRequest.getRequestId())).get().await();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            invokeResponse=responseMap.get(messageId).take();
+        } catch (final InterruptedException ex) {
+
+        } finally {
+            responseMap.remove(messageId);
+        }
+        while (this.invokeResponse==null) {
+
         }
         return this.invokeResponse;
     }

@@ -17,8 +17,8 @@
         <bean id="helloService" class="com.dianping.HelloServiceImpl"/>
         <bean id="helloTestService" class="com.fox.rpc.spring.RemotingServiceRegistry" init-method="init">
             <property name="servicePort" value="4080"/>
-            <property name="serviceAddress" value="192.168.1.101"/>
-            <property name="registryAddress" value="115.28.101.73:2181"/>
+            <property name="serviceAddress" value="202.38.214.167"/>
+            <property name="registryAddress" value="202.38.214.167:2181"/>
             <property name="registryPort" value="2181"/>
             <property name="services" >
                 <map>
