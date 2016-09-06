@@ -68,10 +68,7 @@ public class ServiceInvocationProxy<T> implements InvocationHandler{
         // 创建 RPC 客户端对象并发送 RPC 请求
         Client client = clientFactory.getClient(new ConnectInfo(host,port));
         client.send(request);
-        Robot r   =   new   Robot();
 
-
-        r.delay(3000);
         //client.setContext(host,port);
         long time = System.currentTimeMillis();
         //CallFuture callFuture=client.send(request);

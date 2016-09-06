@@ -4,8 +4,11 @@ import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.remoting.invoker.api.CallFuture;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import io.netty.util.AttributeKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.concurrent.CountDownLatch;
 
 
 /**
@@ -23,15 +26,9 @@ public class NettyClientHandler extends SimpleChannelInboundHandler<InvokeRespon
 
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, InvokeResponse invokeResponse) throws Exception {
-//        String requestId = invokeResponse.getRequestId();
-//        CallFuture callFuture =FutureMap.getFuture(requestId);
-//        System.out.println("客户端收到请求"+invokeResponse.toString());
-//        if (callFuture!=null) {
-//            FutureMap.removeFuture(requestId);
-//            callFuture.processResponse(invokeResponse);
-//        }
         nettyClient.processResponse(invokeResponse);
-
+        channelHandlerContext.channel().attr(
+                new AttributeKey<CountDownLatch>(invokeResponse.getRequestId())).get().countDown();
     }
 
     @Override
