@@ -8,6 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * Created by wenbo2018 on 2016/8/26.
  */
 public class FutureMap {
+
     private static ConcurrentHashMap<String,CallFuture> pendingRPC = new ConcurrentHashMap<String,CallFuture>();
 
     public static void putFuture(String requestId,CallFuture callFuture) {
@@ -21,7 +22,5 @@ public class FutureMap {
     public static void removeFuture(String requestId) {
         pendingRPC.remove(requestId);
     }
-
-
 
 }

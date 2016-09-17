@@ -9,6 +9,9 @@ import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.LinkedBlockingQueue;
+
 /**
  * Created by wenbo2018 on 2016/8/26.
  */
@@ -24,21 +27,33 @@ public class NettyClient implements Client{
 
     private InvokeResponse invokeResponse;
 
+    private InvokeRequest invokeRequest;
+
+    private static ConcurrentHashMap<String, LinkedBlockingQueue<InvokeResponse>> responseMap = new ConcurrentHashMap<String,LinkedBlockingQueue<InvokeResponse>>();
+
     public NettyClient (EventLoopGroup group,ConnectInfo connectInfo) {
         bootstrap.group(group);
         bootstrap.channel(NioSocketChannel.class);
         bootstrap.handler(new ClientChannelInitializer(this));
         bootstrap.option(ChannelOption.TCP_NODELAY, true);
-
         this.connectInfo=connectInfo;
     }
 
     @Override
-    public CallFuture send(InvokeRequest request) throws Exception {
+    public CallFuture send(final InvokeRequest request) throws Exception {
+        this.invokeRequest=request;
+        final LinkedBlockingQueue<InvokeResponse> queue=new LinkedBlockingQueue<InvokeResponse>(1);
+
         CallFuture callFuture=new CallFuture(request);
-        FutureMap.putFuture(request.getRequestId(),callFuture);
-        if (channel.isWritable())
-        channel.writeAndFlush(request);
+        try {
+            responseMap.put(request.getRequestId(),queue);
+            if (channel.isWritable()) {
+                channel.writeAndFlush(request);
+            }
+        } catch (Exception e) {
+            responseMap.remove(request.getRequestId());
+        }
+
         return callFuture;
     }
 
@@ -60,7 +75,7 @@ public class NettyClient implements Client{
          channelFuture.addListener(new ChannelFutureListener() {
              @Override
              public void operationComplete(ChannelFuture channelFuture) throws Exception {
-                 System.out.println("连接已经建立");
+
              }
          });
         if (channelFuture.isSuccess()) {
@@ -76,12 +91,25 @@ public class NettyClient implements Client{
 
     @Override
     public void processResponse(InvokeResponse invokeResponse) {
+        LinkedBlockingQueue<InvokeResponse> queue=responseMap.get(invokeResponse.getRequestId());
+        queue.add(invokeResponse);
         this.invokeResponse=invokeResponse;
     }
 
     @Override
     public InvokeResponse getResponse() {
-        System.out.println("ddddd");
+        String messageId=invokeRequest.getRequestId();
+        InvokeResponse invokeResponse=null;
+        try {
+            invokeResponse=responseMap.get(messageId).take();
+        } catch (final InterruptedException ex) {
+
+        } finally {
+            responseMap.remove(messageId);
+        }
+        while (this.invokeResponse==null) {
+
+        }
         return this.invokeResponse;
     }
 }
