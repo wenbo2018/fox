@@ -8,7 +8,6 @@ import com.fox.rpc.remoting.invoker.config.ConnectInfo;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.socket.nio.NioSocketChannel;
-
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -43,7 +42,6 @@ public class NettyClient implements Client{
     public CallFuture send(final InvokeRequest request) throws Exception {
         this.invokeRequest=request;
         final LinkedBlockingQueue<InvokeResponse> queue=new LinkedBlockingQueue<InvokeResponse>(1);
-
         CallFuture callFuture=new CallFuture(request);
         try {
             responseMap.put(request.getRequestId(),queue);
@@ -53,7 +51,6 @@ public class NettyClient implements Client{
         } catch (Exception e) {
             responseMap.remove(request.getRequestId());
         }
-
         return callFuture;
     }
 

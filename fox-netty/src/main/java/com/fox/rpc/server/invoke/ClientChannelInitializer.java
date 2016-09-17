@@ -7,6 +7,7 @@ import com.fox.rpc.common.codec.RpcEncoder;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
+import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 
 /**
  * Created by wenbo2018 on 2016/8/26.
@@ -23,6 +24,7 @@ public class ClientChannelInitializer extends ChannelInitializer<SocketChannel> 
     protected void initChannel(SocketChannel socketChannel) throws Exception {
         ChannelPipeline pipeline = socketChannel.pipeline();
         pipeline.addLast(new RpcEncoder(InvokeRequest.class)); // 编码 RPC 请求
+        pipeline.addLast(new LengthFieldBasedFrameDecoder(65536, 0, 4, 0, 0));
         pipeline.addLast(new RpcDecoder(InvokeResponse.class)); // 解码 RPC 响应
         pipeline.addLast(new NettyClientHandler(this.nettyClient)); // 处
     }

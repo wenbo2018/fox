@@ -12,6 +12,7 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.HashMap;
@@ -29,7 +30,6 @@ public class NettyServer implements Server {
     private String serviceIp;
 
     private int servicePort;
-
 
 
     @Override
@@ -54,6 +54,7 @@ public class NettyServer implements Server {
                 @Override
                 public void initChannel(SocketChannel channel) throws Exception {
                     ChannelPipeline pipeline = channel.pipeline();
+                    pipeline.addLast(new LengthFieldBasedFrameDecoder(65536, 0, 4, 0, 0));
                     pipeline.addLast(new RpcDecoder(InvokeRequest.class)); // 解码 RPC 请求
                     pipeline.addLast(new RpcEncoder(InvokeResponse.class)); // 编码 RPC 响应
                     pipeline.addLast(new NettyServerHandler(handlerMap)); // 处理 RPC 请求
@@ -61,7 +62,6 @@ public class NettyServer implements Server {
             });
             bootstrap.option(ChannelOption.SO_BACKLOG, 1024);
             bootstrap.childOption(ChannelOption.SO_KEEPALIVE, true);
-            System.out.println("rpc服务已经启动");
             ChannelFuture future = bootstrap.bind(serviceIp,servicePort).sync();
             LOGGER.debug("server started on port {}",serviceIp+":"+servicePort);
             future.channel().closeFuture().sync();
