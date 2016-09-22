@@ -51,10 +51,6 @@ public class RemotingServiceRegistry implements ApplicationContextAware{
     private  String registryPort;
 
 
-    //线程池配置信息
-
-
-
     public void init() {
         LOGGER.debug("service begin");
         Map<String, Object> handlerMap=new HashMap<String,Object>();

@@ -6,8 +6,6 @@ import com.fox.rpc.registry.RemotingServiceDiscovery;
 import com.fox.rpc.remoting.ServiceFactory;
 import com.fox.rpc.remoting.invoker.config.InvokerCfg;
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.FactoryBean;
 
 /**
@@ -15,7 +13,8 @@ import org.springframework.beans.factory.FactoryBean;
  */
 public class RemotingServiceProxy implements FactoryBean{
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ServiceFactory.class);
+    private static final org.apache.log4j.Logger LOGGER= org.apache.log4j.Logger.getLogger(RemotingServiceProxy.class);
+
 
     private String serviceName;
 
@@ -32,7 +31,7 @@ public class RemotingServiceProxy implements FactoryBean{
     private String zkAddress;
 
     public void init() {
-
+        LOGGER.info("service init:"+serviceName);
         if (StringUtils.isBlank(iface)) {
             throw new IllegalArgumentException("invalid interface:" + iface);
         }
@@ -44,7 +43,6 @@ public class RemotingServiceProxy implements FactoryBean{
         this.serviceDiscovery= SpiServiceLoader.newExtension(RemotingServiceDiscovery.class);
         serviceDiscovery.init(this.zkAddress);
         InvokerCfg invokerConfig= new InvokerCfg(this.interfaceClass,this.iface,this.serviceName,this.serviceDiscovery);
-
         this.service= ServiceFactory.getService(invokerConfig);
     }
 
