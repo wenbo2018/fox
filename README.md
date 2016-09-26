@@ -1,5 +1,4 @@
 #fox
-![Gitter](https://badges.gitter.im/Join Chat.svg)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/wenbo2018/fox/)
 
 
