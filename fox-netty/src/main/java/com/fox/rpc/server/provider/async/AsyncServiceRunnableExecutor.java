@@ -49,14 +49,12 @@ public class AsyncServiceRunnableExecutor<T> implements Callable{
             @Override
             public void operationComplete(ChannelFuture channelFuture) throws Exception {
                 LOGGER.debug("Send response for request " + request.getRequestId());
-                System.out.println("Send response for request " + request.getRequestId());
             }
         });
         return null;
     }
 
     private Object handle(InvokeRequest request) throws Exception {
-        // 获取服务对象
         String serviceName = request.getServiceName();
         String serviceVersion = request.getServiceVersion();
         if (StringUtil.isNotEmpty(serviceVersion)) {
@@ -67,16 +65,10 @@ public class AsyncServiceRunnableExecutor<T> implements Callable{
         if (serviceBean == null) {
             throw new RuntimeException(String.format("can not find service bean by key: %s", serviceName));
         }
-        // 获取反射调用所需的参数
         Class<?> serviceClass = serviceBean.getClass();
         String methodName = request.getMethodName();
         Class<?>[] parameterTypes = request.getParameterTypes();
         Object[] parameters = request.getParameters();
-        // 执行反射调用
-//        Method method = serviceClass.getMethod(methodName, parameterTypes);
-//        method.setAccessible(true);
-//        return method.invoke(serviceBean, parameters);
-        // 使用 CGLib 执行反射调用
         FastClass serviceFastClass = FastClass.create(serviceClass);
         FastMethod serviceFastMethod = serviceFastClass.getMethod(methodName, parameterTypes);
         return serviceFastMethod.invoke(serviceBean, parameters);

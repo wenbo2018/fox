@@ -24,9 +24,9 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>com.spring-rpc</groupId>
+      <groupId>rpc.fox</groupId>
       <artifactId>fox-remoting</artifactId>
-      <version>1.3.0</version>
+      <version>1.0.0</version>
     </dependency>
     <dependency>
       <groupId>com.dianping</groupId>
@@ -56,9 +56,9 @@
       <version>3.1.2.RELEASE</version>
     </dependency>
     <dependency>
-      <groupId>com.spring-rpc</groupId>
+      <groupId>rpc.fox</groupId>
       <artifactId>fox-registry-zookeeper</artifactId>
-      <version>1.3.0</version>
+      <version>1.0.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
     <dependency>
@@ -67,9 +67,9 @@
       <version>3.1.2.RELEASE</version>
     </dependency>
     <dependency>
-      <groupId>com.spring-rpc</groupId>
+      <groupId>rpc.fox</groupId>
       <artifactId>fox-netty</artifactId>
-      <version>1.3.0</version>
+      <version>1.0.0</version>
     </dependency>
     <dependency>
       <groupId>com.dianping</groupId>
@@ -77,9 +77,9 @@
       <version>1.0-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <groupId>com.spring-rpc</groupId>
+      <groupId>rpc.fox</groupId>
       <artifactId>fox-netty</artifactId>
-      <version>1.3.0</version>
+      <version>1.0.0</version>
     </dependency>
   </dependencies>
 </project>
