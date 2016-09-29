@@ -1,5 +1,7 @@
 package com.fox.rpc;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.ServiceLoader;
 import java.util.concurrent.ConcurrentHashMap;
@@ -29,5 +31,27 @@ public class SpiServiceLoader {
             return service;
         }
         return null;
+    }
+
+
+    public static <T> List<T> getExtensionList(Class<T> clazz) {
+        List<T> extensions = (List<T>) extensionServices.get(clazz);
+        if (extensions == null) {
+            extensions = newExtensionList(clazz);
+            if (!extensions.isEmpty()) {
+                extensionServices.put(clazz, extensions);
+            }
+        }
+        return extensions;
+    }
+
+
+    public static <T> List<T> newExtensionList(Class<T> clazz) {
+        ServiceLoader<T> serviceLoader = ServiceLoader.load(clazz);
+        List<T> extensions = new ArrayList<T>();
+        for (T service : serviceLoader) {
+            extensions.add(service);
+        }
+        return extensions;
     }
 }

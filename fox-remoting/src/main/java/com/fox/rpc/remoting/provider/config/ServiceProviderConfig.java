@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * Created by shenwenbo on 16/8/7.
  */
-public class ProviderCfg<T> {
+public class ServiceProviderConfig<T> {
 
     private Map<String, Object> handlerMap = new HashMap<String, Object>();
 
@@ -17,8 +17,9 @@ public class ProviderCfg<T> {
 
     private String serviceAddress;
 
-    private RemotingServiceRegistry remotingServiceRegistry;
+    private String serviceName;
 
+    private RemotingServiceRegistry remotingServiceRegistry;
 
     public String getServicePort() {
         return servicePort;
@@ -50,5 +51,13 @@ public class ProviderCfg<T> {
 
     public void setRemotingServiceRegistry(RemotingServiceRegistry remotingServiceRegistry) {
         this.remotingServiceRegistry = remotingServiceRegistry;
+    }
+
+    public String getServiceName() {
+        return serviceName;
+    }
+
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
     }
 }

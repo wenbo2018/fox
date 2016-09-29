@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/common")
 public class CommonController {
 
-
-
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model) {
 

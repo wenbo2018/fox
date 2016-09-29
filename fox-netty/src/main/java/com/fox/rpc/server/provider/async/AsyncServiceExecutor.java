@@ -19,15 +19,15 @@ public class AsyncServiceExecutor {
 
     public static void  init() {
         if(executorService == null){
-                if(executorService == null){
-                    executorService = new ThreadPoolExecutor(16, 16, 600L, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(65536));
-                }
+            if(executorService == null){
+                executorService = new ThreadPoolExecutor(16, 16, 600L, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(65536));
+            }
         }
     }
 
     public static void  submitCallback(ChannelHandlerContext ctx, InvokeRequest request, Object service) {
-        AsyncServiceRunnableExecutor asyncServiceRunnableExecutor=new
-                AsyncServiceRunnableExecutor(ctx,request,service);
+        AsyncServiceRunnable asyncServiceRunnableExecutor=new
+                AsyncServiceRunnable(ctx,request,service);
         executorService.submit(asyncServiceRunnableExecutor);
     }
 

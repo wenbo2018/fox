@@ -20,11 +20,7 @@
     </properties>
 
     <dependencies>
-        <!-- CGLib -->
-        <dependency>
-            <groupId>cglib</groupId>
-            <artifactId>cglib</artifactId>
-        </dependency>
+
         <!-- RPC Common -->
         <dependency>
             <groupId>rpc.fox</groupId>

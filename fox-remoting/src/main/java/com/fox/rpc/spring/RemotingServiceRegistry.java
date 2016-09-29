@@ -6,7 +6,7 @@ import com.fox.rpc.common.util.StringUtil;
 import com.fox.rpc.registry.RegisterCfg;
 import com.fox.rpc.remoting.ServiceFactory;
 import com.fox.rpc.remoting.provider.api.ThreadPool;
-import com.fox.rpc.remoting.provider.config.ProviderCfg;
+import com.fox.rpc.remoting.provider.config.ServiceProviderConfig;
 import org.apache.commons.collections4.MapUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -64,7 +64,7 @@ public class RemotingServiceRegistry implements ApplicationContextAware{
         }
 
         //封装服务提供信息
-        ProviderCfg providerCfg=new ProviderCfg();
+        ServiceProviderConfig providerCfg=new ServiceProviderConfig();
         providerCfg.setServicePort(this.servicePort);
         providerCfg.setServiceAddress(this.serviceAddress);
         providerCfg.setHandlerMap(handlerMap);
