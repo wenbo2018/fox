@@ -24,45 +24,11 @@ public class ServiceFactory {
     private static final Logger LOGGER = LoggerFactory.getLogger(ServiceFactory.class);
 
     static ServiceProxy serviceProxy = ServiceProxyLoader.getServiceProxy();
-    /**
-     * 获取服务
-     * @param invokerConfig
-     * @param <T>
-     * @return
-     */
+
     public static <T> T getService(InvokerConfig invokerConfig)  {
         return serviceProxy.getProxy(invokerConfig);
     }
 
-
-//    public static void registryService(RegisterCfg registerCfg,ServiceProviderConfig providerCfg) {
-//        LOGGER.info("begin registery");
-//        RemotingServiceRegistry remotingServiceRegistry=SpiServiceLoader.newExtension(RemotingServiceRegistry.class);
-//        remotingServiceRegistry.setContext(registerCfg);
-//        if (remotingServiceRegistry != null) {
-//            for (String interfaceName : registerCfg.getHandlerMap().keySet()) {
-//                remotingServiceRegistry.register(interfaceName,providerCfg.getServiceAddress()+":"+providerCfg.getServicePort());
-//                LOGGER.debug("register service: {} => {}", interfaceName,providerCfg.getServiceAddress());
-//            }
-//        } else {
-//            LOGGER.error("register center fail");
-//        }
-//    }
-//
-//    public static void publishService(ServiceProviderConfig cfg) {
-//        Server server= SpiServiceLoader.newExtension(Server.class);
-//        server.setContext(cfg);
-//        try {
-//            server.star();
-//        } catch (Exception e) {
-//            System.out.println(e);
-//            LOGGER.error("Service publish fail",e);
-//        }
-//    }
-
-
-
-    //发布服务
     public static void addService(List<ProviderConfig<?>> providerConfigList) {
         publishService(providerConfigList);
         List<Server> servers = SpiServiceLoader.getExtensionList(Server.class);
@@ -88,7 +54,7 @@ public class ServiceFactory {
             LOGGER.error("serverConfig is  null");
         }
     }
-    //将服务注册到注册中心
+
     public static void  publishService(List<ProviderConfig<?>> providerConfigList){
         RemotingServiceRegistry remotingServiceRegistry=SpiServiceLoader.newExtension(RemotingServiceRegistry.class);
         if (providerConfigList != null) {
