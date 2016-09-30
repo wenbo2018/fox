@@ -1,6 +1,6 @@
 package com.fox.rpc.registry.zookeeper;
 
-import com.fox.rpc.registry.RegisterCfg;
+import com.fox.rpc.registry.RegistryConfig;
 import com.fox.rpc.registry.RemotingServiceRegistry;
 import org.I0Itec.zkclient.ZkClient;
 import org.slf4j.Logger;
@@ -15,7 +15,7 @@ public class ZooKeeperServiceRegistry implements RemotingServiceRegistry {
 
     private static ZkClient zkClient;
 
-    private RegisterCfg cfg;
+    private RegistryConfig cfg;
 
 
     private void initZk() {
@@ -49,7 +49,7 @@ public class ZooKeeperServiceRegistry implements RemotingServiceRegistry {
     }
 
     @Override
-    public void setContext(RegisterCfg cfg) {
+    public void setContext(RegistryConfig cfg) {
         this.cfg=cfg;
     }
 }
