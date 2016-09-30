@@ -1,6 +1,5 @@
 package com.dianping;
 
-import com.dianping.dto.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -21,11 +20,11 @@ public class HelloServiceTest {
     @Test
     public void test() {
         System.out.println(helloService.hello("shenwenbo"));
-        System.out.println(helloService.hello("wngayuehua"));
-        User user=new User();
-        user.setPassword("123");
-        user.setUsername("wenbo2018");
-        System.out.println(helloService.changeUser(user).toString());
+//        System.out.println(helloService.hello("wngayuehua"));
+//        User user=new User();
+//        user.setPassword("123");
+//        user.setUsername("wenbo2018");
+//        System.out.println(helloService.changeUser(user).toString());
     }
 
 }

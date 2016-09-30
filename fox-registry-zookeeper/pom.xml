@@ -7,9 +7,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.spring-rpc</groupId>
+        <groupId>rpc.fox</groupId>
         <artifactId>fox-parent</artifactId>
-        <version>1.3.0</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>fox-registry-zookeeper</artifactId>
@@ -38,13 +38,13 @@
         </dependency>
         <!-- RPC Common -->
         <dependency>
-            <groupId>com.spring-rpc</groupId>
+            <groupId>rpc.fox</groupId>
             <artifactId>fox-common</artifactId>
             <version>${project.version}</version>
         </dependency>
         <!-- RPC Registry -->
         <dependency>
-            <groupId>com.spring-rpc</groupId>
+            <groupId>rpc.fox</groupId>
             <artifactId>fox-remoting</artifactId>
             <version>${project.version}</version>
         </dependency>
