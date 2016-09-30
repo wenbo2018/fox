@@ -1,25 +1,19 @@
 package com.fox.rpc.server.provider;
 
-import com.fox.rpc.registry.RemotingServiceRegistry;
 import com.fox.rpc.remoting.provider.AbstractServer;
-import com.fox.rpc.remoting.provider.config.ServiceProviderConfig;
 import com.fox.rpc.remoting.provider.config.ServerConfig;
-import com.fox.rpc.remoting.provider.process.RequestProcessor;
+import com.fox.rpc.remoting.provider.config.ServiceProviderConfig;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class NettyServer extends AbstractServer {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(NettyServer.class);
+    private static final org.apache.log4j.Logger LOGGER = org.apache.log4j.Logger.getLogger(NettyServer.class);
 
     private ServerBootstrap bootstrap;
 
@@ -27,11 +21,6 @@ public class NettyServer extends AbstractServer {
 
     private EventLoopGroup workerGroup;
 
-    private RequestProcessor requestProcessor;
-
-    private RemotingServiceRegistry serviceRegistry;
-
-    private Map<String, Object> handlerMap = new HashMap<String, Object>();
 
     private String serviceIp;
 
@@ -55,15 +44,13 @@ public class NettyServer extends AbstractServer {
 
     @Override
     public void setContext(ServiceProviderConfig cfg) {
-        this.serviceRegistry =cfg.getRemotingServiceRegistry();
-        this.handlerMap = cfg.getHandlerMap();
         this.serviceIp=cfg.getServiceAddress();
         this.servicePort=Integer.parseInt(cfg.getServicePort());
     }
 
     @Override
     public boolean isStarted() {
-        return this.isStarted();
+        return this.started;
     }
 
     @Override
@@ -76,12 +63,19 @@ public class NettyServer extends AbstractServer {
         if (!started) {
             ChannelFuture future = null;
             try {
-                future = this.bootstrap.bind(serviceIp,servicePort).sync();
-                future.channel().closeFuture().sync();
+                future = this.bootstrap.bind(serverConfig.getIp(),serverConfig.getPort()).sync();
+                future.addListener(new ChannelFutureListener() {
+                    @Override
+                    public void operationComplete(ChannelFuture future) throws Exception {
+                         LOGGER.info("netty service stared");
+                    }
+                });
+                //future.channel().closeFuture().sync();
             } catch (InterruptedException e) {
                 LOGGER.error("Netty start error:"+e);
             }
-            LOGGER.debug("server started on port {}",serviceIp+":"+servicePort);
+            this.started=true;
+            LOGGER.debug("server started on port :"+serviceIp+":"+servicePort);
         }
     }
 

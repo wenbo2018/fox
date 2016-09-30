@@ -12,7 +12,7 @@ public class SpringUtil implements ApplicationContextAware {
     private static ApplicationContext applicationContext;
 
     public static Object fetchSpringBean(ProviderConfig config) {
-          return  applicationContext.getBean(config.getUrl());
+          return  applicationContext.getBean(config.getServiceName());
     }
 
     @Override

@@ -44,12 +44,6 @@ public class AsyncServiceRunnable<T> implements Callable{
         }
         // 写入 RPC 响应对象并自动关闭连接
         channel.write(response);
-        /*channel.writeAndFlush(response).addListener(new ChannelFutureListener() {
-            @Override
-            public void operationComplete(ChannelFuture channelFuture) throws Exception {
-                LOGGER.debug("Send response for request " + request.getRequestId());
-            }
-        });*/
         return null;
     }
 

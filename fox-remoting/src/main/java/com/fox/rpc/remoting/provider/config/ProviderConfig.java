@@ -7,7 +7,7 @@ public class ProviderConfig<T> {
 
     private Class<?> serviceInterface;
 
-    private String url;
+    private String serviceName;
 
     private String version;
 
@@ -28,12 +28,12 @@ public class ProviderConfig<T> {
         this.serviceInterface = serviceInterface;
     }
 
-    public String getUrl() {
-        return url;
+    public String getServiceName() {
+        return serviceName;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
     }
 
     public String getVersion() {

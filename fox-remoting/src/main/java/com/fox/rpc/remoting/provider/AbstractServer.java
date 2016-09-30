@@ -33,7 +33,6 @@ public abstract class AbstractServer implements Server {
         this.serverConfig=serverConfig;
         this.requestProcessor= RequestProcessorFactory.selectProcessor();
         return this.requestProcessor;
-
     }
 
     public void stop() {

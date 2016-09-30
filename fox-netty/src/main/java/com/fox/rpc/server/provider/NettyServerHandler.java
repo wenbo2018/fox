@@ -19,9 +19,7 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<InvokeReques
 
     @Override
     public void channelRead0(final ChannelHandlerContext ctx, InvokeRequest request) throws Exception {
-        //线程池处理
-        //AsyncServiceExecutor.submitCallback(ctx,request,handlerMap.get(request.getServiceName()));
-
+        System.err.println("收到请求"+request.toString());
         this.nettyServer.processRequest(request,new NettyChannel(ctx.channel()));
     }
 

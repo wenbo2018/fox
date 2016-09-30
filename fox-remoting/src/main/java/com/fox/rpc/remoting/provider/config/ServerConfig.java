@@ -10,8 +10,10 @@ public class ServerConfig {
     private int corePoolSize = Constants.PROVIDER_POOL_CORE_SIZE;
     private int maxPoolSize = Constants.PROVIDER_POOL_MAX_SIZE;
     private int workQueueSize = Constants.PROVIDER_POOL_QUEUE_SIZE;
+    //服务端口号，默认在4080发布
     private int port = Constants.DEFAULT_PORT;
-    private String ip;
+    //服务发布机器ip
+    private String ip="127.0.0.1";
 
 
     public int getCorePoolSize() {

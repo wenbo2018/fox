@@ -4,13 +4,8 @@ import com.fox.rpc.common.util.SerializationUtil;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
-
 import java.util.List;
 
-/**
- * RPC 解码器
- *
- */
 public class RpcDecoder extends ByteToMessageDecoder {
 
     private Class<?> genericClass;

@@ -5,7 +5,6 @@ import com.fox.rpc.remoting.provider.async.AsyncServiceRunnable;
 import com.fox.rpc.remoting.provider.config.ProviderConfig;
 import com.fox.rpc.remoting.provider.config.ServiceProviderConfig;
 
-import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -26,7 +25,7 @@ public class ThreadPoolRequestProcessor<T> implements RequestProcessor<T>{
     public ThreadPoolRequestProcessor () {
         if(executorService == null){
             if(executorService == null){
-                executorService = new ThreadPoolExecutor(16, 16, 600L, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(65536));
+                executorService = new ThreadPoolExecutor(5, 5, 600L, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(65536));
             }
         }
     }
@@ -44,7 +43,7 @@ public class ThreadPoolRequestProcessor<T> implements RequestProcessor<T>{
 
     @Override
     public void addService(ProviderConfig<T> providerConfig) {
-        cacheServices.put(providerConfig.getUrl(),providerConfig);
+        cacheServices.put(providerConfig.getServiceName(),providerConfig);
     }
 
 

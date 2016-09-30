@@ -13,14 +13,14 @@ public class ZooKeeperServiceRegistry implements RemotingServiceRegistry {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ZooKeeperServiceRegistry.class);
 
-    private  ZkClient zkClient;
+    private static ZkClient zkClient;
 
     private RegisterCfg cfg;
 
 
     private void initZk() {
         // 创建 ZooKeeper 客户端
-        this.zkClient = new ZkClient(cfg.getAddress(), Constant.ZK_SESSION_TIMEOUT, Constant.ZK_CONNECTION_TIMEOUT);
+        zkClient = new ZkClient("127.0.0.1", Constant.ZK_SESSION_TIMEOUT, Constant.ZK_CONNECTION_TIMEOUT);
         LOGGER.debug("connect zookeeper");
     }
 

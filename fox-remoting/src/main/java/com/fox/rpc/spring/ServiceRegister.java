@@ -6,9 +6,7 @@ import com.fox.rpc.remoting.provider.config.ProviderConfig;
 import com.fox.rpc.remoting.provider.config.ServerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -32,15 +30,12 @@ public class ServiceRegister {
         serverConfig.setPort(this.getPort());
         serverConfig.setWorkQueueSize(this.getWorkQueueSize());
         serverConfig.setMaxPoolSize(this.getMaxPoolSize());
-
-
         LOGGER.debug("service begin");
-        Map<String, Object> handlerMap=new HashMap<String,Object>();
         List<ProviderConfig<?>> providerConfigList = new ArrayList<ProviderConfig<?>>();
         if (services!=null) {
-            for (String url : services.keySet()) {
-                ProviderConfig config=new ProviderConfig(services.get(url));
-                config.setUrl(url);
+            for (String serviceName : services.keySet()) {
+                ProviderConfig config=new ProviderConfig(services.get(serviceName));
+                config.setServiceName(serviceName);
                 config.setServerConfig(serverConfig);
                 providerConfigList.add(config);
             }

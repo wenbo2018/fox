@@ -79,9 +79,9 @@ public class RemotingServiceRegistry implements ApplicationContextAware{
 
         threadPool.init();
         // 将服务注册到注册中心
-        ServiceFactory.registryService(registerCfg,providerCfg);
-        //启动服务器
-        ServiceFactory.publishService(providerCfg);
+//        ServiceFactory.registryService(registerCfg,providerCfg);
+//        //启动服务器
+//        ServiceFactory.publishService(providerCfg);
     }
 
 

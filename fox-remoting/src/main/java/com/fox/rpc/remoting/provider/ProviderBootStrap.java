@@ -4,6 +4,7 @@ package com.fox.rpc.remoting.provider;
  * Created by shenwenbo on 2016/9/27.
  */
 public class ProviderBootStrap {
+
     static volatile boolean isInitialized = false;
 
     public static void init() {
