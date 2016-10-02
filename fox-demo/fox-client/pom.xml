@@ -24,16 +24,6 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>rpc.fox</groupId>
-      <artifactId>fox-remoting</artifactId>
-      <version>1.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>com.dianping</groupId>
-      <artifactId>fox-api</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
       <version>3.1.2.RELEASE</version>
@@ -44,17 +34,22 @@
       <artifactId>spring-context-support</artifactId>
       <version>3.1.2.RELEASE</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>3.1.2.RELEASE</version>
+    </dependency>
 
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
       <version>3.1.2.RELEASE</version>
     </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-beans</artifactId>
-      <version>3.1.2.RELEASE</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.springframework</groupId>-->
+      <!--<artifactId>spring-beans</artifactId>-->
+      <!--<version>3.1.2.RELEASE</version>-->
+    <!--</dependency>-->
     <dependency>
       <groupId>rpc.fox</groupId>
       <artifactId>fox-registry-zookeeper</artifactId>
@@ -62,24 +57,24 @@
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
-      <version>3.1.2.RELEASE</version>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>3.1.2.RELEASE</version>
     </dependency>
     <dependency>
       <groupId>rpc.fox</groupId>
       <artifactId>fox-netty</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>rpc.fox</groupId>
+      <artifactId>fox-remoting</artifactId>
       <version>1.0.0</version>
     </dependency>
     <dependency>
       <groupId>com.dianping</groupId>
       <artifactId>fox-api</artifactId>
       <version>1.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>rpc.fox</groupId>
-      <artifactId>fox-netty</artifactId>
-      <version>1.0.0</version>
     </dependency>
   </dependencies>
 </project>

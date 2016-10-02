@@ -22,14 +22,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="fox-api" />
-        <module name="fox-client" />
-        <module name="fox-common" />
-        <module name="fox-netty" />
-        <module name="fox-registry-redis" />
-        <module name="fox-registry-zookeeper" />
-        <module name="fox-remoting" />
-        <module name="fox-server-demo" />
+        <module name="fox" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

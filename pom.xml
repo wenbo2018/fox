@@ -14,10 +14,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.slf4j>1.7.10</version.slf4j>
+        <version.log4j>1.2.14</version.log4j>
         <version.spring>3.1.2.RELEASE</version.spring>
         <version.netty>4.0.26.Final</version.netty>
-        <version.protostuff>1.0.9</version.protostuff>
-        <version.objenesis>2.1</version.objenesis>
+
         <version.cglib>3.1</version.cglib>
         <version.zookeeper>3.4.6</version.zookeeper>
         <version.zkclient>0.4</version.zkclient>
@@ -30,6 +30,7 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <encoding>UTF-8</encoding>
+        <fox.version>${project.version}</fox.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -39,35 +40,11 @@
                 <artifactId>slf4j-log4j12</artifactId>
                 <version>${version.slf4j}</version>
             </dependency>
-
             <!-- Netty -->
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
                 <version>${version.netty}</version>
-            </dependency>
-            <!-- Protostuff -->
-            <dependency>
-                <groupId>com.dyuproject.protostuff</groupId>
-                <artifactId>protostuff-core</artifactId>
-                <version>${version.protostuff}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.dyuproject.protostuff</groupId>
-                <artifactId>protostuff-runtime</artifactId>
-                <version>${version.protostuff}</version>
-            </dependency>
-            <!-- Objenesis -->
-            <dependency>
-                <groupId>org.objenesis</groupId>
-                <artifactId>objenesis</artifactId>
-                <version>${version.objenesis}</version>
-            </dependency>
-            <!-- CGLib -->
-            <dependency>
-                <groupId>cglib</groupId>
-                <artifactId>cglib</artifactId>
-                <version>${version.cglib}</version>
             </dependency>
             <!-- ZooKeeper -->
             <dependency>
@@ -97,7 +74,7 @@
             <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
-                <version>1.2.14</version>
+                <version>${version.log4j}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -109,6 +86,7 @@
         <module>fox-registry-zookeeper</module>
         <module>fox-registry-redis</module>
         <module>fox-demo</module>
+        <module>fox</module>
     </modules>
 
 </project>
