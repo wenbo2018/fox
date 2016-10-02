@@ -9,6 +9,8 @@ public class InvokeResponse {
     private Exception exception;
     private Object result;
 
+    private String serialize;
+
     public boolean hasException() {
         return exception != null;
     }
@@ -35,6 +37,14 @@ public class InvokeResponse {
 
     public void setResult(Object result) {
         this.result = result;
+    }
+
+    public String getSerialize() {
+        return serialize;
+    }
+
+    public void setSerialize(String serialize) {
+        this.serialize = serialize;
     }
 
     @Override

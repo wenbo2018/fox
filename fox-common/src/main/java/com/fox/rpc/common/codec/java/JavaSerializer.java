@@ -1,6 +1,7 @@
 package com.fox.rpc.common.codec.java;
 
 import com.fox.rpc.common.codec.AbstractSerializer;
+import com.fox.rpc.common.common.Constants;
 
 import java.io.*;
 
@@ -8,6 +9,10 @@ import java.io.*;
  * Created by shenwenbo on 2016/9/30.
  */
 public class JavaSerializer extends AbstractSerializer {
+
+
+    private byte serializerType= Constants.JAVA_DEFAULT_SERIALIEE_byte;
+
     @Override
     public <T> byte[] serialize(T obj) {
         if(obj==null) throw new NullPointerException();
@@ -37,5 +42,10 @@ public class JavaSerializer extends AbstractSerializer {
             e.printStackTrace();
         }
         return obj;
+    }
+
+    @Override
+    public byte getSerializerType() {
+        return this.serializerType;
     }
 }

@@ -3,6 +3,7 @@ package com.fox.rpc.common.codec.hessian;
 import com.caucho.hessian.io.HessianInput;
 import com.caucho.hessian.io.HessianOutput;
 import com.fox.rpc.common.codec.AbstractSerializer;
+import com.fox.rpc.common.common.Constants;
 import org.apache.log4j.Logger;
 
 import java.io.ByteArrayInputStream;
@@ -16,7 +17,7 @@ public class HessianSerializer extends  AbstractSerializer {
 
     private static Logger LOGGER=Logger.getLogger(HessianSerializer.class);
 
-    private String serializerType="hessian";
+    private byte serializerType= Constants.HESSIAN_SERIALIEE_byte;
 
     @Override
     public <T> byte[] serialize(T obj) {
@@ -46,7 +47,7 @@ public class HessianSerializer extends  AbstractSerializer {
         return object;
     }
 
-    public String getSerializerType() {
-        return serializerType;
+    public byte getSerializerType() {
+        return this.serializerType;
     }
 }

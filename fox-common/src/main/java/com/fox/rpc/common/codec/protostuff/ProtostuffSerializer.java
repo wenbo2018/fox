@@ -5,6 +5,7 @@ import com.dyuproject.protostuff.ProtostuffIOUtil;
 import com.dyuproject.protostuff.Schema;
 import com.dyuproject.protostuff.runtime.RuntimeSchema;
 import com.fox.rpc.common.codec.AbstractSerializer;
+import com.fox.rpc.common.common.Constants;
 import org.objenesis.Objenesis;
 import org.objenesis.ObjenesisStd;
 
@@ -20,7 +21,7 @@ public class ProtostuffSerializer extends AbstractSerializer {
 
     private static Objenesis objenesis = new ObjenesisStd(true);
 
-    private String serializerType="protostuff";
+    private byte serializerType= Constants.PROTOSTUFF_SERIALIEE_byte;
 
 
     @Override
@@ -59,7 +60,7 @@ public class ProtostuffSerializer extends AbstractSerializer {
         return schema;
     }
 
-    public String getSerializerType() {
-        return serializerType;
+    public byte getSerializerType() {
+        return this.serializerType;
     }
 }

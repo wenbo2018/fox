@@ -17,5 +17,6 @@
         <bean id="helloService" class="com.fox.rpc.spring.ServiceProxy" init-method="init">
             <property name="iface" value="com.dianping.HelloService"/>
             <property name="serviceName" value="service.fox.com_helloTestService_helloService_1.0.0"/>
+            <property name="serializer" value="protostuff"/>
         </bean>
 </beans>

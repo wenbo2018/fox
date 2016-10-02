@@ -1,5 +1,6 @@
 package com.fox.rpc.spring;
 
+import com.fox.rpc.common.common.Constants;
 import com.fox.rpc.common.util.ClassUtils;
 import com.fox.rpc.remoting.ServiceFactory;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
@@ -14,6 +15,8 @@ public class ServiceProxy implements FactoryBean{
     private static final org.apache.log4j.Logger LOGGER= org.apache.log4j.Logger.getLogger(ServiceProxy.class);
 
     private String serviceName;
+
+    private String serializer = Constants.PROTOSTUFF_SERIALIEE;
 
     private String iface;
 
@@ -36,7 +39,7 @@ public class ServiceProxy implements FactoryBean{
         } catch (ClassNotFoundException e) {
             LOGGER.error("not class found",e);
         }
-        InvokerConfig invokerConfig= new InvokerConfig(this.interfaceClass,this.iface,this.serviceName);
+        InvokerConfig invokerConfig= new InvokerConfig(this.interfaceClass,this.iface,this.serviceName,this.serializer);
         this.service= ServiceFactory.getService(invokerConfig);
     }
 
@@ -102,5 +105,13 @@ public class ServiceProxy implements FactoryBean{
 
     public void setZkAddress(String zkAddress) {
         this.zkAddress = zkAddress;
+    }
+
+    public String getSerializer() {
+        return serializer;
+    }
+
+    public void setSerializer(String serializer) {
+        this.serializer = serializer;
     }
 }

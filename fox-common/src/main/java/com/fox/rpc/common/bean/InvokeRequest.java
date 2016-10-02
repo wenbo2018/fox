@@ -14,6 +14,8 @@ public class InvokeRequest {
     private Class<?>[] parameterTypes;
     private Object[] parameters;
 
+    private String serialize;
+
     private String serviceName;
 
     public String getRequestId() {
@@ -70,6 +72,14 @@ public class InvokeRequest {
 
     public void setServiceName(String serviceName) {
         this.serviceName = serviceName;
+    }
+
+    public String getSerialize() {
+        return serialize;
+    }
+
+    public void setSerialize(String serialize) {
+        this.serialize = serialize;
     }
 
     @Override
