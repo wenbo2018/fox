@@ -12,10 +12,13 @@ public class InvokerConfig<T> {
     //服务名称
     private String serviceName;
 
-    public InvokerConfig(Class<T> interfaceClass, String iface,String serviceName) {
+    private String serializer;
+
+    public InvokerConfig(Class<T> interfaceClass, String iface,String serviceName,String serializer) {
         this.interfaceClass = interfaceClass;
         this.iface = iface;
         this.serviceName=serviceName;
+        this.serializer=serializer;
     }
 
     public Class<T> getInterfaceClass() {
@@ -40,5 +43,13 @@ public class InvokerConfig<T> {
 
     public void setServiceName(String serviceName) {
         this.serviceName = serviceName;
+    }
+
+    public String getSerializer() {
+        return serializer;
+    }
+
+    public void setSerializer(String serializer) {
+        this.serializer = serializer;
     }
 }

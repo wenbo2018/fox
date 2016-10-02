@@ -17,14 +17,6 @@ public class HelloServiceTest {
     @Resource
     private HelloService helloService;
 
-    @Test
-    public void test() {
-        System.out.println(helloService.hello("shenwenbo"));
-//        System.out.println(helloService.hello("wngayuehua"));
-//        User user=new User();
-//        user.setPassword("123");
-//        user.setUsername("wenbo2018");
-//        System.out.println(helloService.changeUser(user).toString());
-    }
+
 
 }

@@ -37,10 +37,12 @@ public class AsyncServiceRunnable<T> implements Callable{
         try {
             Object result = handle(request);
             response.setResult(result);
+            response.setSerialize(request.getSerialize());
         } catch (Exception e) {
             System.out.println("handle result failure"+e);
             LOGGER.error("handle result failure", e);
             response.setException(e);
+            response.setSerialize(request.getSerialize());
         }
         // 写入 RPC 响应对象并自动关闭连接
         channel.write(response);

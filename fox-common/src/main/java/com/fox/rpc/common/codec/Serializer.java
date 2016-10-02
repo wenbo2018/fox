@@ -9,4 +9,6 @@ public interface Serializer {
 
     <T> T deserialize(byte[] data, Class<T> cls);
 
+    byte getSerializerType();
+
 }

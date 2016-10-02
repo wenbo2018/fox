@@ -22,7 +22,6 @@ public class NettyClientHandler extends SimpleChannelInboundHandler<InvokeRespon
 
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, InvokeResponse invokeResponse) throws Exception {
-        System.out.println(invokeResponse.toString());
         nettyClient.processResponse(invokeResponse);
     }
 

@@ -32,9 +32,13 @@ public class ServiceInvocationProxy<T> implements InvocationHandler{
 
     private String serviceName;
 
+
+    private String serializer;
+
     public ServiceInvocationProxy(InvokerConfig config) {
         this.interfaceClass=config.getInterfaceClass();
         this.serviceName=config.getServiceName();
+        this.serializer=config.getSerializer();
     }
 
     @Override
@@ -94,6 +98,7 @@ public class ServiceInvocationProxy<T> implements InvocationHandler{
         request.setParameterTypes(method.getParameterTypes());
         request.setParameters(args);
         request.setServiceName(this.serviceName);
+        request.setSerialize(this.serializer);
         return request;
     }
 
