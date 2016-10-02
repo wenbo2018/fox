@@ -1,9 +1,14 @@
 package com.dianping.dto;
 
+import java.io.Serializable;
+
 /**
  * Created by shenwenbo on 2016/9/17.
  */
-public class User {
+public class User implements Serializable{
+
+    private static final long serialVersionUID = -2005236441469993193L;
+
     private  String username;
     private  String password;
 

@@ -19,6 +19,6 @@ public class Constants {
 
     public static String HESSIAN_SERIALIEE="hessian";
 
-    public static byte HESSIAN_SERIALIEE_byte=2;
+    public static byte HESSIAN_SERIALIEE_byte=1;
 
 }

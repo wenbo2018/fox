@@ -1,10 +1,13 @@
 package com.fox.rpc.common.bean;
 
+import java.io.Serializable;
+
 /**
  * 封装 RPC 响应
  */
-public class InvokeResponse {
+public class InvokeResponse implements Serializable{
 
+    private static final long serialVersionUID = 7581738802316790113L;
     private String requestId;
     private Exception exception;
     private Object result;

@@ -20,7 +20,6 @@ public class InvokerEncoder extends MessageToByteEncoder {
 
     @Override
     public void encode(ChannelHandlerContext ctx, Object in, ByteBuf out) throws Exception {
-
         if (genericClass.isInstance(in)) {
             InvokeRequest invokeRequest=(InvokeRequest)in;
             String s=invokeRequest.getSerialize();
