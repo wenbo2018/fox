@@ -2,7 +2,6 @@ package com.fox.rpc.server.provider;
 
 import com.fox.rpc.remoting.provider.AbstractServer;
 import com.fox.rpc.remoting.provider.config.ServerConfig;
-import com.fox.rpc.remoting.provider.config.ServiceProviderConfig;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
@@ -41,12 +40,6 @@ public class NettyServer extends AbstractServer {
         bootstrap.childOption(ChannelOption.SO_KEEPALIVE, true);
     }
 
-
-    @Override
-    public void setContext(ServiceProviderConfig cfg) {
-        this.serviceIp=cfg.getServiceAddress();
-        this.servicePort=Integer.parseInt(cfg.getServicePort());
-    }
 
     @Override
     public boolean isStarted() {

@@ -17,6 +17,8 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <encoding>UTF-8</encoding>
+        <version.protostuff>1.0.9</version.protostuff>
+        <version.objenesis>2.1</version.objenesis>
     </properties>
     <dependencies>
         <!-- SLF4J -->
@@ -33,15 +35,18 @@
         <dependency>
             <groupId>com.dyuproject.protostuff</groupId>
             <artifactId>protostuff-core</artifactId>
+            <version>${version.protostuff}</version>
         </dependency>
         <dependency>
             <groupId>com.dyuproject.protostuff</groupId>
             <artifactId>protostuff-runtime</artifactId>
+            <version>${version.protostuff}</version>
         </dependency>
         <!-- Objenesis -->
         <dependency>
             <groupId>org.objenesis</groupId>
             <artifactId>objenesis</artifactId>
+            <version>${version.objenesis}</version>
         </dependency>
         <!-- Apache Commons Lang -->
         <dependency>

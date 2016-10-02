@@ -3,8 +3,6 @@ package com.fox.rpc.remoting.provider.process;
 import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.remoting.provider.async.AsyncServiceRunnable;
 import com.fox.rpc.remoting.provider.config.ProviderConfig;
-import com.fox.rpc.remoting.provider.config.ServiceProviderConfig;
-
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -48,7 +46,7 @@ public class ThreadPoolRequestProcessor<T> implements RequestProcessor<T>{
 
 
     @Override
-    public void removeService(ServiceProviderConfig<T> serviceProviderConfig) {
+    public void removeService(ProviderConfig<T> serviceProviderConfig) {
 
     }
 

@@ -6,7 +6,7 @@
         <groupId>rpc.fox</groupId>
         <artifactId>fox-parent</artifactId>
         <version>1.0.0</version>
-    </parent>
+  </parent>
 
   <name>fox-demo</name>
   <artifactId>fox-demo</artifactId>
