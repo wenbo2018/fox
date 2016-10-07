@@ -37,7 +37,7 @@ public class ServiceProxy implements FactoryBean{
         try {
             this.interfaceClass = ClassUtils.loadClass(classLoader, this.iface.trim());
         } catch (ClassNotFoundException e) {
-            LOGGER.error("not class found",e);
+            LOGGER.error("class not found"+interfaceClass,e);
         }
         InvokerConfig invokerConfig= new InvokerConfig(this.interfaceClass,this.iface,this.serviceName,this.serializer);
         this.service= ServiceFactory.getService(invokerConfig);

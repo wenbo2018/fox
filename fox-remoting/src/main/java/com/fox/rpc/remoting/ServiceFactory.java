@@ -10,8 +10,6 @@ import com.fox.rpc.remoting.provider.config.ProviderConfig;
 import com.fox.rpc.remoting.provider.config.ServerConfig;
 import com.fox.rpc.remoting.provider.process.RequestProcessor;
 import org.apache.commons.collections4.CollectionUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -21,7 +19,7 @@ import java.util.List;
  */
 public class ServiceFactory {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ServiceFactory.class);
+    private static final org.apache.log4j.Logger LOGGER= org.apache.log4j.Logger.getLogger(ServiceFactory.class);
 
     static ServiceProxy serviceProxy = ServiceProxyLoader.getServiceProxy();
 
@@ -60,7 +58,7 @@ public class ServiceFactory {
         if (providerConfigList != null) {
             for (ProviderConfig config:providerConfigList ) {
                 remotingServiceRegistry.register(config.getServiceName(),config.getServerConfig().getIp()+":"+config.getServerConfig().getPort());
-                LOGGER.debug("register service: {} => {}", config.getServiceName());
+                LOGGER.debug("register service:"+config.getServiceName());
             }
         } else {
             LOGGER.error("register center fail");

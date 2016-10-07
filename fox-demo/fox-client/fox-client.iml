@@ -31,6 +31,12 @@
     <orderEntry type="library" name="Maven: jline:jline:0.9.94" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty:3.7.0.Final" level="project" />
     <orderEntry type="library" name="Maven: com.101tec:zkclient:0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-test:3.1.2.RELEASE" level="project" />
+    <orderEntry type="module" module-name="fox-netty" />
+    <orderEntry type="module" module-name="fox-remoting" />
+    <orderEntry type="library" name="Maven: cglib:cglib:3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm:4.2" level="project" />
+    <orderEntry type="module" module-name="fox-api" />
     <orderEntry type="module" module-name="fox-common" />
     <orderEntry type="library" name="Maven: io.netty:netty-all:4.0.26.Final" level="project" />
     <orderEntry type="library" name="Maven: com.dyuproject.protostuff:protostuff-core:1.0.9" level="project" />
@@ -41,11 +47,5 @@
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.3.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.0" level="project" />
     <orderEntry type="library" name="Maven: com.caucho:hessian:3.1.5" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-test:3.1.2.RELEASE" level="project" />
-    <orderEntry type="module" module-name="fox-netty" />
-    <orderEntry type="module" module-name="fox-remoting" />
-    <orderEntry type="library" name="Maven: cglib:cglib:3.1" level="project" />
-    <orderEntry type="library" name="Maven: org.ow2.asm:asm:4.2" level="project" />
-    <orderEntry type="module" module-name="fox-api" />
   </component>
 </module>

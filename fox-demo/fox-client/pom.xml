@@ -76,5 +76,10 @@
       <artifactId>fox-api</artifactId>
       <version>1.0-0</version>
     </dependency>
+    <dependency>
+      <groupId>rpc.fox</groupId>
+      <artifactId>fox-common</artifactId>
+      <version>1.0.0</version>
+    </dependency>
   </dependencies>
 </project>

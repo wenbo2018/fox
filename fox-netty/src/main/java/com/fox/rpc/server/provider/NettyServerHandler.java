@@ -3,12 +3,12 @@ package com.fox.rpc.server.provider;
 import com.fox.rpc.common.bean.InvokeRequest;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 
 public class NettyServerHandler extends SimpleChannelInboundHandler<InvokeRequest> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(NettyServerHandler.class);
+
+    private static Logger LOGGER=Logger.getLogger(NettyServerHandler.class);
 
 
     private NettyServer nettyServer;
@@ -19,7 +19,7 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<InvokeReques
 
     @Override
     public void channelRead0(final ChannelHandlerContext ctx, InvokeRequest request) throws Exception {
-        System.err.println("收到请求"+request.toString());
+        LOGGER.info(request.toString());
         this.nettyServer.processRequest(request,new NettyChannel(ctx.channel()));
     }
 
