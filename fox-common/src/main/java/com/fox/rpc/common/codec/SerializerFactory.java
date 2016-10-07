@@ -19,19 +19,22 @@ public class SerializerFactory {
 
     private static volatile boolean isInitialized = false;
 
-
     static {
         if (!isInitialized) {
-            serializers.put(Constants.JAVA_DEFAULT_SERIALIEE,new JavaSerializer());
-            serializersType.put(Constants.JAVA_DEFAULT_SERIALIEE_byte,new JavaSerializer());
+            synchronized (SerializerFactory.class) {
+                if (!isInitialized) {
+                    serializers.put(Constants.JAVA_DEFAULT_SERIALIEE,new JavaSerializer());
+                    serializersType.put(Constants.JAVA_DEFAULT_SERIALIEE_byte,new JavaSerializer());
 
-            serializers.put(Constants.HESSIAN_SERIALIEE,new HessianSerializer());
-            serializersType.put(Constants.HESSIAN_SERIALIEE_byte,new HessianSerializer());
+                    serializers.put(Constants.HESSIAN_SERIALIEE,new HessianSerializer());
+                    serializersType.put(Constants.HESSIAN_SERIALIEE_byte,new HessianSerializer());
 
-            serializers.put(Constants.PROTOSTUFF_SERIALIEE,new ProtostuffSerializer());
-            serializersType.put(Constants.PROTOSTUFF_SERIALIEE_byte,new ProtostuffSerializer());
+                    serializers.put(Constants.PROTOSTUFF_SERIALIEE,new ProtostuffSerializer());
+                    serializersType.put(Constants.PROTOSTUFF_SERIALIEE_byte,new ProtostuffSerializer());
+                    isInitialized=true;
+                }
+            }
         }
-        isInitialized=true;
     }
 
     public static Serializer getSerializer(String serializerTypr) {
@@ -42,7 +45,6 @@ public class SerializerFactory {
             return serializer;
         }
     }
-
 
     public static Serializer getSerializer(byte serializerTypr) {
         Serializer serializer=serializersType.get(serializerTypr);
