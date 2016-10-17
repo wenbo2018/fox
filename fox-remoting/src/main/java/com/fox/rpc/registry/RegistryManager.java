@@ -30,10 +30,20 @@ public class RegistryManager {
                 LOGGER.error("Failed to load config from " + ENV_FILE, e);
             }
 
-//            config = normalizeConfig(config);
-//            ConfigManagerLoader.getConfigManager().init(config);
+            config = normalizeConfig(config);
+            ConfigManagerLoader.getConfigManager().init(config);
             isInitialized = true;
         }
+    }
+
+    private static Properties normalizeConfig(Properties props) {
+        // Strip trailing whitespace in property values
+        Properties newProps = new Properties();
+        for (String key : props.stringPropertyNames()) {
+            String value = props.getProperty(key);
+            newProps.put(key, value.trim());
+        }
+        return newProps;
     }
 
 
