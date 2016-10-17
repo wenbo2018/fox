@@ -20,7 +20,7 @@ public class ZooKeeperServiceRegistry implements RemotingServiceRegistry {
 
     private void initZk() {
         // 创建 ZooKeeper 客户端
-        zkClient = new ZkClient("127.0.0.1", Constant.ZK_SESSION_TIMEOUT, Constant.ZK_CONNECTION_TIMEOUT);
+        zkClient = new ZkClient("127.0.0.1", Constants.ZK_SESSION_TIMEOUT, Constants.ZK_CONNECTION_TIMEOUT);
         LOGGER.debug("connect zookeeper");
     }
 
@@ -29,7 +29,7 @@ public class ZooKeeperServiceRegistry implements RemotingServiceRegistry {
         //初始化zk客户端
         initZk();
         // 创建 registry 节点（持久）
-        String registryPath = Constant.ZK_REGISTRY_PATH;
+        String registryPath = Constants.ZK_REGISTRY_PATH;
         if (!zkClient.exists(registryPath)) {
             zkClient.createPersistent(registryPath);
             LOGGER.debug("create registry node: {}", registryPath);
@@ -39,7 +39,6 @@ public class ZooKeeperServiceRegistry implements RemotingServiceRegistry {
         if (!zkClient.exists(servicePath)) {
             zkClient.createPersistent(servicePath);
             LOGGER.debug("create service node: {}", servicePath);
-            System.out.println("创建持久节点："+servicePath);
         }
         // 创建 address 节点（临时）
         String addressPath = servicePath + "/address-";

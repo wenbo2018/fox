@@ -13,7 +13,7 @@ public interface Registry {
 
     void registerService(String serviceName, String serviceAddress);
 
-    void unregisterService(String serviceName, String serviceAddress);
+    boolean unregisterService(String serviceName, String serviceAddress);
 
     String getServiceAddress(String serviceName);
 

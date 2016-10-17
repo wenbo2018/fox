@@ -23,11 +23,11 @@ public class ZooKeeperServiceDiscovery implements RemotingServiceDiscovery {
     public String discover(String name) {
         // 创建 ZooKeeper 客'户端
         System.out.println();
-        ZkClient zkClient = new ZkClient("127.0.0.1", Constant.ZK_SESSION_TIMEOUT, Constant.ZK_CONNECTION_TIMEOUT);
+        ZkClient zkClient = new ZkClient("127.0.0.1", Constants.ZK_SESSION_TIMEOUT, Constants.ZK_CONNECTION_TIMEOUT);
         LOGGER.debug("connect zookeeper");
         try {
             // 获取 service 节点
-            String servicePath = Constant.ZK_REGISTRY_PATH + "/" + name;
+            String servicePath = Constants.ZK_REGISTRY_PATH + "/" + name;
             if (!zkClient.exists(servicePath)) {
                 throw new RuntimeException(String.format("can not find any service node on path: %s", servicePath));
             }

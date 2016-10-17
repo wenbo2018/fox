@@ -19,7 +19,7 @@ public class SerializerFactory {
 
     private static volatile boolean isInitialized = false;
 
-    static {
+    public static void init() {
         if (!isInitialized) {
             synchronized (SerializerFactory.class) {
                 if (!isInitialized) {

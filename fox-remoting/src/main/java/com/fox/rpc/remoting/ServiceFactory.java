@@ -5,6 +5,7 @@ import com.fox.rpc.registry.RemotingServiceRegistry;
 import com.fox.rpc.remoting.invoker.api.ServiceProxy;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import com.fox.rpc.remoting.invoker.proxy.ServiceProxyLoader;
+import com.fox.rpc.remoting.provider.ProviderBootStrap;
 import com.fox.rpc.remoting.provider.api.Server;
 import com.fox.rpc.remoting.provider.config.ProviderConfig;
 import com.fox.rpc.remoting.provider.config.ServerConfig;
@@ -27,6 +28,16 @@ public class ServiceFactory {
         return serviceProxy.getProxy(invokerConfig);
     }
 
+    static {
+        try {
+            ProviderBootStrap.init();
+        } catch (Throwable e) {
+            e.printStackTrace();
+            LOGGER.error("error while initializing service factory:", e);
+            System.exit(1);
+        }
+    }
+
     public static void addService(List<ProviderConfig<?>> providerConfigList) {
         publishService(providerConfigList);
         List<Server> servers = SpiServiceLoader.getExtensionList(Server.class);
@@ -40,13 +51,13 @@ public class ServiceFactory {
                         requestProcessor=server.star(serverConfig);
                     } catch (Exception e) {
                         e.printStackTrace();
+                        LOGGER.error("server star error:"+serverConfig,e);
                     }
                 }
                 //将服务添加到线程池服务处理器中;
                 for (ProviderConfig config:providerConfigList) {
                     requestProcessor.addService(config);
                 }
-
             }
         } else {
             LOGGER.error("serverConfig is  null");

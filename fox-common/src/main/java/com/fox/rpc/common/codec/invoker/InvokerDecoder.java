@@ -25,6 +25,7 @@ public class InvokerDecoder extends ByteToMessageDecoder {
         if (in.readableBytes() < 1)
             return;
         in.markReaderIndex();
+
         byte b=in.readByte();
 
         //消息长度

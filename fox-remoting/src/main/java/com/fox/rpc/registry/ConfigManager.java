@@ -28,7 +28,7 @@ public class ConfigManager {
      * ConfigManager to get service configs.
      */
     public synchronized static void init() {
-        if (!isInitialized) {
+       /* if (!isInitialized) {
             // Properties config = loadDefaultConfig();
             Properties config = new Properties();
 
@@ -39,11 +39,12 @@ public class ConfigManager {
                 logger.error("Failed to load config from " + ENV_FILE, e);
             }
 
+
             config = normalizeConfig(config);
             ConfigManagerLoader.getConfigManager().init(config);
             // RegistryManager.getInstance().init(config);
             isInitialized = true;
-        }
+        }*/
     }
 
 
