@@ -1,6 +1,8 @@
 package com.fox.rpc.registry;
 
-import com.fox.rpc.UserServiceLoader;
+import com.fox.rpc.common.extension.UserServiceLoader;
+import com.fox.rpc.config.ConfigManager;
+import com.fox.rpc.config.ConfigManagerLoader;
 
 import java.util.List;
 import java.util.Properties;

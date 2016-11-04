@@ -1,7 +1,6 @@
 package com.fox.rpc;
 
 import com.fox.rpc.registry.Registry;
-import com.fox.rpc.registry.RegistryConfig;
 
 import java.util.Properties;
 
@@ -16,10 +15,7 @@ public class RedisRegistry implements Registry {
 
     }
 
-    @Override
-    public void connect(RegistryConfig registryConfig) {
 
-    }
 
     @Override
     public void registerService(String serviceName, String serviceAddress) {

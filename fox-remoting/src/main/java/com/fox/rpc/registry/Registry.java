@@ -9,8 +9,6 @@ public interface Registry {
 
     void init(Properties properties);
 
-    void connect(RegistryConfig registryConfig);
-
     void registerService(String serviceName, String serviceAddress);
 
     boolean unregisterService(String serviceName, String serviceAddress);

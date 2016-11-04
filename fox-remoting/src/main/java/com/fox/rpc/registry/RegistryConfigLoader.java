@@ -1,5 +1,6 @@
 package com.fox.rpc.registry;
 
+import com.fox.rpc.config.ConfigManagerLoader;
 import org.apache.log4j.Logger;
 
 import java.io.FileInputStream;

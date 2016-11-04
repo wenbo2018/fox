@@ -1,6 +1,6 @@
 package com.fox.rpc.remoting.invoker.proxy;
 
-import com.fox.rpc.UserServiceLoader;
+import com.fox.rpc.common.extension.UserServiceLoader;
 import com.fox.rpc.remoting.invoker.api.ServiceProxy;
 import org.slf4j.LoggerFactory;
 

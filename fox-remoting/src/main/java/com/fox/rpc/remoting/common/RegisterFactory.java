@@ -1,6 +1,6 @@
 package com.fox.rpc.remoting.common;
 
-import com.fox.rpc.UserServiceLoader;
+import com.fox.rpc.common.extension.UserServiceLoader;
 import com.fox.rpc.registry.RemotingServiceDiscovery;
 import com.fox.rpc.registry.RemotingServiceRegistry;
 import org.apache.log4j.Logger;
@@ -9,7 +9,9 @@ import org.apache.log4j.Logger;
  * Created by shenwenbo on 2016/9/30.
  */
 public class RegisterFactory {
+
     static Logger LOGGER=Logger.getLogger(RegisterFactory.class);
+
     public static RemotingServiceRegistry  selectRegistrant() {
         RemotingServiceRegistry serviceRegistry= UserServiceLoader.getExtension(RemotingServiceRegistry.class);
         if (serviceRegistry != null) {
@@ -21,7 +23,7 @@ public class RegisterFactory {
     }
 
     public static RemotingServiceDiscovery selectDiscovery() {
-        RemotingServiceDiscovery  serviceDiscovery= com.fox.rpc.UserServiceLoader.getExtension(RemotingServiceDiscovery.class);
+        RemotingServiceDiscovery  serviceDiscovery= UserServiceLoader.getExtension(RemotingServiceDiscovery.class);
         if (serviceDiscovery != null) {
             return serviceDiscovery;
         } else {

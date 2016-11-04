@@ -1,6 +1,5 @@
 package com.fox.rpc.remoting;
 
-import com.fox.rpc.UserServiceLoader;
 import com.fox.rpc.registry.RemotingServiceRegistry;
 import com.fox.rpc.remoting.invoker.api.ServiceProxy;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;

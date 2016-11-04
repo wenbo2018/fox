@@ -2,7 +2,6 @@ package com.fox.rpc.registry.zookeeper;
 
 import com.fox.rpc.common.util.CollectionUtil;
 import com.fox.rpc.registry.Registry;
-import com.fox.rpc.registry.RegistryConfig;
 import org.apache.log4j.Logger;
 
 import java.util.List;
@@ -24,7 +23,6 @@ public class ZookeeperRegistry implements Registry{
 
     @Override
     public void init(Properties properties) {
-
         this.properties = properties;
         if (!isInitialized) {
             synchronized (this) {
@@ -43,10 +41,6 @@ public class ZookeeperRegistry implements Registry{
         }
     }
 
-    @Override
-    public void connect(RegistryConfig registryConfig) {
-
-    }
 
     @Override
     public void registerService(String serviceName, String serviceAddress) {

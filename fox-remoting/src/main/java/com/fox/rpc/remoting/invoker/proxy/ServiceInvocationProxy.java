@@ -1,8 +1,8 @@
 package com.fox.rpc.remoting.invoker.proxy;
 
-import com.fox.rpc.UserServiceLoader;
 import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
+import com.fox.rpc.common.extension.UserServiceLoader;
 import com.fox.rpc.common.util.StringUtil;
 import com.fox.rpc.registry.RemotingServiceDiscovery;
 import com.fox.rpc.remoting.invoker.api.Client;
@@ -58,7 +58,7 @@ public class ServiceInvocationProxy<T> implements InvocationHandler{
         int port = Integer.parseInt(array[1]);
 
         //启动客户端并创建连接
-        ClientFactory clientFactory= com.fox.rpc.UserServiceLoader.getExtension(ClientFactory.class);
+        ClientFactory clientFactory= UserServiceLoader.getExtension(ClientFactory.class);
         clientFactory.init();
 
         // 创建 RPC 客户端对象并发送 RPC 请求

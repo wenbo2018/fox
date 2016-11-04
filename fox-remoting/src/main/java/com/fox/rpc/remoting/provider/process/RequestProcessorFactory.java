@@ -1,6 +1,6 @@
 package com.fox.rpc.remoting.provider.process;
 
-import com.fox.rpc.UserServiceLoader;
+import com.fox.rpc.common.extension.UserServiceLoader;
 
 /**
  * Created by shenwenbo on 2016/9/28.
