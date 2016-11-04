@@ -37,19 +37,19 @@ public class SerializerFactory {
         }
     }
 
-    public static Serializer getSerializer(String serializerTypr) {
-        Serializer serializer=serializers.get(serializerTypr);
+    public static Serializer getSerializer(String serializerType) {
+        Serializer serializer=serializers.get(serializerType);
         if (serializer==null) {
-            throw new  InvalidParameterException(" not serializer typr is found"+serializerTypr);
+            throw new  InvalidParameterException(" not serializer typr is found"+serializerType);
         } else {
             return serializer;
         }
     }
 
-    public static Serializer getSerializer(byte serializerTypr) {
-        Serializer serializer=serializersType.get(serializerTypr);
+    public static Serializer getSerializer(byte serializerType) {
+        Serializer serializer=serializersType.get(serializerType);
         if (serializer==null) {
-            throw new  InvalidParameterException(" not serializer typr is found"+serializerTypr);
+            throw new  InvalidParameterException(" not serializer typr is found"+serializerType);
         } else {
             return serializer;
         }

@@ -25,7 +25,6 @@ public class ZookeeperClient {
     }
 
     public void newZkClient() {
-
         ZkClient zookeeperClient = new ZkClient(address,10000,10000,new SerializableSerializer());
         zookeeperClient.subscribeStateChanges(new IZkStateListener() {
             @Override

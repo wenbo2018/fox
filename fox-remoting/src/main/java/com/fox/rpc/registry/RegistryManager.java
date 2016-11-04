@@ -1,65 +1,42 @@
 package com.fox.rpc.registry;
 
-import org.apache.log4j.Logger;
+import com.fox.rpc.UserServiceLoader;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.util.List;
 import java.util.Properties;
 
 /**
- * Created by shenwenbo on 2016/10/4.
+ * Created by shenwenbo on 2016/10/27.
  */
 public class RegistryManager {
 
-    private static Logger LOGGER=Logger.getLogger(RegistryManager.class);
+    private static RegistryManager instance = new RegistryManager();
 
-    private static final String ENV_FILE = "/data/webapps/appenv";
+    private static ConfigManager configManager = ConfigManagerLoader.getConfigManager();
 
-    static volatile boolean isInitialized = false;
+    private static RegistryConfigManager registryConfigManager=new DefaultRegistryConfigManager();
 
-    public synchronized static void init() {
-        if (!isInitialized) {
-            // Properties config = loadDefaultConfig();
-            Properties config = new Properties();
-            try {
-                Properties props = loadFromFile();
-                config.putAll(props);
-            } catch (IOException e) {
-                LOGGER.error("Failed to load config from " + ENV_FILE, e);
+
+    private static volatile boolean isInit=false;
+
+    public static RegistryManager getInstance() {
+        if (!isInit) {
+            synchronized (RegistryManager.class) {
+                if (!isInit) {
+                    instance.init(registryConfigManager.getRegistryConfig());
+                    isInit = true;
+                }
             }
-
-            config = normalizeConfig(config);
-            ConfigManagerLoader.getConfigManager().init(config);
-            isInitialized = true;
         }
+        return instance;
     }
 
-    private static Properties normalizeConfig(Properties props) {
-        // Strip trailing whitespace in property values
-        Properties newProps = new Properties();
-        for (String key : props.stringPropertyNames()) {
-            String value = props.getProperty(key);
-            newProps.put(key, value.trim());
+    public  static void init(Properties properties) {
+        List<Registry> registryList = UserServiceLoader.getExtensionList(Registry.class);
+        if (registryList.size()>0) {
+            for (Registry registry:registryList) {
+                registry.init(properties);
+            }
         }
-        return newProps;
     }
-
-
-    private static Properties loadFromFile() throws IOException {
-        Properties props = new Properties();
-        InputStream in = null;
-        try {
-            in = new FileInputStream(ENV_FILE);
-            props.load(in);
-        } catch (FileNotFoundException e) {
-            LOGGER.warn(ENV_FILE + " does not exist");
-        } finally {
-            if (in != null)
-                in.close();
-        }
-        return props;
-    }
-
 }

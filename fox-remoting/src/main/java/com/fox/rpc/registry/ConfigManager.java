@@ -10,4 +10,6 @@ public interface ConfigManager {
     public void init();
 
     public void init(Properties properties);
+
+    public Properties getRegistryConfig();
 }

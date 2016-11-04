@@ -1,6 +1,6 @@
 package com.fox.rpc.remoting.invoker.proxy;
 
-import com.fox.rpc.SpiServiceLoader;
+import com.fox.rpc.UserServiceLoader;
 import com.fox.rpc.remoting.invoker.api.ServiceProxy;
 import org.slf4j.LoggerFactory;
 
@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  */
 public class ServiceProxyLoader {
 
-    private static ServiceProxy serviceProxy = SpiServiceLoader.getExtension(ServiceProxy.class);
+    private static ServiceProxy serviceProxy = UserServiceLoader.getExtension(ServiceProxy.class);
 
     private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(ServiceProxy.class);
 

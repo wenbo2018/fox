@@ -1,6 +1,6 @@
 package com.fox.rpc.registry;
 
-import com.fox.rpc.SpiServiceLoader;
+import com.fox.rpc.UserServiceLoader;
 import org.apache.log4j.Logger;
 
 /**
@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
  */
 public class ConfigManagerLoader {
 
-    private static ConfigManager configManager = SpiServiceLoader.getExtension(ConfigManager.class);
+    private static ConfigManager configManager = UserServiceLoader.getExtension(ConfigManager.class);
 
     private static final Logger logger = Logger.getLogger(ConfigManagerLoader.class);
 

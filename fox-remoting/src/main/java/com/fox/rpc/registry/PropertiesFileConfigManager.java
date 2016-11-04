@@ -19,6 +19,8 @@ public class PropertiesFileConfigManager extends AbstractConfigManager  {
 
     private static final String ENV_FILE = "/data/webapps/appenv";
 
+    private  Properties properties;
+
     private String env = null;
     private String group = null;
     private String ip = null;
@@ -29,6 +31,7 @@ public class PropertiesFileConfigManager extends AbstractConfigManager  {
         try {
             loadProperties(config, FileUtils.readFile(new FileInputStream(ENV_FILE)));
         } catch (Throwable e) {
+            LOGGER.error("error when loadProperties:"+e);
         }
         env = (String) config.get("environment");
         if (StringUtils.isBlank(env)) {
@@ -38,14 +41,23 @@ public class PropertiesFileConfigManager extends AbstractConfigManager  {
         ip = (String) config.get("ip");
     }
 
+
+    @Override
+    public Properties getRegistryConfig() {
+        return this.properties;
+    }
+
     @Override
     public void init(Properties properties) {
+        this.properties=properties;
         for (Iterator ir = properties.keySet().iterator(); ir.hasNext();) {
             String key = ir.next().toString();
             String value = properties.getProperty(key);
             setLocalValue(key, value);
         }
     }
+
+
 
 
     public static void loadProperties(Map<String, Object> results, Properties properties) {

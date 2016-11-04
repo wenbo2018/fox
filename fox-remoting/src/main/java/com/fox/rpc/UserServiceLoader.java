@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Created by shenwenbo on 16/8/6.
  */
-public class SpiServiceLoader {
+public class UserServiceLoader {
 
     private static Map<Class<?>, Object> extensionServices = new ConcurrentHashMap<Class<?>, Object>();
 

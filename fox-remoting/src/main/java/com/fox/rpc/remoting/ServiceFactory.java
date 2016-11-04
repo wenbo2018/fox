@@ -1,6 +1,6 @@
 package com.fox.rpc.remoting;
 
-import com.fox.rpc.SpiServiceLoader;
+import com.fox.rpc.UserServiceLoader;
 import com.fox.rpc.registry.RemotingServiceRegistry;
 import com.fox.rpc.remoting.invoker.api.ServiceProxy;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
@@ -40,7 +40,7 @@ public class ServiceFactory {
 
     public static void addService(List<ProviderConfig<?>> providerConfigList) {
         publishService(providerConfigList);
-        List<Server> servers = SpiServiceLoader.getExtensionList(Server.class);
+        List<Server> servers = UserServiceLoader.getExtensionList(Server.class);
         ServerConfig serverConfig=null;
         if (CollectionUtils.isNotEmpty(providerConfigList)) {
             serverConfig=providerConfigList.get(0).getServerConfig();
@@ -65,7 +65,7 @@ public class ServiceFactory {
     }
 
     public static void  publishService(List<ProviderConfig<?>> providerConfigList){
-        RemotingServiceRegistry remotingServiceRegistry=SpiServiceLoader.newExtension(RemotingServiceRegistry.class);
+        RemotingServiceRegistry remotingServiceRegistry= com.fox.rpc.UserServiceLoader.newExtension(RemotingServiceRegistry.class);
         if (providerConfigList != null) {
             for (ProviderConfig config:providerConfigList ) {
                 remotingServiceRegistry.register(config.getServiceName(),config.getServerConfig().getIp()+":"+config.getServerConfig().getPort());
