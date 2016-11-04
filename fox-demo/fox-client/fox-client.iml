@@ -34,6 +34,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-test:3.1.2.RELEASE" level="project" />
     <orderEntry type="module" module-name="fox-netty" />
     <orderEntry type="module" module-name="fox-remoting" />
+    <orderEntry type="module" module-name="fox-config" />
     <orderEntry type="library" name="Maven: cglib:cglib:3.1" level="project" />
     <orderEntry type="library" name="Maven: org.ow2.asm:asm:4.2" level="project" />
     <orderEntry type="module" module-name="fox-api" />

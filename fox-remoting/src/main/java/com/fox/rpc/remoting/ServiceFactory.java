@@ -1,10 +1,10 @@
 package com.fox.rpc.remoting;
 
-import com.fox.rpc.SpiServiceLoader;
 import com.fox.rpc.registry.RemotingServiceRegistry;
 import com.fox.rpc.remoting.invoker.api.ServiceProxy;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import com.fox.rpc.remoting.invoker.proxy.ServiceProxyLoader;
+import com.fox.rpc.remoting.provider.ProviderBootStrap;
 import com.fox.rpc.remoting.provider.api.Server;
 import com.fox.rpc.remoting.provider.config.ProviderConfig;
 import com.fox.rpc.remoting.provider.config.ServerConfig;
@@ -27,9 +27,19 @@ public class ServiceFactory {
         return serviceProxy.getProxy(invokerConfig);
     }
 
+    static {
+        try {
+            ProviderBootStrap.init();
+        } catch (Throwable e) {
+            e.printStackTrace();
+            LOGGER.error("error while initializing service factory:", e);
+            System.exit(1);
+        }
+    }
+
     public static void addService(List<ProviderConfig<?>> providerConfigList) {
         publishService(providerConfigList);
-        List<Server> servers = SpiServiceLoader.getExtensionList(Server.class);
+        List<Server> servers = UserServiceLoader.getExtensionList(Server.class);
         ServerConfig serverConfig=null;
         if (CollectionUtils.isNotEmpty(providerConfigList)) {
             serverConfig=providerConfigList.get(0).getServerConfig();
@@ -40,13 +50,13 @@ public class ServiceFactory {
                         requestProcessor=server.star(serverConfig);
                     } catch (Exception e) {
                         e.printStackTrace();
+                        LOGGER.error("server star error:"+serverConfig,e);
                     }
                 }
                 //将服务添加到线程池服务处理器中;
                 for (ProviderConfig config:providerConfigList) {
                     requestProcessor.addService(config);
                 }
-
             }
         } else {
             LOGGER.error("serverConfig is  null");
@@ -54,7 +64,7 @@ public class ServiceFactory {
     }
 
     public static void  publishService(List<ProviderConfig<?>> providerConfigList){
-        RemotingServiceRegistry remotingServiceRegistry=SpiServiceLoader.newExtension(RemotingServiceRegistry.class);
+        RemotingServiceRegistry remotingServiceRegistry= com.fox.rpc.UserServiceLoader.newExtension(RemotingServiceRegistry.class);
         if (providerConfigList != null) {
             for (ProviderConfig config:providerConfigList ) {
                 remotingServiceRegistry.register(config.getServiceName(),config.getServerConfig().getIp()+":"+config.getServerConfig().getPort());

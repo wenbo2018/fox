@@ -1,8 +1,5 @@
 package com.fox.rpc.remoting.invoker;
 
-import com.fox.rpc.SpiServiceLoader;
-import com.fox.rpc.remoting.invoker.api.ClientFactory;
-
 /**
  * Created by wenbo2018 on 2016/8/26.
  */
@@ -21,7 +18,7 @@ public class InvokerBootStrap {
 //        if (!isStartup) {
 //            synchronized (InvokerBootStrap.class) {
 //                if (!isStartup) {
-//                    ClientFactory clientFactory= SpiServiceLoader.newExtension(ClientFactory.class);
+//                    ClientFactory clientFactory= UserServiceLoader.newExtension(ClientFactory.class);
 //                    clientFactory.init();
 //                }
 //            }

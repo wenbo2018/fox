@@ -1,6 +1,6 @@
 package com.fox.rpc.remoting.provider.process;
 
-import com.fox.rpc.SpiServiceLoader;
+import com.fox.rpc.common.extension.UserServiceLoader;
 
 /**
  * Created by shenwenbo on 2016/9/28.
@@ -8,7 +8,7 @@ import com.fox.rpc.SpiServiceLoader;
 public class RequestProcessorFactory {
 
     public static RequestProcessor selectProcessor() {
-        RequestProcessor requestProcessor = SpiServiceLoader.getExtension(RequestProcessor.class);
+        RequestProcessor requestProcessor = UserServiceLoader.getExtension(RequestProcessor.class);
         if (requestProcessor != null) {
             return requestProcessor;
         } else {
