@@ -13,7 +13,4 @@ public interface RemotingServiceRegistry {
      */
     void register(String serviceName, String serviceAddress);
 
-    void setContext(RegistryConfig cfg);
-
-
 }

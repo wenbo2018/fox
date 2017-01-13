@@ -14,7 +14,6 @@ public class ZooKeeperServiceRegistry implements RemotingServiceRegistry {
 
     private static ZkClient zkClient;
 
-    private RegistryConfig cfg;
 
 
     private void initZk() {
@@ -46,8 +45,4 @@ public class ZooKeeperServiceRegistry implements RemotingServiceRegistry {
         System.out.println("创建零时节点："+addressNode);
     }
 
-    @Override
-    public void setContext(RegistryConfig cfg) {
-        this.cfg=cfg;
-    }
 }
