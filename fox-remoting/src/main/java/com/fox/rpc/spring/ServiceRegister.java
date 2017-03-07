@@ -25,12 +25,14 @@ public class ServiceRegister {
     private int workQueueSize = Constants.PROVIDER_POOL_QUEUE_SIZE;
 
     public void init() {
+        /**初始化服务配置*/
         ServerConfig serverConfig=new ServerConfig();
         serverConfig.setCorePoolSize(this.getCorePoolSize());
         serverConfig.setPort(this.getPort());
         serverConfig.setWorkQueueSize(this.getWorkQueueSize());
         serverConfig.setMaxPoolSize(this.getMaxPoolSize());
-        LOGGER.debug("service begin");
+        LOGGER.info("service begin");
+        /**封装服务信息**/
         List<ProviderConfig<?>> providerConfigList = new ArrayList<ProviderConfig<?>>();
         if (services!=null) {
             for (String serviceName : services.keySet()) {

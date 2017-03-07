@@ -25,7 +25,7 @@ public class TestClient {
                 users.add(helloService.changeUser(user));
             }
             for (User u:users)
-            System.err.println(u.toString());
+            System.out.println(u.toString());
         }
 
 }

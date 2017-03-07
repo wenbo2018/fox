@@ -1,6 +1,7 @@
 package com.fox.rpc.remoting;
 
-import com.fox.rpc.registry.RemotingServiceRegistry;
+import com.fox.rpc.common.extension.UserServiceLoader;
+import com.fox.rpc.registry.Registry;
 import com.fox.rpc.remoting.invoker.api.ServiceProxy;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import com.fox.rpc.remoting.invoker.proxy.ServiceProxyLoader;
@@ -19,11 +20,11 @@ import java.util.List;
  */
 public class ServiceFactory {
 
-    private static final org.apache.log4j.Logger LOGGER= org.apache.log4j.Logger.getLogger(ServiceFactory.class);
+    private static final org.apache.log4j.Logger LOGGER = org.apache.log4j.Logger.getLogger(ServiceFactory.class);
 
     static ServiceProxy serviceProxy = ServiceProxyLoader.getServiceProxy();
 
-    public static <T> T getService(InvokerConfig invokerConfig)  {
+    public static <T> T getService(InvokerConfig invokerConfig) {
         return serviceProxy.getProxy(invokerConfig);
     }
 
@@ -38,23 +39,24 @@ public class ServiceFactory {
     }
 
     public static void addService(List<ProviderConfig<?>> providerConfigList) {
+
         publishService(providerConfigList);
         List<Server> servers = UserServiceLoader.getExtensionList(Server.class);
-        ServerConfig serverConfig=null;
+        ServerConfig serverConfig = null;
         if (CollectionUtils.isNotEmpty(providerConfigList)) {
-            serverConfig=providerConfigList.get(0).getServerConfig();
-            for (Server server:servers) {
-                RequestProcessor requestProcessor=null;
+            serverConfig = providerConfigList.get(0).getServerConfig();
+            for (Server server : servers) {
+                RequestProcessor requestProcessor = null;
                 if (!server.isStarted()) {
                     try {
-                        requestProcessor=server.star(serverConfig);
+                        requestProcessor = server.star(serverConfig);
                     } catch (Exception e) {
                         e.printStackTrace();
-                        LOGGER.error("server star error:"+serverConfig,e);
+                        LOGGER.error("server star error:" + serverConfig, e);
                     }
                 }
                 //将服务添加到线程池服务处理器中;
-                for (ProviderConfig config:providerConfigList) {
+                for (ProviderConfig config : providerConfigList) {
                     requestProcessor.addService(config);
                 }
             }
@@ -63,15 +65,23 @@ public class ServiceFactory {
         }
     }
 
-    public static void  publishService(List<ProviderConfig<?>> providerConfigList){
-        RemotingServiceRegistry remotingServiceRegistry= com.fox.rpc.UserServiceLoader.newExtension(RemotingServiceRegistry.class);
-        if (providerConfigList != null) {
-            for (ProviderConfig config:providerConfigList ) {
-                remotingServiceRegistry.register(config.getServiceName(),config.getServerConfig().getIp()+":"+config.getServerConfig().getPort());
-                LOGGER.debug("register service:"+config.getServiceName());
+    public static void publishService(List<ProviderConfig<?>> providerConfigList) {
+        //RemotingServiceRegistry remotingServiceRegistry = UserServiceLoader.newExtension(RemotingServiceRegistry.class);
+        List<Registry> registryList = UserServiceLoader.getExtensionList(Registry.class);
+        if (registryList.size() > 0) {
+            for (Registry registry : registryList) {
+                if (providerConfigList != null) {
+                    for (ProviderConfig config : providerConfigList) {
+                        registry.registerService(config.getServiceName(),
+                                config.getServerConfig().getIp() + ":" + config.getServerConfig().getPort());
+                        LOGGER.debug("register service:" + config.getServiceName());
+                    }
+                } else {
+                    LOGGER.error("register center fail");
+                }
             }
-        } else {
-            LOGGER.error("register center fail");
         }
+
+
     }
 }

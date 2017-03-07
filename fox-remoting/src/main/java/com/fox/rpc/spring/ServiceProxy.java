@@ -5,6 +5,8 @@ import com.fox.rpc.common.util.ClassUtils;
 import com.fox.rpc.remoting.ServiceFactory;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.FactoryBean;
 
 /**
@@ -12,7 +14,7 @@ import org.springframework.beans.factory.FactoryBean;
  */
 public class ServiceProxy implements FactoryBean{
 
-    private static final org.apache.log4j.Logger LOGGER= org.apache.log4j.Logger.getLogger(ServiceProxy.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ServiceProxy.class);
 
     private String serviceName;
 
@@ -30,14 +32,14 @@ public class ServiceProxy implements FactoryBean{
     private String zkAddress;
 
     public void init() {
-        LOGGER.info("service init:"+serviceName);
+        LOGGER.info("Service Initialized",serviceName);
         if (StringUtils.isBlank(iface)) {
             throw new IllegalArgumentException("invalid interface:" + iface);
         }
         try {
             this.interfaceClass = ClassUtils.loadClass(classLoader, this.iface.trim());
         } catch (ClassNotFoundException e) {
-            LOGGER.error("class not found"+interfaceClass,e);
+            LOGGER.error("class not found:{}"+interfaceClass,e);
         }
         InvokerConfig invokerConfig= new InvokerConfig(this.interfaceClass,this.iface,this.serviceName,this.serializer);
         this.service= ServiceFactory.getService(invokerConfig);

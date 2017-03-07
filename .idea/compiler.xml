@@ -23,18 +23,32 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="fox" />
+        <module name="fox-api" />
+        <module name="fox-client" />
+        <module name="fox-common" />
+        <module name="fox-config" />
+        <module name="fox-netty" />
+        <module name="fox-registry-consul" />
+        <module name="fox-registry-redis" />
+        <module name="fox-registry-zookeeper" />
+        <module name="fox-remoting" />
+        <module name="fox-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="fox" target="1.7" />
       <module name="fox-api" target="1.7" />
       <module name="fox-client" target="1.7" />
       <module name="fox-common" target="1.7" />
+      <module name="fox-config" target="1.7" />
       <module name="fox-demo" target="1.7" />
       <module name="fox-netty" target="1.7" />
       <module name="fox-parent" target="1.7" />
+      <module name="fox-registry-consul" target="1.5" />
       <module name="fox-registry-redis" target="1.7" />
       <module name="fox-registry-zookeeper" target="1.7" />
       <module name="fox-remoting" target="1.7" />
+      <module name="fox-server" target="1.7" />
       <module name="fox-server-demo" target="1.7" />
     </bytecodeTargetLevel>
   </component>
