@@ -11,6 +11,17 @@ It contains three key parts, which include:
 * **Registration**: a service directory framework for service registration and service event publish/subscription
 
 
+
+## Quick Config
+You only need to configure your zookeeper address in the appkeys file;
+appkeys file address:
+/data/app/appkeys.properties(Linux),
+C:/data/app/appkeys.properties(WIN)
+Configuration format:
+fox.registry.adress=170.0.0.1
+fox.registry.type=zookeeper
+
+
 ## Quick Start
 when you need invoke service ,you can just do as following:
 
