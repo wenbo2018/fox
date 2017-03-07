@@ -14,11 +14,17 @@ It contains three key parts, which include:
 
 ## Quick Config
 You only need to configure your zookeeper address in the appkeys file;
+
 appkeys file address:
-/data/app/appkeys.properties(Linux),
+
+/data/app/appkeys.properties(Linux)
+
 C:/data/app/appkeys.properties(WIN)
+
 Configuration format:
+
 fox.registry.adress=170.0.0.1
+
 fox.registry.type=zookeeper
 
 
