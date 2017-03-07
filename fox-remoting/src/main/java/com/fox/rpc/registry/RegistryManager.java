@@ -3,7 +3,6 @@ package com.fox.rpc.registry;
 import com.fox.rpc.common.extension.UserServiceLoader;
 import com.fox.rpc.config.ConfigManager;
 import com.fox.rpc.config.ConfigManagerLoader;
-
 import java.util.List;
 import java.util.Properties;
 
@@ -16,10 +15,10 @@ public class RegistryManager {
 
     private static ConfigManager configManager = ConfigManagerLoader.getConfigManager();
 
-    private static RegistryConfigManager registryConfigManager=new DefaultRegistryConfigManager();
+    private static RegistryConfigManager registryConfigManager = new DefaultRegistryConfigManager();
 
+    private static volatile boolean isInit = false;
 
-    private static volatile boolean isInit=false;
 
     public static RegistryManager getInstance() {
         if (!isInit) {
@@ -33,10 +32,10 @@ public class RegistryManager {
         return instance;
     }
 
-    public  static void init(Properties properties) {
+    public static void init(Properties properties) {
         List<Registry> registryList = UserServiceLoader.getExtensionList(Registry.class);
-        if (registryList.size()>0) {
-            for (Registry registry:registryList) {
+        if (registryList.size() > 0) {
+            for (Registry registry : registryList) {
                 registry.init(properties);
             }
         }

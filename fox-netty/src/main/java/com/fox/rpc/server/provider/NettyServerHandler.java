@@ -7,9 +7,7 @@ import org.apache.log4j.Logger;
 
 public class NettyServerHandler extends SimpleChannelInboundHandler<InvokeRequest> {
 
-
     private static Logger LOGGER=Logger.getLogger(NettyServerHandler.class);
-
 
     private NettyServer nettyServer;
 

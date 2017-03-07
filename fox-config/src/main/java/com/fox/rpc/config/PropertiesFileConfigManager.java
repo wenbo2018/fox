@@ -17,29 +17,27 @@ public class PropertiesFileConfigManager extends AbstractConfigManager  {
 
     private static Logger LOGGER=Logger.getLogger(PropertiesFileConfigManager.class);
 
-    private static final String ENV_FILE = "/data/webapps/appenv";
+    private static final String ENV_FILE = "C:/data/app/appkeys.properties";
 
     private  Properties properties;
 
     private String env = null;
     private String group = null;
-    private String ip = null;
 
 
     @Override
     public void init() {
-        Map<String, Object> config = new HashMap<String, Object>();
         try {
-            loadProperties(config, FileUtils.readFile(new FileInputStream(ENV_FILE)));
+            properties=FileUtils.readFile(new FileInputStream(ENV_FILE));
+            loadProperties(localCache,properties);
         } catch (Throwable e) {
             LOGGER.error("error when loadProperties:"+e);
         }
-        env = (String) config.get("environment");
+        env = (String) getStringValue("environment");
         if (StringUtils.isBlank(env)) {
             LOGGER.warn("the config 'environment' is undefined in " + ENV_FILE);
         }
-        group = (String) config.get("group");
-        ip = (String) config.get("ip");
+        group = (String) getStringValue("group");
     }
 
 

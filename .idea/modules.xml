@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
-    <modules />
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/fox/fox.iml" filepath="$PROJECT_DIR$/fox/fox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-api/fox-api.iml" filepath="$PROJECT_DIR$/fox-demo/fox-api/fox-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-client/fox-client.iml" filepath="$PROJECT_DIR$/fox-demo/fox-client/fox-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-common/fox-common.iml" filepath="$PROJECT_DIR$/fox-common/fox-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-config/fox-config.iml" filepath="$PROJECT_DIR$/fox-config/fox-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-demo.iml" filepath="$PROJECT_DIR$/fox-demo/fox-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-netty/fox-netty.iml" filepath="$PROJECT_DIR$/fox-netty/fox-netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-parent.iml" filepath="$PROJECT_DIR$/fox-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-registry-consul/fox-registry-consul.iml" filepath="$PROJECT_DIR$/fox-registry-consul/fox-registry-consul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-registry-redis/fox-registry-redis.iml" filepath="$PROJECT_DIR$/fox-registry-redis/fox-registry-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-registry-zookeeper/fox-registry-zookeeper.iml" filepath="$PROJECT_DIR$/fox-registry-zookeeper/fox-registry-zookeeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-remoting/fox-remoting.iml" filepath="$PROJECT_DIR$/fox-remoting/fox-remoting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-server/fox-server.iml" filepath="$PROJECT_DIR$/fox-demo/fox-server/fox-server.iml" />
+    </modules>
   </component>
 </project>

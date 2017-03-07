@@ -25,7 +25,7 @@ public abstract class AbstractConfigManager implements ConfigManager {
 
     @Override
     public String getStringValue(String key, String defaultValue) {
-        return getStringValue(key)==null?defaultValue:getStringValue(key);
+        return getStringValue(key) == null ? defaultValue : getStringValue(key);
     }
 
     @Override

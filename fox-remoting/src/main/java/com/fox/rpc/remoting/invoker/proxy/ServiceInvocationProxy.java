@@ -4,16 +4,16 @@ import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.common.extension.UserServiceLoader;
 import com.fox.rpc.common.util.StringUtil;
-import com.fox.rpc.registry.RemotingServiceDiscovery;
+import com.fox.rpc.registry.Registry;
 import com.fox.rpc.remoting.invoker.api.Client;
 import com.fox.rpc.remoting.invoker.api.ClientFactory;
 import com.fox.rpc.remoting.invoker.config.ConnectInfo;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -44,9 +44,11 @@ public class ServiceInvocationProxy<T> implements InvocationHandler{
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         InvokeRequest request=createInvokeRequest(method,args);
-        RemotingServiceDiscovery serviceDiscovery= UserServiceLoader.newExtension(RemotingServiceDiscovery.class);
-        if (serviceDiscovery != null) {
-            serviceAddress = serviceDiscovery.discover(serviceName);
+        List<Registry> registrys=(List<Registry>) UserServiceLoader.getExtension(Registry.class);
+        //随机算法获取注册中心；
+        int n=1+(int)(Math.random()*registrys.size());
+        if (registrys.size()>0) {
+            serviceAddress = registrys.get(n-1).getServiceAddress(serviceName);
             LOGGER.debug("discover service: {} => {}", serviceName, serviceAddress);
         }
         if (StringUtil.isEmpty(serviceAddress)) {

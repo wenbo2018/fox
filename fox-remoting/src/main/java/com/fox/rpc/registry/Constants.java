@@ -5,9 +5,15 @@ package com.fox.rpc.registry;
  */
 public class Constants {
 
-    public static final String KEY_REGISTRY_ADDRESS = "fox.registry.address";
-    public static final String KEY_REGISTRY_TYPE = "fox.registry.type";
-    public static final String REGISTRY_TYPE_ZOOKEEPER = "zookeeper";
-    public static final String DEFAULT_REGISTRY_TYPE=REGISTRY_TYPE_ZOOKEEPER;
+    /**
+     * 注册中心地址KEY
+     */
+    public static final String FOX_REGISTRY_ADDRESS ="fox.registry.adress";
+    /**
+     * 注册中心类型KEY
+     */
+    public static final String FOX_REGISTRY_TYPE = "fox.registry.type";
+
+
 
 }

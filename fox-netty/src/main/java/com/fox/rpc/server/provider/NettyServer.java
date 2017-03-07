@@ -20,13 +20,11 @@ public class NettyServer extends AbstractServer {
 
     private EventLoopGroup workerGroup;
 
-
     private String serviceIp;
 
     private int servicePort;
 
     private volatile boolean started = false;
-
 
     public NettyServer() {
         this.bossGroup = new NioEventLoopGroup();

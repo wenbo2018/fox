@@ -9,13 +9,10 @@ import java.util.Properties;
  */
 public class RedisRegistry implements Registry {
 
-
     @Override
     public void init(Properties properties) {
 
     }
-
-
 
     @Override
     public void registerService(String serviceName, String serviceAddress) {

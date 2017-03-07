@@ -11,9 +11,9 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * Created by shenwenbo on 2016/10/17.
  */
-public class ZookeeperRegistry implements Registry{
+public class ZookeeperRegistry implements Registry {
 
-    private static Logger LOGGER=Logger.getLogger(ZookeeperRegistry.class);
+    private static Logger LOGGER = Logger.getLogger(ZookeeperRegistry.class);
 
     private Properties properties;
 
@@ -21,6 +21,7 @@ public class ZookeeperRegistry implements Registry{
 
     private volatile boolean isInitialized = false;
 
+    /**初始化zk**/
     @Override
     public void init(Properties properties) {
         this.properties = properties;
@@ -28,14 +29,19 @@ public class ZookeeperRegistry implements Registry{
             synchronized (this) {
                 if (!isInitialized) {
                     try {
+                        //获取zk地址
                         String zkAddress = properties.getProperty(Constants.KEY_REGISTRY_ADDRESS);
-                        LOGGER.info("start to initialize zookeeper client:" + zkAddress);
-                        zookeeperClient = new ZookeeperClient(zkAddress);
-                        LOGGER.info("succeed to initialize zookeeper client:" + zkAddress);
+                        if (zkAddress!=null) {
+                            LOGGER.info("start to initialize zookeeper client:" + zkAddress);
+                            zookeeperClient = new ZookeeperClient(zkAddress);
+                            LOGGER.info("succeed to initialize zookeeper client:" + zkAddress);
+                            isInitialized = true;
+                        }else {
+                            LOGGER.error("zookeeper server adress is null");
+                        }
                     } catch (Exception ex) {
                         LOGGER.error("failed to initialize zookeeper client", ex);
                     }
-                    isInitialized = true;
                 }
             }
         }
@@ -49,7 +55,7 @@ public class ZookeeperRegistry implements Registry{
         String servicePath = registryPath + "/" + serviceName;
         zookeeperClient.creatrPersistentNode(servicePath);
         String addressPath = servicePath + "/address-";
-        zookeeperClient.create(addressPath,serviceAddress);
+        zookeeperClient.create(addressPath, serviceAddress);
     }
 
     @Override
@@ -61,27 +67,27 @@ public class ZookeeperRegistry implements Registry{
 
     @Override
     public String getServiceAddress(String serviceName) {
-            // 获取 service 节点
-            String servicePath = Constants.ZK_REGISTRY_PATH + "/" + serviceName;
-            List<String> addressList = zookeeperClient.get(servicePath);
-            if (CollectionUtil.isEmpty(addressList)) {
-                throw new RuntimeException(String.format("can not find any address node on path: %s", servicePath));
-            }
+        // 获取 service 节点
+        String servicePath = Constants.ZK_REGISTRY_PATH + "/" + serviceName;
+        List<String> addressList = zookeeperClient.get(servicePath);
+        if (CollectionUtil.isEmpty(addressList)) {
+            throw new RuntimeException(String.format("can not find any address node on path: %s", servicePath));
+        }
 
-            // 获取 address 节点
-            String address;
-            int size = addressList.size();
-            if (size == 1) {
-                // 若只有一个地址，则获取该地址
-                address = addressList.get(0);
-                LOGGER.debug("get only address node:"+address);
-            } else {
-                //若存在多个地址，负载均衡则随机获取一个地址
-                address = addressList.get(ThreadLocalRandom.current().nextInt(size));
-                LOGGER.debug("get random address node:"+address);
-            }
-            //获取 address 节点的值
-            String addressPath = servicePath +"/" + address;
-            return zookeeperClient.getZookeeperClient().readData(addressPath);
+        // 获取 address 节点
+        String address;
+        int size = addressList.size();
+        if (size == 1) {
+            // 若只有一个地址，则获取该地址
+            address = addressList.get(0);
+            LOGGER.debug("get only address node:" + address);
+        } else {
+            //若存在多个地址，负载均衡则随机获取一个地址
+            address = addressList.get(ThreadLocalRandom.current().nextInt(size));
+            LOGGER.debug("get random address node:" + address);
+        }
+        //获取 address 节点的值
+        String addressPath = servicePath + "/" + address;
+        return zookeeperClient.getZookeeperClient().readData(addressPath);
     }
 }

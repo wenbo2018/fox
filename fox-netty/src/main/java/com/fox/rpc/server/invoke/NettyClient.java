@@ -8,6 +8,8 @@ import com.fox.rpc.remoting.invoker.config.ConnectInfo;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -16,6 +18,8 @@ import java.util.concurrent.LinkedBlockingQueue;
  * Created by wenbo2018 on 2016/8/26.
  */
 public class NettyClient implements Client{
+
+    private  static  Logger LOGGER= LoggerFactory.getLogger(NettyClient.class);
 
     private Channel channel;
 
@@ -51,6 +55,7 @@ public class NettyClient implements Client{
             }
         } catch (Exception e) {
             responseMap.remove(request.getRequestId());
+            LOGGER.error("rpc request failue:{}",e);
         }
         return callFuture;
     }
@@ -67,8 +72,7 @@ public class NettyClient implements Client{
         try {
             channelFuture =bootstrap.connect(host, port).sync();
         } catch (InterruptedException e) {
-            System.out.println(e);
-            e.printStackTrace();
+            LOGGER.error("connect rpc server:{}",e);
         }
          channelFuture.addListener(new ChannelFutureListener() {
              @Override
