@@ -1,7 +1,4 @@
-/**
- * Dianping.com Inc.
- * Copyright (c) 2003-2013 All Rights Reserved.
- */
+
 package com.fox.rpc.remoting.provider.config;
 
 import com.fox.rpc.remoting.common.BeanDefinitionParserLoader;
