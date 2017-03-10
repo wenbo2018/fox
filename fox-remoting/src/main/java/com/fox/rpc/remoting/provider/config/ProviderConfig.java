@@ -15,6 +15,9 @@ public class ProviderConfig<T> {
 
     private ServerConfig serverConfig;
 
+    public ProviderConfig() {
+
+    }
 
     public ProviderConfig(T service) {
         this.setService(service);

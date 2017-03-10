@@ -23,7 +23,8 @@ public class ThreadPoolRequestProcessor<T> implements RequestProcessor<T>{
     public ThreadPoolRequestProcessor () {
         if(executorService == null){
             if(executorService == null){
-                executorService = new ThreadPoolExecutor(5, 5, 600L, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(65536));
+                executorService = new ThreadPoolExecutor(5, 5, 600L, TimeUnit.SECONDS,
+                        new ArrayBlockingQueue<Runnable>(65536));
             }
         }
     }
@@ -35,7 +36,8 @@ public class ThreadPoolRequestProcessor<T> implements RequestProcessor<T>{
 
     @Override
     public void processRequest(InvokeRequest invokeRequest, ServiceProviderChannel channel) {
-        AsyncServiceRunnable asyncServiceRunnable=new AsyncServiceRunnable(channel,invokeRequest,getServiceConfig(invokeRequest));
+        AsyncServiceRunnable asyncServiceRunnable=new
+                AsyncServiceRunnable(channel,invokeRequest,getServiceConfig(invokeRequest));
         executorService.submit(asyncServiceRunnable);
     }
 

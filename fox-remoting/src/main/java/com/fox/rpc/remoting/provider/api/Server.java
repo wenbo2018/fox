@@ -14,4 +14,8 @@ public interface Server {
 
     public RequestProcessor star(ServerConfig serverConfig) throws Exception;
 
+    public RequestProcessor getRequestProcessor();
+
+    int getPort();
+
 }

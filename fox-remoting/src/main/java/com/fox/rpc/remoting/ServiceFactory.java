@@ -12,7 +12,10 @@ import com.fox.rpc.remoting.provider.config.ServerConfig;
 import com.fox.rpc.remoting.provider.process.RequestProcessor;
 import org.apache.commons.collections4.CollectionUtils;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -20,13 +23,12 @@ import java.util.List;
  */
 public class ServiceFactory {
 
+
     private static final org.apache.log4j.Logger LOGGER = org.apache.log4j.Logger.getLogger(ServiceFactory.class);
 
-    static ServiceProxy serviceProxy = ServiceProxyLoader.getServiceProxy();
+    static volatile Map<String, Server> serversMap = new HashMap<String, Server>();
 
-    public static <T> T getService(InvokerConfig invokerConfig) {
-        return serviceProxy.getProxy(invokerConfig);
-    }
+    static ServiceProxy serviceProxy = ServiceProxyLoader.getServiceProxy();
 
     static {
         try {
@@ -38,8 +40,11 @@ public class ServiceFactory {
         }
     }
 
-    public static void addService(List<ProviderConfig<?>> providerConfigList) {
+    public static <T> T getService(InvokerConfig invokerConfig) {
+        return serviceProxy.getProxy(invokerConfig);
+    }
 
+    public static void addService(List<ProviderConfig<?>> providerConfigList) {
         publishService(providerConfigList);
         List<Server> servers = UserServiceLoader.getExtensionList(Server.class);
         ServerConfig serverConfig = null;
@@ -50,6 +55,7 @@ public class ServiceFactory {
                 if (!server.isStarted()) {
                     try {
                         requestProcessor = server.star(serverConfig);
+                        serversMap.put(server.getPort() + "netty", server);
                     } catch (Exception e) {
                         e.printStackTrace();
                         LOGGER.error("server star error:" + serverConfig, e);
@@ -65,8 +71,43 @@ public class ServiceFactory {
         }
     }
 
+    public static void startUpServer(ServerConfig serverConfig) {
+        List<Server> servers = UserServiceLoader.getExtensionList(Server.class);
+        if (serverConfig != null) {
+            for (Server server : servers) {
+                RequestProcessor requestProcessor = null;
+                if (!server.isStarted()) {
+                    try {
+                        requestProcessor = server.star(serverConfig);
+                        serversMap.put(server.getPort() + "netty", server);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        LOGGER.error("server star error:" + serverConfig, e);
+                    }
+                }
+            }
+        } else {
+            LOGGER.error("serverConfig  is  null");
+        }
+    }
+
+
+    public static void addService(ProviderConfig providerConfig) {
+        List<ProviderConfig<?>> providerConfigList = new ArrayList<>();
+        providerConfigList.add(providerConfig);
+        publishService(providerConfigList);
+        List<Server> servers = new ArrayList<>();
+        servers.add(serversMap.get(providerConfig.getServerConfig().getPort() + "netty"));
+        RequestProcessor requestProcessor = null;
+        for (Server server : servers) {
+            requestProcessor = server.getRequestProcessor();
+            requestProcessor.addService(providerConfig);
+        }
+
+    }
+
+
     public static void publishService(List<ProviderConfig<?>> providerConfigList) {
-        //RemotingServiceRegistry remotingServiceRegistry = UserServiceLoader.newExtension(RemotingServiceRegistry.class);
         List<Registry> registryList = UserServiceLoader.getExtensionList(Registry.class);
         if (registryList.size() > 0) {
             for (Registry registry : registryList) {
@@ -81,7 +122,5 @@ public class ServiceFactory {
                 }
             }
         }
-
-
     }
 }

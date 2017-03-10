@@ -20,6 +20,8 @@ public abstract class AbstractServer implements Server {
 
     private ServerConfig serverConfig = null;
 
+    private int port;
+
     protected abstract void doStart(ServerConfig serverConfig);
 
     protected abstract void doStop();
@@ -30,6 +32,7 @@ public abstract class AbstractServer implements Server {
             LOGGER.info("server config:" + serverConfig);
         }
         doStart(serverConfig);
+        this.port=serverConfig.getPort();
         this.serverConfig=serverConfig;
         this.requestProcessor= RequestProcessorFactory.selectProcessor();
         return this.requestProcessor;
@@ -44,4 +47,13 @@ public abstract class AbstractServer implements Server {
         this.requestProcessor.processRequest(request,serviceProviderChannel);
     }
 
+    @Override
+    public RequestProcessor getRequestProcessor() {
+        return this.requestProcessor;
+    }
+
+    @Override
+    public int getPort() {
+        return this.port;
+    }
 }
