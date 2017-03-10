@@ -12,6 +12,7 @@ public class ServerConfig {
     private int workQueueSize = Constants.PROVIDER_POOL_QUEUE_SIZE;
     //服务端口号，默认在4080发布
     private int port = Constants.DEFAULT_PORT;
+
     //服务发布机器ip
     private String ip="127.0.0.1";
 
