@@ -22,6 +22,7 @@ public class DefaultRegistryConfigManager implements RegistryConfigManager {
          * 获取注册地址
          */
         String registryAddr = configManager.getStringValue(Constants.FOX_REGISTRY_ADDRESS);
+
         Properties properties = new Properties();
         properties.put(Constants.FOX_REGISTRY_TYPE, registryType);
         properties.put(Constants.FOX_REGISTRY_ADDRESS, registryAddr);

@@ -40,7 +40,7 @@ public class SerializerFactory {
     public static Serializer getSerializer(String serializerType) {
         Serializer serializer=serializers.get(serializerType);
         if (serializer==null) {
-            throw new  InvalidParameterException(" not serializer typr is found"+serializerType);
+            throw new  InvalidParameterException(" not serializer type is found"+serializerType);
         } else {
             return serializer;
         }
@@ -49,7 +49,7 @@ public class SerializerFactory {
     public static Serializer getSerializer(byte serializerType) {
         Serializer serializer=serializersType.get(serializerType);
         if (serializer==null) {
-            throw new  InvalidParameterException(" not serializer typr is found"+serializerType);
+            throw new  InvalidParameterException(" not serializer type is found"+serializerType);
         } else {
             return serializer;
         }

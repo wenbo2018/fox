@@ -1,6 +1,9 @@
 package com.fox.rpc.remoting;
 
 import com.fox.rpc.common.extension.UserServiceLoader;
+import com.fox.rpc.config.ConfigManager;
+import com.fox.rpc.config.ConfigManagerLoader;
+import com.fox.rpc.registry.Constants;
 import com.fox.rpc.registry.Registry;
 import com.fox.rpc.remoting.invoker.api.ServiceProxy;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
@@ -12,6 +15,8 @@ import com.fox.rpc.remoting.provider.config.ServerConfig;
 import com.fox.rpc.remoting.provider.process.RequestProcessor;
 import org.apache.commons.collections4.CollectionUtils;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,6 +28,7 @@ import java.util.Map;
  */
 public class ServiceFactory {
 
+    private static ConfigManager configManager;
 
     private static final org.apache.log4j.Logger LOGGER = org.apache.log4j.Logger.getLogger(ServiceFactory.class);
 
@@ -33,6 +39,7 @@ public class ServiceFactory {
     static {
         try {
             ProviderBootStrap.init();
+            configManager= ConfigManagerLoader.getConfigManager();
         } catch (Throwable e) {
             e.printStackTrace();
             LOGGER.error("error while initializing service factory:", e);
@@ -72,6 +79,7 @@ public class ServiceFactory {
     }
 
     public static void startUpServer(ServerConfig serverConfig) {
+        serverConfig.setIp(configManager.getStringValue(Constants.FOX_REGISTRY_IP));
         List<Server> servers = UserServiceLoader.getExtensionList(Server.class);
         if (serverConfig != null) {
             for (Server server : servers) {
@@ -113,9 +121,9 @@ public class ServiceFactory {
             for (Registry registry : registryList) {
                 if (providerConfigList != null) {
                     for (ProviderConfig config : providerConfigList) {
-                        registry.registerService(config.getServiceName(),
-                                config.getServerConfig().getIp() + ":" + config.getServerConfig().getPort());
-                        LOGGER.debug("register service:" + config.getServiceName());
+                            registry.registerService(config.getServiceName(),
+                                    config.getServerConfig().getIp() + ":" + config.getServerConfig().getPort());
+                            LOGGER.debug("register service:" + config.getServiceName());
                     }
                 } else {
                     LOGGER.error("register center fail");

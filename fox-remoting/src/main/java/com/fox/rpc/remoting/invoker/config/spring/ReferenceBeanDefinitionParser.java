@@ -36,7 +36,7 @@ public class ReferenceBeanDefinitionParser implements BeanDefinitionParser {
 		beanDefinition.setLazyInit(false);
 		String id = element.getAttribute("id");
 		if (StringUtils.isBlank(id)) {
-			id = "pigeonRef_" + idCounter.incrementAndGet();
+			id = "foxRef_" + idCounter.incrementAndGet();
 		}
 		beanDefinition.setBeanClass(ReferenceProxy.class);
 		beanDefinition.setInitMethodName("init");

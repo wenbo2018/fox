@@ -12,20 +12,19 @@
          http://www.indoorloc.cn/schema/fox-service-1.0.xsd">
 
     <!-- 打开Spring的Annotation支持 -->
-    <context:annotation-config/>
-    <bean id="helloService" class="com.dianping.HelloServiceImpl"/>
-
-    <!--<bean id="helloTestService" class="com.fox.rpc.spring.ServiceRegister" init-method="init">-->
-        <!--<property name="port" value="4080"/>-->
-        <!--<property name="services">-->
-            <!--<map>-->
-                <!--<entry key="service.fox.com_helloTestService_helloService_1.0.0" value-ref="helloService"/>-->
-            <!--</map>-->
-        <!--</property>-->
+    <context:annotation-config />
+    <!--<bean id="helloService" class="com.fox.rpc.spring.ServiceProxy" init-method="init">-->
+    <!--<property name="iface" value="com.dianping.HelloService"/>-->
+    <!--<property name="serviceName" value="service.fox.com_helloTestService_helloService_1.0.0"/>-->
+    <!--<property name="serializer" value="hessian"/>-->
     <!--</bean>-->
+    <bean id="helloService" class="com.dianping.HelloServiceImpl"/>
 
     <fox:server  id="server1" port="4018"/>
     <fox:service server="server1"
                  serviceName="service.fox.com_helloTestService_helloService_1.0.0"
-            ref="helloService"/>
+                 ref="helloService"/>
+
+
+
 </beans>

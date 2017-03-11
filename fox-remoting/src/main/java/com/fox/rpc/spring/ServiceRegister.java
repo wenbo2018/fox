@@ -1,5 +1,7 @@
 package com.fox.rpc.spring;
 
+import com.fox.rpc.config.ConfigManager;
+import com.fox.rpc.config.ConfigManagerLoader;
 import com.fox.rpc.remoting.ServiceFactory;
 import com.fox.rpc.remoting.common.Constants;
 import com.fox.rpc.remoting.provider.config.ProviderConfig;
@@ -16,7 +18,7 @@ import java.util.Map;
 public class ServiceRegister {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ServiceFactory.class);
-
+    private static ConfigManager configManager;
     private boolean publish = true;
     private Map<String, Object> services;
     private int port = Constants.DEFAULT_PORT;
@@ -26,9 +28,11 @@ public class ServiceRegister {
 
     public void init() {
         /**初始化服务配置*/
+        configManager= ConfigManagerLoader.getConfigManager();
         ServerConfig serverConfig=new ServerConfig();
         serverConfig.setCorePoolSize(this.getCorePoolSize());
         serverConfig.setPort(this.getPort());
+        serverConfig.setIp(configManager.getStringValue(com.fox.rpc.registry.Constants.FOX_REGISTRY_IP));
         serverConfig.setWorkQueueSize(this.getWorkQueueSize());
         serverConfig.setMaxPoolSize(this.getMaxPoolSize());
         LOGGER.info("service begin");

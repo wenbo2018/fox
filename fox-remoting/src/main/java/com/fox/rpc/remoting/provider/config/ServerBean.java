@@ -1,5 +1,8 @@
 package com.fox.rpc.remoting.provider.config;
 
+import com.fox.rpc.config.ConfigManager;
+import com.fox.rpc.config.ConfigManagerLoader;
+import com.fox.rpc.registry.Constants;
 import com.fox.rpc.remoting.ServiceFactory;
 
 import java.util.ArrayList;
@@ -11,6 +14,8 @@ import java.util.List;
 public class ServerBean {
 
     private int port;
+
+
 
     private volatile ServerConfig serverConfig;
 
@@ -24,11 +29,14 @@ public class ServerBean {
     }
 
     public ServerConfig init() throws Exception {
+
         if (serverConfig == null) {
             synchronized (this) {
                 if (serverConfig == null) {
+
                     serverConfig = new ServerConfig();
                     serverConfig.setPort(port);
+
                     ServiceFactory.startUpServer(serverConfig);
                 }
             }
