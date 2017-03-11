@@ -11,13 +11,15 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * Created by shenwenbo on 2016/10/17.
  */
-public class ZookeeperRegistry implements Registry {
+public class CuratorRegistry implements Registry {
 
-    private static Logger LOGGER = Logger.getLogger(ZookeeperRegistry.class);
+    private static Logger LOGGER = Logger.getLogger(CuratorRegistry.class);
+
+    private static final String CHARSET = "UTF-8";
 
     private Properties properties;
 
-    private ZookeeperClient zookeeperClient;
+    private CuratorClient zookeeperClient;
 
     private volatile boolean isInitialized = false;
 
@@ -33,7 +35,7 @@ public class ZookeeperRegistry implements Registry {
                         String zkAddress = properties.getProperty(Constants.KEY_REGISTRY_ADDRESS);
                         if (zkAddress!=null) {
                             LOGGER.info("start to initialize zookeeper client:" + zkAddress);
-                            zookeeperClient = new ZookeeperClient(zkAddress);
+                            zookeeperClient = new CuratorClient(zkAddress);
                             LOGGER.info("succeed to initialize zookeeper client:" + zkAddress);
                             isInitialized = true;
                         }else {
@@ -51,25 +53,35 @@ public class ZookeeperRegistry implements Registry {
     @Override
     public void registerService(String serviceName, String serviceAddress) {
         String registryPath = Constants.ZK_REGISTRY_PATH;
-        zookeeperClient.creatrPersistentNode(registryPath);
-        String servicePath = registryPath + "/" + serviceName;
-        zookeeperClient.creatrPersistentNode(servicePath);
-        String addressPath = servicePath + "/address-";
-        zookeeperClient.create(addressPath, serviceAddress);
+        try {
+            zookeeperClient.creatrPersistentNode(registryPath);
+            String servicePath = registryPath + "/" + serviceName;
+            zookeeperClient.creatrPersistentNode(servicePath);
+            String addressPath = servicePath + "/address-";
+            zookeeperClient.create(addressPath, serviceAddress);
+        } catch (Exception e) {
+            LOGGER.error("service register fail:"+serviceName+":"+serviceAddress);
+        }
     }
 
     @Override
-    public boolean unregisterService(String serviceName, String serviceAddress) {
+    public void unregisterService(String serviceName, String serviceAddress) throws Exception {
         String registryPath = Constants.ZK_REGISTRY_PATH;
         String servicePath = registryPath + "/" + serviceName;
-        return zookeeperClient.delete(servicePath);
+        zookeeperClient.delete(servicePath);
     }
 
     @Override
     public String getServiceAddress(String serviceName) {
         // 获取 service 节点
         String servicePath = Constants.ZK_REGISTRY_PATH + "/" + serviceName;
-        List<String> addressList = zookeeperClient.get(servicePath);
+        List<String> addressList = null;
+        try {
+            addressList = zookeeperClient.get(servicePath);
+        } catch (Exception e) {
+            LOGGER.error("get node fail:"+serviceName,e);
+            return null;
+        }
         if (CollectionUtil.isEmpty(addressList)) {
             throw new RuntimeException(String.format("can not find any address node on path: %s", servicePath));
         }
@@ -88,6 +100,13 @@ public class ZookeeperRegistry implements Registry {
         }
         //获取 address 节点的值
         String addressPath = servicePath + "/" + address;
-        return zookeeperClient.getZookeeperClient().readData(addressPath);
+        String result=null;
+        try {
+            byte[] bytes  = zookeeperClient.getZookeeperClient().getData().forPath(addressPath);
+            result= new String(bytes, CHARSET);
+        } catch (Exception e) {
+            LOGGER.error("get node fail:"+addressPath,e);
+        }
+        return result;
     }
 }

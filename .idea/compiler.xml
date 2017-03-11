@@ -22,20 +22,33 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="dpsf-net" />
         <module name="fox" />
-        <module name="fox-api" />
-        <module name="fox-client" />
         <module name="fox-common" />
         <module name="fox-config" />
         <module name="fox-netty" />
-        <module name="fox-registry-consul" />
         <module name="fox-registry-redis" />
         <module name="fox-registry-zookeeper" />
         <module name="fox-remoting" />
-        <module name="fox-server" />
+        <module name="pigeon-common" />
+        <module name="pigeon-config" />
+        <module name="pigeon-config-lion" />
+        <module name="pigeon-console" />
+        <module name="pigeon-demo" />
+        <module name="pigeon-governor-api" />
+        <module name="pigeon-governor-server" />
+        <module name="pigeon-monitor" />
+        <module name="pigeon-monitor-cat" />
+        <module name="pigeon-registry" />
+        <module name="pigeon-registry-mns" />
+        <module name="pigeon-registry-zookeeper" />
+        <module name="pigeon-remoting" />
+        <module name="pigeon-remoting-http" />
+        <module name="pigeon-remoting-netty" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="dpsf-net" target="1.6" />
       <module name="fox" target="1.7" />
       <module name="fox-api" target="1.7" />
       <module name="fox-client" target="1.7" />
@@ -50,6 +63,24 @@
       <module name="fox-remoting" target="1.7" />
       <module name="fox-server" target="1.7" />
       <module name="fox-server-demo" target="1.7" />
+      <module name="pigeon-common" target="1.6" />
+      <module name="pigeon-config" target="1.6" />
+      <module name="pigeon-config-lion" target="1.6" />
+      <module name="pigeon-console" target="1.6" />
+      <module name="pigeon-demo" target="1.6" />
+      <module name="pigeon-extensions" target="1.6" />
+      <module name="pigeon-governor" target="1.6" />
+      <module name="pigeon-governor-api" target="1.6" />
+      <module name="pigeon-governor-server" target="1.6" />
+      <module name="pigeon-monitor" target="1.6" />
+      <module name="pigeon-monitor-cat" target="1.6" />
+      <module name="pigeon-parent" target="1.6" />
+      <module name="pigeon-registry" target="1.6" />
+      <module name="pigeon-registry-mns" target="1.6" />
+      <module name="pigeon-registry-zookeeper" target="1.6" />
+      <module name="pigeon-remoting" target="1.6" />
+      <module name="pigeon-remoting-http" target="1.6" />
+      <module name="pigeon-remoting-netty" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

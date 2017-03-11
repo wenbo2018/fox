@@ -8,6 +8,7 @@
   </parent>
 
   <artifactId>fox-registry-redis</artifactId>
+  <name>fox-registry-redis</name>
   <packaging>jar</packaging>
   <version>1.0.1</version>
 
@@ -16,6 +17,27 @@
     <maven.compiler.target>1.7</maven.compiler.target>
     <encoding>UTF-8</encoding>
   </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+    </dependency>
+    <!-- RPC Common -->
+    <dependency>
+      <groupId>rpc.fox</groupId>
+      <artifactId>fox-common</artifactId>
+      <version>${fox.version}</version>
+    </dependency>
+    <!-- RPC Registry -->
+    <dependency>
+      <groupId>rpc.fox</groupId>
+      <artifactId>fox-remoting</artifactId>
+      <version>${fox.version}</version>
+    </dependency>
+  </dependencies>
+
+
 
 
 

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon/dpsf-net.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon/dpsf-net.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox/fox.iml" filepath="$PROJECT_DIR$/fox/fox.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-api/fox-api.iml" filepath="$PROJECT_DIR$/fox-demo/fox-api/fox-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-client/fox-client.iml" filepath="$PROJECT_DIR$/fox-demo/fox-client/fox-client.iml" />
@@ -15,6 +16,24 @@
       <module fileurl="file://$PROJECT_DIR$/fox-registry-zookeeper/fox-registry-zookeeper.iml" filepath="$PROJECT_DIR$/fox-registry-zookeeper/fox-registry-zookeeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-remoting/fox-remoting.iml" filepath="$PROJECT_DIR$/fox-remoting/fox-remoting.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-server/fox-server.iml" filepath="$PROJECT_DIR$/fox-demo/fox-server/fox-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-common/pigeon-common.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-common/pigeon-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-config/pigeon-config.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-config/pigeon-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-extensions/pigeon-config-lion/pigeon-config-lion.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-extensions/pigeon-config-lion/pigeon-config-lion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-console/pigeon-console.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-console/pigeon-console.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-demo/pigeon-demo.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-demo/pigeon-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-extensions/pigeon-extensions.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-extensions/pigeon-extensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-governor/pigeon-governor.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-governor/pigeon-governor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-governor/pigeon-governor-api/pigeon-governor-api.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-governor/pigeon-governor-api/pigeon-governor-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-governor/pigeon-governor-server/pigeon-governor-server.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-governor/pigeon-governor-server/pigeon-governor-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-monitor/pigeon-monitor.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-monitor/pigeon-monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-extensions/pigeon-monitor-cat/pigeon-monitor-cat.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-extensions/pigeon-monitor-cat/pigeon-monitor-cat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-parent.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-registry/pigeon-registry.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-registry/pigeon-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-extensions/pigeon-registry-mns/pigeon-registry-mns.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-extensions/pigeon-registry-mns/pigeon-registry-mns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-extensions/pigeon-registry-zookeeper/pigeon-registry-zookeeper.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-extensions/pigeon-registry-zookeeper/pigeon-registry-zookeeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-remoting/pigeon-remoting.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-remoting/pigeon-remoting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-extensions/pigeon-remoting-http/pigeon-remoting-http.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-extensions/pigeon-remoting-http/pigeon-remoting-http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon2/pigeon-extensions/pigeon-remoting-netty/pigeon-remoting-netty.iml" filepath="$PROJECT_DIR$/../pigeon2/pigeon-extensions/pigeon-remoting-netty/pigeon-remoting-netty.iml" />
     </modules>
   </component>
 </project>

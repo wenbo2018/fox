@@ -1,1 +1,1 @@
-com.fox.rpc.registry.zookeeper.ZookeeperRegistry
+com.fox.rpc.registry.zookeeper.CuratorRegistry
