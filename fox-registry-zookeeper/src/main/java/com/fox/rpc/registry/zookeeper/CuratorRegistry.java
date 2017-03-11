@@ -77,7 +77,7 @@ public class CuratorRegistry implements Registry {
         String servicePath = Constants.ZK_REGISTRY_PATH + "/" + serviceName;
         List<String> addressList = null;
         try {
-            addressList = zookeeperClient.get(servicePath);
+            addressList = zookeeperClient.getChild(servicePath);
         } catch (Exception e) {
             LOGGER.error("get node fail:"+serviceName,e);
             return null;

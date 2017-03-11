@@ -7,14 +7,13 @@ import java.io.IOException;
 /**
  * Created by shenwenbo on 2017/3/11.
  */
-public class RegionEnsembleProvider implements EnsembleProvider {
+public class DefaultEnsembleProvider implements EnsembleProvider {
 
     private String defaultConnectionString;
 
+    DefaultEnsembleProvider() {}
 
-    RegionEnsembleProvider() {}
-
-    public RegionEnsembleProvider(String connectionString) {
+    public DefaultEnsembleProvider(String connectionString) {
         if(connectionString == null) {
             throw new NullPointerException("connection string is null");
         }

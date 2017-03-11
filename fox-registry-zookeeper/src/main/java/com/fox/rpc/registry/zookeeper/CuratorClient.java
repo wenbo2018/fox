@@ -35,7 +35,7 @@ public class CuratorClient {
      */
     public boolean newZkClient() throws InterruptedException {
         CuratorFramework client = CuratorFrameworkFactory.builder()
-                .ensembleProvider(new RegionEnsembleProvider(address))
+                .ensembleProvider(new DefaultEnsembleProvider(address))
                 .sessionTimeoutMs(30 * 1000)
                 .connectionTimeoutMs( 15 * 1000)
                 .retryPolicy(new ExponentialBackoffRetry(1000, Integer.MAX_VALUE))
@@ -69,7 +69,7 @@ public class CuratorClient {
      * @param path
      * @return
      */
-    public List<String> get(String path) throws Exception {
+    public List<String> getChild(String path) throws Exception {
         if (!exists(path)) {
             throw new RuntimeException(String.format("can not find any service node on path: %s", path));
         }
@@ -81,6 +81,23 @@ public class CuratorClient {
             return null;
         }
         return addressList;
+    }
+
+
+    public String get(String path) throws Exception {
+        return get(path, true);
+    }
+
+    public String get(String path,boolean watch) throws Exception {
+        if (exists(path, watch)) {
+            byte[] bytes = zookeeperClient.getData().forPath(path);
+            String value = new String(bytes, CHARSET);
+            LOGGER.debug("get value of node " + path + ", value " + value);
+            return value;
+        } else {
+            LOGGER.debug("node " + path + " does not exist");
+            return null;
+        }
     }
 
     /**
@@ -131,7 +148,9 @@ public class CuratorClient {
     }
 
 
-
+    public void watch(String path) throws Exception {
+        zookeeperClient.checkExists().watched().forPath(path);
+    }
 
     private void close(CuratorFramework client) {
         if (client != null) {
