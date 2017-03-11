@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.jasig.cas.client:cas-client-core-product:3.2.1-memcached.STABLE.13">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jasig/cas/client/cas-client-core-product/3.2.1-memcached.STABLE.13/cas-client-core-product-3.2.1-memcached.STABLE.13.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jasig/cas/client/cas-client-core-product/3.2.1-memcached.STABLE.13/cas-client-core-product-3.2.1-memcached.STABLE.13-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jasig/cas/client/cas-client-core-product/3.2.1-memcached.STABLE.13/cas-client-core-product-3.2.1-memcached.STABLE.13-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

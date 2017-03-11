@@ -38,7 +38,7 @@ public class ServiceBeanDefinitionParser implements BeanDefinitionParser {
 		beanDefinition.setLazyInit(false);
 		String id = element.getAttribute("id");
 		if (StringUtils.isBlank(id)) {
-			id = "pigeonService_" + idCounter.incrementAndGet();
+			id = "foxService_" + idCounter.incrementAndGet();
 		}
 		beanDefinition.setBeanClass(SingleServiceBean.class);
 		beanDefinition.setInitMethodName("init");

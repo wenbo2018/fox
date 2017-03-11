@@ -1,7 +1,7 @@
 
 package com.fox.rpc.remoting.provider.config;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.MutablePropertyValues;
@@ -41,7 +41,7 @@ public class ServerBeanDefinitionParser implements BeanDefinitionParser {
 		beanDefinition.setLazyInit(false);
 		String id = element.getAttribute("id");
 		if (StringUtils.isBlank(id)) {
-			id = "pigeonServer_" + idCounter.incrementAndGet();
+			id = "foxServer_" + idCounter.incrementAndGet();
 		}
 		beanDefinition.setBeanClass(ServerBean.class);
 		beanDefinition.setInitMethodName("init");

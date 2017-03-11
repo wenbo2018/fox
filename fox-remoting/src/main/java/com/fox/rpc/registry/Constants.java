@@ -15,5 +15,11 @@ public class Constants {
     public static final String FOX_REGISTRY_TYPE = "fox.registry.type";
 
 
+    /**
+     * 注册中心类型KEY
+     */
+    public static final String FOX_REGISTRY_IP = "fox.registry.ip";
+
+
 
 }

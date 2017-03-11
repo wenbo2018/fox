@@ -7,9 +7,12 @@
     <parent>
         <groupId>rpc.fox</groupId>
         <artifactId>fox-parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </parent>
     <artifactId>fox-remoting</artifactId>
+    <name>fox-remoting</name>
+    <packaging>jar</packaging>
+    <version>1.0.1</version>
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
@@ -19,12 +22,12 @@
         <dependency>
             <groupId>rpc.fox</groupId>
             <artifactId>fox-common</artifactId>
-            <version>${project.version}</version>
+            <version>${fox.version}</version>
         </dependency>
         <dependency>
             <groupId>rpc.fox</groupId>
             <artifactId>fox-config</artifactId>
-            <version>1.0.0</version>
+            <version>${fox.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

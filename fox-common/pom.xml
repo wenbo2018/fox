@@ -7,9 +7,12 @@
     <parent>
         <groupId>rpc.fox</groupId>
         <artifactId>fox-parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </parent>
     <artifactId>fox-common</artifactId>
+    <name>fox-common</name>
+    <packaging>jar</packaging>
+    <version>1.0.1</version>
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
@@ -18,17 +21,14 @@
         <version.objenesis>2.1</version.objenesis>
     </properties>
     <dependencies>
-        <!-- SLF4J -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
         </dependency>
-        <!-- Netty -->
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
         </dependency>
-        <!-- Protostuff -->
         <dependency>
             <groupId>com.dyuproject.protostuff</groupId>
             <artifactId>protostuff-core</artifactId>
@@ -39,28 +39,23 @@
             <artifactId>protostuff-runtime</artifactId>
             <version>${version.protostuff}</version>
         </dependency>
-        <!-- Objenesis -->
         <dependency>
             <groupId>org.objenesis</groupId>
             <artifactId>objenesis</artifactId>
             <version>${version.objenesis}</version>
         </dependency>
-        <!-- Apache Commons Lang -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
-        <!-- Apache Commons Collections -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-collections4</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.caucho/hessian -->
         <dependency>
             <groupId>com.caucho</groupId>
             <artifactId>hessian</artifactId>
             <version>3.1.5</version>
         </dependency>
     </dependencies>
-
 </project>
