@@ -23,9 +23,14 @@ C:/data/app/appkeys.properties(WIN)
 
 Configuration format:
 
+```xml
 fox.registry.adress="zk server ip"
+
 fox.registry.type=zookeeper
+
 fox.registry.ip="your rpc server ip"
+
+```
 
 ## Quick Start
 when you need invoke service ,you can just do as following:
