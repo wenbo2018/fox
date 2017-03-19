@@ -1,6 +1,6 @@
 package com.dianping;
 
-import com.dianping.dto.User;
+import com.fox.dto.User;
 import com.fox.rpc.common.codec.Serializer;
 import com.fox.rpc.common.codec.hessian.HessianSerializer;
 

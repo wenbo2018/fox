@@ -2,8 +2,12 @@ package com.fox.rpc.registry.zookeeper;
 
 import com.fox.rpc.common.util.CollectionUtil;
 import com.fox.rpc.registry.Registry;
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
+import org.apache.zookeeper.data.Stat;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.ThreadLocalRandom;
@@ -23,7 +27,9 @@ public class CuratorRegistry implements Registry {
 
     private volatile boolean isInitialized = false;
 
-    /**初始化zk**/
+    /**
+     * 初始化zk
+     **/
     @Override
     public void init(Properties properties) {
         this.properties = properties;
@@ -33,12 +39,12 @@ public class CuratorRegistry implements Registry {
                     try {
                         //获取zk地址
                         String zkAddress = properties.getProperty(Constants.KEY_REGISTRY_ADDRESS);
-                        if (zkAddress!=null) {
+                        if (zkAddress != null) {
                             LOGGER.info("start to initialize zookeeper client:" + zkAddress);
                             zookeeperClient = new CuratorClient(zkAddress);
                             LOGGER.info("succeed to initialize zookeeper client:" + zkAddress);
                             isInitialized = true;
-                        }else {
+                        } else {
                             LOGGER.error("zookeeper server adress is null");
                         }
                     } catch (Exception ex) {
@@ -54,13 +60,34 @@ public class CuratorRegistry implements Registry {
     public void registerService(String serviceName, String serviceAddress) {
         String registryPath = Constants.ZK_REGISTRY_PATH;
         try {
-            zookeeperClient.creatrPersistentNode(registryPath);
-            String servicePath = registryPath + "/" + serviceName;
-            zookeeperClient.creatrPersistentNode(servicePath);
-            String addressPath = servicePath + "/address-";
-            zookeeperClient.create(addressPath, serviceAddress);
+            //根目录不存在,创建根目录;
+            if (!zookeeperClient.exists(registryPath)) {
+                zookeeperClient.creatrPersistentNode(registryPath);
+            }
+            //注册服务，如果服务节点存在，那么将节点再讲不存在的数据设置进行
+            String serviceAddressPath = Constants.ZK_REGISTRY_PATH + "/" + serviceName;
+            if (zookeeperClient.exists(serviceAddressPath)) {
+                Stat stat = new Stat();
+                String addressValues = zookeeperClient.get(serviceAddressPath, stat);
+                String[] addressArray = addressValues.split(",");
+                List<String> addressList = new ArrayList<String>();
+                for (String addr : addressArray) {
+                    addr = addr.trim();
+                    if (addr.length() > 0 && !addressList.contains(addr)) {
+                        addressList.add(addr.trim());
+                    }
+                }
+                if (!addressList.contains(serviceAddress)) {
+                    addressList.add(serviceAddress);
+                    Collections.sort(addressList);
+                    zookeeperClient.set(serviceAddressPath, StringUtils.join(addressList.iterator(), ","), stat.getVersion());
+                }
+            } else {
+                zookeeperClient.create(serviceAddressPath, serviceAddress);
+            }
+            LOGGER.info("service register success:" + serviceName + ":" + serviceAddress);
         } catch (Exception e) {
-            LOGGER.error("service register fail:"+serviceName+":"+serviceAddress);
+            LOGGER.error("service register fail:" + serviceName + ":" + serviceAddress);
         }
     }
 
@@ -74,39 +101,31 @@ public class CuratorRegistry implements Registry {
     @Override
     public String getServiceAddress(String serviceName) {
         // 获取 service 节点
+        String result=null;
         String servicePath = Constants.ZK_REGISTRY_PATH + "/" + serviceName;
-        List<String> addressList = null;
+        String serviceAddressPath = Constants.ZK_REGISTRY_PATH + "/" + serviceName;
         try {
-            addressList = zookeeperClient.getChild(servicePath);
+            if (zookeeperClient.exists(serviceAddressPath)) {
+                Stat stat = new Stat();
+                String addressValues = zookeeperClient.get(serviceAddressPath, stat);
+                String[] addressArray = addressValues.split(",");
+                List<String> addressList = new ArrayList<String>();
+                for (String addr : addressArray) {
+                    addr = addr.trim();
+                    if (addr.length() > 0 && !addressList.contains(addr)) {
+                        addressList.add(addr.trim());
+                    }
+                }
+                //随机获取可提供服务的机器;
+                result=addressList.get(1 + (int)(Math.random()*addressList.size())-1);
+
+            } else {
+                throw new RuntimeException(String.format("can not find any address node on path: %s",serviceAddressPath));
+            }
         } catch (Exception e) {
-            LOGGER.error("get node fail:"+serviceName,e);
-            return null;
-        }
-        if (CollectionUtil.isEmpty(addressList)) {
-            throw new RuntimeException(String.format("can not find any address node on path: %s", servicePath));
+            LOGGER.error("get service address fail:"+e.toString());
         }
 
-        // 获取 address 节点
-        String address;
-        int size = addressList.size();
-        if (size == 1) {
-            // 若只有一个地址，则获取该地址
-            address = addressList.get(0);
-            LOGGER.debug("get only address node:" + address);
-        } else {
-            //若存在多个地址，负载均衡则随机获取一个地址
-            address = addressList.get(ThreadLocalRandom.current().nextInt(size));
-            LOGGER.debug("get random address node:" + address);
-        }
-        //获取 address 节点的值
-        String addressPath = servicePath + "/" + address;
-        String result=null;
-        try {
-            byte[] bytes  = zookeeperClient.getZookeeperClient().getData().forPath(addressPath);
-            result= new String(bytes, CHARSET);
-        } catch (Exception e) {
-            LOGGER.error("get node fail:"+addressPath,e);
-        }
         return result;
     }
 }

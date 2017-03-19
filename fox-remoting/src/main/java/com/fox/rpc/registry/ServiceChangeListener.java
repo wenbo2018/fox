@@ -7,6 +7,7 @@ import java.util.List;
  */
 public interface ServiceChangeListener {
 
+
     void onServiceHostChange(String serviceName, List<String[]> hostList);
 
 }

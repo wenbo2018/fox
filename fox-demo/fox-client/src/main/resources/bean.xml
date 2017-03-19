@@ -14,12 +14,12 @@
 <!-- 打开Spring的Annotation支持 -->
         <context:annotation-config />
         <!--<bean id="helloService" class="com.fox.rpc.spring.ServiceProxy" init-method="init">-->
-            <!--<property name="iface" value="com.dianping.HelloService"/>-->
+            <!--<property name="iface" value="HelloService"/>-->
             <!--<property name="serviceName" value="service.fox.com_helloTestService_helloService_1.0.0"/>-->
             <!--<property name="serializer" value="hessian"/>-->
         <!--</bean>-->
     <fox:invoker id="helloService"
-            iface="com.dianping.HelloService"
+            iface="com.fox.HelloService"
             serviceName="service.fox.com_helloTestService_helloService_1.0.0"
             serializer="hessian"/>
 

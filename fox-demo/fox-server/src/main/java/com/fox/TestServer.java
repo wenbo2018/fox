@@ -1,4 +1,4 @@
-package com.dianping;
+package com.fox;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

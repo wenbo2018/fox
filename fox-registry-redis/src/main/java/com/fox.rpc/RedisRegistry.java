@@ -23,8 +23,7 @@ public class RedisRegistry implements Registry {
     }
 
     @Override
-    public boolean unregisterService(String serviceName, String serviceAddress) {
-        return false;
+    public void unregisterService(String serviceName, String serviceAddress) {
     }
 
     @Override

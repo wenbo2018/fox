@@ -1,7 +1,7 @@
-package com.dianping;
+package com.fox;
 
 
-import com.dianping.dto.User;
+import com.fox.dto.User;
 
 import java.util.Date;
 

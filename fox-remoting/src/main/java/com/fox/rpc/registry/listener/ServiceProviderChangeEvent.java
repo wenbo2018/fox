@@ -50,4 +50,10 @@ public class ServiceProviderChangeEvent {
     public void setConnect(String connect) {
         this.connect = connect;
     }
+
+    public ServiceProviderChangeEvent(String serviceName, String host, int port) {
+        this.serviceName = serviceName;
+        this.host = host;
+        this.port = port;
+    }
 }

@@ -1,4 +1,4 @@
-package com.dianping.dto;
+package com.fox.dto;
 
 import java.io.Serializable;
 

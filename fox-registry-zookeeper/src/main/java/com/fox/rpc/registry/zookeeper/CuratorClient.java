@@ -1,7 +1,12 @@
 package com.fox.rpc.registry.zookeeper;
 
+import io.netty.util.concurrent.DefaultThreadFactory;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
+import org.apache.curator.framework.recipes.cache.ChildData;
+import org.apache.curator.framework.recipes.cache.TreeCache;
+import org.apache.curator.framework.recipes.cache.TreeCacheEvent;
+import org.apache.curator.framework.recipes.cache.TreeCacheListener;
 import org.apache.curator.framework.state.ConnectionState;
 import org.apache.curator.framework.state.ConnectionStateListener;
 import org.apache.curator.retry.ExponentialBackoffRetry;
@@ -11,13 +16,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * Created by shenwenbo on 2016/10/17.
  */
 public class CuratorClient {
 
-    private static Logger LOGGER= LoggerFactory.getLogger(CuratorClient.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(CuratorClient.class);
 
     private String address;
 
@@ -25,8 +32,11 @@ public class CuratorClient {
 
     private CuratorFramework zookeeperClient;
 
+    private static ExecutorService curatorEventListenerThreadPool = Executors
+            .newCachedThreadPool(new DefaultThreadFactory("fox-Curator-Event-Listener"));
+
     public CuratorClient(String zkAddress) throws InterruptedException {
-        this.address=zkAddress;
+        this.address = zkAddress;
         newZkClient();
     }
 
@@ -37,7 +47,7 @@ public class CuratorClient {
         CuratorFramework client = CuratorFrameworkFactory.builder()
                 .ensembleProvider(new DefaultEnsembleProvider(address))
                 .sessionTimeoutMs(30 * 1000)
-                .connectionTimeoutMs( 15 * 1000)
+                .connectionTimeoutMs(15 * 1000)
                 .retryPolicy(new ExponentialBackoffRetry(1000, Integer.MAX_VALUE))
                 .build();
 
@@ -50,12 +60,18 @@ public class CuratorClient {
                 }
             }
         });
-       // client.getCuratorListenable().addListener(new CuratorEventListener(this), curatorEventListenerThreadPool);
+        //事件监听;
+        client.getCuratorListenable().addListener(new CuratorEventListener(this), curatorEventListenerThreadPool);
         client.start();
         boolean isConnected = client.getZookeeperClient().blockUntilConnectedOrTimedOut();
         CuratorFramework oldClient = this.zookeeperClient;
         this.zookeeperClient = client;
         close(oldClient);
+//        try {
+//            setListenterThreeThree(zookeeperClient);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
         LOGGER.info("succeed to create zookeeper client, connected:" + isConnected);
         return isConnected;
     }
@@ -66,6 +82,7 @@ public class CuratorClient {
 
     /**
      * 获取根据path获取节点信息
+     *
      * @param path
      * @return
      */
@@ -88,7 +105,21 @@ public class CuratorClient {
         return get(path, true);
     }
 
-    public String get(String path,boolean watch) throws Exception {
+
+    public String get(String path, Stat stat) throws Exception {
+        if (exists(path, false)) {
+            byte[] bytes = zookeeperClient.getData().storingStatIn(stat).forPath(path);
+            String value = new String(bytes, CHARSET);
+            LOGGER.debug("get value of node " + path + ", value " + value);
+            return value;
+        } else {
+            LOGGER.debug("node " + path + " does not exist");
+            return null;
+        }
+    }
+
+
+    public String get(String path, boolean watch) throws Exception {
         if (exists(path, watch)) {
             byte[] bytes = zookeeperClient.getData().forPath(path);
             String value = new String(bytes, CHARSET);
@@ -101,29 +132,52 @@ public class CuratorClient {
     }
 
     /**
+     * 给存在的节点重新设值
+     *
+     * @param path
+     * @param value
+     * @param version
+     * @throws Exception
+     */
+    public void set(String path, Object value, int version) throws Exception {
+        byte[] bytes = (value == null ? new byte[0] : value.toString().getBytes(CHARSET));
+        if (exists(path, false)) {
+            zookeeperClient.setData().withVersion(0).forPath(path, bytes);
+            LOGGER.debug("set value of node " + path + " to " + value);
+        } else {
+            zookeeperClient.create().creatingParentsIfNeeded().forPath(path, bytes);
+            LOGGER.debug("create node " + path + " value " + value);
+        }
+    }
+
+
+    /**
      * 创建零时节点
+     *
      * @param node
      * @param value
      */
-    public void create(String node,String value) throws Exception {
+    public void create(String node, String value) throws Exception {
         byte[] bytes = (value == null ? new byte[0] : value.toString().getBytes(CHARSET));
-        String addressNode = zookeeperClient.create().withMode(CreateMode.EPHEMERAL).forPath(node,bytes);
-        LOGGER.info("create address node:",addressNode);
+        String addressNode = zookeeperClient.create().withMode(CreateMode.EPHEMERAL).forPath(node, bytes);
+        LOGGER.info("create address node:", addressNode);
     }
 
     /**
      * 创建持久节点
+     *
      * @param path
      */
     public void creatrPersistentNode(String path) throws Exception {
-        if (!exists(path)) {
+        if (!exists(path, false)) {
             zookeeperClient.create().creatingParentsIfNeeded().forPath(path);
-            LOGGER.info("create registry node:",path);
+            LOGGER.info("create registry node:", path);
         }
     }
 
     /**
      * 删除节点
+     *
      * @param path
      * @return
      */
@@ -175,5 +229,4 @@ public class CuratorClient {
                 forPath(path) : zookeeperClient.checkExists().forPath(path);
         return stat != null;
     }
-
 }
