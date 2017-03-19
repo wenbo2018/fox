@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.aliyun.odps:odps-jdbc:1.6">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/aliyun/odps/odps-jdbc/1.6/odps-jdbc-1.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/aliyun/odps/odps-jdbc/1.6/odps-jdbc-1.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/aliyun/odps/odps-jdbc/1.6/odps-jdbc-1.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

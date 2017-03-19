@@ -12,4 +12,5 @@ public interface ServerInfoListener {
      */
     void onServerVersionChange(String serverAddress, String version);
 
+
 }

@@ -163,6 +163,7 @@ public class CuratorClient {
         }
     }
 
+
     public boolean exists(String path) throws Exception {
         Stat stat = zookeeperClient.checkExists().watched().forPath(path);
         return stat != null;
@@ -170,7 +171,8 @@ public class CuratorClient {
 
 
     public boolean exists(String path, boolean watch) throws Exception {
-        Stat stat = watch ? zookeeperClient.checkExists().watched().forPath(path) : zookeeperClient.checkExists().forPath(path);
+        Stat stat = watch ? zookeeperClient.checkExists().watched().
+                forPath(path) : zookeeperClient.checkExists().forPath(path);
         return stat != null;
     }
 

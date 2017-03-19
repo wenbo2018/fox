@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.aliyun.odps:odps-sdk-core:0.18.3-public">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/aliyun/odps/odps-sdk-core/0.18.3-public/odps-sdk-core-0.18.3-public.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/aliyun/odps/odps-sdk-core/0.18.3-public/odps-sdk-core-0.18.3-public-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/aliyun/odps/odps-sdk-core/0.18.3-public/odps-sdk-core-0.18.3-public-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
