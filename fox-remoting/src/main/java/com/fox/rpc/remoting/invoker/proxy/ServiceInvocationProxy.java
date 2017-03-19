@@ -5,6 +5,7 @@ import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.common.extension.UserServiceLoader;
 import com.fox.rpc.common.util.StringUtil;
 import com.fox.rpc.registry.Registry;
+import com.fox.rpc.registry.RegistryManager;
 import com.fox.rpc.remoting.invoker.api.Client;
 import com.fox.rpc.remoting.invoker.api.ClientFactory;
 import com.fox.rpc.remoting.invoker.config.ConnectInfo;
@@ -44,13 +45,8 @@ public class ServiceInvocationProxy<T> implements InvocationHandler{
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         InvokeRequest request=createInvokeRequest(method,args);
-        List<Registry> registrys=(List<Registry>) UserServiceLoader.getExtension(Registry.class);
-        //随机算法获取注册中心；
-        int n=1+(int)(Math.random()*registrys.size());
-        if (registrys.size()>0) {
-            serviceAddress = registrys.get(n-1).getServiceAddress(serviceName);
-            LOGGER.debug("discover service: {} => {}", serviceName, serviceAddress);
-        }
+        serviceAddress = RegistryManager.getInstance().getServiceAddress(serviceName);
+        LOGGER.debug("discover service: {} => {}", serviceName, serviceAddress);
         if (StringUtil.isEmpty(serviceAddress)) {
             throw new RuntimeException("server address is empty");
         }

@@ -16,6 +16,7 @@ public class ThreadPoolRequestProcessor<T> implements RequestProcessor<T>{
     private static int MAX_QUEUE_SIZE;
     private static int CORE_POOL_SIZE;
     private static int MAX_POOL_SIZE;
+
     private static volatile ThreadPoolExecutor executorService = null;
 
     private static ConcurrentHashMap<String,ProviderConfig>  cacheServices=new ConcurrentHashMap<String,ProviderConfig>();

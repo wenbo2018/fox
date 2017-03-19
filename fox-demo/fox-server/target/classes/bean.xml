@@ -19,11 +19,15 @@
     <!--<property name="serializer" value="hessian"/>-->
     <!--</bean>-->
     <bean id="helloService" class="com.dianping.HelloServiceImpl"/>
+    <bean id="userService" class="com.dianping.UserServiceImpl"/>
 
     <fox:server  id="server1" port="4018"/>
     <fox:service server="server1"
                  serviceName="service.fox.com_helloTestService_helloService_1.0.0"
                  ref="helloService"/>
+    <fox:service server="server1"
+                 serviceName="service.fox.com_helloTestService_userService_1.0.0"
+                 ref="userService"/>
 
 
 

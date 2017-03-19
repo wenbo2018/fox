@@ -22,20 +22,141 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="dpsf-net" />
+        <module name="druid" />
+        <module name="dubbo (1)" />
+        <module name="dubbo (2)" />
+        <module name="dubbo-admin" />
+        <module name="dubbo-cluster" />
+        <module name="dubbo-common" />
+        <module name="dubbo-config-api" />
+        <module name="dubbo-config-spring" />
+        <module name="dubbo-container-api" />
+        <module name="dubbo-container-jetty" />
+        <module name="dubbo-container-log4j" />
+        <module name="dubbo-container-logback" />
+        <module name="dubbo-container-spring" />
+        <module name="dubbo-demo-api" />
+        <module name="dubbo-demo-consumer" />
+        <module name="dubbo-demo-provider" />
+        <module name="dubbo-filter-cache" />
+        <module name="dubbo-filter-validation" />
+        <module name="dubbo-monitor-api" />
+        <module name="dubbo-monitor-default" />
+        <module name="dubbo-monitor-simple" />
+        <module name="dubbo-registry-api" />
+        <module name="dubbo-registry-default" />
+        <module name="dubbo-registry-multicast" />
+        <module name="dubbo-registry-redis" />
+        <module name="dubbo-registry-simple" />
+        <module name="dubbo-registry-zookeeper" />
+        <module name="dubbo-remoting-api" />
+        <module name="dubbo-remoting-grizzly" />
+        <module name="dubbo-remoting-http" />
+        <module name="dubbo-remoting-mina" />
+        <module name="dubbo-remoting-netty" />
+        <module name="dubbo-remoting-p2p" />
+        <module name="dubbo-remoting-zookeeper" />
+        <module name="dubbo-rpc-api" />
+        <module name="dubbo-rpc-default" />
+        <module name="dubbo-rpc-hessian" />
+        <module name="dubbo-rpc-http" />
+        <module name="dubbo-rpc-injvm" />
+        <module name="dubbo-rpc-memcached" />
+        <module name="dubbo-rpc-redis" />
+        <module name="dubbo-rpc-rmi" />
+        <module name="dubbo-rpc-thrift" />
+        <module name="dubbo-rpc-webservice" />
+        <module name="dubbo-test-benchmark" />
+        <module name="dubbo-test-compatibility" />
+        <module name="dubbo-test-examples" />
+        <module name="dubbo-test-integration" />
         <module name="fox" />
-        <module name="fox-api" />
-        <module name="fox-client" />
         <module name="fox-common" />
         <module name="fox-config" />
         <module name="fox-netty" />
-        <module name="fox-registry-consul" />
         <module name="fox-registry-redis" />
         <module name="fox-registry-zookeeper" />
         <module name="fox-remoting" />
-        <module name="fox-server" />
+        <module name="hessian-lite" />
+        <module name="pigeon-common" />
+        <module name="pigeon-config" />
+        <module name="pigeon-config-lion" />
+        <module name="pigeon-console" />
+        <module name="pigeon-demo" />
+        <module name="pigeon-governor-api" />
+        <module name="pigeon-governor-server" />
+        <module name="pigeon-monitor" />
+        <module name="pigeon-monitor-cat" />
+        <module name="pigeon-registry" />
+        <module name="pigeon-registry-mns" />
+        <module name="pigeon-registry-zookeeper" />
+        <module name="pigeon-remoting" />
+        <module name="pigeon-remoting-http" />
+        <module name="pigeon-remoting-netty" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="dpsf-net" target="1.6" />
+      <module name="druid" target="1.6" />
+      <module name="dubbo (1)" target="1.5" />
+      <module name="dubbo (2)" target="1.7" />
+      <module name="dubbo-admin" target="1.7" />
+      <module name="dubbo-cluster" target="1.7" />
+      <module name="dubbo-common" target="1.7" />
+      <module name="dubbo-config" target="1.7" />
+      <module name="dubbo-config-api" target="1.7" />
+      <module name="dubbo-config-spring" target="1.7" />
+      <module name="dubbo-container" target="1.7" />
+      <module name="dubbo-container-api" target="1.7" />
+      <module name="dubbo-container-jetty" target="1.7" />
+      <module name="dubbo-container-log4j" target="1.7" />
+      <module name="dubbo-container-logback" target="1.7" />
+      <module name="dubbo-container-spring" target="1.7" />
+      <module name="dubbo-demo" target="1.7" />
+      <module name="dubbo-demo-api" target="1.7" />
+      <module name="dubbo-demo-consumer" target="1.7" />
+      <module name="dubbo-demo-provider" target="1.7" />
+      <module name="dubbo-filter" target="1.7" />
+      <module name="dubbo-filter-cache" target="1.7" />
+      <module name="dubbo-filter-validation" target="1.7" />
+      <module name="dubbo-monitor" target="1.7" />
+      <module name="dubbo-monitor-api" target="1.7" />
+      <module name="dubbo-monitor-default" target="1.7" />
+      <module name="dubbo-monitor-simple" target="1.7" />
+      <module name="dubbo-parent" target="1.7" />
+      <module name="dubbo-registry" target="1.7" />
+      <module name="dubbo-registry-api" target="1.7" />
+      <module name="dubbo-registry-default" target="1.7" />
+      <module name="dubbo-registry-multicast" target="1.7" />
+      <module name="dubbo-registry-redis" target="1.7" />
+      <module name="dubbo-registry-simple" target="1.7" />
+      <module name="dubbo-registry-zookeeper" target="1.7" />
+      <module name="dubbo-remoting" target="1.7" />
+      <module name="dubbo-remoting-api" target="1.7" />
+      <module name="dubbo-remoting-grizzly" target="1.7" />
+      <module name="dubbo-remoting-http" target="1.7" />
+      <module name="dubbo-remoting-mina" target="1.7" />
+      <module name="dubbo-remoting-netty" target="1.7" />
+      <module name="dubbo-remoting-p2p" target="1.7" />
+      <module name="dubbo-remoting-zookeeper" target="1.7" />
+      <module name="dubbo-rpc" target="1.7" />
+      <module name="dubbo-rpc-api" target="1.7" />
+      <module name="dubbo-rpc-default" target="1.7" />
+      <module name="dubbo-rpc-hessian" target="1.7" />
+      <module name="dubbo-rpc-http" target="1.7" />
+      <module name="dubbo-rpc-injvm" target="1.7" />
+      <module name="dubbo-rpc-memcached" target="1.7" />
+      <module name="dubbo-rpc-redis" target="1.7" />
+      <module name="dubbo-rpc-rmi" target="1.7" />
+      <module name="dubbo-rpc-thrift" target="1.7" />
+      <module name="dubbo-rpc-webservice" target="1.7" />
+      <module name="dubbo-simple" target="1.7" />
+      <module name="dubbo-test" target="1.7" />
+      <module name="dubbo-test-benchmark" target="1.6" />
+      <module name="dubbo-test-compatibility" target="1.7" />
+      <module name="dubbo-test-examples" target="1.7" />
+      <module name="dubbo-test-integration" target="1.7" />
       <module name="fox" target="1.7" />
       <module name="fox-api" target="1.7" />
       <module name="fox-client" target="1.7" />
@@ -50,6 +171,25 @@
       <module name="fox-remoting" target="1.7" />
       <module name="fox-server" target="1.7" />
       <module name="fox-server-demo" target="1.7" />
+      <module name="hessian-lite" target="1.7" />
+      <module name="pigeon-common" target="1.6" />
+      <module name="pigeon-config" target="1.6" />
+      <module name="pigeon-config-lion" target="1.6" />
+      <module name="pigeon-console" target="1.6" />
+      <module name="pigeon-demo" target="1.6" />
+      <module name="pigeon-extensions" target="1.6" />
+      <module name="pigeon-governor" target="1.6" />
+      <module name="pigeon-governor-api" target="1.6" />
+      <module name="pigeon-governor-server" target="1.6" />
+      <module name="pigeon-monitor" target="1.6" />
+      <module name="pigeon-monitor-cat" target="1.6" />
+      <module name="pigeon-parent" target="1.6" />
+      <module name="pigeon-registry" target="1.6" />
+      <module name="pigeon-registry-mns" target="1.6" />
+      <module name="pigeon-registry-zookeeper" target="1.6" />
+      <module name="pigeon-remoting" target="1.6" />
+      <module name="pigeon-remoting-http" target="1.6" />
+      <module name="pigeon-remoting-netty" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

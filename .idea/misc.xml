@@ -3,11 +3,19 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../dubbo/dubbo-admin" />
+    <file type="web" url="file://$PROJECT_DIR$/../pigeon2/pigeon-governor/pigeon-governor-server" />
+  </component>
   <component name="IdProvider" IDEtalkID="D5E5EE3033B9CB991C7A2552A366CAC8" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../pigeon2/pom.xml" />
+        <option value="$PROJECT_DIR$/../dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/../dubbo/dubbo-maven/pom.xml" />
+        <option value="$PROJECT_DIR$/../druid/pom.xml" />
       </list>
     </option>
   </component>

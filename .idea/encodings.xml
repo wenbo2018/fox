@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/../druid" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-cluster" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-config/dubbo-config-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-config/dubbo-config-spring" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-container" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-jetty" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-log4j" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-logback" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-spring" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-demo/dubbo-demo-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-demo/dubbo-demo-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-demo/dubbo-demo-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-filter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-filter/dubbo-filter-cache" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-filter/dubbo-filter-validation" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-maven" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-monitor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-monitor/dubbo-monitor-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-monitor/dubbo-monitor-default" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-registry" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-default" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-multicast" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-zookeeper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-remoting" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-grizzly" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-http" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-mina" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-netty" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-p2p" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-zookeeper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-rpc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-default" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-hessian" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-http" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-injvm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-memcached" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-rmi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-thrift" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-webservice" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-simple/dubbo-monitor-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-simple/dubbo-registry-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-benchmark" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-compatibility" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-examples" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-integration" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/hessian-lite" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fox" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fox-common" charset="UTF-8" />
@@ -10,5 +70,6 @@
     <file url="file://$PROJECT_DIR$/fox-registry-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fox-registry-zookeeper" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fox-remoting" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/fox/rpc/registry/RegistryManager.java" charset="UTF-8" />
   </component>
 </project>

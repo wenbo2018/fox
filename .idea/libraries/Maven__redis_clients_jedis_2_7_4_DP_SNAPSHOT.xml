@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: redis.clients:jedis:2.7.4.DP-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.7.4.DP-SNAPSHOT/jedis-2.7.4.DP-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.7.4.DP-SNAPSHOT/jedis-2.7.4.DP-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.7.4.DP-SNAPSHOT/jedis-2.7.4.DP-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -11,7 +11,7 @@ public interface Registry {
 
     void registerService(String serviceName, String serviceAddress);
 
-    boolean unregisterService(String serviceName, String serviceAddress);
+    void unregisterService(String serviceName, String serviceAddress) throws Exception;
 
     String getServiceAddress(String serviceName);
 
