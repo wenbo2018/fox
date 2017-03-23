@@ -8,6 +8,7 @@ import com.fox.rpc.remoting.provider.config.ProviderConfig;
 import com.fox.rpc.remoting.provider.config.ServerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -28,8 +29,8 @@ public class ServiceRegister {
 
     public void init() {
         /**初始化服务配置*/
-        configManager= ConfigManagerLoader.getConfigManager();
-        ServerConfig serverConfig=new ServerConfig();
+        configManager = ConfigManagerLoader.getConfigManager();
+        ServerConfig serverConfig = new ServerConfig();
         serverConfig.setCorePoolSize(this.getCorePoolSize());
         serverConfig.setPort(this.getPort());
         serverConfig.setIp(configManager.getStringValue(com.fox.rpc.registry.Constants.FOX_REGISTRY_IP));
@@ -38,9 +39,9 @@ public class ServiceRegister {
         LOGGER.info("service begin");
         /**封装服务信息**/
         List<ProviderConfig<?>> providerConfigList = new ArrayList<ProviderConfig<?>>();
-        if (services!=null) {
+        if (services != null) {
             for (String serviceName : services.keySet()) {
-                ProviderConfig config=new ProviderConfig(services.get(serviceName));
+                ProviderConfig config = new ProviderConfig(services.get(serviceName));
                 config.setServiceName(serviceName);
                 config.setServerConfig(serverConfig);
                 providerConfigList.add(config);

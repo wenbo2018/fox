@@ -4,17 +4,16 @@ import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.common.extension.UserServiceLoader;
 import com.fox.rpc.common.util.StringUtil;
-import com.fox.rpc.registry.Registry;
 import com.fox.rpc.registry.RegistryManager;
+import com.fox.rpc.remoting.common.ConnectInfo;
+import com.fox.rpc.remoting.invoker.ClientManager;
 import com.fox.rpc.remoting.invoker.api.Client;
 import com.fox.rpc.remoting.invoker.api.ClientFactory;
-import com.fox.rpc.remoting.invoker.config.ConnectInfo;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.util.List;
 import java.util.UUID;
 
 /**
@@ -33,37 +32,31 @@ public class ServiceInvocationProxy<T> implements InvocationHandler{
 
     private String serviceName;
 
-
     private String serializer;
+
+    private InvokerConfig invokerConfig;
 
     public ServiceInvocationProxy(InvokerConfig config) {
         this.interfaceClass=config.getInterfaceClass();
         this.serviceName=config.getServiceName();
         this.serializer=config.getSerializer();
+        this.invokerConfig=config;
     }
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         InvokeRequest request=createInvokeRequest(method,args);
-        serviceAddress = RegistryManager.getInstance().getServiceAddress(serviceName);
-        LOGGER.debug("discover service: {} => {}", serviceName, serviceAddress);
-        if (StringUtil.isEmpty(serviceAddress)) {
-            throw new RuntimeException("server address is empty");
-        }
-        // 从 RPC 服务地址中解析主机名与端口号
-        String[] array = StringUtil.split(serviceAddress, ":");
-        String host = array[0];
-        int port = Integer.parseInt(array[1]);
-
-        //启动客户端并创建连接
-        ClientFactory clientFactory= UserServiceLoader.getExtension(ClientFactory.class);
-        clientFactory.init();
-
-        // 创建 RPC 客户端对象并发送 RPC 请求
-        Client client = clientFactory.getClient(new ConnectInfo(host,port));
+//        serviceAddress = RegistryManager.getInstance().getServiceAddress(serviceName);
+//        LOGGER.debug("discover service: {} => {}", serviceName, serviceAddress);
+//        if (StringUtil.isEmpty(serviceAddress)) {
+//            throw new RuntimeException("server address is empty");
+//        }
+//        // 从 RPC 服务地址中解析主机名与端口号
+//        String[] array = StringUtil.split(serviceAddress, ":");
+//        String host = array[0];
+//        int port = Integer.parseInt(array[1]);
+        Client client = ClientManager.getInstance().getClient(invokerConfig);
         client.send(request);
-
-
         //client.setContext(host,port);
         long time = System.currentTimeMillis();
         //CallFuture callFuture=client.send(request);

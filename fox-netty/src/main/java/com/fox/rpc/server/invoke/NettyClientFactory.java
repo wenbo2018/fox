@@ -1,11 +1,14 @@
 package com.fox.rpc.server.invoke;
 
 
+import com.fox.rpc.remoting.common.ConnectInfo;
 import com.fox.rpc.remoting.invoker.api.Client;
 import com.fox.rpc.remoting.invoker.api.ClientFactory;
-import com.fox.rpc.remoting.invoker.config.ConnectInfo;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -13,6 +16,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * Created by wenbo2018 on 2016/8/26.
  */
 public class NettyClientFactory implements ClientFactory{
+
+    private static Logger LOGGER= LoggerFactory.getLogger(NettyClientFactory.class);
 
     EventLoopGroup group;
 
@@ -26,23 +31,26 @@ public class NettyClientFactory implements ClientFactory{
     public void init() {
         if (!isStartup) {
             this.group = new NioEventLoopGroup(4);
+            LOGGER.info("NettyClientFactory is initial");
         }
     }
 
     @Override
     public Client createClient(ConnectInfo connectInfo) {
+        //TODO: 2017/3/23 暂时未测试
         Client client=new NettyClient(this.group,connectInfo);
-        clients.put(connectInfo.getHostIp()+"-"+connectInfo.getHostPort(),client);
+        client.connect();
+        clients.put(connectInfo.getHost()+"-"+connectInfo.getPort(),client);
         return client;
     }
 
     @Override
     public Client getClient(ConnectInfo connectInfo) {
-        Client client=clients.get(connectInfo.getHostIp()+"-"+connectInfo.getHostPort());
+        Client client=clients.get(connectInfo.getHost()+"-"+connectInfo.getPort());
         if (client==null) {
             client=new NettyClient(this.group,connectInfo);
             client.connect();
-            clients.put(connectInfo.getHostIp()+"-"+connectInfo.getHostPort(),client);
+            clients.put(connectInfo.getHost()+"-"+connectInfo.getPort(),client);
             return client;
         }
         return client;

@@ -13,7 +13,7 @@ public class TestClient {
 
         public static void main(String[] args) {
 
-            ApplicationContext context= new ClassPathXmlApplicationContext("bean.xml");
+            ApplicationContext context= new ClassPathXmlApplicationContext("application.xml");
             final HelloService helloService=(HelloService)context.getBean("helloService");
             new Thread(new Runnable() {
                 @Override

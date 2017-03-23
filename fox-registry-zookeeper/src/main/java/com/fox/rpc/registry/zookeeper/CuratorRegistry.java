@@ -107,18 +107,18 @@ public class CuratorRegistry implements Registry {
         try {
             if (zookeeperClient.exists(serviceAddressPath)) {
                 Stat stat = new Stat();
-                String addressValues = zookeeperClient.get(serviceAddressPath, stat);
-                String[] addressArray = addressValues.split(",");
-                List<String> addressList = new ArrayList<String>();
-                for (String addr : addressArray) {
-                    addr = addr.trim();
-                    if (addr.length() > 0 && !addressList.contains(addr)) {
-                        addressList.add(addr.trim());
-                    }
-                }
-                //随机获取可提供服务的机器;
-                result=addressList.get(1 + (int)(Math.random()*addressList.size())-1);
-
+                result = zookeeperClient.get(serviceAddressPath, stat);
+//                String[] addressArray = addressValues.split(",");
+//                List<String> addressList = new ArrayList<String>();
+//                for (String addr : addressArray) {
+//                    addr = addr.trim();
+//                    if (addr.length() > 0 && !addressList.contains(addr)) {
+//                        addressList.add(addr.trim());
+//                    }
+//                }
+//                //随机获取可提供服务的机器;
+//                result=addressList.get(1 + (int)(Math.random()*addressList.size())-1);
+//
             } else {
                 throw new RuntimeException(String.format("can not find any address node on path: %s",serviceAddressPath));
             }

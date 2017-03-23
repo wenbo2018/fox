@@ -10,7 +10,6 @@ import java.util.Date;
  */
 public class HelloServiceImpl implements HelloService {
 
-
     public String hello(String hello,String hello2) {
         String re=hello+hello2;
         return re;

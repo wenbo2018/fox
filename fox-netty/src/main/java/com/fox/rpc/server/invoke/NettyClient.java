@@ -2,9 +2,9 @@ package com.fox.rpc.server.invoke;
 
 import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
+import com.fox.rpc.remoting.common.ConnectInfo;
 import com.fox.rpc.remoting.invoker.api.CallFuture;
 import com.fox.rpc.remoting.invoker.api.Client;
-import com.fox.rpc.remoting.invoker.config.ConnectInfo;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.socket.nio.NioSocketChannel;
@@ -66,8 +66,8 @@ public class NettyClient implements Client{
             return;
         }
         // 连接 RPC 服务器
-        String host=connectInfo.getHostIp();
-        int port=connectInfo.getHostPort();
+        String host=connectInfo.getHost();
+        int port=connectInfo.getPort();
         ChannelFuture channelFuture=null;
         try {
             channelFuture =bootstrap.connect(host, port).sync();

@@ -38,8 +38,7 @@ public class CuratorEventListener implements CuratorListener {
     @Override
     public void eventReceived(CuratorFramework client, CuratorEvent curatorEvent) throws Exception {
         WatchedEvent event = (curatorEvent == null ? null : curatorEvent.getWatchedEvent());
-        if (event == null
-                || (event.getType() != Watcher.Event.EventType.NodeCreated && event.getType()
+        if (event == null || (event.getType() != Watcher.Event.EventType.NodeCreated && event.getType()
                 != Watcher.Event.EventType.NodeDataChanged
                 && event.getType() != Watcher.Event.EventType.NodeDeleted && event.getType()
                 != Watcher.Event.EventType.NodeChildrenChanged)) {
