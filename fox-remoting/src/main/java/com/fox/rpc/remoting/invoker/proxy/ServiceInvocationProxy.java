@@ -12,6 +12,7 @@ import com.fox.rpc.remoting.invoker.api.ClientFactory;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.util.UUID;
@@ -19,7 +20,7 @@ import java.util.UUID;
 /**
  * Created by shenwenbo on 16/8/23.
  */
-public class ServiceInvocationProxy<T> implements InvocationHandler{
+public class ServiceInvocationProxy<T> implements InvocationHandler {
 
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ServiceInvocationProxy.class);
@@ -37,31 +38,22 @@ public class ServiceInvocationProxy<T> implements InvocationHandler{
     private InvokerConfig invokerConfig;
 
     public ServiceInvocationProxy(InvokerConfig config) {
-        this.interfaceClass=config.getInterfaceClass();
-        this.serviceName=config.getServiceName();
-        this.serializer=config.getSerializer();
-        this.invokerConfig=config;
+        this.interfaceClass = config.getInterfaceClass();
+        this.serviceName = config.getServiceName();
+        this.serializer = config.getSerializer();
+        this.invokerConfig = config;
     }
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        InvokeRequest request=createInvokeRequest(method,args);
-//        serviceAddress = RegistryManager.getInstance().getServiceAddress(serviceName);
-//        LOGGER.debug("discover service: {} => {}", serviceName, serviceAddress);
-//        if (StringUtil.isEmpty(serviceAddress)) {
-//            throw new RuntimeException("server address is empty");
-//        }
-//        // 从 RPC 服务地址中解析主机名与端口号
-//        String[] array = StringUtil.split(serviceAddress, ":");
-//        String host = array[0];
-//        int port = Integer.parseInt(array[1]);
+        InvokeRequest request = createInvokeRequest(method, args);
         Client client = ClientManager.getInstance().getClient(invokerConfig);
         client.send(request);
         //client.setContext(host,port);
         long time = System.currentTimeMillis();
         //CallFuture callFuture=client.send(request);
-//        InvokeResponse response = client.send(request);
-        InvokeResponse response=client.getResponse();
+        // InvokeResponse response = client.send(request);
+        InvokeResponse response = client.getResponse();
         LOGGER.debug("time: {}ms", System.currentTimeMillis() - time);
         if (response == null) {
             throw new RuntimeException("response is null");
@@ -76,6 +68,7 @@ public class ServiceInvocationProxy<T> implements InvocationHandler{
 
     /**
      * 封装rpc调用请求
+     *
      * @param method
      * @param args
      * @return

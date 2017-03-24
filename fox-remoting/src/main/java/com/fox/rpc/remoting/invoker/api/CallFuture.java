@@ -19,7 +19,7 @@ public class CallFuture implements Future {
     private InvokeRequest invokeRequest;
 
     public CallFuture(InvokeRequest invokeRequest) {
-        this.invokeRequest=invokeRequest;
+        this.invokeRequest = invokeRequest;
     }
 
     public InvokeResponse getInvokeResponse() {
@@ -28,8 +28,8 @@ public class CallFuture implements Future {
 
 
     public void processResponse(InvokeResponse invokeResponse) {
-        System.out.println("处理回调："+invokeResponse);
-        this.invokeResponse=invokeResponse;
+        System.out.println("处理回调：" + invokeResponse);
+        this.invokeResponse = invokeResponse;
     }
 
 
