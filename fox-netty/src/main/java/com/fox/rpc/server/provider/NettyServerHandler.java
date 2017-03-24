@@ -17,7 +17,6 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<InvokeReques
 
     @Override
     public void channelRead0(final ChannelHandlerContext ctx, InvokeRequest request) throws Exception {
-        LOGGER.info(request.toString());
         this.nettyServer.processRequest(request,new NettyChannel(ctx.channel()));
     }
 

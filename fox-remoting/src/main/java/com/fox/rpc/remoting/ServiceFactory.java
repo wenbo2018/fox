@@ -80,6 +80,7 @@ public class ServiceFactory {
     }
 
     public static void startUpServer(ServerConfig serverConfig) {
+        serverConfig.setIp(configManager.getStringValue(Constants.FOX_REGISTRY_IP));
         List<Server> servers = UserServiceLoader.getExtensionList(Server.class);
         if (serverConfig != null) {
             for (Server server : servers) {
@@ -122,7 +123,7 @@ public class ServiceFactory {
                 for (ProviderConfig config : providerConfigList) {
                     RegistryManager.getInstance().registerService(config.getServiceName(),
                             config.getServerConfig().getIp() + ":" + config.getServerConfig().getPort());
-                    LOGGER.debug("register service:" + config.getServiceName());
+                    LOGGER.info("register service success:" + config.getServiceName());
                 }
             } else {
                 LOGGER.error("register center fail");

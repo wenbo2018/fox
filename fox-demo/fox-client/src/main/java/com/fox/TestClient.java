@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 
 public class TestClient {
-        static  int i=100;
+        static  int i=10000;
 
         public static void main(String[] args) {
 

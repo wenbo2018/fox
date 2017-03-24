@@ -14,9 +14,6 @@ import java.util.List;
 public class ServerBean {
 
     private int port;
-
-
-
     private volatile ServerConfig serverConfig;
 
     public int getPort() {
@@ -29,14 +26,11 @@ public class ServerBean {
     }
 
     public ServerConfig init() throws Exception {
-
         if (serverConfig == null) {
             synchronized (this) {
                 if (serverConfig == null) {
-
                     serverConfig = new ServerConfig();
                     serverConfig.setPort(port);
-
                     ServiceFactory.startUpServer(serverConfig);
                 }
             }
