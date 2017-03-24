@@ -24,7 +24,7 @@ public class DefaultServiceChangeListener implements ServiceChangeListener {
            Set<HostInfo> newHosts=parseHostPortList(serviceName,hostList);
            Set<HostInfo> needAddHpSet = Collections.emptySet();
            Set<HostInfo> needRemoveSet=Collections.emptySet();
-           if (CollectionUtils.isEmpty(oldHosts)) {
+           if (oldHosts==null) {
                needAddHpSet=newHosts;
            } else {
                needAddHpSet = Collections.newSetFromMap(new ConcurrentHashMap<HostInfo, Boolean>());
@@ -32,12 +32,12 @@ public class DefaultServiceChangeListener implements ServiceChangeListener {
                needAddHpSet.removeAll(oldHosts);
 
                needRemoveSet= Collections.newSetFromMap(new ConcurrentHashMap<HostInfo, Boolean>());
-               needAddHpSet.addAll(oldHosts);
+               needRemoveSet.addAll(oldHosts);
                needRemoveSet.removeAll(newHosts);
            }
            LOGGER.info("service host change:"+newHosts);
            for (HostInfo hostPort : needAddHpSet) {
-               System.err.println(hostPort.getHost()+"-"+hostPort.getPort()+"-"+Thread.currentThread().getId());
+               System.err.println("服务"+serviceName+"增加主机,主机名为:"+hostPort.getHost()+":"+hostPort.getPort()+"---"+needAddHpSet.size());
                RegistryEventListener.providerAdded(serviceName, hostPort.getHost(), hostPort.getPort(),1);
                RegistryEventListener.serverVersionChanged(serviceName,hostPort.getPort()+"1");
            }

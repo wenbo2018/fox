@@ -58,7 +58,7 @@ public class NettyClient implements Client{
                 @Override
                 public void operationComplete(ChannelFuture future) throws Exception {
                     if (future.isSuccess()) {
-                        System.out.println("调用完毕");
+                        LOGGER.info("fox success invoke");
                         return;
                     }
                 }
@@ -88,7 +88,7 @@ public class NettyClient implements Client{
          channelFuture.addListener(new ChannelFutureListener() {
              @Override
              public void operationComplete(ChannelFuture channelFuture) throws Exception {
-
+                    LOGGER.info("FOX SERVICE SUCCESS CONNECT");
              }
          });
         if (channelFuture.isSuccess()) {

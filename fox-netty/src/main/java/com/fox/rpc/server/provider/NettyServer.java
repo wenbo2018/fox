@@ -58,7 +58,7 @@ public class NettyServer extends AbstractServer {
                 future.addListener(new ChannelFutureListener() {
                     @Override
                     public void operationComplete(ChannelFuture future) throws Exception {
-                         LOGGER.info("netty service stared");
+                         LOGGER.info("FOX SERVICE SUCCESS STARTED");
                     }
                 });
                 //future.channel().closeFuture().sync();

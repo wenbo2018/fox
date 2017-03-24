@@ -31,4 +31,20 @@ public class HostInfo {
         this.host = host;
         this.port = port;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof HostInfo) {
+            HostInfo hp = (HostInfo) obj;
+            return this.host.equals(hp.host) && this.port == hp.port;
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return host.hashCode() + port;
+    }
+
+
 }
