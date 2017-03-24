@@ -44,7 +44,7 @@ public class DefaultServiceChangeListener implements ServiceChangeListener {
            }
            for (HostInfo hostPort :needRemoveSet) {
                System.err.println("服务"+serviceName+"摘除主机,主机名为:"+
-                       hostPort.getHost()+":"+hostPort.getPort()+"---"+needAddHpSet.size());
+                       hostPort.getHost()+":"+hostPort.getPort()+"---"+needRemoveSet.size());
                RegistryEventListener.providerRemoved(serviceName, hostPort.getHost(), hostPort.getPort(),0);
            }
     }
