@@ -37,11 +37,14 @@ public class DefaultServiceChangeListener implements ServiceChangeListener {
            }
            LOGGER.info("service host change:"+newHosts);
            for (HostInfo hostPort : needAddHpSet) {
-               System.err.println("服务"+serviceName+"增加主机,主机名为:"+hostPort.getHost()+":"+hostPort.getPort()+"---"+needAddHpSet.size());
+               System.err.println("服务"+serviceName+"增加主机,主机名为:"+
+                       hostPort.getHost()+":"+hostPort.getPort()+"---"+needAddHpSet.size());
                RegistryEventListener.providerAdded(serviceName, hostPort.getHost(), hostPort.getPort(),1);
                RegistryEventListener.serverVersionChanged(serviceName,hostPort.getPort()+"1");
            }
            for (HostInfo hostPort :needRemoveSet) {
+               System.err.println("服务"+serviceName+"摘除主机,主机名为:"+
+                       hostPort.getHost()+":"+hostPort.getPort()+"---"+needAddHpSet.size());
                RegistryEventListener.providerRemoved(serviceName, hostPort.getHost(), hostPort.getPort(),0);
            }
     }
