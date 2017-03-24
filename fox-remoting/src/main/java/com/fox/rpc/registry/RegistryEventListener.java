@@ -43,4 +43,13 @@ public class RegistryEventListener {
         }
     }
 
+    public static void  providerRemoved(String serviceName,String host,int port,int weight) {
+       List<ServiceProviderChangeListener> listeners = new ArrayList<>();
+       listeners.addAll(serviceProviderChangeListeners);
+        for (ServiceProviderChangeListener listener:listeners) {
+            ServiceProviderChangeEvent event = new ServiceProviderChangeEvent(serviceName, host, port);
+            listener.serviceProviderAdded(event);
+        }
+    }
+
 }

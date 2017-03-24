@@ -1,7 +1,6 @@
 package com.fox.rpc.remoting.invoker.api;
 
-import com.fox.rpc.remoting.invoker.config.ConnectInfo;
-import io.netty.channel.Channel;
+import com.fox.rpc.remoting.common.ConnectInfo;
 
 /**
  * Created by wenbo2018 on 2016/8/26.

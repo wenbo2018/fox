@@ -80,7 +80,6 @@ public class ServiceFactory {
     }
 
     public static void startUpServer(ServerConfig serverConfig) {
-
         List<Server> servers = UserServiceLoader.getExtensionList(Server.class);
         if (serverConfig != null) {
             for (Server server : servers) {

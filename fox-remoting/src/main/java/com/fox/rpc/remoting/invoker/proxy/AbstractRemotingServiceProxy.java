@@ -1,5 +1,6 @@
 package com.fox.rpc.remoting.invoker.proxy;
 
+import com.fox.rpc.remoting.invoker.InvokerBootStrap;
 import com.fox.rpc.remoting.invoker.api.ServiceProxy;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import com.fox.rpc.remoting.invoker.util.RpcException;
@@ -29,6 +30,7 @@ public abstract class AbstractRemotingServiceProxy implements ServiceProxy {
         service=services.get(config);
         if (service==null) {
             try {
+                InvokerBootStrap.startup();
                 ServiceInvocationProxy serviceInvocationProxy=new ServiceInvocationProxy(config);
                 service=(T) Proxy.newProxyInstance(config.getClass().getClassLoader(),
                         new Class<?>[]{ config.getInterfaceClass() },serviceInvocationProxy);

@@ -2,9 +2,9 @@ package com.fox.rpc.server.invoke;
 
 import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
+import com.fox.rpc.remoting.common.ConnectInfo;
 import com.fox.rpc.remoting.invoker.api.CallFuture;
 import com.fox.rpc.remoting.invoker.api.Client;
-import com.fox.rpc.remoting.invoker.config.ConnectInfo;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.socket.nio.NioSocketChannel;
@@ -48,11 +48,21 @@ public class NettyClient implements Client{
         this.invokeRequest=request;
         final LinkedBlockingQueue<InvokeResponse> queue=new LinkedBlockingQueue<InvokeResponse>(1);
         CallFuture callFuture=new CallFuture(request);
+        ChannelFuture future=null;
         try {
             responseMap.put(request.getRequestId(),queue);
             if (channel.isWritable()) {
-                channel.writeAndFlush(request);
+                future=channel.writeAndFlush(request);
             }
+            future.addListener(new ChannelFutureListener() {
+                @Override
+                public void operationComplete(ChannelFuture future) throws Exception {
+                    if (future.isSuccess()) {
+                        System.out.println("调用完毕");
+                        return;
+                    }
+                }
+            });
         } catch (Exception e) {
             responseMap.remove(request.getRequestId());
             LOGGER.error("rpc request failue:{}",e);
@@ -60,14 +70,15 @@ public class NettyClient implements Client{
         return callFuture;
     }
 
+
     @Override
     public void connect() {
         if (this.connected) {
             return;
         }
         // 连接 RPC 服务器
-        String host=connectInfo.getHostIp();
-        int port=connectInfo.getHostPort();
+        String host=connectInfo.getHost();
+        int port=connectInfo.getPort();
         ChannelFuture channelFuture=null;
         try {
             channelFuture =bootstrap.connect(host, port).sync();

@@ -18,30 +18,32 @@ public class DefaultServiceChangeListener implements ServiceChangeListener {
 
     private static Logger LOGGER= LoggerFactory.getLogger(DefaultServiceChangeListener.class);
 
-    static int ksp=1;
-
     @Override
-    public void onServiceHostChange(String serviceName, List<String[]> hostList) {
-        //获取旧的服务;
-        Set<HostInfo> oldHosts=RegistryManager.getInstance().getReferencedServiceAddresses(serviceName);
-        Set<HostInfo> newHosts=parseHostPortList(serviceName,hostList);
-        Set<HostInfo> needAddHpSet = Collections.emptySet();
-        if (CollectionUtils.isEmpty(oldHosts)) {
-            needAddHpSet=newHosts;
-        } else {
-            needAddHpSet = Collections.newSetFromMap(new ConcurrentHashMap<HostInfo, Boolean>());
-            needAddHpSet.addAll(newHosts);
-            needAddHpSet.removeAll(oldHosts);
-        }
-        if (LOGGER.isDebugEnabled()) {
-            LOGGER.info("service host change:"+newHosts);
-        }
-        for (HostInfo hostPort : needAddHpSet) {
-            System.err.println(ksp++);
-            RegistryEventListener.providerAdded(serviceName, hostPort.getHost(), hostPort.getPort(),1);
-            RegistryEventListener.serverVersionChanged(serviceName,hostPort.getPort()+"1");
-        }
+     public void  onServiceHostChange(String serviceName, List<String[]> hostList) {
+           Set<HostInfo> oldHosts=RegistryManager.getInstance().getReferencedServiceAddresses(serviceName);
+           Set<HostInfo> newHosts=parseHostPortList(serviceName,hostList);
+           Set<HostInfo> needAddHpSet = Collections.emptySet();
+           Set<HostInfo> needRemoveSet=Collections.emptySet();
+           if (CollectionUtils.isEmpty(oldHosts)) {
+               needAddHpSet=newHosts;
+           } else {
+               needAddHpSet = Collections.newSetFromMap(new ConcurrentHashMap<HostInfo, Boolean>());
+               needAddHpSet.addAll(newHosts);
+               needAddHpSet.removeAll(oldHosts);
 
+               needRemoveSet= Collections.newSetFromMap(new ConcurrentHashMap<HostInfo, Boolean>());
+               needAddHpSet.addAll(oldHosts);
+               needRemoveSet.removeAll(newHosts);
+           }
+           LOGGER.info("service host change:"+newHosts);
+           for (HostInfo hostPort : needAddHpSet) {
+               System.err.println(hostPort.getHost()+"-"+hostPort.getPort()+"-"+Thread.currentThread().getId());
+               RegistryEventListener.providerAdded(serviceName, hostPort.getHost(), hostPort.getPort(),1);
+               RegistryEventListener.serverVersionChanged(serviceName,hostPort.getPort()+"1");
+           }
+           for (HostInfo hostPort :needRemoveSet) {
+               RegistryEventListener.providerRemoved(serviceName, hostPort.getHost(), hostPort.getPort(),0);
+           }
     }
 
     private Set<HostInfo> parseHostPortList(String serviceName, List<String[]> hostList) {

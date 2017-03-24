@@ -80,6 +80,7 @@
         <module>fox-config</module>
         <module>fox</module>
         <module>fox-admin</module>
+        <module>fox-cluster</module>
     </modules>
 
     <build>

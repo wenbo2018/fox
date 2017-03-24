@@ -34,6 +34,11 @@
             <artifactId>fox-remoting</artifactId>
             <version>${fox.version}</version>
         </dependency>
+        <dependency>
+            <groupId>rpc.fox</groupId>
+            <artifactId>fox-cluster</artifactId>
+            <version>${fox.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
