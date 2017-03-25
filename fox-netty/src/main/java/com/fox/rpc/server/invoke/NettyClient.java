@@ -5,12 +5,15 @@ import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.remoting.common.ConnectInfo;
 import com.fox.rpc.remoting.invoker.api.CallFuture;
 import com.fox.rpc.remoting.invoker.api.Client;
+import com.fox.rpc.server.CustomSimpleChannelInboundHandler;
 import io.netty.bootstrap.Bootstrap;
+import io.netty.buffer.ByteBuf;
 import io.netty.channel.*;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -89,6 +92,7 @@ public class NettyClient implements Client{
              @Override
              public void operationComplete(ChannelFuture channelFuture) throws Exception {
                     LOGGER.info("FOX SERVICE SUCCESS CONNECT");
+                  sendData();
              }
          });
         if (channelFuture.isSuccess()) {
@@ -96,6 +100,34 @@ public class NettyClient implements Client{
             this.connected=true;
         }
     }
+
+
+    public void reConnect() {
+        if (channel != null && channel.isActive()) {
+            return;
+        }
+        // 连接 RPC 服务器
+        String host=connectInfo.getHost();
+        int port=connectInfo.getPort();
+        ChannelFuture channelFuture=null;
+        try {
+            channelFuture =bootstrap.connect(host, port).sync();
+        } catch (InterruptedException e) {
+            LOGGER.error("connect rpc server:{}",e);
+        }
+        channelFuture.addListener(new ChannelFutureListener() {
+            @Override
+            public void operationComplete(ChannelFuture channelFuture) throws Exception {
+                LOGGER.info("FOX SERVICE SUCCESS RESTART");
+            }
+        });
+        if (channelFuture.isSuccess()) {
+            this.channel=channelFuture.channel();
+            this.connected=true;
+        }
+    }
+
+
 
     @Override
     public void setContext(String host, int port) {
@@ -124,5 +156,21 @@ public class NettyClient implements Client{
 
         }
         return this.invokeResponse;
+    }
+
+    public void sendData() throws Exception {
+        Random random = new Random(System.currentTimeMillis());
+        for (int i = 0; i < 10000; i++) {
+            if (channel != null && channel.isActive()) {
+                String content = "client msg " + i;
+                ByteBuf buf = channel.alloc().buffer(5 + content.getBytes().length);
+                buf.writeInt(5 + content.getBytes().length);
+                buf.writeByte(CustomSimpleChannelInboundHandler.CUSTOM_MSG);
+                buf.writeBytes(content.getBytes());
+                channel.writeAndFlush(buf);
+            }
+
+            Thread.sleep(random.nextInt(20000));
+        }
     }
 }
