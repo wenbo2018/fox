@@ -7,6 +7,8 @@ import com.fox.rpc.common.codec.invoker.InvokerEncoder;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
+import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
+import io.netty.handler.timeout.IdleStateHandler;
 
 /**
  * Created by wenbo2018 on 2016/8/26.
@@ -22,9 +24,11 @@ public class ClientChannelInitializer extends ChannelInitializer<SocketChannel> 
     @Override
     protected void initChannel(SocketChannel socketChannel) throws Exception {
         ChannelPipeline pipeline = socketChannel.pipeline();
+        pipeline.addLast(new IdleStateHandler(0, 0, 5));
         pipeline.addLast(new InvokerEncoder(InvokeRequest.class)); // 编码 RPC 请求
         pipeline.addLast(new InvokerDecoder(InvokeResponse.class)); // 解码 RPC 响应
-        pipeline.addLast(new NettyClientHandler(this.nettyClient)); // 处
+        //pipeline.addLast(new NettyClientHandler(this.nettyClient)); // 处
+        pipeline.addLast(new ClientHandler(this.nettyClient));
     }
 
 }
