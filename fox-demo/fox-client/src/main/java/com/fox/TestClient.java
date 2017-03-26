@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 
 public class TestClient {
-        static  int i=10000;
+        static  int i=100000;
 
         public static void main(String[] args) {
 
@@ -22,7 +22,7 @@ public class TestClient {
                         System.err.println(helloService.incer());
                         i--;
                         try {
-                            Thread.sleep(1000);
+                            Thread.sleep(10);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }

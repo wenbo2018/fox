@@ -1,12 +1,14 @@
 package com.fox.rpc.common.bean;
 
+import com.fox.rpc.common.common.Constants;
+
 import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  * 封装 RPC 请求
  */
-public class InvokeRequest implements Serializable{
+public class InvokeRequest implements Serializable {
 
     private static final long serialVersionUID = 4242901101810773960L;
     private String requestId;
@@ -15,10 +17,11 @@ public class InvokeRequest implements Serializable{
     private String methodName;
     private Class<?>[] parameterTypes;
     private Object[] parameters;
-
     private String serialize;
-
     private String serviceName;
+    private int messageType = Constants.MESSAGE_TYPE_SERVICE;
+    private long seq;
+    private long createMillisTime;
 
     public String getRequestId() {
         return requestId;
@@ -32,8 +35,8 @@ public class InvokeRequest implements Serializable{
         return interfaceName;
     }
 
-    public void setInterfaceName(String className) {
-        this.interfaceName = className;
+    public void setInterfaceName(String interfaceName) {
+        this.interfaceName = interfaceName;
     }
 
     public String getServiceVersion() {
@@ -68,6 +71,14 @@ public class InvokeRequest implements Serializable{
         this.parameters = parameters;
     }
 
+    public String getSerialize() {
+        return serialize;
+    }
+
+    public void setSerialize(String serialize) {
+        this.serialize = serialize;
+    }
+
     public String getServiceName() {
         return serviceName;
     }
@@ -76,12 +87,28 @@ public class InvokeRequest implements Serializable{
         this.serviceName = serviceName;
     }
 
-    public String getSerialize() {
-        return serialize;
+    public int getMessageType() {
+        return messageType;
     }
 
-    public void setSerialize(String serialize) {
-        this.serialize = serialize;
+    public void setMessageType(int messageType) {
+        this.messageType = messageType;
+    }
+
+    public long getSeq() {
+        return seq;
+    }
+
+    public void setSeq(long seq) {
+        this.seq = seq;
+    }
+
+    public long getCreateMillisTime() {
+        return createMillisTime;
+    }
+
+    public void setCreateMillisTime(long createMillisTime) {
+        this.createMillisTime = createMillisTime;
     }
 
     @Override
@@ -93,7 +120,10 @@ public class InvokeRequest implements Serializable{
                 ", methodName='" + methodName + '\'' +
                 ", parameterTypes=" + Arrays.toString(parameterTypes) +
                 ", parameters=" + Arrays.toString(parameters) +
+                ", serialize='" + serialize + '\'' +
                 ", serviceName='" + serviceName + '\'' +
+                ", messageType=" + messageType +
+                ", seq=" + seq +
                 '}';
     }
 }

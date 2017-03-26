@@ -2,13 +2,12 @@ package com.fox.rpc.remoting.invoker.proxy;
 
 import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
-import com.fox.rpc.common.extension.UserServiceLoader;
-import com.fox.rpc.common.util.StringUtil;
-import com.fox.rpc.registry.RegistryManager;
-import com.fox.rpc.remoting.common.ConnectInfo;
+import com.fox.rpc.remoting.invoker.RemoteServiceCall;
+import com.fox.rpc.remoting.invoker.ServiceInvocationRepository;
 import com.fox.rpc.remoting.invoker.ClientManager;
 import com.fox.rpc.remoting.invoker.api.Client;
-import com.fox.rpc.remoting.invoker.api.ClientFactory;
+import com.fox.rpc.remoting.invoker.async.CallbackFuture;
+import com.fox.rpc.remoting.invoker.async.RemoteInvocationBean;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,13 +46,16 @@ public class ServiceInvocationProxy<T> implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         InvokeRequest request = createInvokeRequest(method, args);
+
         Client client = ClientManager.getInstance().getClient(invokerConfig);
-        client.send(request);
-        //client.setContext(host,port);
+        CallbackFuture callback = new CallbackFuture();
+        InvokeResponse response=null;
+        RemoteServiceCall.requestInvoke(request,callback,client);
+        response = client.send(request, callback);
+        if (response == null) {
+            response = callback.get();
+        }
         long time = System.currentTimeMillis();
-        //CallFuture callFuture=client.send(request);
-        // InvokeResponse response = client.send(request);
-        InvokeResponse response = client.getResponse();
         LOGGER.debug("time: {}ms", System.currentTimeMillis() - time);
         if (response == null) {
             throw new RuntimeException("response is null");
@@ -83,6 +85,7 @@ public class ServiceInvocationProxy<T> implements InvocationHandler {
         request.setParameters(args);
         request.setServiceName(this.serviceName);
         request.setSerialize(this.serializer);
+        request.setCreateMillisTime(System.currentTimeMillis());
         return request;
     }
 

@@ -3,30 +3,33 @@ package com.fox.rpc.server.invoke;
 import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.remoting.common.ConnectInfo;
+import com.fox.rpc.remoting.invoker.AbstractClient;
 import com.fox.rpc.remoting.invoker.api.CallFuture;
 import com.fox.rpc.remoting.invoker.api.Client;
-import com.fox.rpc.server.CustomSimpleChannelInboundHandler;
+import com.fox.rpc.remoting.invoker.async.CallbackFuture;
 import io.netty.bootstrap.Bootstrap;
-import io.netty.buffer.ByteBuf;
 import io.netty.channel.*;
+import io.netty.channel.Channel;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import org.jboss.netty.channel.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * Created by wenbo2018 on 2016/8/26.
  */
-public class NettyClient implements Client{
+public class NettyClient extends AbstractClient {
 
-    private  static  Logger LOGGER= LoggerFactory.getLogger(NettyClient.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(NettyClient.class);
 
     private Channel channel;
 
-    private Bootstrap bootstrap=new Bootstrap();
+    private Bootstrap bootstrap = new Bootstrap();
 
     private ConnectInfo connectInfo;
 
@@ -36,69 +39,105 @@ public class NettyClient implements Client{
 
     private InvokeRequest invokeRequest;
 
-    private static ConcurrentHashMap<String, LinkedBlockingQueue<InvokeResponse>> responseMap = new ConcurrentHashMap<String,LinkedBlockingQueue<InvokeResponse>>();
+    private String adress;
 
-    public NettyClient (EventLoopGroup group,ConnectInfo connectInfo) {
+    private static ConcurrentHashMap<String, LinkedBlockingQueue<InvokeResponse>>
+            responseMap = new ConcurrentHashMap<String, LinkedBlockingQueue<InvokeResponse>>();
+
+    public NettyClient(EventLoopGroup group, ConnectInfo connectInfo) {
         bootstrap.group(group);
         bootstrap.channel(NioSocketChannel.class);
         bootstrap.handler(new ClientChannelInitializer(this));
         bootstrap.option(ChannelOption.TCP_NODELAY, true);
-        this.connectInfo=connectInfo;
+        this.connectInfo = connectInfo;
+        this.adress = connectInfo.getHost() + ":" + connectInfo.getPort();
     }
 
     @Override
-    public CallFuture send(final InvokeRequest request) throws Exception {
-        this.invokeRequest=request;
-        final LinkedBlockingQueue<InvokeResponse> queue=new LinkedBlockingQueue<InvokeResponse>(1);
-        CallFuture callFuture=new CallFuture(request);
-        ChannelFuture future=null;
-        try {
-            responseMap.put(request.getRequestId(),queue);
-            if (channel.isWritable()) {
-                future=channel.writeAndFlush(request);
-            }
-            future.addListener(new ChannelFutureListener() {
-                @Override
-                public void operationComplete(ChannelFuture future) throws Exception {
-                    if (future.isSuccess()) {
-                        LOGGER.info("fox success invoke");
-                        return;
-                    }
-                }
-            });
-        } catch (Exception e) {
-            responseMap.remove(request.getRequestId());
-            LOGGER.error("rpc request failue:{}",e);
-        }
-        return callFuture;
-    }
-
-
-    @Override
-    public void connect() {
+    protected void doConnect() {
         if (this.connected) {
             return;
         }
         // 连接 RPC 服务器
-        String host=connectInfo.getHost();
-        int port=connectInfo.getPort();
-        ChannelFuture channelFuture=null;
+        String host = connectInfo.getHost();
+        int port = connectInfo.getPort();
+        ChannelFuture channelFuture = null;
         try {
-            channelFuture =bootstrap.connect(host, port).sync();
+            channelFuture = bootstrap.connect(host, port).sync();
         } catch (InterruptedException e) {
-            LOGGER.error("connect rpc server:{}",e);
+            LOGGER.error("connect rpc server:{}", e);
         }
-         channelFuture.addListener(new ChannelFutureListener() {
-             @Override
-             public void operationComplete(ChannelFuture channelFuture) throws Exception {
-                    LOGGER.info("FOX SERVICE SUCCESS CONNECT");
-                  sendData();
-             }
-         });
+        channelFuture.addListener(new ChannelFutureListener() {
+            @Override
+            public void operationComplete(ChannelFuture channelFuture) throws Exception {
+                LOGGER.info("FOX SERVICE SUCCESS CONNECT");
+            }
+        });
         if (channelFuture.isSuccess()) {
-            this.channel=channelFuture.channel();
-            this.connected=true;
+            this.channel = channelFuture.channel();
+            this.connected = true;
         }
+    }
+
+//    @Override
+//    public CallFuture send(final InvokeRequest request) throws Exception {
+//        this.invokeRequest = request;
+//        final LinkedBlockingQueue<InvokeResponse> queue = new LinkedBlockingQueue<InvokeResponse>(1);
+//        CallFuture callFuture = new CallFuture(request);
+//        ChannelFuture future = null;
+//        try {
+//            responseMap.put(request.getRequestId(), queue);
+//            if (channel.isWritable()) {
+//                future = channel.writeAndFlush(request);
+//            }
+//            future.addListener(new ChannelFutureListener() {
+//                @Override
+//                public void operationComplete(ChannelFuture future) throws Exception {
+//                    if (future.isSuccess()) {
+//                        LOGGER.info("fox success invoke");
+//                        return;
+//                    }
+//                }
+//            });
+//        } catch (Exception e) {
+//            responseMap.remove(request.getRequestId());
+//            LOGGER.error("rpc request failue:{}", e);
+//        }
+//        return callFuture;
+//    }
+
+//    @Override
+//    public InvokeResponse send(InvokeRequest request, CallbackFuture callbackFuture) throws Exception {
+//        Object[] msg = new Object[] { request, callbackFuture };
+//        ChannelFuture future = null;
+//        future=channel.write(msg);
+//        future.addListener(new ChannelFutureListener() {
+//            @Override
+//            public void operationComplete(ChannelFuture future) throws Exception {
+//                if (future.isSuccess()) {
+//                    LOGGER.info("fox success invoke");
+//                    return;
+//                }
+//            }
+//        });
+//        return null;
+//    }
+
+    @Override
+    protected InvokeResponse doWrite(InvokeRequest request, CallbackFuture callbackFuture) {
+        Object[] msg = new Object[]{request, callbackFuture};
+        ChannelFuture future = null;
+        future = channel.writeAndFlush(request);
+        future.addListener(new ChannelFutureListener() {
+            @Override
+            public void operationComplete(ChannelFuture future) throws Exception {
+                if (future.isSuccess()) {
+                    LOGGER.info("fox success invoke");
+                    return;
+                }
+            }
+        });
+        return null;
     }
 
 
@@ -107,13 +146,13 @@ public class NettyClient implements Client{
             return;
         }
         // 连接 RPC 服务器
-        String host=connectInfo.getHost();
-        int port=connectInfo.getPort();
-        ChannelFuture channelFuture=null;
+        String host = connectInfo.getHost();
+        int port = connectInfo.getPort();
+        ChannelFuture channelFuture = null;
         try {
-            channelFuture =bootstrap.connect(host, port).sync();
+            channelFuture = bootstrap.connect(host, port).sync();
         } catch (InterruptedException e) {
-            LOGGER.error("connect rpc server:{}",e);
+            LOGGER.error("connect rpc server:{}", e);
         }
         channelFuture.addListener(new ChannelFutureListener() {
             @Override
@@ -122,11 +161,10 @@ public class NettyClient implements Client{
             }
         });
         if (channelFuture.isSuccess()) {
-            this.channel=channelFuture.channel();
-            this.connected=true;
+            this.channel = channelFuture.channel();
+            this.connected = true;
         }
     }
-
 
 
     @Override
@@ -134,43 +172,33 @@ public class NettyClient implements Client{
 
     }
 
-    @Override
-    public void processResponse(InvokeResponse invokeResponse) {
-        LinkedBlockingQueue<InvokeResponse> queue=responseMap.get(invokeResponse.getRequestId());
-        queue.add(invokeResponse);
-        this.invokeResponse=invokeResponse;
-    }
 
     @Override
     public InvokeResponse getResponse() {
-        String messageId=invokeRequest.getRequestId();
-        InvokeResponse invokeResponse=null;
+        String messageId = invokeRequest.getRequestId();
+        InvokeResponse invokeResponse = null;
         try {
-            invokeResponse=responseMap.get(messageId).take();
+            if (invokeRequest.getMessageType() == com.fox.rpc.common.common.Constants.MESSAGE_TYPE_HEART) {
+                LOGGER.info("message typr:心跳消息");
+            } else {
+                LOGGER.info("message typr:服务消息");
+            }
+            invokeResponse = responseMap.get(messageId).take();
         } catch (final InterruptedException ex) {
-
+            responseMap.remove(messageId);
         } finally {
             responseMap.remove(messageId);
         }
-        while (this.invokeResponse==null) {
+        while (this.invokeResponse == null) {
 
         }
         return this.invokeResponse;
     }
 
-    public void sendData() throws Exception {
-        Random random = new Random(System.currentTimeMillis());
-        for (int i = 0; i < 10000; i++) {
-            if (channel != null && channel.isActive()) {
-                String content = "client msg " + i;
-                ByteBuf buf = channel.alloc().buffer(5 + content.getBytes().length);
-                buf.writeInt(5 + content.getBytes().length);
-                buf.writeByte(CustomSimpleChannelInboundHandler.CUSTOM_MSG);
-                buf.writeBytes(content.getBytes());
-                channel.writeAndFlush(buf);
-            }
-
-            Thread.sleep(random.nextInt(20000));
-        }
+    @Override
+    public String getAdress() {
+        return this.adress;
     }
+
+
 }

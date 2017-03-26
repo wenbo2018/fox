@@ -22,16 +22,15 @@ public class ProviderDecoder extends ByteToMessageDecoder {
     @Override
     public void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
         //获取序列化方式
-        if (in.readableBytes() < 1)
+        if (in.readableBytes() < 5)
             return;
         in.markReaderIndex();
         byte b=in.readByte();
-
         //消息长度
-        if (in.readableBytes() < 4) {
-            return;
-        }
-        in.markReaderIndex();
+//        if (in.readableBytes() < 4) {
+//            return;
+//        }
+//        in.markReaderIndex();
         int dataLength = in.readInt();
         if (in.readableBytes() < dataLength) {
             in.resetReaderIndex();
