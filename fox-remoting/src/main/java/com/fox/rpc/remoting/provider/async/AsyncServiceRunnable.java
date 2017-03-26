@@ -34,7 +34,15 @@ public class AsyncServiceRunnable<T> implements Callable{
     public Object call() throws Exception {
         InvokeResponse response = new InvokeResponse();
         response.setRequestId(request.getRequestId());
+        if (this.request.getMessageType()== com.fox.rpc.common.common.Constants.MESSAGE_TYPE_HEART) {
+            LOGGER.info("message type:heart beat");
+            response.setSerialize(request.getSerialize());
+            response.setSeq(request.getSeq());
+            channel.write(response);
+            return null;
+        }
         try {
+            LOGGER.info("message type:service");
             Object result = handle(request);
             response.setResult(result);
             response.setSerialize(request.getSerialize());

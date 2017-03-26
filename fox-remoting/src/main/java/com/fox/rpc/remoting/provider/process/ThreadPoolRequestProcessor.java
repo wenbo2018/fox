@@ -1,6 +1,7 @@
 package com.fox.rpc.remoting.provider.process;
 
 import com.fox.rpc.common.bean.InvokeRequest;
+import com.fox.rpc.remoting.common.Constants;
 import com.fox.rpc.remoting.provider.async.AsyncServiceRunnable;
 import com.fox.rpc.remoting.provider.config.ProviderConfig;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -37,6 +38,7 @@ public class ThreadPoolRequestProcessor<T> implements RequestProcessor<T>{
 
     @Override
     public void processRequest(InvokeRequest invokeRequest, ServiceProviderChannel channel) {
+
         AsyncServiceRunnable asyncServiceRunnable=new
                 AsyncServiceRunnable(channel,invokeRequest,getServiceConfig(invokeRequest));
         executorService.submit(asyncServiceRunnable);
@@ -54,6 +56,8 @@ public class ThreadPoolRequestProcessor<T> implements RequestProcessor<T>{
     }
 
     private ProviderConfig getServiceConfig(InvokeRequest invokeRequest) {
+        if (invokeRequest.getMessageType()== com.fox.rpc.common.common.Constants.MESSAGE_TYPE_HEART)
+            return null;
         return  cacheServices.get(invokeRequest.getServiceName());
     }
 }

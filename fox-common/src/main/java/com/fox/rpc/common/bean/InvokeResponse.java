@@ -11,8 +11,17 @@ public class InvokeResponse implements Serializable{
     private String requestId;
     private Exception exception;
     private Object result;
-
+    private long seq;
     private String serialize;
+    private int messageType;
+
+    public long getSeq() {
+        return seq;
+    }
+
+    public void setSeq(long seq) {
+        this.seq = seq;
+    }
 
     public boolean hasException() {
         return exception != null;
@@ -48,6 +57,14 @@ public class InvokeResponse implements Serializable{
 
     public void setSerialize(String serialize) {
         this.serialize = serialize;
+    }
+
+    public int getMessageType() {
+        return messageType;
+    }
+
+    public void setMessageType(int messageType) {
+        this.messageType = messageType;
     }
 
     @Override

@@ -2,20 +2,24 @@ package com.fox.rpc.remoting.invoker.api;
 
 import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
+import com.fox.rpc.remoting.invoker.async.CallbackFuture;
 
 /**
  * Created by shenwenbo on 16/8/19.
  */
 public interface Client {
 
-    public void connect();
+    void connect();
 
-    public CallFuture send(InvokeRequest request) throws Exception;
+    CallFuture send(InvokeRequest request) throws Exception;
 
-    public void setContext(String host, int port);
+    InvokeResponse send(InvokeRequest request, CallbackFuture callbackFuture) throws Exception;
 
-    public void processResponse(InvokeResponse invokeResponse);
+    void setContext(String host, int port);
 
-    public InvokeResponse getResponse();
+    void processResponse(InvokeResponse invokeResponse);
 
+    InvokeResponse getResponse();
+
+    String getAdress();
 }

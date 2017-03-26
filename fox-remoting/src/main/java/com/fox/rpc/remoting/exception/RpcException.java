@@ -1,4 +1,4 @@
-package com.fox.rpc.remoting.invoker.util;
+package com.fox.rpc.remoting.exception;
 
 /**
  * Created by shenwenbo on 16/8/23.

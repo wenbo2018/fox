@@ -27,7 +27,7 @@ public class NettyChannel implements ServiceProviderChannel {
         future.addListener(new ChannelFutureListener() {
             @Override
             public void operationComplete(ChannelFuture future) throws Exception {
-                LOGGER.info("response write success:"+invokeResponse.toString());
+
             }
         });
     }
