@@ -1,10 +1,11 @@
 package com.fox.rpc.remoting.provider.async;
 
 import com.fox.rpc.common.bean.InvokeRequest;
-import com.fox.rpc.common.bean.InvokeResponse;
+import com.fox.rpc.common.common.Constants;
 import com.fox.rpc.common.util.StringUtil;
 import com.fox.rpc.remoting.provider.config.ProviderConfig;
 import com.fox.rpc.remoting.provider.process.ServiceProviderChannel;
+import com.fox.rpc.common.bean.InvokeResponse;
 import net.sf.cglib.reflect.FastClass;
 import net.sf.cglib.reflect.FastMethod;
 import org.slf4j.Logger;
@@ -34,7 +35,7 @@ public class AsyncServiceRunnable<T> implements Callable{
     public Object call() throws Exception {
         InvokeResponse response = new InvokeResponse();
         response.setRequestId(request.getRequestId());
-        if (this.request.getMessageType()== com.fox.rpc.common.common.Constants.MESSAGE_TYPE_HEART) {
+        if (this.request.getMessageType()== Constants.MESSAGE_TYPE_HEART) {
             LOGGER.info("message type:heart beat");
             response.setSerialize(request.getSerialize());
             response.setSeq(request.getSeq());

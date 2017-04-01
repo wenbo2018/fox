@@ -14,6 +14,8 @@ public class InvokerConfig<T> {
 
     private String serializer;
 
+    private String serviceVersion;
+
     public InvokerConfig(Class<T> interfaceClass, String iface,String serviceName,String serializer) {
         this.interfaceClass = interfaceClass;
         this.iface = iface;
@@ -51,5 +53,13 @@ public class InvokerConfig<T> {
 
     public void setSerializer(String serializer) {
         this.serializer = serializer;
+    }
+
+    public String getServiceVersion() {
+        return serviceVersion;
+    }
+
+    public void setServiceVersion(String serviceVersion) {
+        this.serviceVersion = serviceVersion;
     }
 }

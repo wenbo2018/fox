@@ -1,6 +1,5 @@
 package com.fox.rpc.registry.zookeeper;
 
-import com.fox.rpc.common.util.CollectionUtil;
 import com.fox.rpc.registry.Registry;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
@@ -10,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
-import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Created by shenwenbo on 2016/10/17.

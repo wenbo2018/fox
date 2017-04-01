@@ -1,9 +1,9 @@
 package com.fox.rpc.remoting.invoker;
 
+import com.fox.rpc.remoting.invoker.async.CallbackFuture;
 import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.remoting.invoker.api.Client;
-import com.fox.rpc.remoting.invoker.async.CallbackFuture;
 import com.fox.rpc.remoting.invoker.async.RemoteInvocationBean;
 
 /**
@@ -21,5 +21,8 @@ public class RemoteServiceCall {
         response = client.send(request, callback);
         return response;
     }
+
+
+
 
 }

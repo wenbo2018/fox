@@ -1,8 +1,8 @@
 package com.fox.rpc.remoting.invoker.config.spring;
 
+import com.fox.rpc.remoting.ServiceFactory;
 import com.fox.rpc.common.common.Constants;
 import com.fox.rpc.common.util.ClassUtils;
-import com.fox.rpc.remoting.ServiceFactory;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

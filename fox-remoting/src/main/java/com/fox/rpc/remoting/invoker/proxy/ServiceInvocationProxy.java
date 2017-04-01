@@ -1,13 +1,11 @@
 package com.fox.rpc.remoting.invoker.proxy;
 
+import com.fox.rpc.remoting.invoker.ClientManager;
+import com.fox.rpc.remoting.invoker.RemoteServiceCall;
+import com.fox.rpc.remoting.invoker.async.CallbackFuture;
 import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
-import com.fox.rpc.remoting.invoker.RemoteServiceCall;
-import com.fox.rpc.remoting.invoker.ServiceInvocationRepository;
-import com.fox.rpc.remoting.invoker.ClientManager;
 import com.fox.rpc.remoting.invoker.api.Client;
-import com.fox.rpc.remoting.invoker.async.CallbackFuture;
-import com.fox.rpc.remoting.invoker.async.RemoteInvocationBean;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,7 +44,6 @@ public class ServiceInvocationProxy<T> implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         InvokeRequest request = createInvokeRequest(method, args);
-
         Client client = ClientManager.getInstance().getClient(invokerConfig);
         CallbackFuture callback = new CallbackFuture();
         InvokeResponse response=null;

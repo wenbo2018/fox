@@ -1,8 +1,6 @@
 package com.fox.rpc.registry;
 
 import com.fox.rpc.common.HostInfo;
-import com.fox.rpc.remoting.invoker.ClientManager;
-import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

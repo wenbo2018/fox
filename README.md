@@ -36,7 +36,7 @@ fox.registry.ip="your rpc server ip"
 when you need invoke service ,you can just do as following:
 
 ```xml
-         <bean id="helloService" class="com.fox.rpc.spring.ServiceProxy" init-method="init">
+         <bean id="helloService" class="ServiceProxy" init-method="init">
             <property name="iface" value="com.dianping.HelloService"/>
             <property name="serviceName" value="service.fox.com_helloTestService_helloService_1.0.0"/>
             <property name="serializer" value="protostuff"/>
@@ -46,13 +46,13 @@ when you need invoke service ,you can just do as following:
 or use spring schemas
 ```xml
     <fox:invoker id="helloService"
-            iface="com.fox.HelloService"
+            iface="HelloService"
             serviceName="service.fox.com_helloTestService_helloService_1.0.0"
             serializer="hessian"/>
 ```
 
 ```xml
-         <bean id="helloService" class="com.fox.rpc.spring.ServiceProxy" init-method="init">
+         <bean id="helloService" class="ServiceProxy" init-method="init">
             <property name="iface" value="com.dianping.HelloService"/>
             <property name="serviceName" value="service.fox.com_helloTestService_helloService_1.0.0"/>
             <property name="serializer" value="protostuff"/>
@@ -65,7 +65,7 @@ when you publish your services,you can just do as following:
 ```xml
         <bean id="helloService" class="com.dianping.HelloServiceImpl"/>
 
-        <bean id="helloTestService" class="com.fox.rpc.spring.ServiceRegister" init-method="init">
+        <bean id="helloTestService" class="ServiceRegister" init-method="init">
             <property name="port" value="4080"/>
             <property name="services" >
                 <map>

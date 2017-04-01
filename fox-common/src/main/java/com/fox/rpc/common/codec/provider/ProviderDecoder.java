@@ -39,7 +39,7 @@ public class ProviderDecoder extends ByteToMessageDecoder {
         byte[] data = new byte[dataLength];
         in.readBytes(data);
         //SerializationUtil.deserialize(data, genericClass)
-        Serializer serializer=SerializerFactory.getSerializer(b);
+        Serializer serializer= SerializerFactory.getSerializer(b);
         out.add(serializer.deserialize(data, genericClass));
     }
 }

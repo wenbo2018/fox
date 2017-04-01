@@ -1,11 +1,9 @@
 package com.fox.rpc.config;
 
 import com.fox.rpc.config.util.FileUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 
 import java.io.FileInputStream;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Properties;

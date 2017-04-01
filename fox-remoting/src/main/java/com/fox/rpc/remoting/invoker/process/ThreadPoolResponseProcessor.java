@@ -1,9 +1,9 @@
 package com.fox.rpc.remoting.invoker.process;
 
-import com.fox.rpc.common.bean.InvokeResponse;
-import com.fox.rpc.remoting.invoker.ServiceInvocationRepository;
 import com.fox.rpc.remoting.provider.config.ProviderConfig;
 import com.fox.rpc.remoting.provider.process.ServiceProviderChannel;
+import com.fox.rpc.common.bean.InvokeResponse;
+import com.fox.rpc.remoting.invoker.ServiceInvocationRepository;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;

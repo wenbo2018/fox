@@ -1,12 +1,6 @@
 package com.fox.rpc.remoting.provider.config;
 
-import com.fox.rpc.config.ConfigManager;
-import com.fox.rpc.config.ConfigManagerLoader;
-import com.fox.rpc.registry.Constants;
 import com.fox.rpc.remoting.ServiceFactory;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by shenwenbo on 2017/3/9.

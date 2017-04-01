@@ -10,7 +10,7 @@ public interface RequestProcessor<T> {
 
     public void start();
 
-    public void processRequest(InvokeRequest invokeRequest,ServiceProviderChannel channel);
+    public void processRequest(InvokeRequest invokeRequest, ServiceProviderChannel channel);
 
     public void addService(ProviderConfig<T> serviceProviderConfig);
 
