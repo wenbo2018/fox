@@ -1,10 +1,9 @@
 package com.fox.rpc.remoting.invoker;
 
-import com.fox.rpc.common.codec.SerializerFactory;
-import com.fox.rpc.common.extension.UserServiceLoader;
 import com.fox.rpc.config.ConfigManagerLoader;
 import com.fox.rpc.registry.RegistryManager;
-import com.fox.rpc.remoting.invoker.api.ClientFactory;
+import com.fox.rpc.common.codec.SerializerFactory;
+import com.fox.rpc.remoting.invoker.filter.InvokerProcessHandlerFactory;
 
 /**
  * Created by wenbo2018 on 2016/8/26.
@@ -23,6 +22,7 @@ public class InvokerBootStrap {
                 if (!isStartup) {
                     //初始化配置
                     ConfigManagerLoader.init();
+                    InvokerProcessHandlerFactory.init();
                     //系列化工厂初始化
                     SerializerFactory.init();
                     //注册管理初始化

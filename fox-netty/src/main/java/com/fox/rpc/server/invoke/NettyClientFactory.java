@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Created by wenbo2018 on 2016/8/26.
  */
-public class NettyClientFactory implements ClientFactory{
+public class NettyClientFactory implements ClientFactory {
 
     private static Logger LOGGER= LoggerFactory.getLogger(NettyClientFactory.class);
 

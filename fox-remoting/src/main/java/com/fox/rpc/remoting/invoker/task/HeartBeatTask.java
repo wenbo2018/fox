@@ -1,5 +1,6 @@
 package com.fox.rpc.remoting.invoker.task;
 
+import com.fox.rpc.common.common.Constants;
 import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.remoting.exception.HeartBeatExcepion;
@@ -105,10 +106,10 @@ public class HeartBeatTask implements Runnable {
 
     public InvokeRequest createHeartBeatRequest() {
         InvokeRequest invokeRequest = new InvokeRequest();
-        invokeRequest.setMessageType(com.fox.rpc.common.common.Constants.MESSAGE_TYPE_HEART);
+        invokeRequest.setMessageType(Constants.MESSAGE_TYPE_HEART);
         invokeRequest.setInterfaceName(null);
         invokeRequest.setMethodName(HEART_TASK_METHOD);
-        invokeRequest.setSerialize(com.fox.rpc.common.common.Constants.HESSIAN_SERIALIEE);
+        invokeRequest.setSerialize(Constants.HESSIAN_SERIALIEE);
         invokeRequest.setSeq(heartBeatSeq.getAndIncrement());
         invokeRequest.setRequestId(UUID.randomUUID().toString());
         invokeRequest.setCreateMillisTime(System.currentTimeMillis());
@@ -165,10 +166,10 @@ public class HeartBeatTask implements Runnable {
 
     public static void main(String[] args) {
         InvokeRequest invokeRequest = new InvokeRequest();
-        invokeRequest.setMessageType(com.fox.rpc.common.common.Constants.MESSAGE_TYPE_HEART);
+        invokeRequest.setMessageType(Constants.MESSAGE_TYPE_HEART);
         invokeRequest.setInterfaceName(null);
         invokeRequest.setMethodName(HEART_TASK_METHOD);
-        invokeRequest.setSerialize(com.fox.rpc.common.common.Constants.HESSIAN_SERIALIEE);
+        invokeRequest.setSerialize(Constants.HESSIAN_SERIALIEE);
     }
 
 

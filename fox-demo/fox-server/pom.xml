@@ -47,12 +47,11 @@
             <groupId>rpc.fox</groupId>
             <artifactId>fox-netty</artifactId>
             <version>1.0.1</version>
-
         </dependency>
         <dependency>
             <groupId>rpc.fox</groupId>
             <artifactId>fox-api</artifactId>
-            <version>1.0.1</version>
+            <version>${fox.version}</version>
         </dependency>
 
     </dependencies>

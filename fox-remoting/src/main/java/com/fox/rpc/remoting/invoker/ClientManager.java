@@ -1,5 +1,6 @@
 package com.fox.rpc.remoting.invoker;
 
+import com.fox.rpc.remoting.invoker.task.HeartBeatTask;
 import com.fox.rpc.common.HostInfo;
 import com.fox.rpc.common.extension.UserServiceLoader;
 import com.fox.rpc.common.util.CollectionUtil;
@@ -11,8 +12,6 @@ import com.fox.rpc.remoting.common.ConnectInfo;
 import com.fox.rpc.remoting.invoker.api.Client;
 import com.fox.rpc.remoting.invoker.api.ClientFactory;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
-import com.fox.rpc.remoting.invoker.task.HeartBeatTask;
-import io.netty.util.concurrent.DefaultThreadFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.*;

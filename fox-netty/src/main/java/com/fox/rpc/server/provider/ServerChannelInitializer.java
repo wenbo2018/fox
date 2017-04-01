@@ -1,9 +1,9 @@
 package com.fox.rpc.server.provider;
 
 import com.fox.rpc.common.bean.InvokeRequest;
-import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.common.codec.provider.ProviderDecoder;
 import com.fox.rpc.common.codec.provider.ProviderEncoder;
+import com.fox.rpc.common.bean.InvokeResponse;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;

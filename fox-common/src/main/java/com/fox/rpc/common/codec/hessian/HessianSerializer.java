@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
  * Created by shenwenbo on 2016/9/30.
  */
-public class HessianSerializer extends  AbstractSerializer {
+public class HessianSerializer extends AbstractSerializer {
 
     private static Logger LOGGER=Logger.getLogger(HessianSerializer.class);
 

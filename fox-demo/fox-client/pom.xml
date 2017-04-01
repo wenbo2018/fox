@@ -56,24 +56,15 @@
         <artifactId>spring-test</artifactId>
         <version>3.1.2.RELEASE</version>
     </dependency>
-
-    <dependency>
-      <groupId>rpc.fox</groupId>
-      <artifactId>fox-api</artifactId>
-      <version>${fox.version}</version>
-    </dependency>
     <dependency>
       <groupId>rpc.fox</groupId>
       <artifactId>fox</artifactId>
       <version>${fox.version}</version>
     </dependency>
+      <dependency>
+          <groupId>rpc.fox</groupId>
+          <artifactId>fox-api</artifactId>
+          <version>${fox.version}</version>
+      </dependency>
   </dependencies>
-
-  <repositories>
-    <repository>
-      <id>public</id>
-      <name>Public Repositories</name>
-      <url>http://115.28.101.73:8081/nexus/content/groups/public/</url>
-    </repository>
-  </repositories>
 </project>

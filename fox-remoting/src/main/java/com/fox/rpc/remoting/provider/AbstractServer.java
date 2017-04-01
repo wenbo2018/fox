@@ -1,11 +1,11 @@
 package com.fox.rpc.remoting.provider;
 
 import com.fox.rpc.common.bean.InvokeRequest;
-import com.fox.rpc.remoting.provider.api.Server;
 import com.fox.rpc.remoting.provider.config.ServerConfig;
 import com.fox.rpc.remoting.provider.process.RequestProcessor;
-import com.fox.rpc.remoting.provider.process.RequestProcessorFactory;
 import com.fox.rpc.remoting.provider.process.ServiceProviderChannel;
+import com.fox.rpc.remoting.provider.api.Server;
+import com.fox.rpc.remoting.provider.process.RequestProcessorFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,7 +43,7 @@ public abstract class AbstractServer implements Server {
     }
 
 
-    public void processRequest(InvokeRequest request,ServiceProviderChannel serviceProviderChannel){
+    public void processRequest(InvokeRequest request, ServiceProviderChannel serviceProviderChannel){
         this.requestProcessor.processRequest(request,serviceProviderChannel);
     }
 

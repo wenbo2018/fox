@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+        <groupId>rpc.fox</groupId>
+        <artifactId>fox-parent</artifactId>
+        <version>1.0.1</version>
+  </parent>
+  <name>fox-monitor</name>
+  <artifactId>fox-monitor</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.1</version>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <skip_maven_deploy>true</skip_maven_deploy>
+  </properties>
+  <modules>
+    <module>fox-monitor-api</module>
+    <module>fox-monitor-default</module>
+  </modules>
+</project>

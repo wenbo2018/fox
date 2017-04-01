@@ -1,19 +1,17 @@
 package com.fox.rpc.server.invoke;
 
 import com.fox.rpc.common.bean.InvokeRequest;
-import com.fox.rpc.common.bean.InvokeResponse;
+import com.fox.rpc.common.common.Constants;
 import com.fox.rpc.remoting.common.ConnectInfo;
 import com.fox.rpc.remoting.invoker.AbstractClient;
-import com.fox.rpc.remoting.invoker.api.CallFuture;
-import com.fox.rpc.remoting.invoker.api.Client;
 import com.fox.rpc.remoting.invoker.async.CallbackFuture;
+import com.fox.rpc.common.bean.InvokeResponse;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import org.jboss.netty.channel.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -178,7 +176,7 @@ public class NettyClient extends AbstractClient {
         String messageId = invokeRequest.getRequestId();
         InvokeResponse invokeResponse = null;
         try {
-            if (invokeRequest.getMessageType() == com.fox.rpc.common.common.Constants.MESSAGE_TYPE_HEART) {
+            if (invokeRequest.getMessageType() == Constants.MESSAGE_TYPE_HEART) {
                 LOGGER.info("message typr:心跳消息");
             } else {
                 LOGGER.info("message typr:服务消息");

@@ -1,2 +1,0 @@
-com.fox.rpc.remoting.provider.config.ProviderBeanDefinitionParserLoader
-com.fox.rpc.remoting.invoker.config.spring.InvokerBeanDefinitionParserLoader

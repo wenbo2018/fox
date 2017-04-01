@@ -22,6 +22,7 @@ public abstract class AbstractRemotingServiceProxy implements ServiceProxy {
 
     @Override
     public void init() {
+
     }
 
     @Override

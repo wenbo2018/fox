@@ -15,7 +15,8 @@ public class ServiceProxyLoader {
 
     static {
         if (serviceProxy == null) {
-            serviceProxy = new DefaultRemotingServiceProxy();
+            serviceProxy = new FilterRemotingServiceProxy();
+//            serviceProxy = new DefaultRemotingServiceProxy();
         }
         LOGGER.info("serviceProxy:" + serviceProxy);
         serviceProxy.init();
