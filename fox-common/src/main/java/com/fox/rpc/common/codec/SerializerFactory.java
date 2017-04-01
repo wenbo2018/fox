@@ -3,7 +3,7 @@ package com.fox.rpc.common.codec;
 import com.fox.rpc.common.codec.hessian.HessianSerializer;
 import com.fox.rpc.common.codec.java.JavaSerializer;
 import com.fox.rpc.common.codec.protostuff.ProtostuffSerializer;
-import com.fox.rpc.common.common.Constants;
+import com.fox.rpc.common.common.FoxConstants;
 
 import java.security.InvalidParameterException;
 import java.util.concurrent.ConcurrentHashMap;
@@ -23,14 +23,14 @@ public class SerializerFactory {
         if (!isInitialized) {
             synchronized (SerializerFactory.class) {
                 if (!isInitialized) {
-                    serializers.put(Constants.JAVA_DEFAULT_SERIALIEE,new JavaSerializer());
-                    serializersType.put(Constants.JAVA_DEFAULT_SERIALIEE_byte,new JavaSerializer());
+                    serializers.put(FoxConstants.JAVA_DEFAULT_SERIALIEE,new JavaSerializer());
+                    serializersType.put(FoxConstants.JAVA_DEFAULT_SERIALIEE_byte,new JavaSerializer());
 
-                    serializers.put(Constants.HESSIAN_SERIALIEE,new HessianSerializer());
-                    serializersType.put(Constants.HESSIAN_SERIALIEE_byte,new HessianSerializer());
+                    serializers.put(FoxConstants.HESSIAN_SERIALIEE,new HessianSerializer());
+                    serializersType.put(FoxConstants.HESSIAN_SERIALIEE_byte,new HessianSerializer());
 
-                    serializers.put(Constants.PROTOSTUFF_SERIALIEE,new ProtostuffSerializer());
-                    serializersType.put(Constants.PROTOSTUFF_SERIALIEE_byte,new ProtostuffSerializer());
+                    serializers.put(FoxConstants.PROTOSTUFF_SERIALIEE,new ProtostuffSerializer());
+                    serializersType.put(FoxConstants.PROTOSTUFF_SERIALIEE_byte,new ProtostuffSerializer());
                     isInitialized=true;
                 }
             }

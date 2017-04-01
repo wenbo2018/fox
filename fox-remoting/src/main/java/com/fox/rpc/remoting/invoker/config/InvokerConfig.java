@@ -11,10 +11,18 @@ public class InvokerConfig<T> {
     private String iface;
     //服务名称
     private String serviceName;
-
+    /**
+     * 序列号类型
+     */
     private String serializer;
-
+    /**
+     * 服务版本
+     */
     private String serviceVersion;
+    /**
+     * 服务验证key
+     */
+    private String appkey;
 
     public InvokerConfig(Class<T> interfaceClass, String iface,String serviceName,String serializer) {
         this.interfaceClass = interfaceClass;
@@ -61,5 +69,13 @@ public class InvokerConfig<T> {
 
     public void setServiceVersion(String serviceVersion) {
         this.serviceVersion = serviceVersion;
+    }
+
+    public String getAppkey() {
+        return appkey;
+    }
+
+    public void setAppkey(String appkey) {
+        this.appkey = appkey;
     }
 }

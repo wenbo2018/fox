@@ -21,8 +21,4 @@ public class RemoteServiceCall {
         response = client.send(request, callback);
         return response;
     }
-
-
-
-
 }

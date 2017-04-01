@@ -1,7 +1,7 @@
 package com.fox.rpc.remoting.provider.process;
 
 import com.fox.rpc.common.bean.InvokeRequest;
-import com.fox.rpc.common.common.Constants;
+import com.fox.rpc.common.common.FoxConstants;
 import com.fox.rpc.remoting.provider.async.AsyncServiceRunnable;
 import com.fox.rpc.remoting.provider.config.ProviderConfig;
 
@@ -57,7 +57,7 @@ public class ThreadPoolRequestProcessor<T> implements RequestProcessor<T>{
     }
 
     private ProviderConfig getServiceConfig(InvokeRequest invokeRequest) {
-        if (invokeRequest.getMessageType()== Constants.MESSAGE_TYPE_HEART)
+        if (invokeRequest.getMessageType()== FoxConstants.MESSAGE_TYPE_HEART)
             return null;
         return  cacheServices.get(invokeRequest.getServiceName());
     }

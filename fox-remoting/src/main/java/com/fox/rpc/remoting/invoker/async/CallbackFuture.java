@@ -2,7 +2,7 @@ package com.fox.rpc.remoting.invoker.async;
 
 import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
-import com.fox.rpc.common.common.Constants;
+import com.fox.rpc.common.common.FoxConstants;
 import com.fox.rpc.remoting.invoker.api.CallFuture;
 
 /**
@@ -20,7 +20,7 @@ public class CallbackFuture implements Callback {
     public void run() {
         synchronized (this) {
             this.done = true;
-            if (this.response.getMessageType() == Constants.MESSAGE_TYPE_SERVICE) {
+            if (this.response.getMessageType() == FoxConstants.MESSAGE_TYPE_SERVICE) {
                 this.success = true;
             }
             this.notifyAll();

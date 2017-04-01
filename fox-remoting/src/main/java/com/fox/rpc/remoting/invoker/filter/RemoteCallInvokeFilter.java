@@ -20,7 +20,6 @@ public class RemoteCallInvokeFilter implements Filter {
 
     @Override
     public InvokeResponse invoke(ServiceInvocationHandler handler, InvokeContext invokeContext) throws Throwable {
-
         InvokeRequest request = createInvokeRequest(invokeContext);
         Client client = ClientManager.getInstance().getClient(invokeContext.getInvokerConfig());
         CallbackFuture callback = new CallbackFuture();

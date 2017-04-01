@@ -1,6 +1,6 @@
 package com.fox.rpc.common.bean;
 
-import com.fox.rpc.common.common.Constants;
+import com.fox.rpc.common.common.FoxConstants;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -19,7 +19,7 @@ public class InvokeRequest implements Serializable {
     private Object[] parameters;
     private String serialize;
     private String serviceName;
-    private int messageType = Constants.MESSAGE_TYPE_SERVICE;
+    private int messageType = FoxConstants.MESSAGE_TYPE_SERVICE;
     private long seq;
     private long createMillisTime;
 

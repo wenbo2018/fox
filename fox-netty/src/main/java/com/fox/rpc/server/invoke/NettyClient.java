@@ -1,7 +1,7 @@
 package com.fox.rpc.server.invoke;
 
 import com.fox.rpc.common.bean.InvokeRequest;
-import com.fox.rpc.common.common.Constants;
+import com.fox.rpc.common.common.FoxConstants;
 import com.fox.rpc.remoting.common.ConnectInfo;
 import com.fox.rpc.remoting.invoker.AbstractClient;
 import com.fox.rpc.remoting.invoker.async.CallbackFuture;
@@ -176,7 +176,7 @@ public class NettyClient extends AbstractClient {
         String messageId = invokeRequest.getRequestId();
         InvokeResponse invokeResponse = null;
         try {
-            if (invokeRequest.getMessageType() == Constants.MESSAGE_TYPE_HEART) {
+            if (invokeRequest.getMessageType() == FoxConstants.MESSAGE_TYPE_HEART) {
                 LOGGER.info("message typr:心跳消息");
             } else {
                 LOGGER.info("message typr:服务消息");

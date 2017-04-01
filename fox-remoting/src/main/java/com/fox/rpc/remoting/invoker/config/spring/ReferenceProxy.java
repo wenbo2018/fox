@@ -1,7 +1,7 @@
 package com.fox.rpc.remoting.invoker.config.spring;
 
+import com.fox.rpc.common.common.FoxConstants;
 import com.fox.rpc.remoting.ServiceFactory;
-import com.fox.rpc.common.common.Constants;
 import com.fox.rpc.common.util.ClassUtils;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import org.apache.commons.lang3.StringUtils;
@@ -18,7 +18,7 @@ public class ReferenceProxy implements FactoryBean{
 
     private String serviceName;
 
-    private String serializer = Constants.PROTOSTUFF_SERIALIEE;
+    private String serializer = FoxConstants.PROTOSTUFF_SERIALIEE;
 
     private String iface;
 

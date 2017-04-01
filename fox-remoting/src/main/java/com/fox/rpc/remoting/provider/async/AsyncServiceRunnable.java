@@ -1,8 +1,9 @@
 package com.fox.rpc.remoting.provider.async;
 
 import com.fox.rpc.common.bean.InvokeRequest;
-import com.fox.rpc.common.common.Constants;
+import com.fox.rpc.common.common.FoxConstants;
 import com.fox.rpc.common.util.StringUtil;
+import com.fox.rpc.remoting.enums.ReturnEnum;
 import com.fox.rpc.remoting.provider.config.ProviderConfig;
 import com.fox.rpc.remoting.provider.process.ServiceProviderChannel;
 import com.fox.rpc.common.bean.InvokeResponse;
@@ -35,7 +36,7 @@ public class AsyncServiceRunnable<T> implements Callable{
     public Object call() throws Exception {
         InvokeResponse response = new InvokeResponse();
         response.setRequestId(request.getRequestId());
-        if (this.request.getMessageType()== Constants.MESSAGE_TYPE_HEART) {
+        if (this.request.getMessageType()== FoxConstants.MESSAGE_TYPE_HEART) {
             LOGGER.info("message type:heart beat");
             response.setSerialize(request.getSerialize());
             response.setSeq(request.getSeq());
@@ -47,11 +48,13 @@ public class AsyncServiceRunnable<T> implements Callable{
             Object result = handle(request);
             response.setResult(result);
             response.setSerialize(request.getSerialize());
+            response.setReturnType(ReturnEnum.SERVICE.ordinal());
         } catch (Exception e) {
             System.out.println("handle result failure"+e);
             LOGGER.error("handle result failure", e);
             response.setException(e);
             response.setSerialize(request.getSerialize());
+            response.setReturnType(ReturnEnum.SERVER_EXCEPTION.ordinal());
         }
         // 写入 RPC 响应对象并自动关闭连接
         channel.write(response);

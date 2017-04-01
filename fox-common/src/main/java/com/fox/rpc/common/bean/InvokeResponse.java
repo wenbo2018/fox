@@ -14,6 +14,7 @@ public class InvokeResponse implements Serializable{
     private long seq;
     private String serialize;
     private int messageType;
+    private int returnType;
 
     public long getSeq() {
         return seq;
@@ -67,6 +68,14 @@ public class InvokeResponse implements Serializable{
         this.messageType = messageType;
     }
 
+    public int getReturnType() {
+        return returnType;
+    }
+
+    public void setReturnType(int returnType) {
+        this.returnType = returnType;
+    }
+
     @Override
     public String toString() {
         return "InvokeResponse{" +
@@ -75,4 +84,5 @@ public class InvokeResponse implements Serializable{
                 ", result=" + result +
                 '}';
     }
+
 }
