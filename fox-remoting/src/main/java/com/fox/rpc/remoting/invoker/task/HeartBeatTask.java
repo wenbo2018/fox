@@ -1,6 +1,6 @@
 package com.fox.rpc.remoting.invoker.task;
 
-import com.fox.rpc.common.common.Constants;
+import com.fox.rpc.common.common.FoxConstants;
 import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.remoting.exception.HeartBeatExcepion;
@@ -106,10 +106,10 @@ public class HeartBeatTask implements Runnable {
 
     public InvokeRequest createHeartBeatRequest() {
         InvokeRequest invokeRequest = new InvokeRequest();
-        invokeRequest.setMessageType(Constants.MESSAGE_TYPE_HEART);
+        invokeRequest.setMessageType(FoxConstants.MESSAGE_TYPE_HEART);
         invokeRequest.setInterfaceName(null);
         invokeRequest.setMethodName(HEART_TASK_METHOD);
-        invokeRequest.setSerialize(Constants.HESSIAN_SERIALIEE);
+        invokeRequest.setSerialize(FoxConstants.HESSIAN_SERIALIEE);
         invokeRequest.setSeq(heartBeatSeq.getAndIncrement());
         invokeRequest.setRequestId(UUID.randomUUID().toString());
         invokeRequest.setCreateMillisTime(System.currentTimeMillis());
@@ -131,6 +131,7 @@ public class HeartBeatTask implements Runnable {
         HeartBeatStat heartBeatStat = getHeartBeatStat(client.getAdress());
         if (heartBeatStat.succeedCounter.longValue() >= SERVICE_HEALTH_COUNT) {
             LOGGER.info("this servicce[" + client.getAdress() + "] is health:", client.getAdress());
+            heartBeatStat.resetCounter();
         } else if (heartBeatStat.failedCounter.longValue() >= SERVICE_HEALTH_COUNT) {
             //服务不可用，摘除当前服务
             LOGGER.info("this servicce[" + client.getAdress() + "]  has been removed:", client.getAdress());
@@ -166,10 +167,10 @@ public class HeartBeatTask implements Runnable {
 
     public static void main(String[] args) {
         InvokeRequest invokeRequest = new InvokeRequest();
-        invokeRequest.setMessageType(Constants.MESSAGE_TYPE_HEART);
+        invokeRequest.setMessageType(FoxConstants.MESSAGE_TYPE_HEART);
         invokeRequest.setInterfaceName(null);
         invokeRequest.setMethodName(HEART_TASK_METHOD);
-        invokeRequest.setSerialize(Constants.HESSIAN_SERIALIEE);
+        invokeRequest.setSerialize(FoxConstants.HESSIAN_SERIALIEE);
     }
 
 

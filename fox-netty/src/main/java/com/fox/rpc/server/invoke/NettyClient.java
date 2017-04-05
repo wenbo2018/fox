@@ -1,7 +1,7 @@
 package com.fox.rpc.server.invoke;
 
 import com.fox.rpc.common.bean.InvokeRequest;
-import com.fox.rpc.common.common.Constants;
+import com.fox.rpc.common.common.FoxConstants;
 import com.fox.rpc.remoting.common.ConnectInfo;
 import com.fox.rpc.remoting.invoker.AbstractClient;
 import com.fox.rpc.remoting.invoker.async.CallbackFuture;
@@ -77,50 +77,6 @@ public class NettyClient extends AbstractClient {
         }
     }
 
-//    @Override
-//    public CallFuture send(final InvokeRequest request) throws Exception {
-//        this.invokeRequest = request;
-//        final LinkedBlockingQueue<InvokeResponse> queue = new LinkedBlockingQueue<InvokeResponse>(1);
-//        CallFuture callFuture = new CallFuture(request);
-//        ChannelFuture future = null;
-//        try {
-//            responseMap.put(request.getRequestId(), queue);
-//            if (channel.isWritable()) {
-//                future = channel.writeAndFlush(request);
-//            }
-//            future.addListener(new ChannelFutureListener() {
-//                @Override
-//                public void operationComplete(ChannelFuture future) throws Exception {
-//                    if (future.isSuccess()) {
-//                        LOGGER.info("fox success invoke");
-//                        return;
-//                    }
-//                }
-//            });
-//        } catch (Exception e) {
-//            responseMap.remove(request.getRequestId());
-//            LOGGER.error("rpc request failue:{}", e);
-//        }
-//        return callFuture;
-//    }
-
-//    @Override
-//    public InvokeResponse send(InvokeRequest request, CallbackFuture callbackFuture) throws Exception {
-//        Object[] msg = new Object[] { request, callbackFuture };
-//        ChannelFuture future = null;
-//        future=channel.write(msg);
-//        future.addListener(new ChannelFutureListener() {
-//            @Override
-//            public void operationComplete(ChannelFuture future) throws Exception {
-//                if (future.isSuccess()) {
-//                    LOGGER.info("fox success invoke");
-//                    return;
-//                }
-//            }
-//        });
-//        return null;
-//    }
-
     @Override
     protected InvokeResponse doWrite(InvokeRequest request, CallbackFuture callbackFuture) {
         Object[] msg = new Object[]{request, callbackFuture};
@@ -176,7 +132,7 @@ public class NettyClient extends AbstractClient {
         String messageId = invokeRequest.getRequestId();
         InvokeResponse invokeResponse = null;
         try {
-            if (invokeRequest.getMessageType() == Constants.MESSAGE_TYPE_HEART) {
+            if (invokeRequest.getMessageType() == FoxConstants.MESSAGE_TYPE_HEART) {
                 LOGGER.info("message typr:心跳消息");
             } else {
                 LOGGER.info("message typr:服务消息");

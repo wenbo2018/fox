@@ -1,7 +1,7 @@
 package com.fox.rpc.common.codec.java;
 
 import com.fox.rpc.common.codec.AbstractSerializer;
-import com.fox.rpc.common.common.Constants;
+import com.fox.rpc.common.common.FoxConstants;
 
 import java.io.*;
 
@@ -11,7 +11,7 @@ import java.io.*;
 public class JavaSerializer extends AbstractSerializer {
 
 
-    private byte serializerType= Constants.JAVA_DEFAULT_SERIALIEE_byte;
+    private byte serializerType= FoxConstants.JAVA_DEFAULT_SERIALIEE_byte;
 
     @Override
     public <T> byte[] serialize(T obj) {

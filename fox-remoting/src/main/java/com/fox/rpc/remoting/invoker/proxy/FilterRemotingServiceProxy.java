@@ -1,10 +1,9 @@
 package com.fox.rpc.remoting.invoker.proxy;
 
 import com.fox.rpc.remoting.exception.RpcException;
-import com.fox.rpc.remoting.invoker.Filter;
 import com.fox.rpc.remoting.invoker.InvokerBootStrap;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
-import com.fox.rpc.remoting.invoker.filter.InvokerProcessHandlerFactory;
+import com.fox.rpc.remoting.invoker.filter.InvokerFilterWrapper;
 
 import java.lang.reflect.Proxy;
 
@@ -22,7 +21,7 @@ public class FilterRemotingServiceProxy extends AbstractRemotingServiceProxy {
         if (service==null) {
             try {
                 InvokerBootStrap.startup();
-                FilterServiceInvocationProxy serviceInvocationProxy=new FilterServiceInvocationProxy(config, InvokerProcessHandlerFactory.selectInvocationHandler());
+                FilterServiceInvocationProxy serviceInvocationProxy=new FilterServiceInvocationProxy(config, InvokerFilterWrapper.selectInvocationHandler());
                 service=(T) Proxy.newProxyInstance(config.getClass().getClassLoader(),
                         new Class<?>[]{ config.getInterfaceClass() },serviceInvocationProxy);
             } catch (Throwable e) {
