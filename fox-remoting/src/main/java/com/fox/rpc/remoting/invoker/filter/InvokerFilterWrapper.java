@@ -1,9 +1,8 @@
 package com.fox.rpc.remoting.invoker.filter;
 
 import com.fox.rpc.common.bean.InvokeResponse;
-import com.fox.rpc.remoting.invoker.Filter;
+import com.fox.rpc.remoting.invoker.handler.Filter;
 import com.fox.rpc.remoting.invoker.InvokeContext;
-import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import com.fox.rpc.remoting.invoker.handler.ServiceInvocationHandler;
 
 import java.util.ArrayList;
@@ -35,9 +34,8 @@ public class InvokerFilterWrapper {
         return bizInvocationHandler;
     }
 
-    @SuppressWarnings({ "rawtypes" })
-    private static <V extends Filter> ServiceInvocationHandler createInvocationHandler(
-            List<V> internalFilters) {
+    @SuppressWarnings({"rawtypes"})
+    private static <V extends Filter> ServiceInvocationHandler createInvocationHandler(List<V> internalFilters) {
         ServiceInvocationHandler last = null;
         List<V> filterList = new ArrayList<V>();
         filterList.addAll(internalFilters);

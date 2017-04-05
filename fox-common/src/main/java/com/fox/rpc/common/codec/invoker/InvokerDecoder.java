@@ -13,13 +13,7 @@ import java.util.List;
  */
 public class InvokerDecoder extends ByteToMessageDecoder {
 
-    private Class<?> genericClass;
-
-    public InvokerDecoder(Class<?> genericClass) {
-        this.genericClass = genericClass;
-    }
-
-    @Override
+    private Class<?> genericClass;@Override
     public void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
         //获取序列化方式
         if (in.readableBytes() < 5)
@@ -41,4 +35,10 @@ public class InvokerDecoder extends ByteToMessageDecoder {
         Serializer serializer = SerializerFactory.getSerializer(b);
         out.add(serializer.deserialize(data, genericClass));
     }
+
+    public InvokerDecoder(Class<?> genericClass) {
+        this.genericClass = genericClass;
+    }
+
+
 }

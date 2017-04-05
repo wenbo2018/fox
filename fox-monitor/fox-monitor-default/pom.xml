@@ -22,58 +22,10 @@
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.10</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>3.1.2.RELEASE</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context-support</artifactId>
-      <version>3.1.2.RELEASE</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>3.1.2.RELEASE</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-core</artifactId>
-      <version>3.1.2.RELEASE</version>
-    </dependency>
-
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-test</artifactId>
-        <version>3.1.2.RELEASE</version>
-    </dependency>
-
-    <dependency>
       <groupId>rpc.fox</groupId>
-      <artifactId>fox-api</artifactId>
-      <version>${fox.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>rpc.fox</groupId>
-      <artifactId>fox</artifactId>
+      <artifactId>fox-monitor-api</artifactId>
       <version>${fox.version}</version>
     </dependency>
   </dependencies>
 
-  <repositories>
-    <repository>
-      <id>public</id>
-      <name>Public Repositories</name>
-      <url>http://115.28.101.73:8081/nexus/content/groups/public/</url>
-    </repository>
-  </repositories>
 </project>
