@@ -1,19 +1,21 @@
 package com.fox.rpc.remoting.invoker;
 
-import com.fox.rpc.remoting.invoker.task.HeartBeatTask;
+import com.fox.rpc.registry.listener.ServiceProviderChangeListener;
 import com.fox.rpc.common.HostInfo;
+import com.fox.rpc.remoting.common.ConnectInfo;
+import com.fox.rpc.remoting.invoker.api.ClientFactory;
+import com.fox.rpc.remoting.invoker.task.HeartBeatTask;
+import com.fox.rpc.remoting.invoker.cluster.Route;
 import com.fox.rpc.common.extension.UserServiceLoader;
 import com.fox.rpc.common.util.CollectionUtil;
 import com.fox.rpc.registry.RegistryEventListener;
 import com.fox.rpc.registry.RegistryManager;
 import com.fox.rpc.registry.listener.ServiceProviderChangeEvent;
-import com.fox.rpc.registry.listener.ServiceProviderChangeListener;
-import com.fox.rpc.remoting.common.ConnectInfo;
 import com.fox.rpc.remoting.invoker.api.Client;
-import com.fox.rpc.remoting.invoker.api.ClientFactory;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
@@ -36,7 +38,7 @@ public class ClientManager {
 
     private ClientFactory clientFactory;
 
-    private  ExecutorService heartBeatThreadPool;
+    private ExecutorService heartBeatThreadPool;
 
     private HeartBeatTask heartBeatTask;
 
@@ -53,13 +55,12 @@ public class ClientManager {
     }
 
     private ClientManager() {
-        this.heartBeatThreadPool=Executors.newFixedThreadPool(1, Executors.defaultThreadFactory());
-        this.heartBeatTask=new HeartBeatTask();
+        this.heartBeatThreadPool = Executors.newFixedThreadPool(1, Executors.defaultThreadFactory());
+        this.heartBeatTask = new HeartBeatTask();
         heartBeatThreadPool.execute(this.heartBeatTask);
         RegistryEventListener.addListener(providerChangeListener);
 
     }
-
 
     private void init() {
         clientFactory = UserServiceLoader.newExtension(ClientFactory.class);
@@ -89,6 +90,7 @@ public class ClientManager {
 
     /**
      * 创建一个netty连接
+     *
      * @param connectInfo
      * @return
      */
@@ -109,7 +111,8 @@ public class ClientManager {
             }
             clients = clientsMap.get(invokerConfig);
         }
-        return clients.get(1 + (int) (Math.random() * clients.size()) - 1);
+        Route route = UserServiceLoader.getExtension(Route.class);
+        return route.route(clients, invokerConfig);
     }
 
 
@@ -119,11 +122,10 @@ public class ClientManager {
         for (List<Client> client : _clients) {
             clients.addAll(client);
         }
-
         return clients;
     }
 
-    //服务增加监控处理
+    //服务变化监控处理
     class InnerServiceProviderChangeListener implements ServiceProviderChangeListener {
 
         @Override

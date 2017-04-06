@@ -21,7 +21,7 @@ public class FilterServiceInvocationProxy implements InvocationHandler {
     private InvokerConfig invokerConfig;
     private ServiceInvocationHandler handler;
 
-    public FilterServiceInvocationProxy(InvokerConfig invokerConfig,ServiceInvocationHandler serviceInvocationHandler) {
+    public FilterServiceInvocationProxy(InvokerConfig invokerConfig, ServiceInvocationHandler serviceInvocationHandler) {
         this.invokerConfig=invokerConfig;
         this.handler=serviceInvocationHandler;
     }

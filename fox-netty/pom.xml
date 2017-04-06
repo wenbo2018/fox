@@ -19,7 +19,6 @@
         <encoding>UTF-8</encoding>
     </properties>
     <dependencies>
-        <!-- RPC Common -->
         <dependency>
             <groupId>rpc.fox</groupId>
             <artifactId>fox-common</artifactId>

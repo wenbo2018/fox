@@ -1,12 +1,12 @@
 package com.fox.rpc.remoting.provider.async;
 
 import com.fox.rpc.common.bean.InvokeRequest;
+import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.common.common.FoxConstants;
 import com.fox.rpc.common.util.StringUtil;
 import com.fox.rpc.remoting.enums.ReturnEnum;
 import com.fox.rpc.remoting.provider.config.ProviderConfig;
 import com.fox.rpc.remoting.provider.process.ServiceProviderChannel;
-import com.fox.rpc.common.bean.InvokeResponse;
 import net.sf.cglib.reflect.FastClass;
 import net.sf.cglib.reflect.FastMethod;
 import org.slf4j.Logger;
@@ -37,20 +37,19 @@ public class AsyncServiceRunnable<T> implements Callable{
         InvokeResponse response = new InvokeResponse();
         response.setRequestId(request.getRequestId());
         if (this.request.getMessageType()== FoxConstants.MESSAGE_TYPE_HEART) {
-            LOGGER.info("message type:heart beat");
+            LOGGER.debug("message type:heart beat");
             response.setSerialize(request.getSerialize());
             response.setSeq(request.getSeq());
             channel.write(response);
             return null;
         }
         try {
-            LOGGER.info("message type:service");
+            LOGGER.debug("message type:service");
             Object result = handle(request);
             response.setResult(result);
             response.setSerialize(request.getSerialize());
             response.setReturnType(ReturnEnum.SERVICE.ordinal());
         } catch (Exception e) {
-            System.out.println("handle result failure"+e);
             LOGGER.error("handle result failure", e);
             response.setException(e);
             response.setSerialize(request.getSerialize());

@@ -1,8 +1,8 @@
 package com.fox.rpc.server.invoke;
 
+import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.codec.invoker.InvokerEncoder;
-import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.common.codec.invoker.InvokerDecoder;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;

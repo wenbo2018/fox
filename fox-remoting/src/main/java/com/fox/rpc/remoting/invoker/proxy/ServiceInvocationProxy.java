@@ -1,11 +1,11 @@
 package com.fox.rpc.remoting.invoker.proxy;
 
+import com.fox.rpc.common.bean.InvokeResponse;
+import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.remoting.invoker.ClientManager;
 import com.fox.rpc.remoting.invoker.RemoteServiceCall;
-import com.fox.rpc.remoting.invoker.async.CallbackFuture;
-import com.fox.rpc.common.bean.InvokeRequest;
-import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.remoting.invoker.api.Client;
+import com.fox.rpc.remoting.invoker.async.CallbackFuture;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

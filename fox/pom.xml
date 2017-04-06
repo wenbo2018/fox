@@ -59,9 +59,6 @@
                             <artifactSet>
                                 <includes>
                                     <include>rpc.fox:fox-common</include>
-                                    <include>rpc.fox:fox-common</include>
-                                    <include>rpc.fox:fox-common</include>
-                                    <include>rpc.fox:fox-common</include>
                                 </includes>
                             </artifactSet>
                             <transformers>

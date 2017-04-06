@@ -1,9 +1,9 @@
 package com.fox.rpc.remoting.invoker;
 
-import com.fox.rpc.config.ConfigManagerLoader;
-import com.fox.rpc.registry.RegistryManager;
 import com.fox.rpc.common.codec.SerializerFactory;
+import com.fox.rpc.config.ConfigManagerLoader;
 import com.fox.rpc.remoting.invoker.filter.InvokerFilterWrapper;
+import com.fox.rpc.registry.RegistryManager;
 
 /**
  * Created by wenbo2018 on 2016/8/26.

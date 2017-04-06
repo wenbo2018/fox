@@ -22,6 +22,7 @@
     <bean id="userService" class="com.fox.UserServiceImpl"/>
 
     <fox:server  id="server1" port="4019"/>
+
     <fox:service server="server1"
                  serviceName="service.fox.com_helloTestService_helloService_1.0.0"
                  ref="helloService"/>

@@ -2,17 +2,17 @@ package com.fox.rpc.remoting;
 
 import com.fox.rpc.common.extension.UserServiceLoader;
 import com.fox.rpc.config.ConfigManagerLoader;
+import com.fox.rpc.registry.Registry;
 import com.fox.rpc.registry.RegistryManager;
-import com.fox.rpc.remoting.provider.config.ProviderConfig;
+import com.fox.rpc.remoting.invoker.api.ServiceProxy;
+import com.fox.rpc.remoting.provider.api.Server;
 import com.fox.rpc.remoting.provider.config.ServerConfig;
+import com.fox.rpc.remoting.provider.config.ProviderConfig;
 import com.fox.rpc.config.ConfigManager;
 import com.fox.rpc.registry.Constants;
-import com.fox.rpc.registry.Registry;
-import com.fox.rpc.remoting.invoker.api.ServiceProxy;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 import com.fox.rpc.remoting.invoker.proxy.ServiceProxyLoader;
 import com.fox.rpc.remoting.provider.ProviderBootStrap;
-import com.fox.rpc.remoting.provider.api.Server;
 import com.fox.rpc.remoting.provider.process.RequestProcessor;
 import org.apache.commons.collections4.CollectionUtils;
 

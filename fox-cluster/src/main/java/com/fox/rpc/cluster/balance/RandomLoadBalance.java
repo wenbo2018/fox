@@ -1,6 +1,5 @@
-package com.fox.rpc.balance;
+package com.fox.rpc.cluster.balance;
 
-import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.remoting.invoker.api.Client;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 
@@ -13,15 +12,14 @@ import java.util.Random;
 public class RandomLoadBalance extends AbstractLoadBalance {
 
     private final Random random = new Random();
+
     /**
      * 随机算法选择Client，暂时按照随机数选择；
-     *
      * @param invokerConfig
-     * @param request
      * @return
      */
     @Override
-    protected Client doSelect(List<Client> clients, InvokerConfig invokerConfig, InvokeRequest request) {
+    protected Client doSelect(List<Client> clients, InvokerConfig invokerConfig) {
         int total = clients.size();
         int offset = random.nextInt(total);
         return clients.get(offset);

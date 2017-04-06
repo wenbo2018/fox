@@ -9,10 +9,10 @@
     <xsd:import namespace="http://www.springframework.org/schema/beans"/>
 
 
-    <xsd:element name="com.hawkeys.core.extension" type="Textension"/>
+    <xsd:element name="com.hawkeys.common.extension" type="Textension"/>
     <xsd:complexType name="Textension">
         <xsd:complexContent>
-            <xsd:com.hawkeys.core.extension base="beans:identifiedType">
+            <xsd:com.hawkeys.common.extension base="beans:identifiedType">
                 <xsd:sequence minOccurs="0" maxOccurs="unbounded">
                     <xsd:element name="require" type="Trequire"
                                  minOccurs="0"/>
@@ -23,7 +23,7 @@
                                use="required"/>
                 <xsd:attribute name="point" type="xsd:string"
                                use="required"/>
-            </xsd:com.hawkeys.core.extension>
+            </xsd:com.hawkeys.common.extension>
         </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="Trequire">

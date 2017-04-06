@@ -1,8 +1,8 @@
 package com.fox.rpc.common.codec.provider;
 
+import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.common.codec.Serializer;
 import com.fox.rpc.common.codec.SerializerFactory;
-import com.fox.rpc.common.bean.InvokeResponse;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;

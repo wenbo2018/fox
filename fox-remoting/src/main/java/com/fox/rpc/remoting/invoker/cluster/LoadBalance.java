@@ -1,6 +1,5 @@
-package com.fox.rpc.balance;
+package com.fox.rpc.remoting.invoker.cluster;
 
-import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.remoting.invoker.api.Client;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 
@@ -11,6 +10,6 @@ import java.util.List;
  */
 public interface LoadBalance {
 
-    Client select(List<Client> clients, InvokerConfig invokerConfig, InvokeRequest request);
+    Client select(List<Client> clients, InvokerConfig invokerConfig);
 
 }

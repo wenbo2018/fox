@@ -1,8 +1,8 @@
 package com.fox.rpc.registry.zookeeper;
 
+import com.fox.rpc.registry.ServiceChangeListener;
 import com.fox.rpc.registry.DefaultServiceChangeListener;
 import com.fox.rpc.registry.RegistryEventListener;
-import com.fox.rpc.registry.ServiceChangeListener;
 import com.fox.rpc.registry.exception.RegistryException;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.api.CuratorEvent;

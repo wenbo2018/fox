@@ -1,8 +1,8 @@
 package com.fox.rpc.remoting.invoker.api;
 
-import com.fox.rpc.common.bean.InvokeRequest;
-import com.fox.rpc.remoting.invoker.async.CallbackFuture;
 import com.fox.rpc.common.bean.InvokeResponse;
+import com.fox.rpc.remoting.invoker.async.CallbackFuture;
+import com.fox.rpc.common.bean.InvokeRequest;
 
 /**
  * Created by shenwenbo on 16/8/19.
