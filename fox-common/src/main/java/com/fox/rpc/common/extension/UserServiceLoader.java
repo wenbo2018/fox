@@ -5,13 +5,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.ServiceLoader;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 /**
  * Created by shenwenbo on 16/8/6.
  */
-public class UserServiceLoader {
+public class UserServiceLoader<T> {
 
     private static Map<Class<?>, Object> extensionServices = new ConcurrentHashMap<Class<?>, Object>();
+
+    private static Map<String, Object> cachedInstances = new ConcurrentHashMap<String, Object>();
+
+    private static final ConcurrentMap<Class<?>, UserServiceLoader<?>> EXTENSION_LOADERS = new ConcurrentHashMap<Class<?>, UserServiceLoader<?>>();
 
     public static <T> T getExtension(Class<T> clazz) {
         T extension = (T) extensionServices.get(clazz);
@@ -19,6 +24,39 @@ public class UserServiceLoader {
             extension = newExtension(clazz);
             if (extension != null) {
                 extensionServices.put(clazz, extension);
+            }
+        }
+        return extension;
+    }
+
+
+    /**
+     * 根据实现类名获取指定扩展节点
+     * @param classType
+     * @param <T>
+     * @return
+     */
+    public <T> T getExtension(String classType) {
+        T extension = (T) cachedInstances.get(classType);
+        if (extension != null)
+            return extension;
+        Class<T> clazz = null;
+        try {
+            clazz = (Class<T>) Class.forName(classType);
+        } catch (ClassNotFoundException e) {
+            throw new IllegalArgumentException("classType type(" + classType + ") is not class!");
+        }
+        extension = (T) cachedInstances.get(classType);
+        if (extension == null) {
+            try {
+                extension = (T) clazz.newInstance();
+            } catch (InstantiationException e) {
+                throw new IllegalArgumentException("classType instance type(" + classType + ") is not be created!");
+            } catch (IllegalAccessException e) {
+                throw new IllegalArgumentException("classType instance type(" + classType + ") is not be created!");
+            }
+            if (extension != null) {
+                cachedInstances.put(classType, extension);
             }
         }
         return extension;
@@ -54,4 +92,26 @@ public class UserServiceLoader {
         }
         return extensions;
     }
+
+    /***
+     * 获取某个接口的扩展，参考dubbo
+     * @param type
+     * @param <T>
+     * @return
+     */
+    public static <T> UserServiceLoader<T> getExtensionLoader(Class<T> type) {
+        if (type == null)
+            throw new IllegalArgumentException("Extension type == null");
+        if (!type.isInterface()) {
+            throw new IllegalArgumentException("Extension type(" + type + ") is not interface!");
+        }
+        UserServiceLoader<T> loader = (UserServiceLoader<T>) EXTENSION_LOADERS.get(type);
+        if (loader == null) {
+            EXTENSION_LOADERS.putIfAbsent(type, new UserServiceLoader<T>());
+            loader = (UserServiceLoader<T>) EXTENSION_LOADERS.get(type);
+        }
+        return loader;
+    }
+
+
 }

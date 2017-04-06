@@ -1,7 +1,7 @@
 package com.fox.rpc.remoting.invoker.async;
 
-import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
+import com.fox.rpc.common.bean.InvokeRequest;
 
 /**
  * Created by shenwenbo on 2017/3/25.

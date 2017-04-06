@@ -1,8 +1,8 @@
-package com.fox.rpc.balance;
+package com.fox.rpc.cluster.balance;
 
-import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.util.CollectionUtil;
 import com.fox.rpc.remoting.invoker.api.Client;
+import com.fox.rpc.remoting.invoker.cluster.LoadBalance;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
 
 import java.util.List;
@@ -12,10 +12,10 @@ import java.util.List;
  */
 public abstract class AbstractLoadBalance implements LoadBalance {
 
-    protected abstract Client doSelect(List<Client> clients, InvokerConfig invokerConfig, InvokeRequest request);
+    protected abstract Client doSelect(List<Client> clients, InvokerConfig invokerConfig);
 
     @Override
-    public Client select(List<Client> clients, InvokerConfig invokerConfig, InvokeRequest request) {
+    public Client select(List<Client> clients, InvokerConfig invokerConfig) {
         if (CollectionUtil.isEmpty(clients)) {
             return null;
         }
@@ -23,7 +23,7 @@ public abstract class AbstractLoadBalance implements LoadBalance {
             return clients.get(0);
         }
         Client loadBalanceClient = null;
-        loadBalanceClient = doSelect(clients, invokerConfig,request);
+        loadBalanceClient = doSelect(clients, invokerConfig);
         return loadBalanceClient;
     }
 }

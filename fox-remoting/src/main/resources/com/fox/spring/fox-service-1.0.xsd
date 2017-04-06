@@ -12,11 +12,11 @@
     <xsd:element name="invoker">
         <xsd:complexType>
             <xsd:complexContent>
-                <xsd:com.hawkeys.core.extension base="beans:identifiedType">
+                <xsd:extension base="beans:identifiedType">
                     <xsd:attribute name="iface" type="xsd:string" use="required" />
                     <xsd:attribute name="serviceName" type="xsd:string" use="required" />
                     <xsd:attribute name="serializer" type="xsd:string" default="hessian"/>
-                </xsd:com.hawkeys.core.extension>
+                </xsd:extension>
             </xsd:complexContent>
         </xsd:complexType>
     </xsd:element>
@@ -25,11 +25,11 @@
     <xsd:element name="service">
         <xsd:complexType>
             <xsd:complexContent>
-                <xsd:com.hawkeys.core.extension base="beans:identifiedType">
+                <xsd:extension base="beans:identifiedType">
                     <xsd:attribute name="serviceName" type="xsd:string" />
                     <xsd:attribute name="ref" type="xsd:string" use="required" />
                     <xsd:attribute name="server" type="xsd:string" />
-                </xsd:com.hawkeys.core.extension>
+                </xsd:extension>
             </xsd:complexContent>
         </xsd:complexType>
     </xsd:element>
@@ -38,9 +38,9 @@
     <xsd:element name="server">
         <xsd:complexType>
             <xsd:complexContent>
-                <xsd:com.hawkeys.core.extension base="beans:identifiedType">
+                <xsd:extension base="beans:identifiedType">
                     <xsd:attribute name="port" type="xsd:string" default="4040" />
-                </xsd:com.hawkeys.core.extension>
+                </xsd:extension>
             </xsd:complexContent>
         </xsd:complexType>
     </xsd:element>

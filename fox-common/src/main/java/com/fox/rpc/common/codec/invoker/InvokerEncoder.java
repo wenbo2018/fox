@@ -1,7 +1,7 @@
 package com.fox.rpc.common.codec.invoker;
 
-import com.fox.rpc.common.codec.Serializer;
 import com.fox.rpc.common.bean.InvokeRequest;
+import com.fox.rpc.common.codec.Serializer;
 import com.fox.rpc.common.codec.SerializerFactory;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

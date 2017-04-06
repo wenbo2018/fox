@@ -5,24 +5,13 @@ package com.fox.rpc.remoting.invoker.config;
  */
 public class InvokerConfig<T> {
 
-    //接口class对象
     private Class<T> interfaceClass;
-    //接口包信息
     private String iface;
-    //服务名称
     private String serviceName;
-    /**
-     * 序列号类型
-     */
     private String serializer;
-    /**
-     * 服务版本
-     */
     private String serviceVersion;
-    /**
-     * 服务验证key
-     */
     private String appkey;
+    private String loadBalance;
 
     public InvokerConfig(Class<T> interfaceClass, String iface,String serviceName,String serializer) {
         this.interfaceClass = interfaceClass;
@@ -77,5 +66,13 @@ public class InvokerConfig<T> {
 
     public void setAppkey(String appkey) {
         this.appkey = appkey;
+    }
+
+    public String getLoadBalance() {
+        return loadBalance;
+    }
+
+    public void setLoadBalance(String loadBalance) {
+        this.loadBalance = loadBalance;
     }
 }

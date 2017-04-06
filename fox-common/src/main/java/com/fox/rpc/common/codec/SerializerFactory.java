@@ -1,9 +1,9 @@
 package com.fox.rpc.common.codec;
 
-import com.fox.rpc.common.codec.hessian.HessianSerializer;
 import com.fox.rpc.common.codec.java.JavaSerializer;
 import com.fox.rpc.common.codec.protostuff.ProtostuffSerializer;
 import com.fox.rpc.common.common.FoxConstants;
+import com.fox.rpc.common.codec.hessian.HessianSerializer;
 
 import java.security.InvalidParameterException;
 import java.util.concurrent.ConcurrentHashMap;

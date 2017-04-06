@@ -1,9 +1,9 @@
 package com.fox.rpc.remoting.invoker.proxy;
 
+import com.fox.rpc.remoting.exception.RpcException;
 import com.fox.rpc.remoting.invoker.InvokerBootStrap;
 import com.fox.rpc.remoting.invoker.api.ServiceProxy;
 import com.fox.rpc.remoting.invoker.config.InvokerConfig;
-import com.fox.rpc.remoting.exception.RpcException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

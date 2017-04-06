@@ -1,7 +1,7 @@
 package com.fox.rpc.remoting.invoker.api;
 
-import com.fox.rpc.common.bean.InvokeRequest;
 import com.fox.rpc.common.bean.InvokeResponse;
+import com.fox.rpc.common.bean.InvokeRequest;
 
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;

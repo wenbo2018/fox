@@ -1,8 +1,8 @@
 package com.fox.rpc.remoting.invoker.task;
 
+import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.common.common.FoxConstants;
 import com.fox.rpc.common.bean.InvokeRequest;
-import com.fox.rpc.common.bean.InvokeResponse;
 import com.fox.rpc.remoting.exception.HeartBeatExcepion;
 import com.fox.rpc.remoting.invoker.ClientManager;
 import com.fox.rpc.remoting.invoker.RemoteServiceCall;

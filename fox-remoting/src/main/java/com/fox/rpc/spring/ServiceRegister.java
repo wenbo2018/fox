@@ -1,11 +1,11 @@
 package com.fox.rpc.spring;
 
-import com.fox.rpc.config.ConfigManagerLoader;
-import com.fox.rpc.remoting.provider.config.ServerConfig;
 import com.fox.rpc.config.ConfigManager;
+import com.fox.rpc.config.ConfigManagerLoader;
 import com.fox.rpc.remoting.ServiceFactory;
 import com.fox.rpc.remoting.common.Constants;
 import com.fox.rpc.remoting.provider.config.ProviderConfig;
+import com.fox.rpc.remoting.provider.config.ServerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
