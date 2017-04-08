@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="disconf-web:war">
+    <output-path>$PROJECT_DIR$/../disconf/disconf-web/target</output-path>
+    <root id="archive" name="disconf-web.war">
+      <element id="artifact" artifact-name="disconf-web:war exploded" />
+    </root>
+  </artifact>
+</component>
