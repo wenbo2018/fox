@@ -5,9 +5,9 @@
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>rpc.fox</groupId>
+    <groupId>io.github.wenbo2018</groupId>
     <artifactId>fox-parent</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -81,6 +81,7 @@
         <module>fox</module>
         <module>fox-admin</module>
         <module>fox-cluster</module>
+        <module>fox-monitor</module>
     </modules>
 
     <build>

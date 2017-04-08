@@ -3,15 +3,15 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-        <groupId>rpc.fox</groupId>
+        <groupId>io.github.wenbo2018</groupId>
         <artifactId>fox-parent</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.0</version>
   </parent>
 
   <name>fox-demo</name>
   <artifactId>fox-demo</artifactId>
   <packaging>pom</packaging>
-  <version>1.0.1</version>
+  <version>1.0.0</version>
   <url>http://maven.apache.org</url>
   <properties>
     <skip_maven_deploy>true</skip_maven_deploy>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="Javac" />
     <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
@@ -12,6 +11,7 @@
       <entry name="!?*.flex" />
       <entry name="!?*.kt" />
       <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
     </wildcardResourcePatterns>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="false">
@@ -22,116 +22,38 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="disconf-client" />
-        <module name="disconf-core" />
-        <module name="disconf-spring-boot-core" />
-        <module name="disconf-spring-boot-web" />
-        <module name="disconf-standalone-demo" />
-        <module name="disconf-standalone-dubbo-demo" />
-        <module name="disconf-web" />
-        <module name="dpsf-net" />
-        <module name="fox-server (1)" />
+        <module name="fox" />
+        <module name="fox-admin" />
+        <module name="fox-api" />
+        <module name="fox-client" />
+        <module name="fox-cluster" />
+        <module name="fox-common" />
+        <module name="fox-config" />
+        <module name="fox-monitor-api" />
+        <module name="fox-monitor-default" />
+        <module name="fox-netty" />
+        <module name="fox-registry-consul" />
+        <module name="fox-registry-redis" />
+        <module name="fox-registry-zookeeper" />
+        <module name="fox-remoting" />
+        <module name="fox-server" />
         <module name="jconf-client" />
         <module name="jconf-core" />
         <module name="jconf-web" />
-        <module name="pigeon-common" />
-        <module name="pigeon-config" />
-        <module name="pigeon-config-lion" />
-        <module name="pigeon-console" />
-        <module name="pigeon-demo" />
-        <module name="pigeon-governor-api" />
-        <module name="pigeon-governor-server" />
-        <module name="pigeon-monitor" />
-        <module name="pigeon-monitor-cat" />
-        <module name="pigeon-registry" />
-        <module name="pigeon-registry-mns" />
-        <module name="pigeon-registry-zookeeper" />
-        <module name="pigeon-remoting" />
-        <module name="pigeon-remoting-http" />
-        <module name="pigeon-remoting-netty" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="disconf-base" target="1.6" />
-      <module name="disconf-client" target="1.6" />
-      <module name="disconf-core" target="1.6" />
-      <module name="disconf-demos-java" target="1.7" />
-      <module name="disconf-spring-boot-core" target="1.7" />
-      <module name="disconf-spring-boot-demo" target="1.7" />
-      <module name="disconf-spring-boot-web" target="1.7" />
-      <module name="disconf-standalone-demo" target="1.7" />
-      <module name="disconf-standalone-dubbo-demo" target="1.7" />
-      <module name="disconf-web" target="1.6" />
-      <module name="dpsf-net" target="1.6" />
-      <module name="druid" target="1.6" />
-      <module name="dubbo (1)" target="1.5" />
-      <module name="dubbo (2)" target="1.7" />
-      <module name="dubbo-admin" target="1.7" />
-      <module name="dubbo-cluster" target="1.7" />
-      <module name="dubbo-common" target="1.7" />
-      <module name="dubbo-config" target="1.7" />
-      <module name="dubbo-config-api" target="1.7" />
-      <module name="dubbo-config-spring" target="1.7" />
-      <module name="dubbo-container" target="1.7" />
-      <module name="dubbo-container-api" target="1.7" />
-      <module name="dubbo-container-jetty" target="1.7" />
-      <module name="dubbo-container-log4j" target="1.7" />
-      <module name="dubbo-container-logback" target="1.7" />
-      <module name="dubbo-container-spring" target="1.7" />
-      <module name="dubbo-demo" target="1.7" />
-      <module name="dubbo-demo-api" target="1.7" />
-      <module name="dubbo-demo-consumer" target="1.7" />
-      <module name="dubbo-demo-provider" target="1.7" />
-      <module name="dubbo-filter" target="1.7" />
-      <module name="dubbo-filter-cache" target="1.7" />
-      <module name="dubbo-filter-validation" target="1.7" />
-      <module name="dubbo-monitor" target="1.7" />
-      <module name="dubbo-monitor-api" target="1.7" />
-      <module name="dubbo-monitor-default" target="1.7" />
-      <module name="dubbo-monitor-simple" target="1.7" />
-      <module name="dubbo-parent" target="1.7" />
-      <module name="dubbo-registry" target="1.7" />
-      <module name="dubbo-registry-api" target="1.7" />
-      <module name="dubbo-registry-default" target="1.7" />
-      <module name="dubbo-registry-multicast" target="1.7" />
-      <module name="dubbo-registry-redis" target="1.7" />
-      <module name="dubbo-registry-simple" target="1.7" />
-      <module name="dubbo-registry-zookeeper" target="1.7" />
-      <module name="dubbo-remoting" target="1.7" />
-      <module name="dubbo-remoting-api" target="1.7" />
-      <module name="dubbo-remoting-grizzly" target="1.7" />
-      <module name="dubbo-remoting-http" target="1.7" />
-      <module name="dubbo-remoting-mina" target="1.7" />
-      <module name="dubbo-remoting-netty" target="1.7" />
-      <module name="dubbo-remoting-p2p" target="1.7" />
-      <module name="dubbo-remoting-zookeeper" target="1.7" />
-      <module name="dubbo-rpc" target="1.7" />
-      <module name="dubbo-rpc-api" target="1.7" />
-      <module name="dubbo-rpc-default" target="1.7" />
-      <module name="dubbo-rpc-hessian" target="1.7" />
-      <module name="dubbo-rpc-http" target="1.7" />
-      <module name="dubbo-rpc-injvm" target="1.7" />
-      <module name="dubbo-rpc-memcached" target="1.7" />
-      <module name="dubbo-rpc-redis" target="1.7" />
-      <module name="dubbo-rpc-rmi" target="1.7" />
-      <module name="dubbo-rpc-thrift" target="1.7" />
-      <module name="dubbo-rpc-webservice" target="1.7" />
-      <module name="dubbo-simple" target="1.7" />
-      <module name="dubbo-test" target="1.7" />
-      <module name="dubbo-test-benchmark" target="1.6" />
-      <module name="dubbo-test-compatibility" target="1.7" />
-      <module name="dubbo-test-examples" target="1.7" />
-      <module name="dubbo-test-integration" target="1.7" />
       <module name="fox" target="1.7" />
       <module name="fox-admin" target="1.7" />
       <module name="fox-api" target="1.7" />
-      <module name="fox-api (1)" target="1.7" />
       <module name="fox-client" target="1.7" />
-      <module name="fox-client (1)" target="1.7" />
       <module name="fox-cluster" target="1.7" />
       <module name="fox-common" target="1.7" />
       <module name="fox-config" target="1.7" />
       <module name="fox-demo" target="1.7" />
+      <module name="fox-monitor" target="1.7" />
+      <module name="fox-monitor-api" target="1.7" />
+      <module name="fox-monitor-default" target="1.7" />
       <module name="fox-netty" target="1.7" />
       <module name="fox-parent" target="1.7" />
       <module name="fox-registry-consul" target="1.7" />
@@ -139,31 +61,10 @@
       <module name="fox-registry-zookeeper" target="1.7" />
       <module name="fox-remoting" target="1.7" />
       <module name="fox-server" target="1.7" />
-      <module name="fox-server (1)" target="1.7" />
-      <module name="fox-server-demo" target="1.7" />
-      <module name="hessian-lite" target="1.7" />
       <module name="jconf-client" target="1.7" />
       <module name="jconf-core" target="1.7" />
       <module name="jconf-parent" target="1.7" />
       <module name="jconf-web" target="1.7" />
-      <module name="pigeon-common" target="1.6" />
-      <module name="pigeon-config" target="1.6" />
-      <module name="pigeon-config-lion" target="1.6" />
-      <module name="pigeon-console" target="1.6" />
-      <module name="pigeon-demo" target="1.6" />
-      <module name="pigeon-extensions" target="1.6" />
-      <module name="pigeon-governor" target="1.6" />
-      <module name="pigeon-governor-api" target="1.6" />
-      <module name="pigeon-governor-server" target="1.6" />
-      <module name="pigeon-monitor" target="1.6" />
-      <module name="pigeon-monitor-cat" target="1.6" />
-      <module name="pigeon-parent" target="1.6" />
-      <module name="pigeon-registry" target="1.6" />
-      <module name="pigeon-registry-mns" target="1.6" />
-      <module name="pigeon-registry-zookeeper" target="1.6" />
-      <module name="pigeon-remoting" target="1.6" />
-      <module name="pigeon-remoting-http" target="1.6" />
-      <module name="pigeon-remoting-netty" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

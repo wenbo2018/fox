@@ -6,13 +6,13 @@
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>rpc.fox</groupId>
+        <groupId>io.github.wenbo2018</groupId>
         <artifactId>fox-parent</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.0</version>
     </parent>
     <artifactId>fox-registry-zookeeper</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.1</version>
+    <version>1.0.0</version>
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
@@ -47,13 +47,13 @@
         </dependency>
         <!-- RPC Common -->
         <dependency>
-            <groupId>rpc.fox</groupId>
+            <groupId>io.github.wenbo2018</groupId>
             <artifactId>fox-common</artifactId>
             <version>${fox.version}</version>
         </dependency>
         <!-- RPC Registry -->
         <dependency>
-            <groupId>rpc.fox</groupId>
+            <groupId>io.github.wenbo2018</groupId>
             <artifactId>fox-remoting</artifactId>
             <version>${fox.version}</version>
         </dependency>

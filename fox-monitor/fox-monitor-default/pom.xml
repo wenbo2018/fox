@@ -3,9 +3,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>rpc.fox</groupId>
+    <groupId>io.github.wenbo2018</groupId>
     <artifactId>fox-monitor</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.0</version>
   </parent>
 
   <artifactId>fox-monitor-default</artifactId>
@@ -13,19 +13,16 @@
   <name>fox-monitor-default</name>
   <version>1.0.1</version>
   <url>http://maven.apache.org</url>
-
   <properties>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <encoding>UTF-8</encoding>
   </properties>
-
   <dependencies>
     <dependency>
-      <groupId>rpc.fox</groupId>
+      <groupId>io.github.wenbo2018</groupId>
       <artifactId>fox-monitor-api</artifactId>
       <version>${fox.version}</version>
     </dependency>
   </dependencies>
-
 </project>

@@ -5,14 +5,14 @@
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>rpc.fox</groupId>
+        <groupId>io.github.wenbo2018</groupId>
         <artifactId>fox-parent</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.0</version>
     </parent>
     <artifactId>fox-remoting</artifactId>
     <name>fox-remoting</name>
     <packaging>jar</packaging>
-    <version>1.0.1</version>
+    <version>1.0.0</version>
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
@@ -20,12 +20,12 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>rpc.fox</groupId>
+            <groupId>io.github.wenbo2018</groupId>
             <artifactId>fox-common</artifactId>
             <version>${fox.version}</version>
         </dependency>
         <dependency>
-            <groupId>rpc.fox</groupId>
+            <groupId>io.github.wenbo2018</groupId>
             <artifactId>fox-config</artifactId>
             <version>${fox.version}</version>
         </dependency>
