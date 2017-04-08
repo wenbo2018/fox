@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: javax.faces:jsf-impl:1.2_15">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/faces/jsf-impl/1.2_15/jsf-impl-1.2_15.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/faces/jsf-impl/1.2_15/jsf-impl-1.2_15-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/faces/jsf-impl/1.2_15/jsf-impl-1.2_15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

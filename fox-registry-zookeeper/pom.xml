@@ -6,7 +6,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>io.github.wenbo2018</groupId>
+        <groupId>com.github.wenbo2018</groupId>
         <artifactId>fox-parent</artifactId>
         <version>1.0.0</version>
     </parent>
@@ -47,13 +47,13 @@
         </dependency>
         <!-- RPC Common -->
         <dependency>
-            <groupId>io.github.wenbo2018</groupId>
+            <groupId>com.github.wenbo2018</groupId>
             <artifactId>fox-common</artifactId>
             <version>${fox.version}</version>
         </dependency>
         <!-- RPC Registry -->
         <dependency>
-            <groupId>io.github.wenbo2018</groupId>
+            <groupId>com.github.wenbo2018</groupId>
             <artifactId>fox-remoting</artifactId>
             <version>${fox.version}</version>
         </dependency>

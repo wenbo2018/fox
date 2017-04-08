@@ -21,7 +21,7 @@
     <orderEntry type="library" name="Maven: org.apache.curator:curator-framework:2.7.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:16.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.curator:curator-client:2.7.1" level="project" />
-    <orderEntry type="module" module-name="fox-common" />
+    <orderEntry type="library" name="Maven: io.github.wenbo2018:fox-common:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-all:4.0.26.Final" level="project" />
     <orderEntry type="library" name="Maven: com.dyuproject.protostuff:protostuff-core:1.0.9" level="project" />
     <orderEntry type="library" name="Maven: com.dyuproject.protostuff:protostuff-api:1.0.9" level="project" />
@@ -31,8 +31,8 @@
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.3.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.0" level="project" />
     <orderEntry type="library" name="Maven: com.caucho:hessian:3.1.5" level="project" />
-    <orderEntry type="module" module-name="fox-remoting" />
-    <orderEntry type="module" module-name="fox-config" />
+    <orderEntry type="library" name="Maven: io.github.wenbo2018:fox-remoting:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: io.github.wenbo2018:fox-config:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:3.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:3.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-asm:3.1.2.RELEASE" level="project" />
