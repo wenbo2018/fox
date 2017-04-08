@@ -49,6 +49,6 @@
     <orderEntry type="library" name="Maven: org.apache.curator:curator-client:2.7.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.curator:curator-recipes:2.7.1" level="project" />
     <orderEntry type="module" module-name="fox-netty" />
-    <orderEntry type="module" module-name="fox-api" />
+    <orderEntry type="module" module-name="fox-api (1)" />
   </component>
 </module>
