@@ -2,40 +2,40 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>rpc.fox</groupId>
+        <groupId>io.github.wenbo2018</groupId>
         <artifactId>fox-parent</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.0</version>
     </parent>
 
-    <groupId>rpc.fox</groupId>
+    <groupId>io.github.wenbo2018</groupId>
     <artifactId>fox</artifactId>
     <name>fox</name>
     <packaging>jar</packaging>
-    <version>1.0.1</version>
+    <version>1.0.0</version>
 
     <dependencies>
         <dependency>
-            <groupId>rpc.fox</groupId>
+            <groupId>io.github.wenbo2018</groupId>
             <artifactId>fox-common</artifactId>
             <version>${fox.version}</version>
         </dependency>
         <dependency>
-            <groupId>rpc.fox</groupId>
+            <groupId>io.github.wenbo2018</groupId>
             <artifactId>fox-netty</artifactId>
             <version>${fox.version}</version>
         </dependency>
         <dependency>
-            <groupId>rpc.fox</groupId>
+            <groupId>io.github.wenbo2018</groupId>
             <artifactId>fox-registry-zookeeper</artifactId>
             <version>${fox.version}</version>
         </dependency>
         <dependency>
-            <groupId>rpc.fox</groupId>
+            <groupId>io.github.wenbo2018</groupId>
             <artifactId>fox-remoting</artifactId>
             <version>${fox.version}</version>
         </dependency>
         <dependency>
-            <groupId>rpc.fox</groupId>
+            <groupId>io.github.wenbo2018</groupId>
             <artifactId>fox-cluster</artifactId>
             <version>${fox.version}</version>
         </dependency>

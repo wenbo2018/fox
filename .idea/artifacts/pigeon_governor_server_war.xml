@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="pigeon-governor-server:war">
-    <output-path>$PROJECT_DIR$/../pigeon2/pigeon-governor/pigeon-governor-server/target</output-path>
-    <root id="archive" name="pigeon-governor-server-dev-2.7.8.war">
-      <element id="artifact" artifact-name="pigeon-governor-server:war exploded" />
-    </root>
-  </artifact>
-</component>

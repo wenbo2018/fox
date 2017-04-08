@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../Jconf" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../disconf" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../disconf-demos-java" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
 </project>
