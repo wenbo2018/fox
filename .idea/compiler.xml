@@ -40,9 +40,12 @@
         <module name="jconf-client" />
         <module name="jconf-core" />
         <module name="jconf-web" />
+        <module name="jconf-web (2)" />
+        <module name="tinymvc-core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo" target="1.7" />
       <module name="fox" target="1.7" />
       <module name="fox-admin" target="1.7" />
       <module name="fox-api" target="1.7" />
@@ -63,8 +66,13 @@
       <module name="fox-server" target="1.7" />
       <module name="jconf-client" target="1.7" />
       <module name="jconf-core" target="1.7" />
+      <module name="Jconf-parent" target="1.7" />
       <module name="jconf-parent" target="1.7" />
       <module name="jconf-web" target="1.7" />
+      <module name="jconf-web (1)" target="1.7" />
+      <module name="jconf-web (2)" target="1.7" />
+      <module name="ting-mvc" target="1.7" />
+      <module name="tinymvc-core" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -5,7 +5,7 @@
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>io.github.wenbo2018</groupId>
+        <groupId>com.github.wenbo2018</groupId>
         <artifactId>fox-parent</artifactId>
         <version>1.0.0</version>
     </parent>
@@ -20,17 +20,17 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>io.github.wenbo2018</groupId>
+            <groupId>com.github.wenbo2018</groupId>
             <artifactId>fox-common</artifactId>
             <version>${fox.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.github.wenbo2018</groupId>
+            <groupId>com.github.wenbo2018</groupId>
             <artifactId>fox-registry-zookeeper</artifactId>
             <version>${fox.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.github.wenbo2018</groupId>
+            <groupId>com.github.wenbo2018</groupId>
             <artifactId>fox-remoting</artifactId>
             <version>${fox.version}</version>
         </dependency>
