@@ -2,14 +2,14 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:fox="http://www.indoorloc.cn/schema/fox"
+       xmlns:fox="http://www.github.wenbo2018.com/schema/fox"
        xsi:schemaLocation="
          http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
          http://www.springframework.org/schema/context
          http://www.springframework.org/schema/context/spring-context-3.0.xsd
-         http://www.indoorloc.cn/schema/fox
-         http://www.indoorloc.cn/schema/fox-service-1.0.xsd">
+         http://www.github.wenbo2018.com/schema/fox
+         http://www.github.wenbo2018.com/schema/fox-service-1.0.xsd">
 
     <!-- 打开Spring的Annotation支持 -->
     <context:annotation-config />
@@ -18,8 +18,8 @@
     <!--<property name="serviceName" value="service.fox.com_helloTestService_helloService_1.0.0"/>-->
     <!--<property name="serializer" value="hessian"/>-->
     <!--</bean>-->
-    <bean id="helloService" class="com.fox.HelloServiceImpl"/>
-    <bean id="userService" class="com.fox.UserServiceImpl"/>
+    <bean id="helloService" class="com.github.wenbo2018.fox.demo.server.HelloServiceImpl"/>
+    <bean id="userService" class="com.github.wenbo2018.fox.demo.server.UserServiceImpl"/>
 
     <fox:server  id="server1" port="4019"/>
 
@@ -29,4 +29,5 @@
     <fox:service server="server1"
                  serviceName="service.fox.com_helloTestService_userService_1.0.0"
                  ref="userService"/>
+
 </beans>
