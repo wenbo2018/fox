@@ -19,5 +19,8 @@
     <file url="file://$PROJECT_DIR$/fox-registry-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fox-registry-zookeeper" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fox-remoting" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fox-spring" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fox-spring/fox-spring-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring-boot-learning" charset="UTF-8" />
   </component>
 </project>

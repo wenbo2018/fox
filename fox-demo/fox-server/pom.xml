@@ -33,9 +33,14 @@
             <artifactId>spring-core</artifactId>
             <version>3.1.2.RELEASE</version>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.github.wenbo2018</groupId>-->
+            <!--<artifactId>fox-remoting</artifactId>-->
+            <!--<version>1.0.0</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.github.wenbo2018</groupId>
-            <artifactId>fox-remoting</artifactId>
+            <artifactId>fox-spring-config</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
@@ -53,6 +58,23 @@
             <artifactId>fox-api</artifactId>
             <version>${fox.version}</version>
         </dependency>
-
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptor>src/main/assembly/assembly.xml</descriptor>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

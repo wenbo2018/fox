@@ -1,153 +1,222 @@
-2017-04-08 13:28:11,950 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@21599f38: startup date [Sat Apr 08 13:28:11 CST 2017]; root of context hierarchy
-2017-04-08 13:28:12,232 - Loading XML bean definitions from class path resource [bean.xml]
-2017-04-08 13:28:25,309 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@78a1c83: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,userService,server1,foxService_1,foxService_2,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
-2017-04-08 13:28:25,403 - serviceProxy:com.fox.rpc.remoting.invoker.proxy.FilterRemotingServiceProxy@193d6547
-2017-04-08 13:28:25,418 - start to initialize zookeeper client:202.38.214.166
-2017-04-08 13:28:25,465 - maxRetries too large (2147483647). Pinning to 29
-2017-04-08 13:28:25,590 - Starting
-2017-04-08 13:28:25,606 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
-2017-04-08 13:28:25,606 - Client environment:host.name=SKY-20150908HA1
-2017-04-08 13:28:25,606 - Client environment:java.version=1.7.0_80
-2017-04-08 13:28:25,606 - Client environment:java.vendor=Oracle Corporation
-2017-04-08 13:28:25,606 - Client environment:java.home=D:\Program Files\Java\jdk1.7.0_80\jre
-2017-04-08 13:28:25,606 - Client environment:java.class.path=D:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\deploy.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\access-bridge-64.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\dnsns.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\jaccess.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\localedata.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunec.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunjce_provider.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunmscapi.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\zipfs.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\javaws.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfxrt.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\management-agent.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\plugin.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;G:\java_project\fox\fox-demo\target\classes;G:\maven\org\springframework\spring-context-support\3.1.2.RELEASE\spring-context-support-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-beans\3.1.2.RELEASE\spring-beans-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;G:\maven\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;G:\maven\org\springframework\spring-expression\3.1.2.RELEASE\spring-expression-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;G:\maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;G:\java_project\fox\fox-remoting\target\classes;G:\java_project\fox\fox-common\target\classes;G:\maven\io\netty\netty-all\4.0.26.Final\netty-all-4.0.26.Final.jar;G:\maven\com\dyuproject\protostuff\protostuff-core\1.0.9\protostuff-core-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-api\1.0.9\protostuff-api-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-runtime\1.0.9\protostuff-runtime-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-collectionschema\1.0.9\protostuff-collectionschema-1.0.9.jar;G:\maven\org\objenesis\objenesis\2.1\objenesis-2.1.jar;G:\maven\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;G:\maven\org\apache\commons\commons-collections4\4.0\commons-collections4-4.0.jar;G:\maven\com\caucho\hessian\3.1.5\hessian-3.1.5.jar;G:\java_project\fox\fox-config\target\classes;G:\maven\cglib\cglib\3.1\cglib-3.1.jar;G:\maven\org\ow2\asm\asm\4.2\asm-4.2.jar;G:\maven\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;G:\java_project\fox\fox-registry-zookeeper\target\classes;G:\maven\org\slf4j\slf4j-log4j12\1.7.10\slf4j-log4j12-1.7.10.jar;G:\maven\org\slf4j\slf4j-api\1.7.10\slf4j-api-1.7.10.jar;G:\maven\log4j\log4j\1.2.17\log4j-1.2.17.jar;G:\maven\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;G:\maven\jline\jline\0.9.94\jline-0.9.94.jar;G:\maven\junit\junit\3.8.1\junit-3.8.1.jar;G:\maven\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;G:\maven\com\101tec\zkclient\0.4\zkclient-0.4.jar;G:\maven\org\apache\curator\curator-framework\2.7.1\curator-framework-2.7.1.jar;G:\maven\com\google\guava\guava\16.0.1\guava-16.0.1.jar;G:\maven\org\apache\curator\curator-client\2.7.1\curator-client-2.7.1.jar;G:\maven\org\apache\curator\curator-recipes\2.7.1\curator-recipes-2.7.1.jar;G:\java_project\fox\fox-netty\target\classes;D:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.2.5\lib\idea_rt.jar
-2017-04-08 13:28:25,621 - Client environment:java.library.path=D:\Program Files\Java\jdk1.7.0_80\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_80\bin;D:\Program Files\Java\jdk1.7.0_80\jre\bin;d:\Program Files\MATLAB\R2014a\runtime\win64;d:\Program Files\MATLAB\R2014a\bin;d:\Program Files\MATLAB\R2014a\polyspace\bin;G:\apache-maven-3.3.9\bin;D:\Program Files\nodejs\;C:\Users\Administrator\AppData\Roaming\npm;.
-2017-04-08 13:28:25,621 - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
-2017-04-08 13:28:25,621 - Client environment:java.compiler=<NA>
-2017-04-08 13:28:25,621 - Client environment:os.name=Windows 7
-2017-04-08 13:28:25,621 - Client environment:os.arch=amd64
-2017-04-08 13:28:25,621 - Client environment:os.version=6.1
-2017-04-08 13:28:25,621 - Client environment:user.name=Administrator
-2017-04-08 13:28:25,621 - Client environment:user.home=E:
-2017-04-08 13:28:25,621 - Client environment:user.dir=G:\java_project\fox
-2017-04-08 13:28:25,621 - Initiating client connection, connectString=202.38.214.166 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@32f4236c
-2017-04-08 13:28:25,652 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
-2017-04-08 13:28:25,652 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
-2017-04-08 13:28:25,730 - Connected to an old server; r-o mode will be unavailable
-2017-04-08 13:28:25,730 - Session establishment complete on server 202.38.214.166/202.38.214.166:2181, sessionid = 0x15b4c086ddd0000, negotiated timeout = 30000
-2017-04-08 13:28:25,746 - State change: CONNECTED
-2017-04-08 13:28:25,746 - zookeeper state changed to CONNECTED
-2017-04-08 13:28:26,760 - succeed to create zookeeper client, connected:true
-2017-04-08 13:28:26,760 - succeed to initialize zookeeper client:202.38.214.166
-2017-04-08 13:28:26,885 - server config:com.fox.rpc.remoting.provider.config.ServerConfig@455fcabc
-2017-04-08 13:28:26,963 - FOX SERVICE SUCCESS STARTED
-2017-04-08 13:28:27,056 - zookeeper event received, type: NodeCreated, path: /fox/register/service.fox.com_helloTestService_helloService_1.0.0
-2017-04-08 13:28:27,056 - create address node:
-2017-04-08 13:28:27,056 - service register success:service.fox.com_helloTestService_helloService_1.0.0:202.38.214.166:4019
-2017-04-08 13:28:27,056 - service register success:202.38.214.166:4019
-2017-04-08 13:28:27,072 - add service to referencedServiceAddresses:[com.fox.rpc.common.HostInfo@87446cbc]
-2017-04-08 13:28:27,072 - register service success:service.fox.com_helloTestService_helloService_1.0.0
-2017-04-08 13:28:27,088 - Service address changed, path /fox/register/service.fox.com_helloTestService_helloService_1.0.0 value 202.38.214.166:4019
-2017-04-08 13:28:27,088 - service host change:[com.fox.rpc.common.HostInfo@87446cbc]
-2017-04-08 13:28:27,103 - zookeeper event received, type: NodeCreated, path: /fox/register/service.fox.com_helloTestService_userService_1.0.0
-2017-04-08 13:28:27,103 - create address node:
-2017-04-08 13:28:27,103 - service register success:service.fox.com_helloTestService_userService_1.0.0:202.38.214.166:4019
-2017-04-08 13:28:27,103 - service register success:202.38.214.166:4019
-2017-04-08 13:28:27,103 - add service to referencedServiceAddresses:[com.fox.rpc.common.HostInfo@87446cbc]
-2017-04-08 13:28:27,103 - register service success:service.fox.com_helloTestService_userService_1.0.0
-2017-04-08 13:28:27,103 - Service address changed, path /fox/register/service.fox.com_helloTestService_userService_1.0.0 value 202.38.214.166:4019
-2017-04-08 13:28:27,103 - service host change:[com.fox.rpc.common.HostInfo@87446cbc]
-2017-04-08 13:31:30,999 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2e426a3: startup date [Sat Apr 08 13:31:30 CST 2017]; root of context hierarchy
-2017-04-08 13:31:31,074 - Loading XML bean definitions from class path resource [bean.xml]
-2017-04-08 13:31:31,363 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7c55e052: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,userService,server1,foxService_1,foxService_2,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
-2017-04-08 13:31:31,410 - serviceProxy:com.fox.rpc.remoting.invoker.proxy.FilterRemotingServiceProxy@486a58c4
-2017-04-08 13:31:31,410 - start to initialize zookeeper client:202.38.214.166
-2017-04-08 13:31:31,441 - maxRetries too large (2147483647). Pinning to 29
-2017-04-08 13:31:31,612 - Starting
-2017-04-08 13:31:31,628 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
-2017-04-08 13:31:31,628 - Client environment:host.name=SKY-20150908HA1
-2017-04-08 13:31:31,628 - Client environment:java.version=1.7.0_80
-2017-04-08 13:31:31,628 - Client environment:java.vendor=Oracle Corporation
-2017-04-08 13:31:31,628 - Client environment:java.home=D:\Program Files\Java\jdk1.7.0_80\jre
-2017-04-08 13:31:31,628 - Client environment:java.class.path=D:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\deploy.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\access-bridge-64.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\dnsns.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\jaccess.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\localedata.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunec.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunjce_provider.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunmscapi.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\zipfs.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\javaws.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfxrt.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\management-agent.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\plugin.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;G:\java_project\fox\fox-demo\fox-server\target\classes;G:\maven\org\springframework\spring-context-support\3.1.2.RELEASE\spring-context-support-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-beans\3.1.2.RELEASE\spring-beans-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;G:\maven\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;G:\maven\org\springframework\spring-expression\3.1.2.RELEASE\spring-expression-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;G:\maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;G:\java_project\fox\fox-remoting\target\classes;G:\java_project\fox\fox-common\target\classes;G:\maven\io\netty\netty-all\4.0.26.Final\netty-all-4.0.26.Final.jar;G:\maven\com\dyuproject\protostuff\protostuff-core\1.0.9\protostuff-core-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-api\1.0.9\protostuff-api-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-runtime\1.0.9\protostuff-runtime-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-collectionschema\1.0.9\protostuff-collectionschema-1.0.9.jar;G:\maven\org\objenesis\objenesis\2.1\objenesis-2.1.jar;G:\maven\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;G:\maven\org\apache\commons\commons-collections4\4.0\commons-collections4-4.0.jar;G:\maven\com\caucho\hessian\3.1.5\hessian-3.1.5.jar;G:\java_project\fox\fox-config\target\classes;G:\maven\cglib\cglib\3.1\cglib-3.1.jar;G:\maven\org\ow2\asm\asm\4.2\asm-4.2.jar;G:\maven\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;G:\java_project\fox\fox-registry-zookeeper\target\classes;G:\maven\org\slf4j\slf4j-log4j12\1.7.10\slf4j-log4j12-1.7.10.jar;G:\maven\org\slf4j\slf4j-api\1.7.10\slf4j-api-1.7.10.jar;G:\maven\log4j\log4j\1.2.17\log4j-1.2.17.jar;G:\maven\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;G:\maven\jline\jline\0.9.94\jline-0.9.94.jar;G:\maven\junit\junit\3.8.1\junit-3.8.1.jar;G:\maven\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;G:\maven\com\101tec\zkclient\0.4\zkclient-0.4.jar;G:\maven\org\apache\curator\curator-framework\2.7.1\curator-framework-2.7.1.jar;G:\maven\com\google\guava\guava\16.0.1\guava-16.0.1.jar;G:\maven\org\apache\curator\curator-client\2.7.1\curator-client-2.7.1.jar;G:\maven\org\apache\curator\curator-recipes\2.7.1\curator-recipes-2.7.1.jar;G:\java_project\fox\fox-netty\target\classes;G:\java_project\fox\fox-demo\fox-api\target\classes;D:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.2.5\lib\idea_rt.jar
-2017-04-08 13:31:31,644 - Client environment:java.library.path=D:\Program Files\Java\jdk1.7.0_80\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_80\bin;D:\Program Files\Java\jdk1.7.0_80\jre\bin;d:\Program Files\MATLAB\R2014a\runtime\win64;d:\Program Files\MATLAB\R2014a\bin;d:\Program Files\MATLAB\R2014a\polyspace\bin;G:\apache-maven-3.3.9\bin;D:\Program Files\nodejs\;C:\Users\Administrator\AppData\Roaming\npm;.
-2017-04-08 13:31:31,644 - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
-2017-04-08 13:31:31,644 - Client environment:java.compiler=<NA>
-2017-04-08 13:31:31,644 - Client environment:os.name=Windows 7
-2017-04-08 13:31:31,644 - Client environment:os.arch=amd64
-2017-04-08 13:31:31,644 - Client environment:os.version=6.1
-2017-04-08 13:31:31,644 - Client environment:user.name=Administrator
-2017-04-08 13:31:31,644 - Client environment:user.home=E:
-2017-04-08 13:31:31,644 - Client environment:user.dir=G:\java_project\fox
-2017-04-08 13:31:31,644 - Initiating client connection, connectString=202.38.214.166 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@5ae1a5c7
-2017-04-08 13:31:31,690 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
-2017-04-08 13:31:31,690 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
-2017-04-08 13:31:31,737 - Connected to an old server; r-o mode will be unavailable
-2017-04-08 13:31:31,737 - Session establishment complete on server 202.38.214.166/202.38.214.166:2181, sessionid = 0x15b4c086ddd0001, negotiated timeout = 30000
-2017-04-08 13:31:31,737 - State change: CONNECTED
-2017-04-08 13:31:31,737 - zookeeper state changed to CONNECTED
-2017-04-08 13:31:32,757 - succeed to create zookeeper client, connected:true
-2017-04-08 13:31:32,757 - succeed to initialize zookeeper client:202.38.214.166
-2017-04-08 13:31:32,851 - server config:com.fox.rpc.remoting.provider.config.ServerConfig@457d9faa
-2017-04-08 13:31:32,929 - FOX SERVICE SUCCESS STARTED
-2017-04-08 13:31:32,976 - zookeeper event received, type: NodeCreated, path: /fox/register/service.fox.com_helloTestService_helloService_1.0.0
-2017-04-08 13:31:32,991 - create address node:
-2017-04-08 13:31:32,991 - service register success:service.fox.com_helloTestService_helloService_1.0.0:202.38.214.166:4019
-2017-04-08 13:31:32,991 - service register success:202.38.214.166:4019
-2017-04-08 13:31:32,991 - Service address changed, path /fox/register/service.fox.com_helloTestService_helloService_1.0.0 value 202.38.214.166:4019
-2017-04-08 13:31:32,991 - empty address list for service:service.fox.com_helloTestService_helloService_1.0.0
-2017-04-08 13:31:32,991 - add service to referencedServiceAddresses:[com.fox.rpc.common.HostInfo@87446cbc]
-2017-04-08 13:31:32,991 - service host change:[com.fox.rpc.common.HostInfo@87446cbc]
-2017-04-08 13:31:32,991 - register service success:service.fox.com_helloTestService_helloService_1.0.0
-2017-04-08 13:31:32,991 - add service to referencedServiceAddresses:service.fox.com_helloTestService_helloService_1.0.0
-2017-04-08 13:31:33,007 - zookeeper event received, type: NodeCreated, path: /fox/register/service.fox.com_helloTestService_userService_1.0.0
-2017-04-08 13:31:33,007 - create address node:
-2017-04-08 13:31:33,007 - service register success:service.fox.com_helloTestService_userService_1.0.0:202.38.214.166:4019
-2017-04-08 13:31:33,007 - service register success:202.38.214.166:4019
-2017-04-08 13:31:33,007 - add service to referencedServiceAddresses:[com.fox.rpc.common.HostInfo@87446cbc]
-2017-04-08 13:31:33,007 - register service success:service.fox.com_helloTestService_userService_1.0.0
-2017-04-08 13:31:33,022 - Service address changed, path /fox/register/service.fox.com_helloTestService_userService_1.0.0 value 202.38.214.166:4019
-2017-04-08 13:31:33,022 - service host change:[com.fox.rpc.common.HostInfo@87446cbc]
-2017-04-08 13:31:50,728 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@423777c8: startup date [Sat Apr 08 13:31:50 CST 2017]; root of context hierarchy
-2017-04-08 13:31:50,812 - Loading XML bean definitions from class path resource [application.xml]
-2017-04-08 13:31:51,109 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@44f0e58b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
-2017-04-08 13:31:51,140 - Service Initialized
-2017-04-08 13:31:51,140 - serviceProxy:com.fox.rpc.remoting.invoker.proxy.FilterRemotingServiceProxy@2fddcf4e
-2017-04-08 13:31:51,156 - start to initialize zookeeper client:202.38.214.166
-2017-04-08 13:31:51,296 - maxRetries too large (2147483647). Pinning to 29
-2017-04-08 13:31:51,593 - Starting
-2017-04-08 13:31:51,639 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
-2017-04-08 13:31:51,639 - Client environment:host.name=SKY-20150908HA1
-2017-04-08 13:31:51,639 - Client environment:java.version=1.7.0_80
-2017-04-08 13:31:51,639 - Client environment:java.vendor=Oracle Corporation
-2017-04-08 13:31:51,639 - Client environment:java.home=D:\Program Files\Java\jdk1.7.0_80\jre
-2017-04-08 13:31:51,639 - Client environment:java.class.path=D:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\deploy.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\access-bridge-64.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\dnsns.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\jaccess.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\localedata.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunec.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunjce_provider.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunmscapi.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\zipfs.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\javaws.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfxrt.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\management-agent.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\plugin.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;G:\java_project\fox\fox-demo\fox-client\target\classes;G:\maven\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;G:\maven\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;G:\maven\org\springframework\spring-beans\3.1.2.RELEASE\spring-beans-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-expression\3.1.2.RELEASE\spring-expression-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-context-support\3.1.2.RELEASE\spring-context-support-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;G:\maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;G:\maven\org\springframework\spring-test\3.1.2.RELEASE\spring-test-3.1.2.RELEASE.jar;G:\java_project\fox\fox-common\target\classes;G:\maven\org\slf4j\slf4j-log4j12\1.7.10\slf4j-log4j12-1.7.10.jar;G:\maven\org\slf4j\slf4j-api\1.7.10\slf4j-api-1.7.10.jar;G:\maven\log4j\log4j\1.2.17\log4j-1.2.17.jar;G:\maven\io\netty\netty-all\4.0.26.Final\netty-all-4.0.26.Final.jar;G:\maven\com\dyuproject\protostuff\protostuff-core\1.0.9\protostuff-core-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-api\1.0.9\protostuff-api-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-runtime\1.0.9\protostuff-runtime-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-collectionschema\1.0.9\protostuff-collectionschema-1.0.9.jar;G:\maven\org\objenesis\objenesis\2.1\objenesis-2.1.jar;G:\maven\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;G:\maven\org\apache\commons\commons-collections4\4.0\commons-collections4-4.0.jar;G:\maven\com\caucho\hessian\3.1.5\hessian-3.1.5.jar;G:\java_project\fox\fox-netty\target\classes;G:\java_project\fox\fox-registry-zookeeper\target\classes;G:\maven\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;G:\maven\jline\jline\0.9.94\jline-0.9.94.jar;G:\maven\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;G:\maven\com\101tec\zkclient\0.4\zkclient-0.4.jar;G:\maven\org\apache\curator\curator-framework\2.7.1\curator-framework-2.7.1.jar;G:\maven\com\google\guava\guava\16.0.1\guava-16.0.1.jar;G:\maven\org\apache\curator\curator-client\2.7.1\curator-client-2.7.1.jar;G:\maven\org\apache\curator\curator-recipes\2.7.1\curator-recipes-2.7.1.jar;G:\java_project\fox\fox-remoting\target\classes;G:\java_project\fox\fox-config\target\classes;G:\maven\cglib\cglib\3.1\cglib-3.1.jar;G:\maven\org\ow2\asm\asm\4.2\asm-4.2.jar;G:\maven\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;G:\java_project\fox\fox-cluster\target\classes;G:\java_project\fox\fox-demo\fox-api\target\classes;D:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.2.5\lib\idea_rt.jar
-2017-04-08 13:31:51,655 - Client environment:java.library.path=D:\Program Files\Java\jdk1.7.0_80\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_80\bin;D:\Program Files\Java\jdk1.7.0_80\jre\bin;d:\Program Files\MATLAB\R2014a\runtime\win64;d:\Program Files\MATLAB\R2014a\bin;d:\Program Files\MATLAB\R2014a\polyspace\bin;G:\apache-maven-3.3.9\bin;D:\Program Files\nodejs\;C:\Users\Administrator\AppData\Roaming\npm;.
-2017-04-08 13:31:51,655 - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
-2017-04-08 13:31:51,655 - Client environment:java.compiler=<NA>
-2017-04-08 13:31:51,655 - Client environment:os.name=Windows 7
-2017-04-08 13:31:51,655 - Client environment:os.arch=amd64
-2017-04-08 13:31:51,655 - Client environment:os.version=6.1
-2017-04-08 13:31:51,655 - Client environment:user.name=Administrator
-2017-04-08 13:31:51,655 - Client environment:user.home=E:
-2017-04-08 13:31:51,655 - Client environment:user.dir=G:\java_project\fox
-2017-04-08 13:31:51,655 - Initiating client connection, connectString=202.38.214.166 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@36192751
-2017-04-08 13:31:51,702 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
-2017-04-08 13:31:51,702 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
-2017-04-08 13:31:51,749 - Connected to an old server; r-o mode will be unavailable
-2017-04-08 13:31:51,749 - Session establishment complete on server 202.38.214.166/202.38.214.166:2181, sessionid = 0x15b4c086ddd0002, negotiated timeout = 30000
-2017-04-08 13:31:51,764 - State change: CONNECTED
-2017-04-08 13:31:51,764 - zookeeper state changed to CONNECTED
-2017-04-08 13:31:51,764 - succeed to create zookeeper client, connected:true
-2017-04-08 13:31:51,764 - succeed to initialize zookeeper client:202.38.214.166
-2017-04-08 13:31:51,847 - NettyClientFactory is initial
-2017-04-08 13:31:52,012 - successed get service adress from service center:202.38.214.166:4019
-2017-04-08 13:31:52,090 - FOX SERVICE SUCCESS CONNECT
-2017-04-08 13:31:52,152 - fox success invoke
-2017-04-08 13:31:52,152 - fox success invoke
-2017-04-08 13:31:53,260 - fox success invoke
-2017-04-08 13:31:53,260 - fox success invoke
-2017-04-08 13:31:54,261 - fox success invoke
-2017-04-08 13:31:54,261 - fox success invoke
-2017-04-08 13:31:55,275 - fox success invoke
-2017-04-08 13:31:55,275 - fox success invoke
-2017-04-08 13:31:56,289 - fox success invoke
-2017-04-08 13:31:56,289 - fox success invoke
-2017-04-08 13:31:56,804 - fox success invoke
-2017-04-08 13:31:56,804 - heart beat success
-2017-04-08 13:31:57,303 - fox success invoke
-2017-04-08 13:31:57,303 - fox success invoke
-2017-04-08 13:31:57,693 - server caught exception
+2017-04-15 18:50:34,304 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@20d547f8: startup date [Sat Apr 15 18:50:34 CST 2017]; root of context hierarchy
+2017-04-15 18:50:34,372 - Loading XML bean definitions from class path resource [application.xml]
+2017-04-15 18:50:34,679 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@439b38d7: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2017-04-15 18:50:34,695 - Service Initialized
+2017-04-15 18:50:34,710 - class not found:{}null
+java.lang.ClassNotFoundException: com.github.wenbo2018.fox.demo.server.HelloService
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:278)
+	at org.apache.commons.lang3.ClassUtils.getClass(ClassUtils.java:828)
+	at org.apache.commons.lang3.ClassUtils.getClass(ClassUtils.java:862)
+	at com.github.wenbo2018.fox.common.util.ClassUtils.loadClass(ClassUtils.java:12)
+	at com.github.wenbo2018.fox.spring.config.ReferenceProxy.init(ReferenceProxy.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1522)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:591)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:469)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.github.wenbo2018.fox.demo.client.TestClient.main(TestClient.java:16)
+2017-04-15 18:50:34,710 - serviceProxy:com.github.wenbo2018.fox.remoting.invoker.proxy.FilterRemotingServiceProxy@78db33bc
+2017-04-15 18:50:34,726 - start to initialize zookeeper client:202.38.214.166
+2017-04-15 18:50:34,741 - maxRetries too large (2147483647). Pinning to 29
+2017-04-15 18:50:34,835 - Starting
+2017-04-15 18:50:34,851 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-04-15 18:50:34,851 - Client environment:host.name=SKY-20150908HA1
+2017-04-15 18:50:34,851 - Client environment:java.version=1.7.0_80
+2017-04-15 18:50:34,851 - Client environment:java.vendor=Oracle Corporation
+2017-04-15 18:50:34,851 - Client environment:java.home=D:\Program Files\Java\jdk1.7.0_80\jre
+2017-04-15 18:50:34,851 - Client environment:java.class.path=D:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\deploy.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\access-bridge-64.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\dnsns.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\jaccess.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\localedata.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunec.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunjce_provider.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunmscapi.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\zipfs.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\javaws.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfxrt.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\management-agent.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\plugin.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;G:\java_project\fox\fox-demo\fox-client\target\classes;G:\maven\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;G:\maven\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;G:\maven\org\springframework\spring-beans\3.1.2.RELEASE\spring-beans-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-expression\3.1.2.RELEASE\spring-expression-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-context-support\3.1.2.RELEASE\spring-context-support-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;G:\maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;G:\maven\org\springframework\spring-test\3.1.2.RELEASE\spring-test-3.1.2.RELEASE.jar;G:\java_project\fox\fox-spring\fox-spring-config\target\classes;G:\java_project\fox\fox-remoting\target\classes;G:\java_project\fox\fox-config\target\classes;G:\maven\cglib\cglib\3.1\cglib-3.1.jar;G:\maven\org\ow2\asm\asm\4.2\asm-4.2.jar;G:\maven\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;G:\java_project\fox\fox-registry-zookeeper\target\classes;G:\maven\org\slf4j\slf4j-log4j12\1.5.8\slf4j-log4j12-1.5.8.jar;G:\maven\org\slf4j\slf4j-api\1.5.8\slf4j-api-1.5.8.jar;G:\maven\log4j\log4j\1.2.14\log4j-1.2.14.jar;G:\maven\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;G:\maven\jline\jline\0.9.94\jline-0.9.94.jar;G:\maven\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;G:\maven\com\101tec\zkclient\0.4\zkclient-0.4.jar;G:\maven\org\apache\curator\curator-framework\2.7.1\curator-framework-2.7.1.jar;G:\maven\com\google\guava\guava\16.0.1\guava-16.0.1.jar;G:\maven\org\apache\curator\curator-client\2.7.1\curator-client-2.7.1.jar;G:\java_project\fox\fox-common\target\classes;G:\maven\io\netty\netty-all\4.0.26.Final\netty-all-4.0.26.Final.jar;G:\maven\com\dyuproject\protostuff\protostuff-core\1.0.9\protostuff-core-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-api\1.0.9\protostuff-api-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-runtime\1.0.9\protostuff-runtime-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-collectionschema\1.0.9\protostuff-collectionschema-1.0.9.jar;G:\maven\org\objenesis\objenesis\2.1\objenesis-2.1.jar;G:\maven\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;G:\maven\org\apache\commons\commons-collections4\4.0\commons-collections4-4.0.jar;G:\maven\com\caucho\hessian\3.1.5\hessian-3.1.5.jar;G:\maven\org\apache\curator\curator-recipes\2.7.1\curator-recipes-2.7.1.jar;G:\java_project\fox\fox-netty\target\classes;G:\java_project\fox\fox-demo\fox-api\target\classes;D:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.2.5\lib\idea_rt.jar
+2017-04-15 18:50:34,866 - Client environment:java.library.path=D:\Program Files\Java\jdk1.7.0_80\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_80\bin;D:\Program Files\Java\jdk1.7.0_80\jre\bin;d:\Program Files\MATLAB\R2014a\runtime\win64;d:\Program Files\MATLAB\R2014a\bin;d:\Program Files\MATLAB\R2014a\polyspace\bin;G:\apache-maven-3.3.9\bin;D:\Program Files\nodejs\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Users\Administrator\AppData\Roaming\npm;.
+2017-04-15 18:50:34,866 - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2017-04-15 18:50:34,866 - Client environment:java.compiler=<NA>
+2017-04-15 18:50:34,866 - Client environment:os.name=Windows 7
+2017-04-15 18:50:34,866 - Client environment:os.arch=amd64
+2017-04-15 18:50:34,866 - Client environment:os.version=6.1
+2017-04-15 18:50:34,866 - Client environment:user.name=Administrator
+2017-04-15 18:50:34,866 - Client environment:user.home=E:
+2017-04-15 18:50:34,866 - Client environment:user.dir=G:\java_project\fox
+2017-04-15 18:50:34,866 - Initiating client connection, connectString=202.38.214.166 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@7700362a
+2017-04-15 18:50:34,948 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-04-15 18:50:34,964 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
+2017-04-15 18:50:34,995 - Connected to an old server; r-o mode will be unavailable
+2017-04-15 18:50:34,995 - Session establishment complete on server 202.38.214.166/202.38.214.166:2181, sessionid = 0x15b71161b1c0001, negotiated timeout = 30000
+2017-04-15 18:50:35,010 - State change: CONNECTED
+2017-04-15 18:50:35,010 - succeed to create zookeeper client, connected:true
+2017-04-15 18:50:35,010 - succeed to initialize zookeeper client:202.38.214.166
+2017-04-15 18:50:35,073 - NettyClientFactory is initial
+2017-04-15 18:50:35,104 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@439b38d7: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2017-04-15 18:50:35,104 - zookeeper state changed to CONNECTED
+2017-04-15 18:51:40,217 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@245658a3: startup date [Sat Apr 15 18:51:40 CST 2017]; root of context hierarchy
+2017-04-15 18:51:40,279 - Loading XML bean definitions from class path resource [application.xml]
+2017-04-15 18:51:40,535 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4e499fd0: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2017-04-15 18:51:40,597 - Service Initialized
+2017-04-15 18:51:40,597 - serviceProxy:com.github.wenbo2018.fox.remoting.invoker.proxy.FilterRemotingServiceProxy@6953dc4b
+2017-04-15 18:51:40,628 - start to initialize zookeeper client:202.38.214.166
+2017-04-15 18:51:40,644 - maxRetries too large (2147483647). Pinning to 29
+2017-04-15 18:51:40,827 - Starting
+2017-04-15 18:51:40,848 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-04-15 18:51:40,848 - Client environment:host.name=SKY-20150908HA1
+2017-04-15 18:51:40,848 - Client environment:java.version=1.7.0_80
+2017-04-15 18:51:40,848 - Client environment:java.vendor=Oracle Corporation
+2017-04-15 18:51:40,848 - Client environment:java.home=D:\Program Files\Java\jdk1.7.0_80\jre
+2017-04-15 18:51:40,848 - Client environment:java.class.path=D:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\deploy.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\access-bridge-64.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\dnsns.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\jaccess.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\localedata.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunec.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunjce_provider.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunmscapi.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\zipfs.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\javaws.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfxrt.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\management-agent.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\plugin.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;G:\java_project\fox\fox-demo\fox-client\target\classes;G:\maven\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;G:\maven\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;G:\maven\org\springframework\spring-beans\3.1.2.RELEASE\spring-beans-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-expression\3.1.2.RELEASE\spring-expression-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-context-support\3.1.2.RELEASE\spring-context-support-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;G:\maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;G:\maven\org\springframework\spring-test\3.1.2.RELEASE\spring-test-3.1.2.RELEASE.jar;G:\java_project\fox\fox-spring\fox-spring-config\target\classes;G:\java_project\fox\fox-remoting\target\classes;G:\java_project\fox\fox-config\target\classes;G:\maven\cglib\cglib\3.1\cglib-3.1.jar;G:\maven\org\ow2\asm\asm\4.2\asm-4.2.jar;G:\maven\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;G:\java_project\fox\fox-registry-zookeeper\target\classes;G:\maven\org\slf4j\slf4j-log4j12\1.5.8\slf4j-log4j12-1.5.8.jar;G:\maven\org\slf4j\slf4j-api\1.5.8\slf4j-api-1.5.8.jar;G:\maven\log4j\log4j\1.2.14\log4j-1.2.14.jar;G:\maven\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;G:\maven\jline\jline\0.9.94\jline-0.9.94.jar;G:\maven\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;G:\maven\com\101tec\zkclient\0.4\zkclient-0.4.jar;G:\maven\org\apache\curator\curator-framework\2.7.1\curator-framework-2.7.1.jar;G:\maven\com\google\guava\guava\16.0.1\guava-16.0.1.jar;G:\maven\org\apache\curator\curator-client\2.7.1\curator-client-2.7.1.jar;G:\java_project\fox\fox-common\target\classes;G:\maven\io\netty\netty-all\4.0.26.Final\netty-all-4.0.26.Final.jar;G:\maven\com\dyuproject\protostuff\protostuff-core\1.0.9\protostuff-core-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-api\1.0.9\protostuff-api-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-runtime\1.0.9\protostuff-runtime-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-collectionschema\1.0.9\protostuff-collectionschema-1.0.9.jar;G:\maven\org\objenesis\objenesis\2.1\objenesis-2.1.jar;G:\maven\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;G:\maven\org\apache\commons\commons-collections4\4.0\commons-collections4-4.0.jar;G:\maven\com\caucho\hessian\3.1.5\hessian-3.1.5.jar;G:\maven\org\apache\curator\curator-recipes\2.7.1\curator-recipes-2.7.1.jar;G:\java_project\fox\fox-netty\target\classes;G:\java_project\fox\fox-demo\fox-api\target\classes;D:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.2.5\lib\idea_rt.jar
+2017-04-15 18:51:40,863 - Client environment:java.library.path=D:\Program Files\Java\jdk1.7.0_80\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_80\bin;D:\Program Files\Java\jdk1.7.0_80\jre\bin;d:\Program Files\MATLAB\R2014a\runtime\win64;d:\Program Files\MATLAB\R2014a\bin;d:\Program Files\MATLAB\R2014a\polyspace\bin;G:\apache-maven-3.3.9\bin;D:\Program Files\nodejs\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Users\Administrator\AppData\Roaming\npm;.
+2017-04-15 18:51:40,863 - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2017-04-15 18:51:40,863 - Client environment:java.compiler=<NA>
+2017-04-15 18:51:40,863 - Client environment:os.name=Windows 7
+2017-04-15 18:51:40,863 - Client environment:os.arch=amd64
+2017-04-15 18:51:40,863 - Client environment:os.version=6.1
+2017-04-15 18:51:40,863 - Client environment:user.name=Administrator
+2017-04-15 18:51:40,863 - Client environment:user.home=E:
+2017-04-15 18:51:40,863 - Client environment:user.dir=G:\java_project\fox
+2017-04-15 18:51:40,863 - Initiating client connection, connectString=202.38.214.166 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@3cb40c69
+2017-04-15 18:51:40,910 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-04-15 18:51:40,910 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
+2017-04-15 18:51:40,941 - Connected to an old server; r-o mode will be unavailable
+2017-04-15 18:51:40,941 - Session establishment complete on server 202.38.214.166/202.38.214.166:2181, sessionid = 0x15b71161b1c0002, negotiated timeout = 30000
+2017-04-15 18:51:40,957 - State change: CONNECTED
+2017-04-15 18:51:40,957 - succeed to create zookeeper client, connected:true
+2017-04-15 18:51:40,957 - succeed to initialize zookeeper client:202.38.214.166
+2017-04-15 18:51:40,988 - zookeeper state changed to CONNECTED
+2017-04-15 18:51:41,019 - NettyClientFactory is initial
+2017-04-15 18:51:41,255 - successed get service adress from service center:202.38.214.166:4019
+2017-04-15 18:51:41,333 - FOX SERVICE SUCCESS CONNECT
+2017-04-15 18:51:46,084 - fox success invoke
+2017-04-15 18:51:46,143 - heart beat success
+2017-04-15 18:51:50,993 - fox success invoke
+2017-04-15 18:51:50,993 - heart beat success
+2017-04-15 18:51:55,993 - fox success invoke
+2017-04-15 18:51:55,993 - heart beat success
+2017-04-15 18:52:00,994 - fox success invoke
+2017-04-15 18:52:00,994 - heart beat success
+2017-04-15 18:52:05,994 - fox success invoke
+2017-04-15 18:52:05,994 - this servicce[202.38.214.166:4019] is health:
+2017-04-15 18:52:05,994 - heart beat success
+2017-04-15 18:52:10,995 - fox success invoke
+2017-04-15 18:52:10,995 - heart beat success
+2017-04-15 18:52:15,995 - fox success invoke
+2017-04-15 18:52:15,995 - heart beat success
+2017-04-15 18:52:20,996 - fox success invoke
+2017-04-15 18:52:20,996 - heart beat success
+2017-04-15 18:52:25,996 - fox success invoke
+2017-04-15 18:52:25,996 - heart beat success
+2017-04-15 18:52:30,997 - fox success invoke
+2017-04-15 18:52:30,997 - this servicce[202.38.214.166:4019] is health:
+2017-04-15 18:52:30,997 - heart beat success
+2017-04-15 18:52:35,997 - fox success invoke
+2017-04-15 18:52:35,997 - heart beat success
+2017-04-15 18:52:40,998 - fox success invoke
+2017-04-15 18:52:40,998 - heart beat success
+2017-04-15 18:52:45,997 - fox success invoke
+2017-04-15 18:52:45,998 - heart beat success
+2017-04-15 18:52:50,999 - fox success invoke
+2017-04-15 18:52:50,999 - heart beat success
+2017-04-15 18:52:55,999 - fox success invoke
+2017-04-15 18:52:55,999 - this servicce[202.38.214.166:4019] is health:
+2017-04-15 18:52:55,999 - heart beat success
+2017-04-15 18:53:01,000 - fox success invoke
+2017-04-15 18:53:01,000 - heart beat success
+2017-04-15 18:53:06,000 - fox success invoke
+2017-04-15 18:53:06,000 - heart beat success
+2017-04-15 18:53:11,000 - fox success invoke
+2017-04-15 18:53:11,000 - heart beat success
+2017-04-15 18:55:42,271 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@20d547f8: startup date [Sat Apr 15 18:55:42 CST 2017]; root of context hierarchy
+2017-04-15 18:55:42,333 - Loading XML bean definitions from class path resource [application.xml]
+2017-04-15 18:55:42,599 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@439b38d7: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2017-04-15 18:55:42,630 - Service Initialized
+2017-04-15 18:55:42,630 - serviceProxy:com.github.wenbo2018.fox.remoting.invoker.proxy.FilterRemotingServiceProxy@a3f5f3
+2017-04-15 18:55:42,661 - start to initialize zookeeper client:202.38.214.166
+2017-04-15 18:55:42,677 - maxRetries too large (2147483647). Pinning to 29
+2017-04-15 18:55:42,770 - Starting
+2017-04-15 18:55:42,786 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-04-15 18:55:42,786 - Client environment:host.name=SKY-20150908HA1
+2017-04-15 18:55:42,786 - Client environment:java.version=1.7.0_80
+2017-04-15 18:55:42,786 - Client environment:java.vendor=Oracle Corporation
+2017-04-15 18:55:42,786 - Client environment:java.home=D:\Program Files\Java\jdk1.7.0_80\jre
+2017-04-15 18:55:42,786 - Client environment:java.class.path=D:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\deploy.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\access-bridge-64.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\dnsns.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\jaccess.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\localedata.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunec.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunjce_provider.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunmscapi.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\zipfs.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\javaws.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfxrt.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\management-agent.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\plugin.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;G:\java_project\fox\fox-demo\fox-client\target\classes;G:\maven\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;G:\maven\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;G:\maven\org\springframework\spring-beans\3.1.2.RELEASE\spring-beans-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-expression\3.1.2.RELEASE\spring-expression-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-context-support\3.1.2.RELEASE\spring-context-support-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;G:\maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;G:\maven\org\springframework\spring-test\3.1.2.RELEASE\spring-test-3.1.2.RELEASE.jar;G:\java_project\fox\fox-spring\fox-spring-config\target\classes;G:\java_project\fox\fox-remoting\target\classes;G:\java_project\fox\fox-config\target\classes;G:\maven\cglib\cglib\3.1\cglib-3.1.jar;G:\maven\org\ow2\asm\asm\4.2\asm-4.2.jar;G:\maven\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;G:\java_project\fox\fox-registry-zookeeper\target\classes;G:\maven\org\slf4j\slf4j-log4j12\1.5.8\slf4j-log4j12-1.5.8.jar;G:\maven\org\slf4j\slf4j-api\1.5.8\slf4j-api-1.5.8.jar;G:\maven\log4j\log4j\1.2.14\log4j-1.2.14.jar;G:\maven\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;G:\maven\jline\jline\0.9.94\jline-0.9.94.jar;G:\maven\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;G:\maven\com\101tec\zkclient\0.4\zkclient-0.4.jar;G:\maven\org\apache\curator\curator-framework\2.7.1\curator-framework-2.7.1.jar;G:\maven\com\google\guava\guava\16.0.1\guava-16.0.1.jar;G:\maven\org\apache\curator\curator-client\2.7.1\curator-client-2.7.1.jar;G:\java_project\fox\fox-common\target\classes;G:\maven\io\netty\netty-all\4.0.26.Final\netty-all-4.0.26.Final.jar;G:\maven\com\dyuproject\protostuff\protostuff-core\1.0.9\protostuff-core-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-api\1.0.9\protostuff-api-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-runtime\1.0.9\protostuff-runtime-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-collectionschema\1.0.9\protostuff-collectionschema-1.0.9.jar;G:\maven\org\objenesis\objenesis\2.1\objenesis-2.1.jar;G:\maven\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;G:\maven\org\apache\commons\commons-collections4\4.0\commons-collections4-4.0.jar;G:\maven\com\caucho\hessian\3.1.5\hessian-3.1.5.jar;G:\maven\org\apache\curator\curator-recipes\2.7.1\curator-recipes-2.7.1.jar;G:\java_project\fox\fox-netty\target\classes;G:\java_project\fox\fox-demo\fox-api\target\classes;D:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.2.5\lib\idea_rt.jar
+2017-04-15 18:55:42,801 - Client environment:java.library.path=D:\Program Files\Java\jdk1.7.0_80\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_80\bin;D:\Program Files\Java\jdk1.7.0_80\jre\bin;d:\Program Files\MATLAB\R2014a\runtime\win64;d:\Program Files\MATLAB\R2014a\bin;d:\Program Files\MATLAB\R2014a\polyspace\bin;G:\apache-maven-3.3.9\bin;D:\Program Files\nodejs\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Users\Administrator\AppData\Roaming\npm;.
+2017-04-15 18:55:42,801 - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2017-04-15 18:55:42,801 - Client environment:java.compiler=<NA>
+2017-04-15 18:55:42,801 - Client environment:os.name=Windows 7
+2017-04-15 18:55:42,801 - Client environment:os.arch=amd64
+2017-04-15 18:55:42,801 - Client environment:os.version=6.1
+2017-04-15 18:55:42,801 - Client environment:user.name=Administrator
+2017-04-15 18:55:42,801 - Client environment:user.home=E:
+2017-04-15 18:55:42,801 - Client environment:user.dir=G:\java_project\fox
+2017-04-15 18:55:42,801 - Initiating client connection, connectString=202.38.214.166 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@12336738
+2017-04-15 18:55:42,833 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-04-15 18:55:42,848 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
+2017-04-15 18:55:42,911 - Connected to an old server; r-o mode will be unavailable
+2017-04-15 18:55:42,911 - Session establishment complete on server 202.38.214.166/202.38.214.166:2181, sessionid = 0x15b71161b1c0004, negotiated timeout = 30000
+2017-04-15 18:55:42,926 - State change: CONNECTED
+2017-04-15 18:55:42,926 - succeed to create zookeeper client, connected:true
+2017-04-15 18:55:42,926 - succeed to initialize zookeeper client:202.38.214.166
+2017-04-15 18:55:42,926 - zookeeper state changed to CONNECTED
+2017-04-15 18:55:42,973 - NettyClientFactory is initial
+2017-04-15 18:55:43,220 - successed get service adress from service center:202.38.214.166:4019
+2017-04-15 18:55:43,330 - FOX SERVICE SUCCESS CONNECT
+2017-04-15 18:55:48,057 - fox success invoke
+2017-04-15 18:55:48,119 - heart beat success
+2017-04-15 18:55:52,998 - fox success invoke
+2017-04-15 18:55:52,998 - heart beat success
+2017-04-15 18:55:57,998 - fox success invoke
+2017-04-15 18:55:58,002 - heart beat success
+2017-04-15 18:56:02,999 - fox success invoke
+2017-04-15 18:56:03,004 - heart beat success
+2017-04-15 18:56:07,999 - fox success invoke
+2017-04-15 18:56:08,000 - this servicce[202.38.214.166:4019] is health:
+2017-04-15 18:56:08,000 - heart beat success
+2017-04-15 18:56:12,999 - fox success invoke
+2017-04-15 18:56:13,001 - heart beat success
+2017-04-15 18:56:18,002 - fox success invoke
+2017-04-15 18:56:18,002 - heart beat success
+2017-04-15 18:56:23,002 - fox success invoke
+2017-04-15 18:56:23,002 - heart beat success
+2017-04-15 18:56:28,001 - fox success invoke
+2017-04-15 18:56:28,003 - heart beat success
+2017-04-15 18:56:33,002 - fox success invoke
+2017-04-15 18:56:33,003 - this servicce[202.38.214.166:4019] is health:
+2017-04-15 18:56:33,003 - heart beat success
+2017-04-15 18:56:38,004 - fox success invoke
+2017-04-15 18:56:38,004 - heart beat success
+2017-04-15 18:56:43,002 - fox success invoke
+2017-04-15 18:56:43,004 - heart beat success
+2017-04-15 18:56:48,005 - fox success invoke
+2017-04-15 18:56:48,005 - heart beat success
+2017-04-15 18:56:53,012 - fox success invoke
+2017-04-15 18:56:53,013 - heart beat success
+2017-04-15 18:56:58,014 - fox success invoke
+2017-04-15 18:56:58,014 - this servicce[202.38.214.166:4019] is health:
+2017-04-15 18:56:58,014 - heart beat success
+2017-04-15 18:57:03,014 - fox success invoke
+2017-04-15 18:57:03,014 - heart beat success
+2017-04-15 18:57:08,014 - fox success invoke
+2017-04-15 18:57:08,015 - heart beat success
+2017-04-15 18:57:13,015 - fox success invoke
+2017-04-15 18:57:13,018 - heart beat success
+2017-04-15 18:57:18,015 - fox success invoke
+2017-04-15 18:57:18,017 - heart beat success
+2017-04-15 18:57:20,047 - client caught exception
 java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at sun.nio.ch.SocketDispatcher.read0(Native Method)
 	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
@@ -165,3 +234,374 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:111)
 	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
 	at java.lang.Thread.run(Thread.java:745)
+2017-04-15 18:57:44,934 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@245658a3: startup date [Sat Apr 15 18:57:44 CST 2017]; root of context hierarchy
+2017-04-15 18:57:45,028 - Loading XML bean definitions from class path resource [application.xml]
+2017-04-15 18:57:45,426 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4e499fd0: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2017-04-15 18:57:45,458 - Service Initialized
+2017-04-15 18:57:45,458 - serviceProxy:com.github.wenbo2018.fox.remoting.invoker.proxy.FilterRemotingServiceProxy@6953dc4b
+2017-04-15 18:57:45,491 - start to initialize zookeeper client:202.38.214.166
+2017-04-15 18:57:45,615 - maxRetries too large (2147483647). Pinning to 29
+2017-04-15 18:57:45,818 - Starting
+2017-04-15 18:57:45,849 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-04-15 18:57:45,849 - Client environment:host.name=SKY-20150908HA1
+2017-04-15 18:57:45,849 - Client environment:java.version=1.7.0_80
+2017-04-15 18:57:45,849 - Client environment:java.vendor=Oracle Corporation
+2017-04-15 18:57:45,849 - Client environment:java.home=D:\Program Files\Java\jdk1.7.0_80\jre
+2017-04-15 18:57:45,849 - Client environment:java.class.path=D:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\deploy.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\access-bridge-64.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\dnsns.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\jaccess.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\localedata.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunec.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunjce_provider.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunmscapi.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\zipfs.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\javaws.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfxrt.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\management-agent.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\plugin.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;G:\java_project\fox\fox-demo\fox-client\target\classes;G:\maven\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;G:\maven\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;G:\maven\org\springframework\spring-beans\3.1.2.RELEASE\spring-beans-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-expression\3.1.2.RELEASE\spring-expression-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-context-support\3.1.2.RELEASE\spring-context-support-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;G:\maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;G:\maven\org\springframework\spring-test\3.1.2.RELEASE\spring-test-3.1.2.RELEASE.jar;G:\java_project\fox\fox-spring\fox-spring-config\target\classes;G:\java_project\fox\fox-remoting\target\classes;G:\java_project\fox\fox-config\target\classes;G:\maven\cglib\cglib\3.1\cglib-3.1.jar;G:\maven\org\ow2\asm\asm\4.2\asm-4.2.jar;G:\maven\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;G:\java_project\fox\fox-registry-zookeeper\target\classes;G:\maven\org\slf4j\slf4j-log4j12\1.5.8\slf4j-log4j12-1.5.8.jar;G:\maven\org\slf4j\slf4j-api\1.5.8\slf4j-api-1.5.8.jar;G:\maven\log4j\log4j\1.2.14\log4j-1.2.14.jar;G:\maven\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;G:\maven\jline\jline\0.9.94\jline-0.9.94.jar;G:\maven\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;G:\maven\com\101tec\zkclient\0.4\zkclient-0.4.jar;G:\maven\org\apache\curator\curator-framework\2.7.1\curator-framework-2.7.1.jar;G:\maven\com\google\guava\guava\16.0.1\guava-16.0.1.jar;G:\maven\org\apache\curator\curator-client\2.7.1\curator-client-2.7.1.jar;G:\java_project\fox\fox-common\target\classes;G:\maven\io\netty\netty-all\4.0.26.Final\netty-all-4.0.26.Final.jar;G:\maven\com\dyuproject\protostuff\protostuff-core\1.0.9\protostuff-core-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-api\1.0.9\protostuff-api-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-runtime\1.0.9\protostuff-runtime-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-collectionschema\1.0.9\protostuff-collectionschema-1.0.9.jar;G:\maven\org\objenesis\objenesis\2.1\objenesis-2.1.jar;G:\maven\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;G:\maven\org\apache\commons\commons-collections4\4.0\commons-collections4-4.0.jar;G:\maven\com\caucho\hessian\3.1.5\hessian-3.1.5.jar;G:\maven\org\apache\curator\curator-recipes\2.7.1\curator-recipes-2.7.1.jar;G:\java_project\fox\fox-netty\target\classes;G:\java_project\fox\fox-demo\fox-api\target\classes;D:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.2.5\lib\idea_rt.jar
+2017-04-15 18:57:45,865 - Client environment:java.library.path=D:\Program Files\Java\jdk1.7.0_80\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_80\bin;D:\Program Files\Java\jdk1.7.0_80\jre\bin;d:\Program Files\MATLAB\R2014a\runtime\win64;d:\Program Files\MATLAB\R2014a\bin;d:\Program Files\MATLAB\R2014a\polyspace\bin;G:\apache-maven-3.3.9\bin;D:\Program Files\nodejs\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Users\Administrator\AppData\Roaming\npm;.
+2017-04-15 18:57:45,865 - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2017-04-15 18:57:45,865 - Client environment:java.compiler=<NA>
+2017-04-15 18:57:45,865 - Client environment:os.name=Windows 7
+2017-04-15 18:57:45,865 - Client environment:os.arch=amd64
+2017-04-15 18:57:45,865 - Client environment:os.version=6.1
+2017-04-15 18:57:45,865 - Client environment:user.name=Administrator
+2017-04-15 18:57:45,865 - Client environment:user.home=E:
+2017-04-15 18:57:45,865 - Client environment:user.dir=G:\java_project\fox
+2017-04-15 18:57:45,865 - Initiating client connection, connectString=202.38.214.166 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@3cb40c69
+2017-04-15 18:57:45,896 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-04-15 18:57:45,896 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
+2017-04-15 18:57:45,927 - Connected to an old server; r-o mode will be unavailable
+2017-04-15 18:57:45,927 - Session establishment complete on server 202.38.214.166/202.38.214.166:2181, sessionid = 0x15b71161b1c0006, negotiated timeout = 30000
+2017-04-15 18:57:45,943 - State change: CONNECTED
+2017-04-15 18:57:45,943 - zookeeper state changed to CONNECTED
+2017-04-15 18:57:45,943 - succeed to create zookeeper client, connected:true
+2017-04-15 18:57:45,943 - succeed to initialize zookeeper client:202.38.214.166
+2017-04-15 18:57:46,005 - NettyClientFactory is initial
+2017-04-15 18:57:46,114 - get service address fail:java.lang.RuntimeException: can not find any address node on path: /fox/register/service.fox.com_helloTestService_helloService_1.0.0
+2017-04-15 18:58:26,224 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@245658a3: startup date [Sat Apr 15 18:58:26 CST 2017]; root of context hierarchy
+2017-04-15 18:58:26,271 - Loading XML bean definitions from class path resource [application.xml]
+2017-04-15 18:58:26,513 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4e499fd0: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2017-04-15 18:58:26,560 - Service Initialized
+2017-04-15 18:58:26,560 - serviceProxy:com.github.wenbo2018.fox.remoting.invoker.proxy.FilterRemotingServiceProxy@6953dc4b
+2017-04-15 18:58:26,575 - start to initialize zookeeper client:202.38.214.166
+2017-04-15 18:58:26,653 - maxRetries too large (2147483647). Pinning to 29
+2017-04-15 18:58:26,773 - Starting
+2017-04-15 18:58:26,804 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-04-15 18:58:26,804 - Client environment:host.name=SKY-20150908HA1
+2017-04-15 18:58:26,804 - Client environment:java.version=1.7.0_80
+2017-04-15 18:58:26,804 - Client environment:java.vendor=Oracle Corporation
+2017-04-15 18:58:26,804 - Client environment:java.home=D:\Program Files\Java\jdk1.7.0_80\jre
+2017-04-15 18:58:26,804 - Client environment:java.class.path=D:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\deploy.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\access-bridge-64.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\dnsns.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\jaccess.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\localedata.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunec.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunjce_provider.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunmscapi.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\zipfs.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\javaws.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfxrt.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\management-agent.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\plugin.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;G:\java_project\fox\fox-demo\fox-client\target\classes;G:\maven\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;G:\maven\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;G:\maven\org\springframework\spring-beans\3.1.2.RELEASE\spring-beans-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-expression\3.1.2.RELEASE\spring-expression-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-context-support\3.1.2.RELEASE\spring-context-support-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;G:\maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;G:\maven\org\springframework\spring-test\3.1.2.RELEASE\spring-test-3.1.2.RELEASE.jar;G:\java_project\fox\fox-spring\fox-spring-config\target\classes;G:\java_project\fox\fox-remoting\target\classes;G:\java_project\fox\fox-config\target\classes;G:\maven\cglib\cglib\3.1\cglib-3.1.jar;G:\maven\org\ow2\asm\asm\4.2\asm-4.2.jar;G:\maven\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;G:\java_project\fox\fox-registry-zookeeper\target\classes;G:\maven\org\slf4j\slf4j-log4j12\1.5.8\slf4j-log4j12-1.5.8.jar;G:\maven\org\slf4j\slf4j-api\1.5.8\slf4j-api-1.5.8.jar;G:\maven\log4j\log4j\1.2.14\log4j-1.2.14.jar;G:\maven\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;G:\maven\jline\jline\0.9.94\jline-0.9.94.jar;G:\maven\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;G:\maven\com\101tec\zkclient\0.4\zkclient-0.4.jar;G:\maven\org\apache\curator\curator-framework\2.7.1\curator-framework-2.7.1.jar;G:\maven\com\google\guava\guava\16.0.1\guava-16.0.1.jar;G:\maven\org\apache\curator\curator-client\2.7.1\curator-client-2.7.1.jar;G:\java_project\fox\fox-common\target\classes;G:\maven\io\netty\netty-all\4.0.26.Final\netty-all-4.0.26.Final.jar;G:\maven\com\dyuproject\protostuff\protostuff-core\1.0.9\protostuff-core-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-api\1.0.9\protostuff-api-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-runtime\1.0.9\protostuff-runtime-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-collectionschema\1.0.9\protostuff-collectionschema-1.0.9.jar;G:\maven\org\objenesis\objenesis\2.1\objenesis-2.1.jar;G:\maven\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;G:\maven\org\apache\commons\commons-collections4\4.0\commons-collections4-4.0.jar;G:\maven\com\caucho\hessian\3.1.5\hessian-3.1.5.jar;G:\maven\org\apache\curator\curator-recipes\2.7.1\curator-recipes-2.7.1.jar;G:\java_project\fox\fox-netty\target\classes;G:\java_project\fox\fox-demo\fox-api\target\classes;D:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.2.5\lib\idea_rt.jar
+2017-04-15 18:58:26,819 - Client environment:java.library.path=D:\Program Files\Java\jdk1.7.0_80\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_80\bin;D:\Program Files\Java\jdk1.7.0_80\jre\bin;d:\Program Files\MATLAB\R2014a\runtime\win64;d:\Program Files\MATLAB\R2014a\bin;d:\Program Files\MATLAB\R2014a\polyspace\bin;G:\apache-maven-3.3.9\bin;D:\Program Files\nodejs\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Users\Administrator\AppData\Roaming\npm;.
+2017-04-15 18:58:26,819 - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2017-04-15 18:58:26,819 - Client environment:java.compiler=<NA>
+2017-04-15 18:58:26,819 - Client environment:os.name=Windows 7
+2017-04-15 18:58:26,819 - Client environment:os.arch=amd64
+2017-04-15 18:58:26,819 - Client environment:os.version=6.1
+2017-04-15 18:58:26,819 - Client environment:user.name=Administrator
+2017-04-15 18:58:26,819 - Client environment:user.home=E:
+2017-04-15 18:58:26,819 - Client environment:user.dir=G:\java_project\fox
+2017-04-15 18:58:26,819 - Initiating client connection, connectString=202.38.214.166 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@6811935e
+2017-04-15 18:58:26,851 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-04-15 18:58:26,866 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
+2017-04-15 18:58:26,897 - Connected to an old server; r-o mode will be unavailable
+2017-04-15 18:58:26,897 - Session establishment complete on server 202.38.214.166/202.38.214.166:2181, sessionid = 0x15b71436ac60001, negotiated timeout = 30000
+2017-04-15 18:58:26,897 - State change: CONNECTED
+2017-04-15 18:58:26,913 - succeed to create zookeeper client, connected:true
+2017-04-15 18:58:26,913 - succeed to initialize zookeeper client:202.38.214.166
+2017-04-15 18:58:26,935 - zookeeper state changed to CONNECTED
+2017-04-15 18:58:26,985 - NettyClientFactory is initial
+2017-04-15 18:58:27,157 - successed get service adress from service center:202.38.214.166:4019
+2017-04-15 18:58:27,239 - FOX SERVICE SUCCESS CONNECT
+2017-04-15 18:58:32,061 - fox success invoke
+2017-04-15 18:58:32,132 - heart beat success
+2017-04-15 18:58:36,985 - fox success invoke
+2017-04-15 18:58:36,987 - heart beat success
+2017-04-15 18:58:41,986 - fox success invoke
+2017-04-15 18:58:41,987 - heart beat success
+2017-04-15 18:58:46,988 - fox success invoke
+2017-04-15 18:58:46,988 - heart beat success
+2017-04-15 18:58:51,988 - fox success invoke
+2017-04-15 18:58:51,988 - this servicce[202.38.214.166:4019] is health:
+2017-04-15 18:58:51,988 - heart beat success
+2017-04-15 18:58:56,987 - fox success invoke
+2017-04-15 18:58:56,989 - heart beat success
+2017-04-15 18:59:01,988 - fox success invoke
+2017-04-15 18:59:01,989 - heart beat success
+2017-04-15 18:59:06,990 - fox success invoke
+2017-04-15 18:59:06,990 - heart beat success
+2017-04-15 18:59:11,990 - fox success invoke
+2017-04-15 18:59:11,990 - heart beat success
+2017-04-15 18:59:16,924 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@245658a3: startup date [Sat Apr 15 18:59:16 CST 2017]; root of context hierarchy
+2017-04-15 18:59:16,992 - Loading XML bean definitions from class path resource [application.xml]
+2017-04-15 18:59:17,289 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@439b38d7: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2017-04-15 18:59:17,320 - Service Initialized
+2017-04-15 19:00:01,891 - serviceProxy:com.github.wenbo2018.fox.remoting.invoker.proxy.FilterRemotingServiceProxy@5204db6b
+2017-04-15 19:00:04,163 - start to initialize zookeeper client:202.38.214.166
+2017-04-15 19:00:04,194 - maxRetries too large (2147483647). Pinning to 29
+2017-04-15 19:00:04,288 - Starting
+2017-04-15 19:00:04,288 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-04-15 19:00:04,288 - Client environment:host.name=SKY-20150908HA1
+2017-04-15 19:00:04,288 - Client environment:java.version=1.7.0_80
+2017-04-15 19:00:04,288 - Client environment:java.vendor=Oracle Corporation
+2017-04-15 19:00:04,288 - Client environment:java.home=D:\Program Files\Java\jdk1.7.0_80\jre
+2017-04-15 19:00:04,288 - Client environment:java.class.path=D:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\deploy.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\access-bridge-64.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\dnsns.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\jaccess.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\localedata.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunec.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunjce_provider.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunmscapi.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\zipfs.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\javaws.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfxrt.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\management-agent.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\plugin.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;G:\java_project\fox\fox-demo\fox-client\target\classes;G:\maven\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;G:\maven\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;G:\maven\org\springframework\spring-beans\3.1.2.RELEASE\spring-beans-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-expression\3.1.2.RELEASE\spring-expression-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-context-support\3.1.2.RELEASE\spring-context-support-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;G:\maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;G:\maven\org\springframework\spring-test\3.1.2.RELEASE\spring-test-3.1.2.RELEASE.jar;G:\java_project\fox\fox-spring\fox-spring-config\target\classes;G:\java_project\fox\fox-remoting\target\classes;G:\java_project\fox\fox-config\target\classes;G:\maven\cglib\cglib\3.1\cglib-3.1.jar;G:\maven\org\ow2\asm\asm\4.2\asm-4.2.jar;G:\maven\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;G:\java_project\fox\fox-registry-zookeeper\target\classes;G:\maven\org\slf4j\slf4j-log4j12\1.5.8\slf4j-log4j12-1.5.8.jar;G:\maven\org\slf4j\slf4j-api\1.5.8\slf4j-api-1.5.8.jar;G:\maven\log4j\log4j\1.2.14\log4j-1.2.14.jar;G:\maven\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;G:\maven\jline\jline\0.9.94\jline-0.9.94.jar;G:\maven\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;G:\maven\com\101tec\zkclient\0.4\zkclient-0.4.jar;G:\maven\org\apache\curator\curator-framework\2.7.1\curator-framework-2.7.1.jar;G:\maven\com\google\guava\guava\16.0.1\guava-16.0.1.jar;G:\maven\org\apache\curator\curator-client\2.7.1\curator-client-2.7.1.jar;G:\java_project\fox\fox-common\target\classes;G:\maven\io\netty\netty-all\4.0.26.Final\netty-all-4.0.26.Final.jar;G:\maven\com\dyuproject\protostuff\protostuff-core\1.0.9\protostuff-core-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-api\1.0.9\protostuff-api-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-runtime\1.0.9\protostuff-runtime-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-collectionschema\1.0.9\protostuff-collectionschema-1.0.9.jar;G:\maven\org\objenesis\objenesis\2.1\objenesis-2.1.jar;G:\maven\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;G:\maven\org\apache\commons\commons-collections4\4.0\commons-collections4-4.0.jar;G:\maven\com\caucho\hessian\3.1.5\hessian-3.1.5.jar;G:\maven\org\apache\curator\curator-recipes\2.7.1\curator-recipes-2.7.1.jar;G:\java_project\fox\fox-netty\target\classes;G:\java_project\fox\fox-demo\fox-api\target\classes;D:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.2.5\lib\idea_rt.jar
+2017-04-15 19:00:04,303 - Client environment:java.library.path=D:\Program Files\Java\jdk1.7.0_80\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_80\bin;D:\Program Files\Java\jdk1.7.0_80\jre\bin;d:\Program Files\MATLAB\R2014a\runtime\win64;d:\Program Files\MATLAB\R2014a\bin;d:\Program Files\MATLAB\R2014a\polyspace\bin;G:\apache-maven-3.3.9\bin;D:\Program Files\nodejs\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Users\Administrator\AppData\Roaming\npm;.
+2017-04-15 19:00:04,304 - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2017-04-15 19:00:04,304 - Client environment:java.compiler=<NA>
+2017-04-15 19:00:04,304 - Client environment:os.name=Windows 7
+2017-04-15 19:00:04,304 - Client environment:os.arch=amd64
+2017-04-15 19:00:04,304 - Client environment:os.version=6.1
+2017-04-15 19:00:04,304 - Client environment:user.name=Administrator
+2017-04-15 19:00:04,304 - Client environment:user.home=E:
+2017-04-15 19:00:04,304 - Client environment:user.dir=G:\java_project\fox
+2017-04-15 19:00:04,305 - Initiating client connection, connectString=202.38.214.166 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@3c53a57c
+2017-04-15 19:00:04,337 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-04-15 19:00:04,337 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
+2017-04-15 19:00:04,368 - Connected to an old server; r-o mode will be unavailable
+2017-04-15 19:00:04,368 - Session establishment complete on server 202.38.214.166/202.38.214.166:2181, sessionid = 0x15b71436ac60002, negotiated timeout = 30000
+2017-04-15 19:00:04,368 - State change: CONNECTED
+2017-04-15 19:00:04,368 - zookeeper state changed to CONNECTED
+2017-04-15 19:00:05,391 - succeed to create zookeeper client, connected:true
+2017-04-15 19:00:05,391 - succeed to initialize zookeeper client:202.38.214.166
+2017-04-15 19:00:05,453 - NettyClientFactory is initial
+2017-04-15 19:00:05,547 - successed get service adress from service center:202.38.214.166:4019
+2017-04-15 19:00:08,662 - FOX SERVICE SUCCESS CONNECT
+2017-04-15 19:00:56,994 - Client session timed out, have not heard from server in 51447ms for sessionid 0x15b71436ac60002, closing socket connection and attempting reconnect
+2017-04-15 19:00:58,961 - State change: SUSPENDED
+2017-04-15 19:00:59,016 - zookeeper state changed to SUSPENDED
+2017-04-15 19:01:08,544 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-04-15 19:01:08,544 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
+2017-04-15 19:01:08,544 - Connected to an old server; r-o mode will be unavailable
+2017-04-15 19:01:08,544 - Unable to reconnect to ZooKeeper service, session 0x15b71436ac60002 has expired, closing socket connection
+2017-04-15 19:01:08,544 - State change: LOST
+2017-04-15 19:01:08,544 - Session expired event received
+2017-04-15 19:01:08,560 - zookeeper state changed to LOST
+2017-04-15 19:01:08,560 - Initiating client connection, connectString=202.38.214.166 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@3c53a57c
+2017-04-15 19:01:08,560 - EventThread shut down
+2017-04-15 19:01:08,560 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-04-15 19:01:08,560 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
+2017-04-15 19:01:08,591 - Connected to an old server; r-o mode will be unavailable
+2017-04-15 19:01:08,591 - Session establishment complete on server 202.38.214.166/202.38.214.166:2181, sessionid = 0x15b71436ac60003, negotiated timeout = 30000
+2017-04-15 19:01:08,591 - State change: RECONNECTED
+2017-04-15 19:01:08,591 - zookeeper state changed to RECONNECTED
+2017-04-15 19:01:08,606 - fox success invoke
+2017-04-15 19:01:08,606 - heart beat success
+2017-04-15 19:01:56,314 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@20d547f8: startup date [Sat Apr 15 19:01:56 CST 2017]; root of context hierarchy
+2017-04-15 19:01:56,376 - Loading XML bean definitions from class path resource [application.xml]
+2017-04-15 19:01:57,515 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4c9fc626: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2017-04-15 19:01:57,546 - Service Initialized
+2017-04-15 19:02:00,687 - serviceProxy:com.github.wenbo2018.fox.remoting.invoker.proxy.FilterRemotingServiceProxy@33e0bffc
+2017-04-15 19:02:00,703 - start to initialize zookeeper client:202.38.214.166
+2017-04-15 19:02:00,719 - maxRetries too large (2147483647). Pinning to 29
+2017-04-15 19:02:00,812 - Starting
+2017-04-15 19:02:00,828 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-04-15 19:02:00,828 - Client environment:host.name=SKY-20150908HA1
+2017-04-15 19:02:00,828 - Client environment:java.version=1.7.0_80
+2017-04-15 19:02:00,828 - Client environment:java.vendor=Oracle Corporation
+2017-04-15 19:02:00,828 - Client environment:java.home=D:\Program Files\Java\jdk1.7.0_80\jre
+2017-04-15 19:02:00,828 - Client environment:java.class.path=D:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\deploy.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\access-bridge-64.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\dnsns.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\jaccess.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\localedata.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunec.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunjce_provider.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunmscapi.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\zipfs.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\javaws.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfxrt.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\management-agent.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\plugin.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;G:\java_project\fox\fox-demo\fox-client\target\classes;G:\maven\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;G:\maven\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;G:\maven\org\springframework\spring-beans\3.1.2.RELEASE\spring-beans-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-expression\3.1.2.RELEASE\spring-expression-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-context-support\3.1.2.RELEASE\spring-context-support-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;G:\maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;G:\maven\org\springframework\spring-test\3.1.2.RELEASE\spring-test-3.1.2.RELEASE.jar;G:\java_project\fox\fox-spring\fox-spring-config\target\classes;G:\java_project\fox\fox-remoting\target\classes;G:\java_project\fox\fox-config\target\classes;G:\maven\cglib\cglib\3.1\cglib-3.1.jar;G:\maven\org\ow2\asm\asm\4.2\asm-4.2.jar;G:\maven\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;G:\java_project\fox\fox-registry-zookeeper\target\classes;G:\maven\org\slf4j\slf4j-log4j12\1.5.8\slf4j-log4j12-1.5.8.jar;G:\maven\org\slf4j\slf4j-api\1.5.8\slf4j-api-1.5.8.jar;G:\maven\log4j\log4j\1.2.14\log4j-1.2.14.jar;G:\maven\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;G:\maven\jline\jline\0.9.94\jline-0.9.94.jar;G:\maven\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;G:\maven\com\101tec\zkclient\0.4\zkclient-0.4.jar;G:\maven\org\apache\curator\curator-framework\2.7.1\curator-framework-2.7.1.jar;G:\maven\com\google\guava\guava\16.0.1\guava-16.0.1.jar;G:\maven\org\apache\curator\curator-client\2.7.1\curator-client-2.7.1.jar;G:\java_project\fox\fox-common\target\classes;G:\maven\io\netty\netty-all\4.0.26.Final\netty-all-4.0.26.Final.jar;G:\maven\com\dyuproject\protostuff\protostuff-core\1.0.9\protostuff-core-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-api\1.0.9\protostuff-api-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-runtime\1.0.9\protostuff-runtime-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-collectionschema\1.0.9\protostuff-collectionschema-1.0.9.jar;G:\maven\org\objenesis\objenesis\2.1\objenesis-2.1.jar;G:\maven\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;G:\maven\org\apache\commons\commons-collections4\4.0\commons-collections4-4.0.jar;G:\maven\com\caucho\hessian\3.1.5\hessian-3.1.5.jar;G:\maven\org\apache\curator\curator-recipes\2.7.1\curator-recipes-2.7.1.jar;G:\java_project\fox\fox-netty\target\classes;G:\java_project\fox\fox-cluster\target\classes;G:\java_project\fox\fox-demo\fox-api\target\classes;D:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.2.5\lib\idea_rt.jar
+2017-04-15 19:02:00,843 - Client environment:java.library.path=D:\Program Files\Java\jdk1.7.0_80\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_80\bin;D:\Program Files\Java\jdk1.7.0_80\jre\bin;d:\Program Files\MATLAB\R2014a\runtime\win64;d:\Program Files\MATLAB\R2014a\bin;d:\Program Files\MATLAB\R2014a\polyspace\bin;G:\apache-maven-3.3.9\bin;D:\Program Files\nodejs\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Users\Administrator\AppData\Roaming\npm;.
+2017-04-15 19:02:00,843 - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2017-04-15 19:02:00,843 - Client environment:java.compiler=<NA>
+2017-04-15 19:02:00,843 - Client environment:os.name=Windows 7
+2017-04-15 19:02:00,843 - Client environment:os.arch=amd64
+2017-04-15 19:02:00,843 - Client environment:os.version=6.1
+2017-04-15 19:02:00,843 - Client environment:user.name=Administrator
+2017-04-15 19:02:00,843 - Client environment:user.home=E:
+2017-04-15 19:02:00,843 - Client environment:user.dir=G:\java_project\fox
+2017-04-15 19:02:00,843 - Initiating client connection, connectString=202.38.214.166 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@3963d5c5
+2017-04-15 19:02:00,875 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-04-15 19:02:00,875 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
+2017-04-15 19:02:00,906 - Connected to an old server; r-o mode will be unavailable
+2017-04-15 19:02:00,906 - Session establishment complete on server 202.38.214.166/202.38.214.166:2181, sessionid = 0x15b71436ac60004, negotiated timeout = 30000
+2017-04-15 19:02:00,906 - State change: CONNECTED
+2017-04-15 19:02:00,906 - zookeeper state changed to CONNECTED
+2017-04-15 19:02:01,931 - succeed to create zookeeper client, connected:true
+2017-04-15 19:02:01,931 - succeed to initialize zookeeper client:202.38.214.166
+2017-04-15 19:02:01,994 - NettyClientFactory is initial
+2017-04-15 19:02:02,087 - successed get service adress from service center:202.38.214.166:4019
+2017-04-15 19:02:02,165 - FOX SERVICE SUCCESS CONNECT
+2017-04-15 19:02:06,976 - fox success invoke
+2017-04-15 19:02:06,976 - heart beat success
+2017-04-15 19:04:42,780 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@20d547f8: startup date [Sat Apr 15 19:04:42 CST 2017]; root of context hierarchy
+2017-04-15 19:04:42,842 - Loading XML bean definitions from class path resource [application.xml]
+2017-04-15 19:04:43,061 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@439b38d7: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2017-04-15 19:04:43,092 - Service Initialized
+2017-04-15 19:04:43,108 - serviceProxy:com.github.wenbo2018.fox.remoting.invoker.proxy.FilterRemotingServiceProxy@a3f5f3
+2017-04-15 19:04:43,123 - start to initialize zookeeper client:202.38.214.166
+2017-04-15 19:04:43,154 - maxRetries too large (2147483647). Pinning to 29
+2017-04-15 19:04:43,264 - Starting
+2017-04-15 19:04:43,279 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-04-15 19:04:43,279 - Client environment:host.name=SKY-20150908HA1
+2017-04-15 19:04:43,279 - Client environment:java.version=1.7.0_80
+2017-04-15 19:04:43,279 - Client environment:java.vendor=Oracle Corporation
+2017-04-15 19:04:43,279 - Client environment:java.home=D:\Program Files\Java\jdk1.7.0_80\jre
+2017-04-15 19:04:43,279 - Client environment:java.class.path=D:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\deploy.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\access-bridge-64.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\dnsns.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\jaccess.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\localedata.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunec.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunjce_provider.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunmscapi.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\zipfs.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\javaws.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfxrt.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\management-agent.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\plugin.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;G:\java_project\fox\fox-demo\fox-client\target\classes;G:\maven\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;G:\maven\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;G:\maven\org\springframework\spring-beans\3.1.2.RELEASE\spring-beans-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-expression\3.1.2.RELEASE\spring-expression-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-context-support\3.1.2.RELEASE\spring-context-support-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;G:\maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;G:\maven\org\springframework\spring-test\3.1.2.RELEASE\spring-test-3.1.2.RELEASE.jar;G:\java_project\fox\fox-spring\fox-spring-config\target\classes;G:\java_project\fox\fox-remoting\target\classes;G:\java_project\fox\fox-config\target\classes;G:\maven\cglib\cglib\3.1\cglib-3.1.jar;G:\maven\org\ow2\asm\asm\4.2\asm-4.2.jar;G:\maven\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;G:\java_project\fox\fox-registry-zookeeper\target\classes;G:\maven\org\slf4j\slf4j-log4j12\1.5.8\slf4j-log4j12-1.5.8.jar;G:\maven\org\slf4j\slf4j-api\1.5.8\slf4j-api-1.5.8.jar;G:\maven\log4j\log4j\1.2.14\log4j-1.2.14.jar;G:\maven\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;G:\maven\jline\jline\0.9.94\jline-0.9.94.jar;G:\maven\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;G:\maven\com\101tec\zkclient\0.4\zkclient-0.4.jar;G:\maven\org\apache\curator\curator-framework\2.7.1\curator-framework-2.7.1.jar;G:\maven\com\google\guava\guava\16.0.1\guava-16.0.1.jar;G:\maven\org\apache\curator\curator-client\2.7.1\curator-client-2.7.1.jar;G:\java_project\fox\fox-common\target\classes;G:\maven\io\netty\netty-all\4.0.26.Final\netty-all-4.0.26.Final.jar;G:\maven\com\dyuproject\protostuff\protostuff-core\1.0.9\protostuff-core-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-api\1.0.9\protostuff-api-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-runtime\1.0.9\protostuff-runtime-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-collectionschema\1.0.9\protostuff-collectionschema-1.0.9.jar;G:\maven\org\objenesis\objenesis\2.1\objenesis-2.1.jar;G:\maven\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;G:\maven\org\apache\commons\commons-collections4\4.0\commons-collections4-4.0.jar;G:\maven\com\caucho\hessian\3.1.5\hessian-3.1.5.jar;G:\maven\org\apache\curator\curator-recipes\2.7.1\curator-recipes-2.7.1.jar;G:\java_project\fox\fox-netty\target\classes;G:\java_project\fox\fox-cluster\target\classes;G:\java_project\fox\fox-demo\fox-api\target\classes;D:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.2.5\lib\idea_rt.jar
+2017-04-15 19:04:43,279 - Client environment:java.library.path=D:\Program Files\Java\jdk1.7.0_80\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_80\bin;D:\Program Files\Java\jdk1.7.0_80\jre\bin;d:\Program Files\MATLAB\R2014a\runtime\win64;d:\Program Files\MATLAB\R2014a\bin;d:\Program Files\MATLAB\R2014a\polyspace\bin;G:\apache-maven-3.3.9\bin;D:\Program Files\nodejs\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Users\Administrator\AppData\Roaming\npm;.
+2017-04-15 19:04:43,279 - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2017-04-15 19:04:43,279 - Client environment:java.compiler=<NA>
+2017-04-15 19:04:43,279 - Client environment:os.name=Windows 7
+2017-04-15 19:04:43,279 - Client environment:os.arch=amd64
+2017-04-15 19:04:43,279 - Client environment:os.version=6.1
+2017-04-15 19:04:43,279 - Client environment:user.name=Administrator
+2017-04-15 19:04:43,279 - Client environment:user.home=E:
+2017-04-15 19:04:43,279 - Client environment:user.dir=G:\java_project\fox
+2017-04-15 19:04:43,279 - Initiating client connection, connectString=202.38.214.166 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@f147c4c
+2017-04-15 19:04:43,326 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-04-15 19:04:43,326 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
+2017-04-15 19:04:43,357 - Connected to an old server; r-o mode will be unavailable
+2017-04-15 19:04:43,357 - Session establishment complete on server 202.38.214.166/202.38.214.166:2181, sessionid = 0x15b71436ac60005, negotiated timeout = 30000
+2017-04-15 19:04:43,357 - State change: CONNECTED
+2017-04-15 19:04:43,357 - zookeeper state changed to CONNECTED
+2017-04-15 19:04:44,387 - succeed to create zookeeper client, connected:true
+2017-04-15 19:04:44,387 - succeed to initialize zookeeper client:202.38.214.166
+2017-04-15 19:04:44,480 - NettyClientFactory is initial
+2017-04-15 19:04:44,558 - successed get service adress from service center:202.38.214.166:4019
+2017-04-15 19:04:44,636 - FOX SERVICE SUCCESS CONNECT
+2017-04-15 19:04:44,683 - fox success invoke
+2017-04-15 19:04:44,683 - fox success invoke
+2017-04-15 19:04:45,775 - fox success invoke
+2017-04-15 19:04:45,775 - fox success invoke
+2017-04-15 19:04:46,789 - fox success invoke
+2017-04-15 19:04:46,789 - fox success invoke
+2017-04-15 19:04:47,803 - fox success invoke
+2017-04-15 19:04:47,803 - fox success invoke
+2017-04-15 19:04:48,817 - fox success invoke
+2017-04-15 19:04:48,817 - fox success invoke
+2017-04-15 19:04:49,410 - fox success invoke
+2017-04-15 19:04:49,410 - heart beat success
+2017-04-15 19:04:49,831 - fox success invoke
+2017-04-15 19:04:49,831 - fox success invoke
+2017-04-15 19:04:50,845 - fox success invoke
+2017-04-15 19:04:50,845 - fox success invoke
+2017-04-15 19:04:51,846 - fox success invoke
+2017-04-15 19:04:51,846 - fox success invoke
+2017-04-15 19:04:52,848 - fox success invoke
+2017-04-15 19:04:52,848 - fox success invoke
+2017-04-15 19:04:53,862 - fox success invoke
+2017-04-15 19:04:53,862 - fox success invoke
+2017-04-15 19:04:54,424 - fox success invoke
+2017-04-15 19:04:54,424 - heart beat success
+2017-04-15 19:04:54,876 - fox success invoke
+2017-04-15 19:04:54,876 - fox success invoke
+2017-04-15 19:04:55,876 - fox success invoke
+2017-04-15 19:04:55,876 - fox success invoke
+2017-04-15 19:59:22,131 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@17a83597: startup date [Sat Apr 15 19:59:22 CST 2017]; root of context hierarchy
+2017-04-15 19:59:22,209 - Loading XML bean definitions from class path resource [application.xml]
+2017-04-15 19:59:22,506 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4e499fd0: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2017-04-15 19:59:22,537 - Service Initialized
+2017-04-15 19:59:22,537 - serviceProxy:com.github.wenbo2018.fox.remoting.invoker.proxy.FilterRemotingServiceProxy@6953dc4b
+2017-04-15 19:59:22,552 - start to initialize zookeeper client:202.38.214.166
+2017-04-15 19:59:22,584 - maxRetries too large (2147483647). Pinning to 29
+2017-04-15 19:59:22,677 - Starting
+2017-04-15 19:59:22,693 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-04-15 19:59:22,693 - Client environment:host.name=SKY-20150908HA1
+2017-04-15 19:59:22,693 - Client environment:java.version=1.7.0_80
+2017-04-15 19:59:22,693 - Client environment:java.vendor=Oracle Corporation
+2017-04-15 19:59:22,693 - Client environment:java.home=D:\Program Files\Java\jdk1.7.0_80\jre
+2017-04-15 19:59:22,693 - Client environment:java.class.path=D:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\deploy.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\access-bridge-64.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\dnsns.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\jaccess.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\localedata.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunec.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunjce_provider.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunmscapi.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\zipfs.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\javaws.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfxrt.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\management-agent.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\plugin.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;G:\java_project\fox\fox-demo\fox-client\target\classes;G:\maven\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;G:\maven\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;G:\maven\org\springframework\spring-beans\3.1.2.RELEASE\spring-beans-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-expression\3.1.2.RELEASE\spring-expression-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-context-support\3.1.2.RELEASE\spring-context-support-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;G:\maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;G:\maven\org\springframework\spring-test\3.1.2.RELEASE\spring-test-3.1.2.RELEASE.jar;G:\java_project\fox\fox-spring\fox-spring-config\target\classes;G:\java_project\fox\fox-remoting\target\classes;G:\java_project\fox\fox-config\target\classes;G:\maven\cglib\cglib\3.1\cglib-3.1.jar;G:\maven\org\ow2\asm\asm\4.2\asm-4.2.jar;G:\maven\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;G:\java_project\fox\fox-registry-zookeeper\target\classes;G:\maven\org\slf4j\slf4j-log4j12\1.5.8\slf4j-log4j12-1.5.8.jar;G:\maven\org\slf4j\slf4j-api\1.5.8\slf4j-api-1.5.8.jar;G:\maven\log4j\log4j\1.2.14\log4j-1.2.14.jar;G:\maven\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;G:\maven\jline\jline\0.9.94\jline-0.9.94.jar;G:\maven\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;G:\maven\com\101tec\zkclient\0.4\zkclient-0.4.jar;G:\maven\org\apache\curator\curator-framework\2.7.1\curator-framework-2.7.1.jar;G:\maven\com\google\guava\guava\16.0.1\guava-16.0.1.jar;G:\maven\org\apache\curator\curator-client\2.7.1\curator-client-2.7.1.jar;G:\java_project\fox\fox-common\target\classes;G:\maven\io\netty\netty-all\4.0.26.Final\netty-all-4.0.26.Final.jar;G:\maven\com\dyuproject\protostuff\protostuff-core\1.0.9\protostuff-core-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-api\1.0.9\protostuff-api-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-runtime\1.0.9\protostuff-runtime-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-collectionschema\1.0.9\protostuff-collectionschema-1.0.9.jar;G:\maven\org\objenesis\objenesis\2.1\objenesis-2.1.jar;G:\maven\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;G:\maven\org\apache\commons\commons-collections4\4.0\commons-collections4-4.0.jar;G:\maven\com\caucho\hessian\3.1.5\hessian-3.1.5.jar;G:\maven\org\apache\curator\curator-recipes\2.7.1\curator-recipes-2.7.1.jar;G:\java_project\fox\fox-netty\target\classes;G:\java_project\fox\fox-cluster\target\classes;G:\java_project\fox\fox-demo\fox-api\target\classes;D:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.2.5\lib\idea_rt.jar
+2017-04-15 19:59:22,708 - Client environment:java.library.path=D:\Program Files\Java\jdk1.7.0_80\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_80\bin;D:\Program Files\Java\jdk1.7.0_80\jre\bin;d:\Program Files\MATLAB\R2014a\runtime\win64;d:\Program Files\MATLAB\R2014a\bin;d:\Program Files\MATLAB\R2014a\polyspace\bin;G:\apache-maven-3.3.9\bin;D:\Program Files\nodejs\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Users\Administrator\AppData\Roaming\npm;.
+2017-04-15 19:59:22,708 - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2017-04-15 19:59:22,708 - Client environment:java.compiler=<NA>
+2017-04-15 19:59:22,708 - Client environment:os.name=Windows 7
+2017-04-15 19:59:22,708 - Client environment:os.arch=amd64
+2017-04-15 19:59:22,708 - Client environment:os.version=6.1
+2017-04-15 19:59:22,708 - Client environment:user.name=Administrator
+2017-04-15 19:59:22,708 - Client environment:user.home=E:
+2017-04-15 19:59:22,708 - Client environment:user.dir=G:\java_project\fox
+2017-04-15 19:59:22,708 - Initiating client connection, connectString=202.38.214.166 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@3cb40c69
+2017-04-15 19:59:22,740 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-04-15 19:59:22,740 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
+2017-04-15 19:59:22,771 - Connected to an old server; r-o mode will be unavailable
+2017-04-15 19:59:22,771 - Session establishment complete on server 202.38.214.166/202.38.214.166:2181, sessionid = 0x15b71795a8f0003, negotiated timeout = 30000
+2017-04-15 19:59:22,771 - State change: CONNECTED
+2017-04-15 19:59:22,786 - succeed to create zookeeper client, connected:true
+2017-04-15 19:59:22,786 - succeed to initialize zookeeper client:202.38.214.166
+2017-04-15 19:59:22,849 - NettyClientFactory is initial
+2017-04-15 19:59:22,849 - zookeeper state changed to CONNECTED
+2017-04-15 19:59:23,036 - successed get service adress from service center:202.38.214.166:4019
+2017-04-15 19:59:23,145 - FOX SERVICE SUCCESS CONNECT
+2017-04-15 19:59:23,176 - fox success invoke
+2017-04-15 19:59:23,192 - fox success invoke
+2017-04-15 19:59:24,315 - fox success invoke
+2017-04-15 19:59:24,315 - fox success invoke
+2017-04-15 19:59:25,318 - fox success invoke
+2017-04-15 19:59:25,318 - fox success invoke
+2017-04-15 19:59:26,332 - fox success invoke
+2017-04-15 19:59:26,332 - fox success invoke
+2017-04-15 19:59:27,346 - fox success invoke
+2017-04-15 19:59:27,346 - fox success invoke
+2017-04-15 19:59:27,862 - fox success invoke
+2017-04-15 19:59:27,862 - heart beat success
+2017-04-15 19:59:28,348 - fox success invoke
+2017-04-15 19:59:28,348 - fox success invoke
+2017-04-15 19:59:29,362 - fox success invoke
+2017-04-15 19:59:29,362 - fox success invoke
+2017-04-15 19:59:30,376 - fox success invoke
+2017-04-15 19:59:30,376 - fox success invoke
+2017-04-15 19:59:31,390 - fox success invoke
+2017-04-15 19:59:31,390 - fox success invoke
+2017-04-15 19:59:32,404 - fox success invoke
+2017-04-15 19:59:32,404 - fox success invoke
+2017-04-15 19:59:32,872 - fox success invoke
+2017-04-15 19:59:32,872 - heart beat success
+2017-04-15 19:59:33,418 - fox success invoke
+2017-04-15 19:59:33,418 - fox success invoke
+2017-04-15 19:59:34,432 - fox success invoke
+2017-04-15 19:59:34,432 - fox success invoke
+2017-04-15 20:05:15,152 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@20d547f8: startup date [Sat Apr 15 20:05:15 CST 2017]; root of context hierarchy
+2017-04-15 20:05:15,199 - Loading XML bean definitions from class path resource [application.xml]
+2017-04-15 20:05:15,480 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3b0cdee: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2017-04-15 20:05:15,527 - Service Initialized
+2017-04-15 20:05:15,527 - serviceProxy:com.github.wenbo2018.fox.remoting.invoker.proxy.FilterRemotingServiceProxy@c6824d9
+2017-04-15 20:05:15,542 - start to initialize zookeeper client:202.38.214.166
+2017-04-15 20:05:15,573 - maxRetries too large (2147483647). Pinning to 29
+2017-04-15 20:05:15,667 - Starting
+2017-04-15 20:05:15,683 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-04-15 20:05:15,683 - Client environment:host.name=SKY-20150908HA1
+2017-04-15 20:05:15,683 - Client environment:java.version=1.7.0_80
+2017-04-15 20:05:15,683 - Client environment:java.vendor=Oracle Corporation
+2017-04-15 20:05:15,683 - Client environment:java.home=D:\Program Files\Java\jdk1.7.0_80\jre
+2017-04-15 20:05:15,683 - Client environment:java.class.path=D:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\deploy.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\access-bridge-64.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\dnsns.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\jaccess.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\localedata.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunec.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunjce_provider.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunmscapi.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\zipfs.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\javaws.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jfxrt.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\management-agent.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\plugin.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;G:\java_project\fox\fox-demo\fox-client\target\classes;G:\maven\org\springframework\spring-context\3.1.2.RELEASE\spring-context-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-aop\3.1.2.RELEASE\spring-aop-3.1.2.RELEASE.jar;G:\maven\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;G:\maven\org\springframework\spring-beans\3.1.2.RELEASE\spring-beans-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-expression\3.1.2.RELEASE\spring-expression-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-asm\3.1.2.RELEASE\spring-asm-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-context-support\3.1.2.RELEASE\spring-context-support-3.1.2.RELEASE.jar;G:\maven\org\springframework\spring-core\3.1.2.RELEASE\spring-core-3.1.2.RELEASE.jar;G:\maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;G:\maven\org\springframework\spring-test\3.1.2.RELEASE\spring-test-3.1.2.RELEASE.jar;G:\java_project\fox\fox-spring\fox-spring-config\target\classes;G:\java_project\fox\fox-remoting\target\classes;G:\java_project\fox\fox-config\target\classes;G:\maven\cglib\cglib\3.1\cglib-3.1.jar;G:\maven\org\ow2\asm\asm\4.2\asm-4.2.jar;G:\maven\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;G:\java_project\fox\fox-registry-zookeeper\target\classes;G:\maven\org\slf4j\slf4j-log4j12\1.5.8\slf4j-log4j12-1.5.8.jar;G:\maven\org\slf4j\slf4j-api\1.5.8\slf4j-api-1.5.8.jar;G:\maven\log4j\log4j\1.2.14\log4j-1.2.14.jar;G:\maven\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;G:\maven\jline\jline\0.9.94\jline-0.9.94.jar;G:\maven\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;G:\maven\com\101tec\zkclient\0.4\zkclient-0.4.jar;G:\maven\org\apache\curator\curator-framework\2.7.1\curator-framework-2.7.1.jar;G:\maven\com\google\guava\guava\16.0.1\guava-16.0.1.jar;G:\maven\org\apache\curator\curator-client\2.7.1\curator-client-2.7.1.jar;G:\java_project\fox\fox-common\target\classes;G:\maven\io\netty\netty-all\4.0.26.Final\netty-all-4.0.26.Final.jar;G:\maven\com\dyuproject\protostuff\protostuff-core\1.0.9\protostuff-core-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-api\1.0.9\protostuff-api-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-runtime\1.0.9\protostuff-runtime-1.0.9.jar;G:\maven\com\dyuproject\protostuff\protostuff-collectionschema\1.0.9\protostuff-collectionschema-1.0.9.jar;G:\maven\org\objenesis\objenesis\2.1\objenesis-2.1.jar;G:\maven\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;G:\maven\org\apache\commons\commons-collections4\4.0\commons-collections4-4.0.jar;G:\maven\com\caucho\hessian\3.1.5\hessian-3.1.5.jar;G:\maven\org\apache\curator\curator-recipes\2.7.1\curator-recipes-2.7.1.jar;G:\java_project\fox\fox-netty\target\classes;G:\java_project\fox\fox-cluster\target\classes;G:\java_project\fox\fox-demo\fox-api\target\classes;D:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.2.5\lib\idea_rt.jar
+2017-04-15 20:05:15,698 - Client environment:java.library.path=D:\Program Files\Java\jdk1.7.0_80\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_80\bin;D:\Program Files\Java\jdk1.7.0_80\jre\bin;d:\Program Files\MATLAB\R2014a\runtime\win64;d:\Program Files\MATLAB\R2014a\bin;d:\Program Files\MATLAB\R2014a\polyspace\bin;G:\apache-maven-3.3.9\bin;D:\Program Files\nodejs\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Users\Administrator\AppData\Roaming\npm;.
+2017-04-15 20:05:15,698 - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2017-04-15 20:05:15,698 - Client environment:java.compiler=<NA>
+2017-04-15 20:05:15,698 - Client environment:os.name=Windows 7
+2017-04-15 20:05:15,698 - Client environment:os.arch=amd64
+2017-04-15 20:05:15,698 - Client environment:os.version=6.1
+2017-04-15 20:05:15,698 - Client environment:user.name=Administrator
+2017-04-15 20:05:15,698 - Client environment:user.home=E:
+2017-04-15 20:05:15,698 - Client environment:user.dir=G:\java_project\fox
+2017-04-15 20:05:15,698 - Initiating client connection, connectString=202.38.214.166 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@6811935e
+2017-04-15 20:05:15,729 - Opening socket connection to server 202.38.214.166/202.38.214.166:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-04-15 20:05:15,729 - Socket connection established to 202.38.214.166/202.38.214.166:2181, initiating session
+2017-04-15 20:05:15,761 - Connected to an old server; r-o mode will be unavailable
+2017-04-15 20:05:15,761 - Session establishment complete on server 202.38.214.166/202.38.214.166:2181, sessionid = 0x15b71795a8f0005, negotiated timeout = 30000
+2017-04-15 20:05:15,776 - State change: CONNECTED
+2017-04-15 20:05:15,776 - succeed to create zookeeper client, connected:true
+2017-04-15 20:05:15,776 - succeed to initialize zookeeper client:202.38.214.166
+2017-04-15 20:05:15,807 - zookeeper state changed to CONNECTED
+2017-04-15 20:05:15,839 - NettyClientFactory is initial
+2017-04-15 20:05:16,151 - successed get service adress from service center:202.38.214.166:4019
+2017-04-15 20:05:16,229 - FOX SERVICE SUCCESS CONNECT
+2017-04-15 20:05:16,275 - fox success invoke
+2017-04-15 20:05:16,275 - fox success invoke
+2017-04-15 20:05:17,403 - fox success invoke
+2017-04-15 20:05:17,403 - fox success invoke
+2017-04-15 20:05:18,417 - fox success invoke
+2017-04-15 20:05:18,417 - fox success invoke
+2017-04-15 20:05:19,431 - fox success invoke
+2017-04-15 20:05:19,431 - fox success invoke
+2017-04-15 20:05:20,445 - fox success invoke
+2017-04-15 20:05:20,445 - fox success invoke
+2017-04-15 20:05:20,866 - fox success invoke
+2017-04-15 20:05:20,866 - heart beat success
+2017-04-15 20:05:21,459 - fox success invoke
+2017-04-15 20:05:21,459 - fox success invoke
+2017-04-15 20:05:22,473 - fox success invoke
+2017-04-15 20:05:22,473 - fox success invoke
+2017-04-15 20:05:23,487 - fox success invoke
+2017-04-15 20:05:23,487 - fox success invoke
+2017-04-15 20:05:24,501 - fox success invoke
+2017-04-15 20:05:24,501 - fox success invoke
+2017-04-15 20:05:25,515 - fox success invoke
+2017-04-15 20:05:25,515 - fox success invoke
+2017-04-15 20:05:25,873 - fox success invoke
+2017-04-15 20:05:25,873 - heart beat success
+2017-04-15 20:05:26,529 - fox success invoke
+2017-04-15 20:05:26,529 - fox success invoke
+2017-04-15 20:05:27,543 - fox success invoke
+2017-04-15 20:05:27,543 - fox success invoke
+2017-04-15 20:05:28,548 - fox success invoke
+2017-04-15 20:05:28,548 - fox success invoke

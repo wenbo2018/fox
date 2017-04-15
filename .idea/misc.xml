@@ -6,6 +6,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/../tiny-mvc-demo" />
     <file type="web" url="file://$PROJECT_DIR$/../tiny-mvc/demo" />
+    <file type="web" url="file://$PROJECT_DIR$/../WebS/webs-demo" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -17,6 +18,9 @@
         <option value="$PROJECT_DIR$/../Jconf/jconf-client/pom.xml" />
         <option value="$PROJECT_DIR$/../Jconf/jconf-core/pom.xml" />
         <option value="$PROJECT_DIR$/../Jconf/jconf-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-boot-learning/pom.xml" />
+        <option value="$PROJECT_DIR$/../WebS/pom.xml" />
+        <option value="$PROJECT_DIR$/fox-spring/fox-spring-config/pom.xml" />
       </list>
     </option>
   </component>
