@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="motan-manager:war">
+    <output-path>$PROJECT_DIR$/../motan/motan-manager/target</output-path>
+    <root id="archive" name="motan-manager-0.3.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="motan-manager:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -16,15 +16,17 @@ It contains three key parts, which include:
 You only need to configure your zookeeper address in the appkeys file;
 
 appkeys file address:
-
+```xml
 /data/app/appkeys.properties(Linux)
 
 C:/data/app/appkeys.properties(WIN)
 
-**Configuration format**:
+```
+
+**appkeys file config**:
 
 ```xml
-fox.registry.adress="zk server ip"
+fox.registry.adress="127.0.0.1,127.0.0.2"
 
 fox.registry.type=zookeeper
 
@@ -34,6 +36,7 @@ fox.registry.ip="your rpc server ip"
 
 ## Quick Start
 when you need invoke service ,you can just do as following:
+
 
 ```xml
          <bean id="helloService" class="ServiceProxy" init-method="init">
