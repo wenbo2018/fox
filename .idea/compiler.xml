@@ -32,7 +32,6 @@
         <module name="fox-monitor-api" />
         <module name="fox-monitor-default" />
         <module name="fox-netty" />
-        <module name="fox-registry-consul" />
         <module name="fox-registry-redis" />
         <module name="fox-registry-zookeeper" />
         <module name="fox-remoting" />

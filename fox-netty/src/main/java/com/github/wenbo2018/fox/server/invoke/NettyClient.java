@@ -86,7 +86,6 @@ public class NettyClient extends AbstractClient {
             @Override
             public void operationComplete(ChannelFuture future) throws Exception {
                 if (future.isSuccess()) {
-                    LOGGER.info("fox success invoke");
                     return;
                 }
             }

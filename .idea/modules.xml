@@ -15,7 +15,6 @@
       <module fileurl="file://$PROJECT_DIR$/fox-monitor/fox-monitor-default/fox-monitor-default.iml" filepath="$PROJECT_DIR$/fox-monitor/fox-monitor-default/fox-monitor-default.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-netty/fox-netty.iml" filepath="$PROJECT_DIR$/fox-netty/fox-netty.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-parent.iml" filepath="$PROJECT_DIR$/fox-parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fox-registry-consul/fox-registry-consul.iml" filepath="$PROJECT_DIR$/fox-registry-consul/fox-registry-consul.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-registry-redis/fox-registry-redis.iml" filepath="$PROJECT_DIR$/fox-registry-redis/fox-registry-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-registry-zookeeper/fox-registry-zookeeper.iml" filepath="$PROJECT_DIR$/fox-registry-zookeeper/fox-registry-zookeeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-remoting/fox-remoting.iml" filepath="$PROJECT_DIR$/fox-remoting/fox-remoting.iml" />

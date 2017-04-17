@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 
 public class TestClient {
-        static  int i=100000;
+        static  int i=Integer.MAX_VALUE;
         public static void main(String[] args) {
 
             ApplicationContext context= new ClassPathXmlApplicationContext("application.xml");

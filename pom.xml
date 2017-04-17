@@ -90,13 +90,13 @@
         <module>fox-registry-zookeeper</module>
         <module>fox-registry-redis</module>
         <module>fox-demo</module>
-        <module>fox-registry-consul</module>
         <module>fox-config</module>
         <module>fox</module>
         <module>fox-admin</module>
         <module>fox-cluster</module>
         <module>fox-monitor</module>
         <module>fox-spring</module>
+        <module>fox-spring/fox-spring-config</module>
     </modules>
 
     <build>
