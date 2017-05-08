@@ -88,9 +88,7 @@
         <module>fox-netty</module>
         <module>fox-remoting</module>
         <module>fox-registry-zookeeper</module>
-        <module>fox-registry-redis</module>
         <module>fox-demo</module>
-        <module>fox-registry-consul</module>
         <module>fox-config</module>
         <module>fox</module>
         <module>fox-admin</module>

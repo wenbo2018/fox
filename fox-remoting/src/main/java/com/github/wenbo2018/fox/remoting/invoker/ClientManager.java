@@ -1,5 +1,6 @@
 package com.github.wenbo2018.fox.remoting.invoker;
 
+import com.github.wenbo2018.fox.common.extension.ExtensionServiceLoader;
 import com.github.wenbo2018.fox.remoting.invoker.config.InvokerConfig;
 import com.github.wenbo2018.fox.registry.listener.ServiceProviderChangeListener;
 import com.github.wenbo2018.fox.common.HostInfo;
@@ -7,7 +8,6 @@ import com.github.wenbo2018.fox.remoting.common.ConnectInfo;
 import com.github.wenbo2018.fox.remoting.invoker.api.ClientFactory;
 import com.github.wenbo2018.fox.remoting.invoker.task.HeartBeatTask;
 import com.github.wenbo2018.fox.remoting.invoker.cluster.Route;
-import com.github.wenbo2018.fox.common.extension.UserServiceLoader;
 import com.github.wenbo2018.fox.common.util.CollectionUtil;
 import com.github.wenbo2018.fox.registry.RegistryEventListener;
 import com.github.wenbo2018.fox.registry.RegistryManager;
@@ -62,17 +62,11 @@ public class ClientManager {
     }
 
     private void init() {
-        clientFactory = UserServiceLoader.newExtension(ClientFactory.class);
+        clientFactory = ExtensionServiceLoader.newExtension(ClientFactory.class);
         clientFactory.init();
     }
 
-    /**
-     * 注册一个连接；
-     *
-     * @param invokerConfig
-     * @param host
-     * @param port
-     */
+
     public void registerClient(InvokerConfig invokerConfig, String host, int port) {
         ConnectInfo connectInfo = new ConnectInfo(host, port);
         Client client = selectConnect(connectInfo);
@@ -87,12 +81,7 @@ public class ClientManager {
         clientsMap.put(invokerConfig, clientList);
     }
 
-    /**
-     * 创建一个netty连接
-     *
-     * @param connectInfo
-     * @return
-     */
+
     public Client selectConnect(ConnectInfo connectInfo) {
         return clientFactory.getClient(connectInfo);
     }
@@ -110,7 +99,7 @@ public class ClientManager {
             }
             clients = clientsMap.get(invokerConfig);
         }
-        Route route = UserServiceLoader.getExtension(Route.class);
+        Route route = ExtensionServiceLoader.getExtension(Route.class);
         return route.route(clients, invokerConfig);
     }
 

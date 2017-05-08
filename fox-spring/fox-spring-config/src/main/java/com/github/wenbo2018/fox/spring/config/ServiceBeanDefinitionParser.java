@@ -66,7 +66,4 @@ public class ServiceBeanDefinitionParser implements BeanDefinitionParser {
 		parserContext.getRegistry().registerBeanDefinition(id, beanDefinition);
 		return beanDefinition;
 	}
-
-
-
 }
