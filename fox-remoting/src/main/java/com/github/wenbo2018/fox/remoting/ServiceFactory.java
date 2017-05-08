@@ -1,6 +1,6 @@
 package com.github.wenbo2018.fox.remoting;
 
-import com.github.wenbo2018.fox.common.extension.UserServiceLoader;
+import com.github.wenbo2018.fox.common.extension.ExtensionServiceLoader;
 import com.github.wenbo2018.fox.config.ConfigManagerLoader;
 import com.github.wenbo2018.fox.config.ConfigManager;
 import com.github.wenbo2018.fox.registry.Constants;
@@ -52,7 +52,7 @@ public class ServiceFactory {
 
     public static void addService(List<ProviderConfig<?>> providerConfigList) {
         publishService(providerConfigList);
-        List<Server> servers = UserServiceLoader.getExtensionList(Server.class);
+        List<Server> servers = ExtensionServiceLoader.getExtensionList(Server.class);
         ServerConfig serverConfig = null;
         if (CollectionUtils.isNotEmpty(providerConfigList)) {
             serverConfig = providerConfigList.get(0).getServerConfig();
@@ -79,7 +79,7 @@ public class ServiceFactory {
 
     public static void startUpServer(ServerConfig serverConfig) {
         serverConfig.setIp(configManager.getStringValue(Constants.FOX_REGISTRY_IP));
-        List<Server> servers = UserServiceLoader.getExtensionList(Server.class);
+        List<Server> servers = ExtensionServiceLoader.getExtensionList(Server.class);
         if (serverConfig != null) {
             for (Server server : servers) {
                 RequestProcessor requestProcessor = null;
@@ -115,7 +115,7 @@ public class ServiceFactory {
 
 
     public static void publishService(List<ProviderConfig<?>> providerConfigList) {
-        List<Registry> registryList = UserServiceLoader.getExtensionList(Registry.class);
+        List<Registry> registryList = ExtensionServiceLoader.getExtensionList(Registry.class);
         if (registryList.size() > 0) {
             if (providerConfigList != null) {
                 for (ProviderConfig config : providerConfigList) {

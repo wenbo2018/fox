@@ -1,6 +1,6 @@
 package com.github.wenbo2018.fox.remoting.provider.process;
 
-import com.github.wenbo2018.fox.common.extension.UserServiceLoader;
+import com.github.wenbo2018.fox.common.extension.ExtensionServiceLoader;
 import com.github.wenbo2018.fox.remoting.invoker.process.ThreadPoolResponseProcessor;
 import com.github.wenbo2018.fox.remoting.invoker.process.ResponseProcessor;
 
@@ -10,7 +10,7 @@ import com.github.wenbo2018.fox.remoting.invoker.process.ResponseProcessor;
 public class RequestProcessorFactory {
 
     public static RequestProcessor selectProcessor() {
-        RequestProcessor requestProcessor = UserServiceLoader.getExtension(RequestProcessor.class);
+        RequestProcessor requestProcessor = ExtensionServiceLoader.getExtension(RequestProcessor.class);
         if (requestProcessor != null) {
             return requestProcessor;
         } else {
@@ -19,7 +19,7 @@ public class RequestProcessorFactory {
     }
 
     public static ResponseProcessor selectResponseProcessor() {
-        ResponseProcessor responseProcessor = UserServiceLoader.getExtension(ResponseProcessor.class);
+        ResponseProcessor responseProcessor = ExtensionServiceLoader.getExtension(ResponseProcessor.class);
         if (responseProcessor != null) {
             return responseProcessor;
         } else {

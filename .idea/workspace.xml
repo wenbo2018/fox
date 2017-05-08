@@ -1,7 +1,542 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9892ea9e-d083-404e-86ed-c80436d7338a" name="Default" comment="" />
+    <list default="true" id="9892ea9e-d083-404e-86ed-c80436d7338a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_0_Beta1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_6_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_6_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_6_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_log4j2_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__com_fasterxml_classmate_1_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__junit_junit_4_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_39.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_assertj_assertj_core_2_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_freemarker_freemarker_2_3_25_incubating.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_4_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_json_json_20140107.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_projectlombok_lombok_1_12_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_3_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_4_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_spring_aop_4_3_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_spring_beans_4_3_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_spring_context_4_3_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_spring_core_4_3_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_spring_expression_4_3_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_spring_test_4_3_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_spring_web_4_3_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../spring-boot-learning/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/META-INF/services/com.github.wenbo2018.jconf.client.JconfConfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/META-INF/spring.handlers" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/META-INF/spring.schemas" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/Jconf$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/Jconf.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/JconfCache$InnerJconfCacheConfigChangeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/JconfCache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/JconfConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/client/CuratorClient$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/client/CuratorClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/client/CuratorConfigLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/client/CuratorEventListener$ConfigInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/client/CuratorEventListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/client/CuratorManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/client/DefaultEnsembleProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/exception/JconfException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/listener/ConfigChangeEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/listener/ConfigChangeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/listener/DefaultConfigChangeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/listener/JconfEventListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/com/github/wenbo2018/jconf/client/listener/api/ConfigInfoChangeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/test-classes/com/github/wenbo2018/jconf/client/CuratorClientTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-client/target/test-classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-common/target/classes/META-INF/services/com.github.wenbo2018.jconf.common.config.ConfigManager" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-common/target/classes/com/github/wenbo2018/jconf/common/config/ConfigManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-common/target/classes/com/github/wenbo2018/jconf/common/config/ConfigManagerLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-common/target/classes/com/github/wenbo2018/jconf/common/config/PropertiesFileConfigManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-common/target/classes/com/github/wenbo2018/jconf/common/extension/ExtensionLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-common/target/classes/com/github/wenbo2018/jconf/common/pool/DefaultThreadFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-common/target/classes/com/github/wenbo2018/jconf/common/util/FileUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-common/target/classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-core/target/classes/com/github/wenbo2018/jconf/core/CuratorClient$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-core/target/classes/com/github/wenbo2018/jconf/core/CuratorClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-core/target/classes/com/github/wenbo2018/jconf/core/DefaultEnsembleProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-core/target/classes/com/github/wenbo2018/jconf/core/registry/CuratorRegistry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-core/target/classes/com/github/wenbo2018/jconf/core/registry/Registry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/application-dev.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/application.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/com/github/wenbo2018/jconf/web/Application.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/com/github/wenbo2018/jconf/web/RegistryManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/com/github/wenbo2018/jconf/web/bean/CommonResultJson.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/com/github/wenbo2018/jconf/web/config/MybatisConf.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/com/github/wenbo2018/jconf/web/constants/Constants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/com/github/wenbo2018/jconf/web/constants/ReturnCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/com/github/wenbo2018/jconf/web/dao/ConfigDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/com/github/wenbo2018/jconf/web/dto/Config.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/com/github/wenbo2018/jconf/web/dto/PageModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/com/github/wenbo2018/jconf/web/dto/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/com/github/wenbo2018/jconf/web/listener/ConfigPushListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/com/github/wenbo2018/jconf/web/service/ConfigService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/com/github/wenbo2018/jconf/web/service/impl/ConfigServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/com/github/wenbo2018/jconf/web/web/ConfigController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/log4j2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/logback-spring.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/mapper/ConfigDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/css/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/css/bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/css/bootstrap-theme.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/css/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/css/bootstrap.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/bs/js/npm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/js/jconf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/js/pages.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/admins.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/bootstrap-3.3.5.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/fileUpload.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/fileinput.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/fileinput.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/fileinput_locale_zh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/jquery-2.1.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/jquery.pagination-1.2.7.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/jquery.pagination.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/bootstrap/css/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/bootstrap/css/bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/bootstrap/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/bootstrap/css/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fancy-zoom/css/fancyzoom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fancy-zoom/img/closebox.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fancy-zoom/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fancy-zoom/src/fancyzoom.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fancy-zoom/src/fancyzoom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/API.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/FAQ.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/NEWS.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/PLUGINS.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/ajax.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/annotating.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/arrow-down.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/arrow-left.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/arrow-right.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/arrow-up.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/data-eu-gdp-growth-1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/data-eu-gdp-growth-2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/data-eu-gdp-growth-3.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/data-eu-gdp-growth-4.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/data-eu-gdp-growth-5.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/data-eu-gdp-growth.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/data-japan-gdp-growth.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/data-usa-gdp-growth.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/graph-types.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/hs-2004-27-a-large_web.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/image.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/interacting-axes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/interacting.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/layout.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/multiple-axes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/navigate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/percentiles.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/pie.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/realtime.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/resize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/selection.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/setting-options.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/stacking.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/symbols.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/thresholding.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/time.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/tracking.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/turning-series.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/visitors.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/examples/zooming.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/excanvas.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/excanvas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/jquery.colorhelpers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/jquery.flot.crosshair.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/jquery.flot.fillbetween.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/jquery.flot.image.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/jquery.flot.navigate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/jquery.flot.pie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/jquery.flot.resize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/jquery.flot.selection.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/jquery.flot.stack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/jquery.flot.symbol.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/jquery.flot.threshold.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/flot/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/less/bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/less/core.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/less/fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/less/font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/less/icons.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/less/larger.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/less/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/less/mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/less/path.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/less/rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/less/spinning.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/less/stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/less/variables.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/scss/_bordered-pulled.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/scss/_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/scss/_fixed-width.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/scss/_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/scss/_larger.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/scss/_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/scss/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/scss/_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/scss/_rotated-flipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/scss/_spinning.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/scss/_stacked.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/scss/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/font-awesome/scss/font-awesome.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/changelog.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/agenda-views.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/basic-views.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/animated-overlay.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_flat_15_cd0a0a_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_glass_50_3baae3_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_highlight-hard_70_000000_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_highlight-soft_100_deedf7_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-icons_2694e8_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-icons_2e83ff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-icons_3d80b3_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-icons_72a7cf_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-icons_ffffff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/cupertino/jquery-ui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/default.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/external-dragging.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/gcal.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/json-events.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/json.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/selectable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/demos/theme.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/fullcalendar/fullcalendar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/fullcalendar/fullcalendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/fullcalendar/fullcalendar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/fullcalendar/fullcalendar.print.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/fullcalendar/gcal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/lib/jquery-ui.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/lib/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/fullcalendar-1.6.4/license.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/jQuery-Knob/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/jQuery-Knob/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/jQuery-Knob/js/jquery.knob.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/jQuery-Knob/knob.jquery.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/jquery-1.11.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/jquery.imagesloaded.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/jquery.isotope.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/jquery.masonry.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/lib/jquery.peity.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/stylesheets/elements.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/stylesheets/isotope.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/stylesheets/premium.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/static/theme/stylesheets/theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/web/admin/datas.ftl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/web/admin/index.ftl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/classes/web/admin/menu.ftl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Jconf/jconf-web/target/test-classes/com/github/wenbo2018/web/test/ConfigServiceTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javassist_javassist_3_12_0_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_faces_jsf_api_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_faces_jsf_impl_1_2_15.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_10.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_7_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-cluster/target/classes/META-INF/services/com.github.wenbo2018.fox.remoting.invoker.cluster.LoadBalance" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-cluster/target/classes/com/github/wenbo2018/fox/cluster/ClusterConstants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-cluster/target/classes/com/github/wenbo2018/fox/cluster/DefaultRoute.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-cluster/target/classes/com/github/wenbo2018/fox/cluster/balance/AbstractLoadBalance.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-cluster/target/classes/com/github/wenbo2018/fox/cluster/balance/LeastActiveLoadBalance.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-cluster/target/classes/com/github/wenbo2018/fox/cluster/balance/RandomLoadBalance.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/bean/InvokeRequest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/bean/InvokeResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/codec/AbstractSerializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/codec/Serializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/codec/SerializerFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/codec/hessian/HessianSerializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/codec/invoker/InvokerDecoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/codec/invoker/InvokerEncoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/codec/java/JavaSerializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/codec/protostuff/ProtostuffSerializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/codec/provider/ProviderDecoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/codec/provider/ProviderEncoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/common/FoxConstants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/extension/UserServiceLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/util/ClassUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/util/CollectionUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/util/SerializationUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-common/target/classes/com/github/wenbo2018/fox/common/util/StringUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-config/target/classes/com/github/wenbo2018/fox/config/AbstractConfigManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-config/target/classes/com/github/wenbo2018/fox/config/ConfigManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-config/target/classes/com/github/wenbo2018/fox/config/ConfigManagerLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-config/target/classes/com/github/wenbo2018/fox/config/PropertiesFileConfigManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-config/target/classes/com/github/wenbo2018/fox/config/util/FileUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-config/target/classes/spring/fox-service-1.0.xsd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-demo/fox-api/target/classes/com/github/wenbo2018/fox/demo/api/HelloService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-demo/fox-api/target/classes/com/github/wenbo2018/fox/demo/api/dto/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-demo/fox-api/target/classes/com/github/wenbo2018/fox/demo/api/dto/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-demo/fox-client/target/classes/application.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-demo/fox-client/target/classes/com/github/wenbo2018/fox/demo/client/TestClient$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-demo/fox-client/target/classes/com/github/wenbo2018/fox/demo/client/TestClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-demo/fox-client/target/classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-demo/fox-client/target/test-classes/bean.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-demo/fox-client/target/test-classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-demo/fox-server/target/classes/bean.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-demo/fox-server/target/classes/com/github/wenbo2018/fox/demo/server/HelloServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-demo/fox-server/target/classes/com/github/wenbo2018/fox/demo/server/TestServer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-demo/fox-server/target/classes/com/github/wenbo2018/fox/demo/server/UserServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-demo/fox-server/target/classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-netty/target/classes/com/github/wenbo2018/fox/server/invoke/ClientChannelInitializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-netty/target/classes/com/github/wenbo2018/fox/server/invoke/FutureMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-netty/target/classes/com/github/wenbo2018/fox/server/invoke/NettyClient$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-netty/target/classes/com/github/wenbo2018/fox/server/invoke/NettyClient$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-netty/target/classes/com/github/wenbo2018/fox/server/invoke/NettyClient$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-netty/target/classes/com/github/wenbo2018/fox/server/invoke/NettyClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-netty/target/classes/com/github/wenbo2018/fox/server/invoke/NettyClientFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-netty/target/classes/com/github/wenbo2018/fox/server/invoke/NettyClientHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-netty/target/classes/com/github/wenbo2018/fox/server/provider/NettyChannel$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-netty/target/classes/com/github/wenbo2018/fox/server/provider/NettyChannel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-netty/target/classes/com/github/wenbo2018/fox/server/provider/NettyServer$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-netty/target/classes/com/github/wenbo2018/fox/server/provider/NettyServer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-netty/target/classes/com/github/wenbo2018/fox/server/provider/NettyServerHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-netty/target/classes/com/github/wenbo2018/fox/server/provider/ServerChannelInitializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-consul/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-consul/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-consul/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-consul/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-consul/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-consul/fox-registry-consul.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-consul/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-consul/src/main/java/com/github/wenbo2018/fox/registry/consul/Constants.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-redis/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-redis/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-redis/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-redis/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-redis/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-redis/fox-registry-redis.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-redis/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-redis/src/main/java/com/github/wenbo2018/fox/RedisRegistry.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-redis/src/test/java/com/com.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-redis/src/test/java/com/spring-rpc/AppTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-zookeeper/target/classes/com/github/wenbo2018/fox/registry/zookeeper/Constants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-zookeeper/target/classes/com/github/wenbo2018/fox/registry/zookeeper/CuratorClient$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-zookeeper/target/classes/com/github/wenbo2018/fox/registry/zookeeper/CuratorClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-zookeeper/target/classes/com/github/wenbo2018/fox/registry/zookeeper/CuratorEventListener$PathInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-zookeeper/target/classes/com/github/wenbo2018/fox/registry/zookeeper/CuratorEventListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-zookeeper/target/classes/com/github/wenbo2018/fox/registry/zookeeper/CuratorRegistry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-zookeeper/target/classes/com/github/wenbo2018/fox/registry/zookeeper/DefaultEnsembleProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-registry-zookeeper/target/classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/META-INF/services/com.github.wenbo2018.fox.registry.Registry" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/META-INF/services/com.github.wenbo2018.fox.remoting.invoker.api.Client" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/META-INF/services/com.github.wenbo2018.fox.remoting.invoker.api.ClientFactory" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/META-INF/services/com.github.wenbo2018.fox.remoting.invoker.cluster.Route" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/META-INF/services/com.github.wenbo2018.fox.remoting.invoker.handler.Filter" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/META-INF/services/com.github.wenbo2018.fox.remoting.provider.api.Server" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/common/HostInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/registry/Constants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/registry/DefaultRegistryConfigManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/registry/DefaultServiceChangeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/registry/Registry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/registry/RegistryConfigManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/registry/RegistryEventListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/registry/RegistryManager$InnerServerInfoListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/registry/RegistryManager$InnerServiceProviderChangeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/registry/RegistryManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/registry/ServerInfoListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/registry/ServiceChangeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/registry/exception/RegistryException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/registry/listener/ServiceProviderChangeEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/registry/listener/ServiceProviderChangeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/ServiceFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/common/ConnectInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/common/Constants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/common/ServerInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/enums/ReturnEnum.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/exception/AuthorityException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/exception/HeartBeatExcepion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/exception/RpcException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/exception/TimeOutException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/AbstractClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/ClientManager$InnerServiceProviderChangeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/ClientManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/DefaultInvokerContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/InvokeContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/InvokerBootStrap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/RemoteServiceCall.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/ServiceInvocationRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/api/AsyncProxyCallback.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/api/CallFuture.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/api/Client.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/api/ClientFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/api/Seeion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/api/ServiceProxy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/async/Callback.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/async/CallbackFuture.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/async/RemoteInvocationBean.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/cluster/LoadBalance.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/cluster/Route.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/config/InvokerCfg.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/config/InvokerConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/filter/AuthorityFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/filter/InvokerFilterWrapper$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/filter/InvokerFilterWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/filter/MonitorFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/filter/RemoteCallInvokeFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/handler/Filter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/handler/ServiceInvocationHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/process/ResponseProcessor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/process/ThreadPoolResponseProcessor$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/process/ThreadPoolResponseProcessor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/proxy/AbstractRemotingServiceProxy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/proxy/DefaultRemotingServiceProxy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/proxy/FilterRemotingServiceProxy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/proxy/FilterServiceInvocationProxy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/proxy/ServiceInvocationProxy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/proxy/ServiceProxyLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/task/HeartBeatTask$HeartBeatStat.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/invoker/task/HeartBeatTask.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/provider/AbstractServer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/provider/ProviderBootStrap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/provider/api/Server.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/provider/api/ThreadPool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/provider/async/AsyncServiceRunnable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/provider/config/ProviderConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/provider/config/ServerBean.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/provider/config/ServerConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/provider/config/SingleServiceBean.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/provider/process/RequestProcessor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/provider/process/RequestProcessorFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/provider/process/ServiceProviderChannel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/provider/process/ThreadPoolRequestProcessor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fox-remoting/target/classes/com/github/wenbo2018/fox/remoting/provider/util/NetUtil.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_2.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_4.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_2_1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/fox-common/src/main/java/com/github/wenbo2018/fox/common/extension/UserServiceLoader.java" afterPath="$PROJECT_DIR$/fox-common/src/main/java/com/github/wenbo2018/fox/common/extension/ExtensionServiceLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Jconf/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Jconf/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Jconf/Jconf-parent.iml" afterPath="$PROJECT_DIR$/../Jconf/Jconf-parent.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Jconf/jconf-common/jconf-common.iml" afterPath="$PROJECT_DIR$/../Jconf/jconf-common/jconf-common.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-admin/fox-admin.iml" afterPath="$PROJECT_DIR$/fox-admin/fox-admin.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-cluster/fox-cluster.iml" afterPath="$PROJECT_DIR$/fox-cluster/fox-cluster.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-cluster/src/main/java/com/github/wenbo2018/fox/cluster/DefaultRoute.java" afterPath="$PROJECT_DIR$/fox-cluster/src/main/java/com/github/wenbo2018/fox/cluster/DefaultRoute.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-common/fox-common.iml" afterPath="$PROJECT_DIR$/fox-common/fox-common.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-config/fox-config.iml" afterPath="$PROJECT_DIR$/fox-config/fox-config.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-config/src/main/java/com/github/wenbo2018/fox/config/ConfigManagerLoader.java" afterPath="$PROJECT_DIR$/fox-config/src/main/java/com/github/wenbo2018/fox/config/ConfigManagerLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-demo/fox-api/fox-api.iml" afterPath="$PROJECT_DIR$/fox-demo/fox-api/fox-api.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-demo/fox-client/fox-client.iml" afterPath="$PROJECT_DIR$/fox-demo/fox-client/fox-client.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-demo/fox-server/fox-server.iml" afterPath="$PROJECT_DIR$/fox-demo/fox-server/fox-server.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-monitor/fox-monitor-api/fox-monitor-api.iml" afterPath="$PROJECT_DIR$/fox-monitor/fox-monitor-api/fox-monitor-api.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-monitor/fox-monitor-default/fox-monitor-default.iml" afterPath="$PROJECT_DIR$/fox-monitor/fox-monitor-default/fox-monitor-default.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-netty/fox-netty.iml" afterPath="$PROJECT_DIR$/fox-netty/fox-netty.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-registry-zookeeper/fox-registry-zookeeper.iml" afterPath="$PROJECT_DIR$/fox-registry-zookeeper/fox-registry-zookeeper.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-remoting/fox-remoting.iml" afterPath="$PROJECT_DIR$/fox-remoting/fox-remoting.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/registry/RegistryManager.java" afterPath="$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/registry/RegistryManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/ServiceFactory.java" afterPath="$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/ServiceFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/ClientManager.java" afterPath="$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/ClientManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/proxy/ServiceProxyLoader.java" afterPath="$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/proxy/ServiceProxyLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/provider/process/RequestProcessorFactory.java" afterPath="$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/provider/process/RequestProcessorFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-spring/fox-spring-config/fox-spring-config.iml" afterPath="$PROJECT_DIR$/fox-spring/fox-spring-config/fox-spring-config.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ServiceBeanDefinitionParser.java" afterPath="$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ServiceBeanDefinitionParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ServiceProxy.java" afterPath="$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ServiceProxy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/loader/CommonNamespaceHandler.java" afterPath="$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/loader/CommonNamespaceHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/resources/com/github/wenbo2018/fox/fox/config/fox-service-1.0.xsd" afterPath="$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/resources/com/github/wenbo2018/fox/fox/config/fox-service-1.0.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fox/fox.iml" afterPath="$PROJECT_DIR$/fox/fox.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/info.log" afterPath="$PROJECT_DIR$/logs/info.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../spring-boot-learning/spring-boot-learning.iml" afterPath="$PROJECT_DIR$/../spring-boot-learning/spring-boot-learning.iml" />
+    </list>
     <ignored path="fox-parent.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,6 +572,7 @@
     <ignored path="$PROJECT_DIR$/../WebS/target/" />
     <ignored path="$PROJECT_DIR$/fox-spring/target/" />
     <ignored path="$PROJECT_DIR$/fox-spring/fox-spring-config/target/" />
+    <ignored path="$PROJECT_DIR$/../Jconf/jconf-common/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,110 +596,12 @@
     <favorites_list name="fox-parent" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ReferenceProxy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ReferenceProxy.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InvokerBeanDefinitionParserLoader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/InvokerBeanDefinitionParserLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BeanDefinitionParserLoader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/loader/BeanDefinitionParserLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommonBeanDefinitionParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/loader/CommonBeanDefinitionParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommonNamespaceHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/loader/CommonNamespaceHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../spring-boot-learning/src/main/java/com/github/wenbo2018/springboot/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../spring-boot-learning/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HeartBeatTask.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/task/HeartBeatTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="133" column="26" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyApplicationPreparedEventListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../spring-boot-learning/src/main/java/com/github/wenbo2018/springboot/listen/MyApplicationPreparedEventListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApplicationStartedEventListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../spring-boot-learning/src/main/java/com/github/wenbo2018/springboot/listen/ApplicationStartedEventListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="313">
+              <caret line="92" column="28" lean-forward="true" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -189,17 +627,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Jconf/README.md" />
-        <option value="$PROJECT_DIR$/../Jconf/jconf-client/pom.xml" />
-        <option value="$PROJECT_DIR$/fox-common/pom.xml" />
-        <option value="$PROJECT_DIR$/fox-common/src/main/java/com/fox/rpc/common/codec/hessian/HessianSerializer.java" />
         <option value="$PROJECT_DIR$/fox-demo/pom.xml" />
         <option value="$PROJECT_DIR$/fox-demo/fox-api/pom.xml" />
         <option value="$PROJECT_DIR$/fox-admin/pom.xml" />
         <option value="$PROJECT_DIR$/fox-demo/fox-server/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/fox/pom.xml" />
         <option value="$PROJECT_DIR$/fox-remoting/src/main/resources/com/fox/spring/fox-service-1.0.xsd" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/fox-spring/pom.xml" />
         <option value="$PROJECT_DIR$/fox-spring/fox-spring-config/pom.xml" />
         <option value="$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/spring/config/ServiceRegister.java" />
@@ -231,7 +664,6 @@
         <option value="$PROJECT_DIR$/fox-remoting/src/main/resources/META-INF/services/com.github.wenbo2018.spring.config.loader.BeanDefinitionParserLoader" />
         <option value="$PROJECT_DIR$/fox-demo/fox-client/src/main/resources/application.xml" />
         <option value="$PROJECT_DIR$/fox-remoting/src/main/resources/META-INF/services/com.github.wenbo2018.fox.remoting.invoker.cluster.Route" />
-        <option value="$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/ClientManager.java" />
         <option value="$PROJECT_DIR$/fox-demo/fox-client/pom.xml" />
         <option value="$PROJECT_DIR$/fox-cluster/src/main/java/com/github/wenbo2018/fox/cluster/ClusterConstants.java" />
         <option value="$PROJECT_DIR$/fox-netty/src/main/java/com/github/wenbo2018/fox/server/invoke/NettyClient.java" />
@@ -240,6 +672,12 @@
         <option value="$PROJECT_DIR$/../spring-boot-learning/src/main/java/com/github/wenbo2018/springboot/Application.java" />
         <option value="$PROJECT_DIR$/../spring-boot-learning/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/task/HeartBeatTask.java" />
+        <option value="$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/resources/com/github/wenbo2018/fox/fox/config/fox-service-1.0.xsd" />
+        <option value="$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ServiceBeanDefinitionParser.java" />
+        <option value="$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ServiceProxy.java" />
+        <option value="$PROJECT_DIR$/fox-common/src/main/java/com/github/wenbo2018/fox/common/extension/ExtensionServiceLoader.java" />
+        <option value="$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/ClientManager.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -252,7 +690,6 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Bundled (Maven 3)" />
         <option name="userSettingsFile" value="G:\apache-maven-3.3.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -262,30 +699,13 @@
         <option name="lookForNested" value="true" />
       </MavenImportingSettings>
     </option>
-    <option name="enabledProfiles">
-      <list>
-        <option value="jdk-1.7" />
-      </list>
-    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -303,198 +723,13 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="fox-parent" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox-remoting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox-remoting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox-remoting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remoting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox-remoting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remoting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="invoker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox-remoting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="remoting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="invoker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fox-remoting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fox" />
@@ -503,7 +738,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -511,7 +745,7 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/fox-spring/fox-spring-config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -520,6 +754,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -536,6 +771,18 @@
       <recent name="G:\java_project\fox\fox-spring\fox-spring-config\src\main\resources" />
       <recent name="G:\java_project\fox\fox-spring\fox-spring-config\src\main\resources\com.fox.spring" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.TestClient">
     <configuration default="false" name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -602,9 +849,10 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -614,7 +862,7 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Java" />
@@ -622,7 +870,11 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -647,7 +899,11 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <method />
     </configuration>
@@ -845,6 +1101,7 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
       <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
@@ -861,27 +1118,6 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -909,6 +1145,19 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
       <envs />
       <method />
     </configuration>
@@ -1004,34 +1253,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -1042,7 +1263,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
+      <command value="run" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
@@ -1095,6 +1316,30 @@
         <item index="2" class="java.lang.String" itemvalue="Application.Application" />
       </list>
     </recent_temporary>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -1108,47 +1353,56 @@
       <updated>1491627883838</updated>
       <workItem from="1491627886216" duration="5427000" />
       <workItem from="1492244087412" duration="12678000" />
+      <workItem from="1493998988167" duration="3165000" />
+      <workItem from="1494205328826" duration="420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18105000" />
+    <option name="totallyTimeSpent" value="21690000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39687848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38684505" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17391305" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22585838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6008919" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30774748" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39687848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38684505" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5997552" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1172,182 +1426,369 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/logs/info.log">
+    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ServiceRegister.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1579">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-910">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ReferenceBeanDefinitionParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ProviderBeanDefinitionParserLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/InvokerBeanDefinitionParserLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ReferenceProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ServiceBeanDefinitionParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-common/src/main/java/com/github/wenbo2018/fox/common/codec/SerializerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-common/src/main/java/com/github/wenbo2018/fox/common/codec/Serializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-common/src/main/java/com/github/wenbo2018/fox/common/codec/AbstractSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-common/src/main/java/com/github/wenbo2018/fox/common/common/FoxConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fox-demo/fox-api/src/main/java/com/github/wenbo2018/fox/demo/api/dto/UserService.java">
+    <entry file="file://$PROJECT_DIR$/fox-common/src/main/java/com/github/wenbo2018/fox/common/extension/ExtensionServiceLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="-1347">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-cluster/src/main/java/com/github/wenbo2018/fox/cluster/ClusterConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="92" lean-forward="false" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-cluster/src/main/java/com/github/wenbo2018/fox/cluster/DefaultRoute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="31" column="62" lean-forward="true" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../spring-boot-learning/src/main/java/com/github/wenbo2018/web/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-131">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/common/HostInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/exception/TimeOutException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/api/CallFuture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/api/AsyncProxyCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/api/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/api/ClientFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/api/Seeion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/api/ServiceProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/async/CallbackFuture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fox-demo/fox-server/src/main/java/com/github/wenbo2018/fox/demo/server/TestServer.java">
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/async/RemoteInvocationBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="133">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fox-demo/fox-server/src/main/java/com/github/wenbo2018/fox/demo/server/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/async/Callback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        <state relative-caret-position="133">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/cluster/LoadBalance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/cluster/Route.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/process/ResponseProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/process/ThreadPoolResponseProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/ClientManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/DefaultInvokerContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/InvokeContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/InvokerBootStrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/RemoteServiceCall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/ServiceInvocationRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/AbstractClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/proxy/AbstractRemotingServiceProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/proxy/DefaultRemotingServiceProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/proxy/FilterRemotingServiceProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fox-demo/fox-server/src/main/java/com/github/wenbo2018/fox/demo/server/HelloServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/proxy/FilterServiceInvocationProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/resources/com/github/wenbo2018/fox/fox/config/fox-service-1.0.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/resources/META-INF/services/com.github.wenbo2018.fox.spring.config.loader.BeanDefinitionParserLoader">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/resources/META-INF/spring.handlers">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/resources/META-INF/spring.schemas">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="116" selection-start-line="0" selection-start-column="116" selection-end-line="0" selection-end-column="116" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/resources/META-INF/services/com.github.wenbo2018.spring.config.loader.BeanDefinitionParserLoader">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-common/src/main/java/com/github/wenbo2018/fox/common/util/ClassUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-demo/fox-client/src/main/java/com/github/wenbo2018/fox/demo/client/TestClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        <state relative-caret-position="133">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#594#1067#0" expanded="false" />
-            <element signature="e#1066#1067#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fox-demo/fox-client/src/main/resources/application.xml">
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/proxy/ServiceInvocationProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="133">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/proxy/ServiceProxyLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/handler/Filter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fox-demo/fox-server/src/main/resources/bean.xml">
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/handler/ServiceInvocationHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        <state relative-caret-position="133">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/resources/META-INF/services/com.github.wenbo2018.fox.remoting.invoker.api.ClientFactory">
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/provider/async/AsyncServiceRunnable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="57" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
+        <state relative-caret-position="19">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/resources/META-INF/services/com.github.wenbo2018.fox.remoting.invoker.handler.Filter">
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/provider/api/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="133">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/resources/META-INF/services/com.github.wenbo2018.fox.remoting.provider.api.Server">
+    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/provider/api/ThreadPool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="52" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/filter/MonitorFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="95">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/filter/AuthorityFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/filter/InvokerFilterWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/filter/RemoteCallInvokeFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="133">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1355,7 +1796,7 @@
     <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/resources/META-INF/services/com.github.wenbo2018.fox.remoting.invoker.api.Client">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="43" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1363,248 +1804,15 @@
     <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/resources/META-INF/services/com.github.wenbo2018.fox.registry.Registry">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="52" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-cluster/src/main/resources/META-INF/services/com.github.wenbo2018.fox.remoting.invoker.cluster.LoadBalance">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/ClientManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="112" column="44" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-demo/fox-client/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-common/src/main/java/com/github/wenbo2018/fox/common/extension/UserServiceLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-cluster/src/main/java/com/github/wenbo2018/fox/cluster/DefaultRoute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/resources/META-INF/services/com.github.wenbo2018.fox.remoting.invoker.cluster.Route">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/cluster/Route.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-cluster/src/main/java/com/github/wenbo2018/fox/cluster/ClusterConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="92" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-cluster/src/main/java/com/github/wenbo2018/fox/cluster/balance/AbstractLoadBalance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="48" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-demo/fox-server/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-netty/src/main/java/com/github/wenbo2018/fox/server/invoke/NettyClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
-          <folding>
-            <element signature="e#2335#2560#0" expanded="false" />
-            <element signature="e#2559#2560#0" expanded="false" />
-            <element signature="e#2990#3291#0" expanded="false" />
-            <element signature="e#3290#3291#0" expanded="false" />
-            <element signature="e#3810#4035#0" expanded="false" />
-            <element signature="e#4034#4035#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/fox-remoting.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1536">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/common/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ServiceProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ServiceRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ReferenceBeanDefinitionParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/ReferenceProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/InvokerBeanDefinitionParserLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/loader/BeanDefinitionParserLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/loader/CommonBeanDefinitionParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-spring/fox-spring-config/src/main/java/com/github/wenbo2018/fox/spring/config/loader/CommonNamespaceHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../spring-boot-learning/src/main/java/com/github/wenbo2018/springboot/listen/ApplicationStartedEventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../spring-boot-learning/src/main/java/com/github/wenbo2018/springboot/listen/MyApplicationPreparedEventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../spring-boot-learning/src/main/java/com/github/wenbo2018/springboot/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../spring-boot-learning/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fox-remoting/src/main/java/com/github/wenbo2018/fox/remoting/invoker/task/HeartBeatTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="133" column="26" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
+        <state relative-caret-position="313">
+          <caret line="92" column="28" lean-forward="true" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1628,7 +1836,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1663,7 +1871,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>jconf-client</last-edited>
+          <last-edited>Jconf-parent</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

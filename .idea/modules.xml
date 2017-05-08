@@ -16,14 +16,13 @@
       <module fileurl="file://$PROJECT_DIR$/fox-monitor/fox-monitor-default/fox-monitor-default.iml" filepath="$PROJECT_DIR$/fox-monitor/fox-monitor-default/fox-monitor-default.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-netty/fox-netty.iml" filepath="$PROJECT_DIR$/fox-netty/fox-netty.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-parent.iml" filepath="$PROJECT_DIR$/fox-parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fox-registry-consul/fox-registry-consul.iml" filepath="$PROJECT_DIR$/fox-registry-consul/fox-registry-consul.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fox-registry-redis/fox-registry-redis.iml" filepath="$PROJECT_DIR$/fox-registry-redis/fox-registry-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-registry-zookeeper/fox-registry-zookeeper.iml" filepath="$PROJECT_DIR$/fox-registry-zookeeper/fox-registry-zookeeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-remoting/fox-remoting.iml" filepath="$PROJECT_DIR$/fox-remoting/fox-remoting.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-server/fox-server.iml" filepath="$PROJECT_DIR$/fox-demo/fox-server/fox-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-spring/fox-spring.iml" filepath="$PROJECT_DIR$/fox-spring/fox-spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-spring/fox-spring-config/fox-spring-config.iml" filepath="$PROJECT_DIR$/fox-spring/fox-spring-config/fox-spring-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-client/jconf-client.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-client/jconf-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-common/jconf-common.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-common/jconf-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-core/jconf-core.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-core/jconf-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-web/jconf-web.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-web/jconf-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/../spring-boot-learning/spring-boot-learning.iml" filepath="$PROJECT_DIR$/../spring-boot-learning/spring-boot-learning.iml" />

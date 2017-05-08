@@ -1,6 +1,6 @@
 package com.github.wenbo2018.fox.config;
 
-import com.github.wenbo2018.fox.common.extension.UserServiceLoader;
+import com.github.wenbo2018.fox.common.extension.ExtensionServiceLoader;
 import org.apache.log4j.Logger;
 
 /**
@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
  */
 public class ConfigManagerLoader {
 
-    private static ConfigManager configManager = UserServiceLoader.getExtension(ConfigManager.class);
+    private static ConfigManager configManager = ExtensionServiceLoader.getExtension(ConfigManager.class);
 
     private static final Logger logger = Logger.getLogger(ConfigManagerLoader.class);
 

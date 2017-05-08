@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <resourceExtensions />
-    <wildcardResourcePatterns>
-      <entry name="!?*.java" />
-      <entry name="!?*.form" />
-      <entry name="!?*.class" />
-      <entry name="!?*.groovy" />
-      <entry name="!?*.scala" />
-      <entry name="!?*.flex" />
-      <entry name="!?*.kt" />
-      <entry name="!?*.clj" />
-      <entry name="!?*.aj" />
-    </wildcardResourcePatterns>
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+      <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
         <module name="fox" />
         <module name="fox-admin" />
         <module name="fox-api" />
@@ -32,13 +16,12 @@
         <module name="fox-monitor-api" />
         <module name="fox-monitor-default" />
         <module name="fox-netty" />
-        <module name="fox-registry-consul" />
-        <module name="fox-registry-redis" />
         <module name="fox-registry-zookeeper" />
         <module name="fox-remoting" />
         <module name="fox-server" />
         <module name="fox-spring-config" />
         <module name="jconf-client" />
+        <module name="jconf-common" />
         <module name="jconf-core" />
         <module name="jconf-web" />
         <module name="jconf-web (2)" />
@@ -72,13 +55,14 @@
       <module name="fox-spring-config" target="1.7" />
       <module name="fox-spring-config (1)" target="1.7" />
       <module name="jconf-client" target="1.7" />
+      <module name="jconf-common" target="1.7" />
       <module name="jconf-core" target="1.7" />
-      <module name="Jconf-parent" target="1.7" />
+      <module name="Jconf-parent" target="1.6" />
       <module name="jconf-parent" target="1.7" />
       <module name="jconf-web" target="1.7" />
       <module name="jconf-web (1)" target="1.7" />
       <module name="jconf-web (2)" target="1.7" />
-      <module name="spring-boot-learning" target="1.7" />
+      <module name="spring-boot-learning" target="1.6" />
       <module name="ting-mvc" target="1.7" />
       <module name="tinymvc-core" target="1.7" />
       <module name="webs" target="1.7" />

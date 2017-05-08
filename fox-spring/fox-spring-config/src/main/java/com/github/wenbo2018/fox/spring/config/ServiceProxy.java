@@ -12,7 +12,7 @@ import org.springframework.beans.factory.FactoryBean;
 /**
  * Created by shenwenbo on 16/7/21.
  */
-public class ServiceProxy implements FactoryBean{
+public class ServiceProxy implements FactoryBean {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ServiceProxy.class);
 
@@ -24,25 +24,24 @@ public class ServiceProxy implements FactoryBean{
 
     private Object service;
 
-    private Class<?>  interfaceClass;
+    private Class<?> interfaceClass;
 
     private ClassLoader classLoader;
-
 
     private String zkAddress;
 
     public void init() {
-        LOGGER.info("Service Initialized",serviceName);
+        LOGGER.info("Service Initialized", serviceName);
         if (StringUtils.isBlank(iface)) {
             throw new IllegalArgumentException("invalid interface:" + iface);
         }
         try {
             this.interfaceClass = ClassUtils.loadClass(classLoader, this.iface.trim());
         } catch (ClassNotFoundException e) {
-            LOGGER.error("class not found:{}"+interfaceClass,e);
+            LOGGER.error("class not found:{}" + interfaceClass, e);
         }
-        InvokerConfig invokerConfig= new InvokerConfig(this.interfaceClass,this.iface,this.serviceName,this.serializer);
-        this.service= ServiceFactory.getService(invokerConfig);
+        InvokerConfig invokerConfig = new InvokerConfig(this.interfaceClass, this.iface, this.serviceName, this.serializer);
+        this.service = ServiceFactory.getService(invokerConfig);
     }
 
     @Override

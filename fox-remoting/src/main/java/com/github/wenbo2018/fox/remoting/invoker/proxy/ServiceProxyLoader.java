@@ -1,6 +1,6 @@
 package com.github.wenbo2018.fox.remoting.invoker.proxy;
 
-import com.github.wenbo2018.fox.common.extension.UserServiceLoader;
+import com.github.wenbo2018.fox.common.extension.ExtensionServiceLoader;
 import com.github.wenbo2018.fox.remoting.invoker.api.ServiceProxy;
 import org.slf4j.LoggerFactory;
 
@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  */
 public class ServiceProxyLoader {
 
-    private static ServiceProxy serviceProxy = UserServiceLoader.getExtension(ServiceProxy.class);
+    private static ServiceProxy serviceProxy = ExtensionServiceLoader.getExtension(ServiceProxy.class);
 
     private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(ServiceProxy.class);
 

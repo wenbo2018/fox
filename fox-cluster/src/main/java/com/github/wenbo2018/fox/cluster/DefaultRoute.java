@@ -1,8 +1,8 @@
 package com.github.wenbo2018.fox.cluster;
 
+import com.github.wenbo2018.fox.common.extension.ExtensionServiceLoader;
 import com.github.wenbo2018.fox.remoting.invoker.config.InvokerConfig;
 import com.github.wenbo2018.fox.remoting.invoker.cluster.LoadBalance;
-import com.github.wenbo2018.fox.common.extension.UserServiceLoader;
 import com.github.wenbo2018.fox.remoting.invoker.api.Client;
 import com.github.wenbo2018.fox.remoting.invoker.cluster.Route;
 
@@ -19,10 +19,10 @@ public class DefaultRoute implements Route {
         if (clients != null && clients.size() > 0) {
             String loadBalanceType=invokerConfig.getLoadBalance();
             if (loadBalanceType!=null) {
-                loadBalance= UserServiceLoader.getExtensionLoader(LoadBalance.class)
+                loadBalance= ExtensionServiceLoader.getExtensionLoader(LoadBalance.class)
                         .getExtension(resolveLoadBalance(loadBalanceType));
             } else {
-                loadBalance= UserServiceLoader.getExtensionLoader(LoadBalance.class)
+                loadBalance= ExtensionServiceLoader.getExtensionLoader(LoadBalance.class)
                         .getExtension(ClusterConstants.DEFAULT_LOADBALANCE);
             }
         }
