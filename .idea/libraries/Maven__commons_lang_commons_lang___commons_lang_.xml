@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: commons-lang:commons-lang:${commons-lang}">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/${commons-lang}/commons-lang-${commons-lang}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/${commons-lang}/commons-lang-${commons-lang}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/${commons-lang}/commons-lang-${commons-lang}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

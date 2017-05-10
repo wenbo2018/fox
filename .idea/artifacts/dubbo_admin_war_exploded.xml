@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="dubbo-admin:war exploded">
+    <output-path>$PROJECT_DIR$/../dubbo/dubbo-admin/target/dubbo-admin-2.5.4-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="dubbo-admin" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../dubbo/dubbo-admin/target/dubbo-admin-2.5.4-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="dubbo-admin/web/Web" />
+    </root>
+  </artifact>
+</component>
