@@ -25,6 +25,17 @@
         <module name="jconf-core" />
         <module name="jconf-web" />
         <module name="jconf-web (2)" />
+        <module name="pigeon" />
+        <module name="pigeon-common" />
+        <module name="pigeon-config" />
+        <module name="pigeon-console" />
+        <module name="pigeon-monitor" />
+        <module name="pigeon-registry" />
+        <module name="pigeon-registry-composite" />
+        <module name="pigeon-registry-zookeeper" />
+        <module name="pigeon-remoting" />
+        <module name="pigeon-remoting-http" />
+        <module name="pigeon-remoting-netty" />
         <module name="spring-boot-learning" />
         <module name="tinymvc-core" />
         <module name="webs-core" />
@@ -62,6 +73,19 @@
       <module name="jconf-web" target="1.7" />
       <module name="jconf-web (1)" target="1.7" />
       <module name="jconf-web (2)" target="1.7" />
+      <module name="pigeon" target="1.7" />
+      <module name="pigeon-common" target="1.7" />
+      <module name="pigeon-config" target="1.7" />
+      <module name="pigeon-console" target="1.7" />
+      <module name="pigeon-extensions" target="1.7" />
+      <module name="pigeon-monitor" target="1.7" />
+      <module name="pigeon-parent" target="1.7" />
+      <module name="pigeon-registry" target="1.7" />
+      <module name="pigeon-registry-composite" target="1.7" />
+      <module name="pigeon-registry-zookeeper" target="1.7" />
+      <module name="pigeon-remoting" target="1.7" />
+      <module name="pigeon-remoting-http" target="1.7" />
+      <module name="pigeon-remoting-netty" target="1.7" />
       <module name="spring-boot-learning" target="1.6" />
       <module name="ting-mvc" target="1.7" />
       <module name="tinymvc-core" target="1.7" />

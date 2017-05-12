@@ -50,6 +50,12 @@ public class ServerBeanDefinitionParser implements BeanDefinitionParser {
 		if (element.hasAttribute("port")) {
 			properties.addPropertyValue("port",element.getAttribute("port"));
 		}
+		if (element.hasAttribute("ip")) {
+			properties.addPropertyValue("ip",element.getAttribute("ip"));
+		}
+		if (element.hasAttribute("registerPort")) {
+			properties.addPropertyValue("registerPort",element.getAttribute("port"));
+		}
 		parserContext.getRegistry().registerBeanDefinition(id, beanDefinition);
 		return beanDefinition;
 	}
