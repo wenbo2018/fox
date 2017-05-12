@@ -1,4 +1,4 @@
-#fox
+# fox
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/wenbo2018/fox/)
 
 
@@ -22,7 +22,7 @@ appkeys.properties file address:
 
 C:/data/app/appkeys.properties(WIN)
 
-###Configuration format:
+### Configuration format:
 
 ```xml
 fox.registry.adress="zk server ip"
@@ -35,9 +35,9 @@ fox.registry.ip="your rpc server ip"
 
 ## Quick Start
 
-###Configurations1:
+### Configurations1:
 
-####Service invocation
+#### Service invocation
 
 ```xml
          <bean id="helloService" class="ServiceProxy" init-method="init">
@@ -46,7 +46,7 @@ fox.registry.ip="your rpc server ip"
             <property name="serializer" value="protostuff"/>
          </bean>
 ```
-####Publish service
+#### Publish service
 
 ```xml
         <bean id="helloService" class="com.dianping.HelloServiceImpl"/>
@@ -61,9 +61,9 @@ fox.registry.ip="your rpc server ip"
         </bean>
 ```
 
-###Configurations2:
+### Configurations2:
 
-####Service invocation
+#### Service invocation
 
 ```xml
 <fox:invoker id="helloService"
@@ -72,7 +72,7 @@ fox.registry.ip="your rpc server ip"
             serializer="hessian"/>
 ```
 
-####Publish service
+#### Publish service
 
 ```xml
     <fox:server  id="server1" port="4019"/>
