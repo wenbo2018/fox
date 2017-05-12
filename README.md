@@ -18,9 +18,12 @@ You only need to configure your zookeeper address in the appkeys.properties:
 
 appkeys.properties file address:
 
+```xml
 /data/app/appkeys.properties(Linux)
 
 C:/data/app/appkeys.properties(WIN)
+
+```
 
 ### Configuration format:
 
@@ -40,7 +43,7 @@ fox.registry.ip="your rpc server ip"
 #### Service invocation
 
 ```xml
-         <bean id="helloService" class="ServiceProxy" init-method="init">
+         <bean id="helloService" class="com.github.wenbo2018.fox.spring.config.ServiceProxy" init-method="init">
             <property name="iface" value="com.github.wenbo2018.fox.demo.api"/>
             <property name="serviceName" value="service.fox.com_helloTestService_helloService_1.0.0"/>
             <property name="serializer" value="protostuff"/>
@@ -49,9 +52,9 @@ fox.registry.ip="your rpc server ip"
 #### Publish service
 
 ```xml
-        <bean id="helloService" class="com.dianping.HelloServiceImpl"/>
+        <bean id="helloService" class="com.github.wenbo2018.fox.demo.server.HelloServiceImpl"/>
 
-        <bean id="helloTestService" class="ServiceRegister" init-method="init">
+        <bean id="helloTestService" class="com.github.wenbo2018.fox.spring.config.ServiceRegister" init-method="init">
             <property name="port" value="4080"/>
             <property name="services" >
                 <map>
@@ -75,6 +78,9 @@ fox.registry.ip="your rpc server ip"
 #### Publish service
 
 ```xml
+    <bean id="helloService" class="com.github.wenbo2018.fox.demo.server.HelloServiceImpl"/>
+    <bean id="userService" class="com.github.wenbo2018.fox.demo.server.UserServiceImpl"/>
+    
     <fox:server  id="server1" port="4019"/>
     <fox:service server="server1"
                  serviceName="service.fox.com_helloTestService_helloService_1.0.0"
