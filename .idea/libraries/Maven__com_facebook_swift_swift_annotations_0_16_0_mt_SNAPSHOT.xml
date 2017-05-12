@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.facebook.swift:swift-annotations:0.16.0-mt-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/facebook/swift/swift-annotations/0.16.0-mt-SNAPSHOT/swift-annotations-0.16.0-mt-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/facebook/swift/swift-annotations/0.16.0-mt-SNAPSHOT/swift-annotations-0.16.0-mt-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/facebook/swift/swift-annotations/0.16.0-mt-SNAPSHOT/swift-annotations-0.16.0-mt-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

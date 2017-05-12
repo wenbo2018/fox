@@ -46,16 +46,16 @@
     </xsd:element>
 
 
-    <!--<xsd:element name="register">-->
-        <!--<xsd:complexType>-->
-            <!--<xsd:complexContent>-->
-                <!--<xsd:extension base="beans:identifiedType">-->
-                    <!--<xsd:attribute name="ip" type="xsd:string" use="required" />-->
-                    <!--<xsd:attribute name="port" type="xsd:string" default="2181" />-->
-                <!--</xsd:extension>-->
-            <!--</xsd:complexContent>-->
-        <!--</xsd:complexType>-->
-    <!--</xsd:element>-->
+    <xsd:element name="register">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="registerAddress" type="xsd:string" use="required" />
+                    <xsd:attribute name="registerPort" type="xsd:string" default="2181" />
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
 
 
 </xsd:schema>

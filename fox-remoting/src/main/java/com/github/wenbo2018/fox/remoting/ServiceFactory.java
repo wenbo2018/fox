@@ -14,6 +14,7 @@ import com.github.wenbo2018.fox.remoting.provider.config.ProviderConfig;
 import com.github.wenbo2018.fox.remoting.provider.config.ServerConfig;
 import com.github.wenbo2018.fox.remoting.provider.process.RequestProcessor;
 import com.github.wenbo2018.fox.remoting.invoker.proxy.ServiceProxyLoader;
+import com.github.wenbo2018.fox.remoting.provider.util.NetUtil;
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.ArrayList;
@@ -78,7 +79,11 @@ public class ServiceFactory {
     }
 
     public static void startUpServer(ServerConfig serverConfig) {
-        serverConfig.setIp(configManager.getStringValue(Constants.FOX_REGISTRY_IP));
+        String host = configManager.getStringValue(Constants.FOX_REGISTRY_IP);
+        if (host==null) {
+            host=NetUtil.getHostIp();
+        }
+        serverConfig.setIp(host);
         List<Server> servers = ExtensionServiceLoader.getExtensionList(Server.class);
         if (serverConfig != null) {
             for (Server server : servers) {

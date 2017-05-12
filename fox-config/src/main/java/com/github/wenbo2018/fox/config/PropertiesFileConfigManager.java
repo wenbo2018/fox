@@ -25,6 +25,7 @@ public class PropertiesFileConfigManager extends AbstractConfigManager  {
 
     @Override
     public void init() {
+        LOGGER.info("ConfigManager init");
         try {
             String os = System.getProperty("os.name");
             if(os.toLowerCase().startsWith("win")){

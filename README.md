@@ -1,4 +1,4 @@
-## fox
+#fox
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/wenbo2018/fox/)
 
 
@@ -13,15 +13,16 @@ It contains three key parts, which include:
 
 
 ## Quick Config
-You only need to configure your zookeeper address in the appkeys file;
 
-appkeys file address:
+You only need to configure your zookeeper address in the appkeys.properties:
+
+appkeys.properties file address:
 
 /data/app/appkeys.properties(Linux)
 
 C:/data/app/appkeys.properties(WIN)
 
-**Configuration format**:
+###Configuration format:
 
 ```xml
 fox.registry.adress="zk server ip"
@@ -33,34 +34,19 @@ fox.registry.ip="your rpc server ip"
 ```
 
 ## Quick Start
-when you need invoke service ,you can just do as following:
+
+###Configurations1:
+
+####Service invocation
 
 ```xml
          <bean id="helloService" class="ServiceProxy" init-method="init">
-            <property name="iface" value="com.dianping.HelloService"/>
+            <property name="iface" value="com.github.wenbo2018.fox.demo.api"/>
             <property name="serviceName" value="service.fox.com_helloTestService_helloService_1.0.0"/>
             <property name="serializer" value="protostuff"/>
          </bean>
-
 ```
-or use spring schemas
-```xml
-    <fox:invoker id="helloService"
-            iface="HelloService"
-            serviceName="service.fox.com_helloTestService_helloService_1.0.0"
-            serializer="hessian"/>
-```
-
-```xml
-         <bean id="helloService" class="ServiceProxy" init-method="init">
-            <property name="iface" value="com.dianping.HelloService"/>
-            <property name="serviceName" value="service.fox.com_helloTestService_helloService_1.0.0"/>
-            <property name="serializer" value="protostuff"/>
-         </bean>
-
-```
-
-when you publish your services,you can just do as following:
+####Publish service
 
 ```xml
         <bean id="helloService" class="com.dianping.HelloServiceImpl"/>
@@ -74,7 +60,19 @@ when you publish your services,you can just do as following:
             </property>
         </bean>
 ```
-or use spring schemas
+
+###Configurations2:
+
+####Service invocation
+
+```xml
+<fox:invoker id="helloService"
+                 iface="com.github.wenbo2018.fox.demo.api.HelloService"
+            serviceName="service.fox.com_helloTestService_helloService_1.0.0"
+            serializer="hessian"/>
+```
+
+####Publish service
 
 ```xml
     <fox:server  id="server1" port="4019"/>
@@ -85,6 +83,4 @@ or use spring schemas
                  serviceName="service.fox.com_helloTestService_userService_1.0.0"
                  ref="userService"/>
 ```
-
-This framework refers to the design of Piegon,Dubbo,Motan
 

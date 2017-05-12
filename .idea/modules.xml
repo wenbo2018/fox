@@ -25,6 +25,19 @@
       <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-common/jconf-common.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-common/jconf-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-core/jconf-core.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-core/jconf-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-web/jconf-web.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-web/jconf-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-build/pigeon.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-build/pigeon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-common/pigeon-common.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-common/pigeon-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-config/pigeon-config.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-config/pigeon-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-console/pigeon-console.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-console/pigeon-console.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-extensions/pigeon-extensions.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-extensions/pigeon-extensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-monitor/pigeon-monitor.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-monitor/pigeon-monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-parent.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-registry/pigeon-registry.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-registry/pigeon-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-extensions/pigeon-registry-composite/pigeon-registry-composite.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-extensions/pigeon-registry-composite/pigeon-registry-composite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-extensions/pigeon-registry-zookeeper/pigeon-registry-zookeeper.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-extensions/pigeon-registry-zookeeper/pigeon-registry-zookeeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-remoting/pigeon-remoting.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-remoting/pigeon-remoting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-extensions/pigeon-remoting-http/pigeon-remoting-http.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-extensions/pigeon-remoting-http/pigeon-remoting-http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-extensions/pigeon-remoting-netty/pigeon-remoting-netty.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-extensions/pigeon-remoting-netty/pigeon-remoting-netty.iml" />
       <module fileurl="file://$PROJECT_DIR$/../spring-boot-learning/spring-boot-learning.iml" filepath="$PROJECT_DIR$/../spring-boot-learning/spring-boot-learning.iml" />
       <module fileurl="file://$PROJECT_DIR$/../tiny-mvc/ting-mvc.iml" filepath="$PROJECT_DIR$/../tiny-mvc/ting-mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/../tiny-mvc/tinymvc-core/tinymvc-core.iml" filepath="$PROJECT_DIR$/../tiny-mvc/tinymvc-core/tinymvc-core.iml" />
