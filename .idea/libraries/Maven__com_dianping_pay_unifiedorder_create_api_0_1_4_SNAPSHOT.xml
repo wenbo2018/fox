@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dianping.pay:unifiedorder-create-api:0.1.4-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/pay/unifiedorder-create-api/0.1.4-SNAPSHOT/unifiedorder-create-api-0.1.4-20160913.130916-2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/pay/unifiedorder-create-api/0.1.4-SNAPSHOT/unifiedorder-create-api-0.1.4-20160913.130916-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/pay/unifiedorder-create-api/0.1.4-SNAPSHOT/unifiedorder-create-api-0.1.4-20160913.130916-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

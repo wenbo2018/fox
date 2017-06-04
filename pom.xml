@@ -95,6 +95,7 @@
         <module>fox-cluster</module>
         <module>fox-monitor</module>
         <module>fox-spring</module>
+        <module>fox-http</module>
     </modules>
 
     <build>

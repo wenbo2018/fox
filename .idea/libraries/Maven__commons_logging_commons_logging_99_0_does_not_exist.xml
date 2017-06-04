@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: commons-logging:commons-logging:99.0-does-not-exist">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/99.0-does-not-exist/commons-logging-99.0-does-not-exist.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/99.0-does-not-exist/commons-logging-99.0-does-not-exist-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/99.0-does-not-exist/commons-logging-99.0-does-not-exist-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

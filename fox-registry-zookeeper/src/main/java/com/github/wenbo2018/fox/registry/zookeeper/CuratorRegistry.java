@@ -38,15 +38,15 @@ public class CuratorRegistry implements Registry {
                         //获取zk地址
                         String zkAddress = properties.getProperty(Constants.KEY_REGISTRY_ADDRESS);
                         if (zkAddress != null) {
-                            LOGGER.info("start to initialize zookeeper client:" + zkAddress);
+                            LOGGER.info("start to initialize zookeeper curator:" + zkAddress);
                             zookeeperClient = new CuratorClient(zkAddress);
-                            LOGGER.info("succeed to initialize zookeeper client:" + zkAddress);
+                            LOGGER.info("succeed to initialize zookeeper curator:" + zkAddress);
                             isInitialized = true;
                         } else {
                             LOGGER.error("zookeeper server adress is null");
                         }
                     } catch (Exception ex) {
-                        LOGGER.error("failed to initialize zookeeper client", ex);
+                        LOGGER.error("failed to initialize zookeeper curator", ex);
                     }
                 }
             }

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dianping:wed-operation-api:0.0.0.99">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/wed-operation-api/0.0.0.99/wed-operation-api-0.0.0.99.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/wed-operation-api/0.0.0.99/wed-operation-api-0.0.0.99-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/wed-operation-api/0.0.0.99/wed-operation-api-0.0.0.99-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.sankuai.mafka:idl-castle:1.0.12-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sankuai/mafka/idl-castle/1.0.12-SNAPSHOT/idl-castle-1.0.12-20160516.055316-2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sankuai/mafka/idl-castle/1.0.12-SNAPSHOT/idl-castle-1.0.12-20160516.055316-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sankuai/mafka/idl-castle/1.0.12-SNAPSHOT/idl-castle-1.0.12-20160516.055316-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

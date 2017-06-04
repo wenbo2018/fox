@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.wenbo2018:jconf-common:${project.version}">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/wenbo2018/jconf-common/${project.version}/jconf-common-${project.version}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../Jconf/jconf-common/jconf-common-${project.version}-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/wenbo2018/jconf-common/${project.version}/jconf-common-${project.version}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../Jconf/jconf-common/jconf-common-${project.version}-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/wenbo2018/jconf-common/${project.version}/jconf-common-${project.version}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

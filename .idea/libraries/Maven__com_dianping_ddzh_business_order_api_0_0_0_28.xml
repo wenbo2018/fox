@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dianping:ddzh-business-order-api:0.0.0.28">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/ddzh-business-order-api/0.0.0.28/ddzh-business-order-api-0.0.0.28.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/ddzh-business-order-api/0.0.0.28/ddzh-business-order-api-0.0.0.28-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/ddzh-business-order-api/0.0.0.28/ddzh-business-order-api-0.0.0.28-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

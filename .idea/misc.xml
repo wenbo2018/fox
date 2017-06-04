@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="gwt" url="file://$PROJECT_DIR$/../guava/guava-gwt" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/../guava/guava" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/../redisson/redisson" />
+    <file type="web" url="file://$PROJECT_DIR$/../dubbo-monitor" />
+    <file type="web" url="file://$PROJECT_DIR$/../dubbo/dubbo-admin" />
     <file type="web" url="file://$PROJECT_DIR$/../tiny-mvc-demo" />
     <file type="web" url="file://$PROJECT_DIR$/../tiny-mvc/demo" />
     <file type="web" url="file://$PROJECT_DIR$/../WebS/webs-demo" />
+    <file type="web" url="file://$PROJECT_DIR$/../../java/wedding-mobileapi-web" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -12,13 +18,24 @@
         <option value="$PROJECT_DIR$/fox-monitor/fox-monitor-api/pom.xml" />
         <option value="$PROJECT_DIR$/../Jconf/pom.xml" />
         <option value="$PROJECT_DIR$/../tiny-mvc/pom.xml" />
-        <option value="$PROJECT_DIR$/../Jconf/jconf-client/pom.xml" />
         <option value="$PROJECT_DIR$/../Jconf/jconf-core/pom.xml" />
         <option value="$PROJECT_DIR$/../Jconf/jconf-web/pom.xml" />
         <option value="$PROJECT_DIR$/../spring-boot-learning/pom.xml" />
         <option value="$PROJECT_DIR$/../WebS/pom.xml" />
         <option value="$PROJECT_DIR$/fox-spring/fox-spring-config/pom.xml" />
         <option value="$PROJECT_DIR$/../pigeon/pom.xml" />
+        <option value="$PROJECT_DIR$/../dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/../webmagic-learn/pom.xml" />
+        <option value="$PROJECT_DIR$/../jobhunter/pom.xml" />
+        <option value="$PROJECT_DIR$/../douban-crawler/pom.xml" />
+        <option value="$PROJECT_DIR$/../open-messaging-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../config-utils/pom.xml" />
+        <option value="$PROJECT_DIR$/../dubbo-monitor/pom.xml" />
+        <option value="$PROJECT_DIR$/../guava/pom.xml" />
+        <option value="$PROJECT_DIR$/../tiny-spring/pom.xml" />
+        <option value="$PROJECT_DIR$/../../java/wedding-mobileapi-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../redisson/pom.xml" />
+        <option value="$PROJECT_DIR$/../rbmap/pom.xml" />
       </list>
     </option>
   </component>

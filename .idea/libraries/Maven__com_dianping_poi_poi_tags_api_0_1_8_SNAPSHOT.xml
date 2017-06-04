@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dianping.poi:poi-tags-api:0.1.8-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/poi/poi-tags-api/0.1.8-SNAPSHOT/poi-tags-api-0.1.8-20160622.082657-8.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/poi/poi-tags-api/0.1.8-SNAPSHOT/poi-tags-api-0.1.8-20160622.082657-8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/poi/poi-tags-api/0.1.8-SNAPSHOT/poi-tags-api-0.1.8-20160622.082657-8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -36,9 +36,7 @@ public class CuratorClient {
         newZkClient();
     }
 
-    /**
-     * 初始化zk客户端
-     */
+
     public boolean newZkClient() throws InterruptedException {
         CuratorFramework client = CuratorFrameworkFactory.builder()
                 .ensembleProvider(new DefaultEnsembleProvider(address))
@@ -68,7 +66,7 @@ public class CuratorClient {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-        LOGGER.info("succeed to create zookeeper client, connected:" + isConnected);
+        LOGGER.info("succeed to create zookeeper curator, connected:" + isConnected);
         return isConnected;
     }
 
@@ -204,10 +202,10 @@ public class CuratorClient {
 
     private void close(CuratorFramework client) {
         if (client != null) {
-            LOGGER.info("begin to close zookeeper client");
+            LOGGER.info("begin to close zookeeper curator");
             try {
                 client.close();
-                LOGGER.info("succeed to close zookeeper client");
+                LOGGER.info("succeed to close zookeeper curator");
             } catch (Exception e) {
             }
         }

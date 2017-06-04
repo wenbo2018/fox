@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dianping.mobile:mobile-checkin-api:0.2.3-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/mobile/mobile-checkin-api/0.2.3-SNAPSHOT/mobile-checkin-api-0.2.3-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/mobile/mobile-checkin-api/0.2.3-SNAPSHOT/mobile-checkin-api-0.2.3-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/mobile/mobile-checkin-api/0.2.3-SNAPSHOT/mobile-checkin-api-0.2.3-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

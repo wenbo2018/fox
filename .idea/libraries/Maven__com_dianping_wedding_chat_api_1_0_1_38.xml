@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dianping:wedding-chat-api:1.0.1.38">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/wedding-chat-api/1.0.1.38/wedding-chat-api-1.0.1.38.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/wedding-chat-api/1.0.1.38/wedding-chat-api-1.0.1.38-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/wedding-chat-api/1.0.1.38/wedding-chat-api-1.0.1.38-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
