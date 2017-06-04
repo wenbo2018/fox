@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.meituan.mafka:mafka-kafka_2.9.2:2.1.4-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/meituan/mafka/mafka-kafka_2.9.2/2.1.4-SNAPSHOT/mafka-kafka_2.9.2-2.1.4-20160630.060531-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/meituan/mafka/mafka-kafka_2.9.2/2.1.4-SNAPSHOT/mafka-kafka_2.9.2-2.1.4-20160630.060531-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/meituan/mafka/mafka-kafka_2.9.2/2.1.4-SNAPSHOT/mafka-kafka_2.9.2-2.1.4-20160630.060531-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

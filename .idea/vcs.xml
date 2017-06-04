@@ -2,8 +2,18 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../Jconf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../WebS" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../dubbo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../dubbo-monitor" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../guava" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../ja-micro" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../jobhunter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../open-messaging-demo" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../pigeon" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../redisson" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../spring-boot-learning" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../tiny-spring" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../java/wedding-mobileapi-web" vcs="Git" />
   </component>
 </project>

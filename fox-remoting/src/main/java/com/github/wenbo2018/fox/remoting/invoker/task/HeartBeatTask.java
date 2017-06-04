@@ -98,7 +98,7 @@ public class HeartBeatTask implements Runnable {
             serviceChangeNoify(client);
             LOGGER.info("heart beat success");
         } else {
-            LOGGER.info("client sel is not consta");
+            LOGGER.info("curator sel is not consta");
         }
     }
 

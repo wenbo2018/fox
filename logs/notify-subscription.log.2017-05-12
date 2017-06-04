@@ -1,0 +1,190 @@
+2017-05-12 09:32:13,111 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3e633589: startup date [Fri May 12 09:32:13 CST 2017]; root of context hierarchy
+2017-05-12 09:32:13,168 - Loading XML bean definitions from class path resource [application.xml]
+2017-05-12 09:32:13,419 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@77312cf9: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2017-05-12 09:32:13,451 - Service Initialized
+2017-05-12 09:32:13,459 - serviceProxy:com.github.wenbo2018.fox.remoting.invoker.proxy.FilterRemotingServiceProxy@157507d9
+2017-05-12 09:32:13,461 - ConfigManager init
+2017-05-12 09:32:13,475 - start to initialize zookeeper client:123.206.9.140
+2017-05-12 09:32:13,495 - maxRetries too large (2147483647). Pinning to 29
+2017-05-12 09:32:13,587 - Starting
+2017-05-12 09:32:13,597 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-05-12 09:32:13,597 - Client environment:host.name=192.168.31.100
+2017-05-12 09:32:13,597 - Client environment:java.version=1.7.0_80
+2017-05-12 09:32:13,597 - Client environment:java.vendor=Oracle Corporation
+2017-05-12 09:32:13,597 - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre
+2017-05-12 09:32:13,598 - Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/htmlconverter.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-doclet.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/tools.jar:/Users/wenbo.shen/project/home/fox/fox-demo/fox-client/target/classes:/Users/wenbo.shen/.m2/repository/org/springframework/spring-context/3.1.2.RELEASE/spring-context-3.1.2.RELEASE.jar:/Users/wenbo.shen/.m2/repository/org/springframework/spring-aop/3.1.2.RELEASE/spring-aop-3.1.2.RELEASE.jar:/Users/wenbo.shen/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/wenbo.shen/.m2/repository/org/springframework/spring-beans/3.1.2.RELEASE/spring-beans-3.1.2.RELEASE.jar:/Users/wenbo.shen/.m2/repository/org/springframework/spring-expression/3.1.2.RELEASE/spring-expression-3.1.2.RELEASE.jar:/Users/wenbo.shen/.m2/repository/org/springframework/spring-asm/3.1.2.RELEASE/spring-asm-3.1.2.RELEASE.jar:/Users/wenbo.shen/.m2/repository/org/springframework/spring-context-support/3.1.2.RELEASE/spring-context-support-3.1.2.RELEASE.jar:/Users/wenbo.shen/.m2/repository/org/springframework/spring-core/3.1.2.RELEASE/spring-core-3.1.2.RELEASE.jar:/Users/wenbo.shen/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/wenbo.shen/.m2/repository/org/springframework/spring-test/3.1.2.RELEASE/spring-test-3.1.2.RELEASE.jar:/Users/wenbo.shen/project/home/fox/fox-spring/fox-spring-config/target/classes:/Users/wenbo.shen/project/home/fox/fox-remoting/target/classes:/Users/wenbo.shen/project/home/fox/fox-config/target/classes:/Users/wenbo.shen/.m2/repository/cglib/cglib/3.1/cglib-3.1.jar:/Users/wenbo.shen/.m2/repository/org/ow2/asm/asm/4.2/asm-4.2.jar:/Users/wenbo.shen/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/wenbo.shen/project/home/fox/fox-registry-zookeeper/target/classes:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-log4j12/1.5.8/slf4j-log4j12-1.5.8.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8.jar:/Users/wenbo.shen/.m2/repository/log4j/log4j/1.2.14/log4j-1.2.14.jar:/Users/wenbo.shen/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/Users/wenbo.shen/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/wenbo.shen/.m2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar:/Users/wenbo.shen/.m2/repository/com/101tec/zkclient/0.4/zkclient-0.4.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-framework/2.7.1/curator-framework-2.7.1.jar:/Users/wenbo.shen/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-client/2.7.1/curator-client-2.7.1.jar:/Users/wenbo.shen/project/home/fox/fox-common/target/classes:/Users/wenbo.shen/.m2/repository/io/netty/netty-all/4.0.26.Final/netty-all-4.0.26.Final.jar:/Users/wenbo.shen/.m2/repository/com/dyuproject/protostuff/protostuff-core/1.0.9/protostuff-core-1.0.9.jar:/Users/wenbo.shen/.m2/repository/com/dyuproject/protostuff/protostuff-api/1.0.9/protostuff-api-1.0.9.jar:/Users/wenbo.shen/.m2/repository/com/dyuproject/protostuff/protostuff-runtime/1.0.9/protostuff-runtime-1.0.9.jar:/Users/wenbo.shen/.m2/repository/com/dyuproject/protostuff/protostuff-collectionschema/1.0.9/protostuff-collectionschema-1.0.9.jar:/Users/wenbo.shen/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar:/Users/wenbo.shen/.m2/repository/org/apache/commons/commons-collections4/4.0/commons-collections4-4.0.jar:/Users/wenbo.shen/.m2/repository/com/caucho/hessian/3.1.5/hessian-3.1.5.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-recipes/2.7.1/curator-recipes-2.7.1.jar:/Users/wenbo.shen/project/home/fox/fox-netty/target/classes:/Users/wenbo.shen/project/home/fox/fox-cluster/target/classes:/Users/wenbo.shen/project/home/fox/fox-demo/fox-api/target/classes:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar:/Users/wenbo.shen/Library/Caches/IntelliJIdea2017.1/groovyHotSwap/gragent.jar
+2017-05-12 09:32:13,598 - Client environment:java.library.path=/Users/wenbo.shen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-05-12 09:32:13,598 - Client environment:java.io.tmpdir=/var/folders/8d/qpv5thcn36lc5y753n7qq8wh0000gn/T/
+2017-05-12 09:32:13,598 - Client environment:java.compiler=<NA>
+2017-05-12 09:32:13,598 - Client environment:os.name=Mac OS X
+2017-05-12 09:32:13,598 - Client environment:os.arch=x86_64
+2017-05-12 09:32:13,598 - Client environment:os.version=10.12.4
+2017-05-12 09:32:13,598 - Client environment:user.name=wenbo.shen
+2017-05-12 09:32:13,598 - Client environment:user.home=/Users/wenbo.shen
+2017-05-12 09:32:13,598 - Client environment:user.dir=/Users/wenbo.shen/project/home/fox
+2017-05-12 09:32:13,599 - Initiating client connection, connectString=123.206.9.140 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@2c6e85a7
+2017-05-12 09:32:13,621 - Opening socket connection to server 123.206.9.140/123.206.9.140:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-05-12 09:32:13,670 - Socket connection established to 123.206.9.140/123.206.9.140:2181, initiating session
+2017-05-12 09:32:13,714 - Session establishment complete on server 123.206.9.140/123.206.9.140:2181, sessionid = 0x15af9f3995300e5, negotiated timeout = 30000
+2017-05-12 09:32:13,720 - State change: CONNECTED
+2017-05-12 09:32:13,721 - zookeeper state changed to CONNECTED
+2017-05-12 09:32:14,725 - succeed to create zookeeper client, connected:true
+2017-05-12 09:32:14,725 - succeed to initialize zookeeper client:123.206.9.140
+2017-05-12 09:32:14,728 - ConfigManager init
+2017-05-12 09:32:14,792 - NettyClientFactory is initial
+2017-05-12 09:32:14,982 - successed get service adress from service center:192.168.31.100:4019
+2017-05-12 09:32:15,056 - FOX SERVICE SUCCESS CONNECT
+2017-05-12 09:32:15,104 - fox success invoke
+2017-05-12 09:32:15,106 - fox success invoke
+2017-05-12 09:32:16,217 - fox success invoke
+2017-05-12 09:32:16,218 - fox success invoke
+2017-05-12 09:32:17,226 - fox success invoke
+2017-05-12 09:32:17,226 - fox success invoke
+2017-05-12 09:32:18,232 - fox success invoke
+2017-05-12 09:32:18,233 - fox success invoke
+2017-05-12 09:32:19,240 - fox success invoke
+2017-05-12 09:32:19,241 - fox success invoke
+2017-05-12 09:32:19,745 - fox success invoke
+2017-05-12 09:32:19,747 - heart beat success
+2017-05-12 09:32:20,248 - fox success invoke
+2017-05-12 09:32:20,249 - fox success invoke
+2017-05-12 09:32:21,255 - fox success invoke
+2017-05-12 09:32:21,256 - fox success invoke
+2017-05-12 09:32:22,261 - fox success invoke
+2017-05-12 09:32:22,262 - fox success invoke
+2017-05-12 09:32:23,272 - fox success invoke
+2017-05-12 09:32:23,273 - fox success invoke
+2017-05-12 09:32:24,279 - fox success invoke
+2017-05-12 09:32:24,279 - fox success invoke
+2017-05-12 09:32:24,744 - fox success invoke
+2017-05-12 09:32:24,746 - heart beat success
+2017-05-12 09:32:25,286 - fox success invoke
+2017-05-12 09:32:25,286 - fox success invoke
+2017-05-12 09:32:26,292 - fox success invoke
+2017-05-12 09:32:26,293 - fox success invoke
+2017-05-12 09:32:27,300 - fox success invoke
+2017-05-12 09:32:27,301 - fox success invoke
+2017-05-12 09:32:28,310 - fox success invoke
+2017-05-12 09:32:28,311 - fox success invoke
+2017-05-12 09:32:29,317 - fox success invoke
+2017-05-12 09:32:29,318 - fox success invoke
+2017-05-12 09:32:29,748 - fox success invoke
+2017-05-12 09:32:29,750 - heart beat success
+2017-05-12 09:32:30,326 - fox success invoke
+2017-05-12 09:32:30,326 - fox success invoke
+2017-05-12 09:32:31,332 - fox success invoke
+2017-05-12 09:32:31,333 - fox success invoke
+2017-05-12 09:32:32,338 - fox success invoke
+2017-05-12 09:32:32,340 - fox success invoke
+2017-05-12 09:32:33,342 - fox success invoke
+2017-05-12 09:32:33,343 - fox success invoke
+2017-05-12 09:32:34,348 - fox success invoke
+2017-05-12 09:32:34,349 - fox success invoke
+2017-05-12 09:32:34,752 - fox success invoke
+2017-05-12 09:32:34,754 - heart beat success
+2017-05-12 09:32:35,356 - fox success invoke
+2017-05-12 09:32:35,356 - fox success invoke
+2017-05-12 09:32:36,364 - fox success invoke
+2017-05-12 09:32:36,365 - fox success invoke
+2017-05-12 09:32:37,373 - fox success invoke
+2017-05-12 09:32:37,374 - fox success invoke
+2017-05-12 09:32:38,382 - fox success invoke
+2017-05-12 09:32:38,382 - fox success invoke
+2017-05-12 09:32:39,387 - fox success invoke
+2017-05-12 09:32:39,388 - fox success invoke
+2017-05-12 09:32:39,756 - fox success invoke
+2017-05-12 09:32:39,757 - this servicce[192.168.31.100:4019] is health:
+2017-05-12 09:32:39,757 - heart beat success
+2017-05-12 09:32:40,396 - fox success invoke
+2017-05-12 09:32:40,396 - fox success invoke
+2017-05-12 09:32:41,402 - fox success invoke
+2017-05-12 09:32:41,404 - fox success invoke
+2017-05-12 09:32:42,412 - fox success invoke
+2017-05-12 09:32:42,412 - fox success invoke
+2017-05-12 09:32:43,419 - fox success invoke
+2017-05-12 09:32:43,420 - fox success invoke
+2017-05-12 09:32:44,424 - fox success invoke
+2017-05-12 09:32:44,425 - fox success invoke
+2017-05-12 09:32:44,759 - fox success invoke
+2017-05-12 09:32:44,761 - heart beat success
+2017-05-12 09:32:45,430 - fox success invoke
+2017-05-12 09:32:45,431 - fox success invoke
+2017-05-12 09:32:46,439 - fox success invoke
+2017-05-12 09:32:46,441 - fox success invoke
+2017-05-12 09:32:47,449 - fox success invoke
+2017-05-12 09:32:47,449 - fox success invoke
+2017-05-12 09:32:48,457 - fox success invoke
+2017-05-12 09:32:48,458 - fox success invoke
+2017-05-12 09:32:49,462 - fox success invoke
+2017-05-12 09:32:49,463 - fox success invoke
+2017-05-12 09:32:49,763 - fox success invoke
+2017-05-12 09:32:49,764 - heart beat success
+2017-05-12 09:32:50,469 - fox success invoke
+2017-05-12 09:32:50,470 - fox success invoke
+2017-05-12 09:32:51,479 - fox success invoke
+2017-05-12 09:32:51,479 - fox success invoke
+2017-05-12 09:32:52,485 - fox success invoke
+2017-05-12 09:32:52,486 - fox success invoke
+2017-05-12 09:32:53,492 - fox success invoke
+2017-05-12 09:32:53,492 - fox success invoke
+2017-05-12 09:32:54,498 - fox success invoke
+2017-05-12 09:32:54,498 - fox success invoke
+2017-05-12 09:32:54,764 - fox success invoke
+2017-05-12 09:32:54,766 - heart beat success
+2017-05-12 09:32:55,503 - fox success invoke
+2017-05-12 09:32:55,504 - fox success invoke
+2017-05-12 09:32:56,510 - fox success invoke
+2017-05-12 09:32:56,511 - fox success invoke
+2017-05-12 09:32:57,515 - fox success invoke
+2017-05-12 09:32:57,516 - fox success invoke
+2017-05-12 09:32:58,522 - fox success invoke
+2017-05-12 09:32:58,523 - fox success invoke
+2017-05-12 09:32:59,532 - fox success invoke
+2017-05-12 09:32:59,533 - fox success invoke
+2017-05-12 09:32:59,769 - fox success invoke
+2017-05-12 09:32:59,772 - heart beat success
+2017-05-12 09:33:00,539 - fox success invoke
+2017-05-12 09:33:00,540 - fox success invoke
+2017-05-12 09:33:01,546 - fox success invoke
+2017-05-12 09:33:01,547 - fox success invoke
+2017-05-12 09:33:02,554 - fox success invoke
+2017-05-12 09:33:02,554 - fox success invoke
+2017-05-12 09:33:03,564 - fox success invoke
+2017-05-12 09:33:03,565 - fox success invoke
+2017-05-12 09:33:04,569 - fox success invoke
+2017-05-12 09:33:04,570 - fox success invoke
+2017-05-12 09:33:04,772 - fox success invoke
+2017-05-12 09:33:04,776 - this servicce[192.168.31.100:4019] is health:
+2017-05-12 09:33:04,777 - heart beat success
+2017-05-12 09:33:05,572 - fox success invoke
+2017-05-12 09:33:05,572 - fox success invoke
+2017-05-12 09:33:06,578 - fox success invoke
+2017-05-12 09:33:06,578 - fox success invoke
+2017-05-12 09:33:07,585 - fox success invoke
+2017-05-12 09:33:07,585 - fox success invoke
+2017-05-12 09:33:08,592 - fox success invoke
+2017-05-12 09:33:08,594 - fox success invoke
+2017-05-12 09:33:09,602 - fox success invoke
+2017-05-12 09:33:09,604 - fox success invoke
+2017-05-12 09:33:09,775 - fox success invoke
+2017-05-12 09:33:09,778 - heart beat success
+2017-05-12 09:33:10,611 - fox success invoke
+2017-05-12 09:33:10,612 - fox success invoke
+2017-05-12 09:33:11,619 - fox success invoke
+2017-05-12 09:33:11,620 - fox success invoke
+2017-05-12 09:33:12,623 - fox success invoke
+2017-05-12 09:33:12,625 - fox success invoke
+2017-05-12 09:33:13,631 - fox success invoke
+2017-05-12 09:33:13,632 - fox success invoke
+2017-05-12 09:33:14,637 - fox success invoke
+2017-05-12 09:33:14,637 - fox success invoke
+2017-05-12 09:33:14,779 - fox success invoke
+2017-05-12 09:33:14,780 - heart beat success
+2017-05-12 09:33:15,643 - fox success invoke
+2017-05-12 09:33:15,645 - fox success invoke
+2017-05-12 09:33:16,650 - fox success invoke
+2017-05-12 09:33:16,650 - fox success invoke
+2017-05-12 09:33:17,657 - fox success invoke
+2017-05-12 09:33:17,658 - fox success invoke
+2017-05-12 09:33:18,665 - fox success invoke
+2017-05-12 09:33:18,666 - fox success invoke

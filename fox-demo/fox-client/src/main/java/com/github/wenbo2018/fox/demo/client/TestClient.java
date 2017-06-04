@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 
 public class TestClient {
-        static  int i=100000;
+        static  int i=400;
         public static void main(String[] args) {
 
             ApplicationContext context= new ClassPathXmlApplicationContext("application.xml");
@@ -21,11 +21,11 @@ public class TestClient {
                     while (i>0) {
                         System.err.println(helloService.incer());
                         i--;
-                        try {
-                            Thread.sleep(1000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
+//                        try {
+//                            Thread.sleep(1000);
+//                        } catch (InterruptedException e) {
+//                            e.printStackTrace();
+//                        }
                     }
                 }
             }).start();

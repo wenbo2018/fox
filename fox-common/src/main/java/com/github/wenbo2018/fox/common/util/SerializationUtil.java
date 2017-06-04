@@ -10,9 +10,7 @@ import org.objenesis.ObjenesisStd;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * 序列化工具类（基于 Protostuff 实现）
- */
+
 public class SerializationUtil {
 
     private static Map<Class<?>, Schema<?>> cachedSchema = new ConcurrentHashMap<Class<?>, Schema<?>>();
@@ -22,9 +20,7 @@ public class SerializationUtil {
     private SerializationUtil() {
     }
 
-    /**
-     * 序列化（对象 -> 字节数组）
-     */
+
     @SuppressWarnings("unchecked")
     public static <T> byte[] serialize(T obj) {
         Class<T> cls = (Class<T>) obj.getClass();
@@ -39,9 +35,7 @@ public class SerializationUtil {
         }
     }
 
-    /**
-     * 反序列化（字节数组 -> 对象）
-     */
+
     public static <T> T deserialize(byte[] data, Class<T> cls) {
         try {
             T message = objenesis.newInstance(cls);

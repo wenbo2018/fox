@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dianping.poi:poi-gis-api:0.0.18">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/poi/poi-gis-api/0.0.18/poi-gis-api-0.0.18.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/poi/poi-gis-api/0.0.18/poi-gis-api-0.0.18-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/poi/poi-gis-api/0.0.18/poi-gis-api-0.0.18-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

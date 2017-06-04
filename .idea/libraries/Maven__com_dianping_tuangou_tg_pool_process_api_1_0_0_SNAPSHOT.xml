@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dianping.tuangou:tg-pool-process-api:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/tuangou/tg-pool-process-api/1.0.0-SNAPSHOT/tg-pool-process-api-1.0.0-20160930.104018-5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/tuangou/tg-pool-process-api/1.0.0-SNAPSHOT/tg-pool-process-api-1.0.0-20160930.104018-5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/tuangou/tg-pool-process-api/1.0.0-SNAPSHOT/tg-pool-process-api-1.0.0-20160930.104018-5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

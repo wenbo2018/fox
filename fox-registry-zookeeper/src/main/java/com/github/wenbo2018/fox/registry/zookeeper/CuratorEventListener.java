@@ -72,11 +72,7 @@ public class CuratorEventListener implements CuratorListener {
         LOGGER.info(sb.toString());
     }
 
-    /***
-     * 服务地址变化
-     * @param pathInfo
-     * @throws Exception
-     */
+
     private void addressChanged(PathInfo pathInfo) throws Exception {
         String hosts = client.get(pathInfo.path);
         LOGGER.info("Service address changed, path " + pathInfo.path + " value " + hosts);

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dianping:iphub-api:1.1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/iphub-api/1.1.0-SNAPSHOT/iphub-api-1.1.0-20150518.085811-16.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/iphub-api/1.1.0-SNAPSHOT/iphub-api-1.1.0-20150518.085811-16-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/iphub-api/1.1.0-SNAPSHOT/iphub-api-1.1.0-20150518.085811-16-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

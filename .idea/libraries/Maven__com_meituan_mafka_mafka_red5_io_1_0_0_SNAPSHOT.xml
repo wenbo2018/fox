@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.meituan.mafka:mafka-red5-io:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/meituan/mafka/mafka-red5-io/1.0.0-SNAPSHOT/mafka-red5-io-1.0.0-20150715.092246-2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/meituan/mafka/mafka-red5-io/1.0.0-SNAPSHOT/mafka-red5-io-1.0.0-20150715.092246-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/meituan/mafka/mafka-red5-io/1.0.0-SNAPSHOT/mafka-red5-io-1.0.0-20150715.092246-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

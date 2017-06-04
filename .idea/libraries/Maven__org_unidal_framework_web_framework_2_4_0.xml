@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.unidal.framework:web-framework:2.4.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/unidal/framework/web-framework/2.4.0/web-framework-2.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/unidal/framework/web-framework/2.4.0/web-framework-2.4.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/unidal/framework/web-framework/2.4.0/web-framework-2.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

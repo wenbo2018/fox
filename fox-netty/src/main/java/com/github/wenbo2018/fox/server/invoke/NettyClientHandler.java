@@ -23,13 +23,13 @@ public class NettyClientHandler extends SimpleChannelInboundHandler<InvokeRespon
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext,
                                 InvokeResponse invokeResponse) throws Exception {
-        LOGGER.debug("client receive message:{}", invokeResponse.toString());
+        LOGGER.debug("curator receive message:{}", invokeResponse.toString());
         nettyClient.processResponse(invokeResponse);
     }
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        LOGGER.error("client caught exception", cause);
+        LOGGER.error("curator caught exception", cause);
         ctx.close();
     }
 

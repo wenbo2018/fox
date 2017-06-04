@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dianping:wed-common-util:0.1.2-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/wed-common-util/0.1.2-SNAPSHOT/wed-common-util-0.1.2-20161206.075523-3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/wed-common-util/0.1.2-SNAPSHOT/wed-common-util-0.1.2-20161206.075523-3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/wed-common-util/0.1.2-SNAPSHOT/wed-common-util-0.1.2-20161206.075523-3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -3,6 +3,65 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Jconf/Jconf-parent.iml" filepath="$PROJECT_DIR$/../Jconf/Jconf-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo-monitor/com.handu.open.iml" filepath="$PROJECT_DIR$/../dubbo-monitor/com.handu.open.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../douban-crawler/douban-crawler.iml" filepath="$PROJECT_DIR$/../douban-crawler/douban-crawler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo/dubbo.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo/dubbo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-admin/dubbo-admin.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-admin/dubbo-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-cluster/dubbo-cluster.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-cluster/dubbo-cluster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-common/dubbo-common.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-common/dubbo-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-config/dubbo-config.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-config/dubbo-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-config/dubbo-config-api/dubbo-config-api.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-config/dubbo-config-api/dubbo-config-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-config/dubbo-config-spring/dubbo-config-spring.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-config/dubbo-config-spring/dubbo-config-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-api/dubbo-container-api.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-api/dubbo-container-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-jetty/dubbo-container-jetty.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-jetty/dubbo-container-jetty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-log4j/dubbo-container-log4j.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-log4j/dubbo-container-log4j.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-logback/dubbo-container-logback.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-logback/dubbo-container-logback.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-spring/dubbo-container-spring.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-container/dubbo-container-spring/dubbo-container-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-demo/dubbo-demo.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-demo/dubbo-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-demo/dubbo-demo-api/dubbo-demo-api.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-demo/dubbo-demo-api/dubbo-demo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-demo/dubbo-demo-consumer/dubbo-demo-consumer.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-demo/dubbo-demo-consumer/dubbo-demo-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-demo/dubbo-demo-provider/dubbo-demo-provider.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-demo/dubbo-demo-provider/dubbo-demo-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-filter/dubbo-filter.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-filter/dubbo-filter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-filter/dubbo-filter-cache/dubbo-filter-cache.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-filter/dubbo-filter-cache/dubbo-filter-cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-filter/dubbo-filter-validation/dubbo-filter-validation.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-filter/dubbo-filter-validation/dubbo-filter-validation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-monitor/dubbo-monitor.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-monitor/dubbo-monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-monitor/dubbo-monitor-api/dubbo-monitor-api.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-monitor/dubbo-monitor-api/dubbo-monitor-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-monitor/dubbo-monitor-default/dubbo-monitor-default.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-monitor/dubbo-monitor-default/dubbo-monitor-default.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-simple/dubbo-monitor-simple/dubbo-monitor-simple.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-simple/dubbo-monitor-simple/dubbo-monitor-simple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-parent.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-api/dubbo-registry-api.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-api/dubbo-registry-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-default/dubbo-registry-default.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-default/dubbo-registry-default.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-multicast/dubbo-registry-multicast.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-multicast/dubbo-registry-multicast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-redis/dubbo-registry-redis.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-redis/dubbo-registry-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-simple/dubbo-registry-simple/dubbo-registry-simple.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-simple/dubbo-registry-simple/dubbo-registry-simple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-zookeeper/dubbo-registry-zookeeper.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-registry/dubbo-registry-zookeeper/dubbo-registry-zookeeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-api/dubbo-remoting-api.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-api/dubbo-remoting-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-grizzly/dubbo-remoting-grizzly.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-grizzly/dubbo-remoting-grizzly.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-http/dubbo-remoting-http.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-http/dubbo-remoting-http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-mina/dubbo-remoting-mina.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-mina/dubbo-remoting-mina.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-netty/dubbo-remoting-netty.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-netty/dubbo-remoting-netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-p2p/dubbo-remoting-p2p.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-p2p/dubbo-remoting-p2p.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-zookeeper/dubbo-remoting-zookeeper.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-remoting/dubbo-remoting-zookeeper/dubbo-remoting-zookeeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-api/dubbo-rpc-api.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-api/dubbo-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-default/dubbo-rpc-default.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-default/dubbo-rpc-default.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-hessian/dubbo-rpc-hessian.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-hessian/dubbo-rpc-hessian.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-http/dubbo-rpc-http.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-http/dubbo-rpc-http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-injvm/dubbo-rpc-injvm.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-injvm/dubbo-rpc-injvm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-memcached/dubbo-rpc-memcached.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-memcached/dubbo-rpc-memcached.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-redis/dubbo-rpc-redis.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-redis/dubbo-rpc-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-rmi/dubbo-rpc-rmi.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-rmi/dubbo-rpc-rmi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-thrift/dubbo-rpc-thrift.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-thrift/dubbo-rpc-thrift.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-webservice/dubbo-rpc-webservice.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-rpc/dubbo-rpc-webservice/dubbo-rpc-webservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-simple/dubbo-simple.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-simple/dubbo-simple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-benchmark/dubbo-test-benchmark.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-benchmark/dubbo-test-benchmark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-compatibility/dubbo-test-compatibility.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-compatibility/dubbo-test-compatibility.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-examples/dubbo-test-examples.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-examples/dubbo-test-examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-integration/dubbo-test-integration.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-integration/dubbo-test-integration.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox/fox.iml" filepath="$PROJECT_DIR$/fox/fox.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-admin/fox-admin.iml" filepath="$PROJECT_DIR$/fox-admin/fox-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-api/fox-api.iml" filepath="$PROJECT_DIR$/fox-demo/fox-api/fox-api.iml" />
@@ -11,6 +70,7 @@
       <module fileurl="file://$PROJECT_DIR$/fox-common/fox-common.iml" filepath="$PROJECT_DIR$/fox-common/fox-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-config/fox-config.iml" filepath="$PROJECT_DIR$/fox-config/fox-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-demo.iml" filepath="$PROJECT_DIR$/fox-demo/fox-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-http/fox-http.iml" filepath="$PROJECT_DIR$/fox-http/fox-http.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-monitor/fox-monitor.iml" filepath="$PROJECT_DIR$/fox-monitor/fox-monitor.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-monitor/fox-monitor-api/fox-monitor-api.iml" filepath="$PROJECT_DIR$/fox-monitor/fox-monitor-api/fox-monitor-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-monitor/fox-monitor-default/fox-monitor-default.iml" filepath="$PROJECT_DIR$/fox-monitor/fox-monitor-default/fox-monitor-default.iml" />
@@ -21,10 +81,21 @@
       <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-server/fox-server.iml" filepath="$PROJECT_DIR$/fox-demo/fox-server/fox-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-spring/fox-spring.iml" filepath="$PROJECT_DIR$/fox-spring/fox-spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-spring/fox-spring-config/fox-spring-config.iml" filepath="$PROJECT_DIR$/fox-spring/fox-spring-config/fox-spring-config.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-client/jconf-client.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-client/jconf-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guava/guava/guava.iml" filepath="$PROJECT_DIR$/../guava/guava/guava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guava/guava-gwt/guava-gwt.iml" filepath="$PROJECT_DIR$/../guava/guava-gwt/guava-gwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guava/guava-parent.iml" filepath="$PROJECT_DIR$/../guava/guava-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guava/guava-testlib/guava-testlib.iml" filepath="$PROJECT_DIR$/../guava/guava-testlib/guava-testlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guava/guava-tests/guava-tests.iml" filepath="$PROJECT_DIR$/../guava/guava-tests/guava-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dubbo/hessian-lite/hessian-lite.iml" filepath="$PROJECT_DIR$/../dubbo/hessian-lite/hessian-lite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ja-micro.iml" filepath="$PROJECT_DIR$/.idea/modules/ja-micro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-client-sdk/jconf-client-sdk.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-client-sdk/jconf-client-sdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-common/jconf-common.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-common/jconf-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-core/jconf-core.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-core/jconf-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-demo/jconf-demo.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-demo/jconf-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-web/jconf-web.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-web/jconf-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../jobhunter/jobhunter.iml" filepath="$PROJECT_DIR$/../jobhunter/jobhunter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/..//local-config-utils.iml" filepath="$PROJECT_DIR$/..//local-config-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../open-messaging-demo/open-messaging-demo.iml" filepath="$PROJECT_DIR$/../open-messaging-demo/open-messaging-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-build/pigeon.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-build/pigeon.iml" />
       <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-common/pigeon-common.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-common/pigeon-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-config/pigeon-config.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-config/pigeon-config.iml" />
@@ -38,12 +109,23 @@
       <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-remoting/pigeon-remoting.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-remoting/pigeon-remoting.iml" />
       <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-extensions/pigeon-remoting-http/pigeon-remoting-http.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-extensions/pigeon-remoting-http/pigeon-remoting-http.iml" />
       <module fileurl="file://$PROJECT_DIR$/../pigeon/pigeon-extensions/pigeon-remoting-netty/pigeon-remoting-netty.iml" filepath="$PROJECT_DIR$/../pigeon/pigeon-extensions/pigeon-remoting-netty/pigeon-remoting-netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../rbmap/rbmap.iml" filepath="$PROJECT_DIR$/../rbmap/rbmap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../redisson/redisson/redisson.iml" filepath="$PROJECT_DIR$/../redisson/redisson/redisson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../redisson/redisson-all/redisson-all.iml" filepath="$PROJECT_DIR$/../redisson/redisson-all/redisson-all.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../redisson/redisson-parent.iml" filepath="$PROJECT_DIR$/../redisson/redisson-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../redisson/redisson-tomcat/redisson-tomcat.iml" filepath="$PROJECT_DIR$/../redisson/redisson-tomcat/redisson-tomcat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../redisson/redisson-tomcat/redisson-tomcat-6/redisson-tomcat-6.iml" filepath="$PROJECT_DIR$/../redisson/redisson-tomcat/redisson-tomcat-6/redisson-tomcat-6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../redisson/redisson-tomcat/redisson-tomcat-7/redisson-tomcat-7.iml" filepath="$PROJECT_DIR$/../redisson/redisson-tomcat/redisson-tomcat-7/redisson-tomcat-7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../redisson/redisson-tomcat/redisson-tomcat-8/redisson-tomcat-8.iml" filepath="$PROJECT_DIR$/../redisson/redisson-tomcat/redisson-tomcat-8/redisson-tomcat-8.iml" />
       <module fileurl="file://$PROJECT_DIR$/../spring-boot-learning/spring-boot-learning.iml" filepath="$PROJECT_DIR$/../spring-boot-learning/spring-boot-learning.iml" />
       <module fileurl="file://$PROJECT_DIR$/../tiny-mvc/ting-mvc.iml" filepath="$PROJECT_DIR$/../tiny-mvc/ting-mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tiny-spring/tiny-spring.iml" filepath="$PROJECT_DIR$/../tiny-spring/tiny-spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/../tiny-mvc/tinymvc-core/tinymvc-core.iml" filepath="$PROJECT_DIR$/../tiny-mvc/tinymvc-core/tinymvc-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../webmagic-learn/webmagic-learn.iml" filepath="$PROJECT_DIR$/../webmagic-learn/webmagic-learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/../WebS/webs.iml" filepath="$PROJECT_DIR$/../WebS/webs.iml" />
       <module fileurl="file://$PROJECT_DIR$/../WebS/webs-core/webs-core.iml" filepath="$PROJECT_DIR$/../WebS/webs-core/webs-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/../WebS/webs-demo/webs-demo.iml" filepath="$PROJECT_DIR$/../WebS/webs-demo/webs-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../java/wedding-mobileapi-web/wedding-mobileapi-web.iml" filepath="$PROJECT_DIR$/../../java/wedding-mobileapi-web/wedding-mobileapi-web.iml" />
     </modules>
   </component>
 </project>
