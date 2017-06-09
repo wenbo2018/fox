@@ -3,7 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/.." charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../Jconf" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../Jconf/jconf-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../Jconf/jconf-client-sdk" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../Jconf/jconf-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../Jconf/jconf-core" charset="UTF-8" />
@@ -68,6 +67,7 @@
     <file url="file://$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-compatibility" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-examples" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-integration" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../dubbo/dubbo/readme.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../dubbo/hessian-lite" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../elasticsearch-learning" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
@@ -77,9 +77,9 @@
     <file url="file://$PROJECT_DIR$/fox-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fox-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fox-demo" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/fox-demo/fox-api" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/fox-demo/fox-client" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/fox-demo/fox-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fox-demo/fox-demo-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fox-demo/fox-demo-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fox-demo/fox-demo-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fox-http" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fox-monitor" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fox-monitor/fox-monitor-api" charset="UTF-8" />

@@ -64,12 +64,13 @@
       <module fileurl="file://$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-integration/dubbo-test-integration.iml" filepath="$PROJECT_DIR$/../dubbo/dubbo-test/dubbo-test-integration/dubbo-test-integration.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox/fox.iml" filepath="$PROJECT_DIR$/fox/fox.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-admin/fox-admin.iml" filepath="$PROJECT_DIR$/fox-admin/fox-admin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-api/fox-api.iml" filepath="$PROJECT_DIR$/fox-demo/fox-api/fox-api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-client/fox-client.iml" filepath="$PROJECT_DIR$/fox-demo/fox-client/fox-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-cluster/fox-cluster.iml" filepath="$PROJECT_DIR$/fox-cluster/fox-cluster.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-common/fox-common.iml" filepath="$PROJECT_DIR$/fox-common/fox-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-config/fox-config.iml" filepath="$PROJECT_DIR$/fox-config/fox-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-demo.iml" filepath="$PROJECT_DIR$/fox-demo/fox-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-demo-api/fox-demo-api.iml" filepath="$PROJECT_DIR$/fox-demo/fox-demo-api/fox-demo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-demo-client/fox-demo-client.iml" filepath="$PROJECT_DIR$/fox-demo/fox-demo-client/fox-demo-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-demo-server/fox-demo-server.iml" filepath="$PROJECT_DIR$/fox-demo/fox-demo-server/fox-demo-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-http/fox-http.iml" filepath="$PROJECT_DIR$/fox-http/fox-http.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-monitor/fox-monitor.iml" filepath="$PROJECT_DIR$/fox-monitor/fox-monitor.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-monitor/fox-monitor-api/fox-monitor-api.iml" filepath="$PROJECT_DIR$/fox-monitor/fox-monitor-api/fox-monitor-api.iml" />
@@ -78,7 +79,6 @@
       <module fileurl="file://$PROJECT_DIR$/fox-parent.iml" filepath="$PROJECT_DIR$/fox-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-registry-zookeeper/fox-registry-zookeeper.iml" filepath="$PROJECT_DIR$/fox-registry-zookeeper/fox-registry-zookeeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-remoting/fox-remoting.iml" filepath="$PROJECT_DIR$/fox-remoting/fox-remoting.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fox-demo/fox-server/fox-server.iml" filepath="$PROJECT_DIR$/fox-demo/fox-server/fox-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-spring/fox-spring.iml" filepath="$PROJECT_DIR$/fox-spring/fox-spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/fox-spring/fox-spring-config/fox-spring-config.iml" filepath="$PROJECT_DIR$/fox-spring/fox-spring-config/fox-spring-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/../guava/guava/guava.iml" filepath="$PROJECT_DIR$/../guava/guava/guava.iml" />
@@ -87,7 +87,6 @@
       <module fileurl="file://$PROJECT_DIR$/../guava/guava-testlib/guava-testlib.iml" filepath="$PROJECT_DIR$/../guava/guava-testlib/guava-testlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/../guava/guava-tests/guava-tests.iml" filepath="$PROJECT_DIR$/../guava/guava-tests/guava-tests.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dubbo/hessian-lite/hessian-lite.iml" filepath="$PROJECT_DIR$/../dubbo/hessian-lite/hessian-lite.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ja-micro.iml" filepath="$PROJECT_DIR$/.idea/modules/ja-micro.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-client-sdk/jconf-client-sdk.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-client-sdk/jconf-client-sdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-common/jconf-common.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-common/jconf-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Jconf/jconf-core/jconf-core.iml" filepath="$PROJECT_DIR$/../Jconf/jconf-core/jconf-core.iml" />

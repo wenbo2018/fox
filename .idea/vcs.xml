@@ -7,7 +7,6 @@
     <mapping directory="$PROJECT_DIR$/../dubbo-monitor" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../guava" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../ja-micro" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../jobhunter" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../open-messaging-demo" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../pigeon" vcs="Git" />
