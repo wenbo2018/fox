@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dianping:account-api:3.3.4">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/account-api/3.3.4/account-api-3.3.4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/account-api/3.3.4/account-api-3.3.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dianping/account-api/3.3.4/account-api-3.3.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

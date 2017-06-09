@@ -8,7 +8,6 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.github.wenbo2018:webs-core:0.0.2-SNAPSHOT" />
-          <element id="library" level="project" name="Maven: net.sf.json-lib:json-lib:jdk15:2.0" />
           <element id="library" level="project" name="Maven: javax.faces:jsf-impl:1.2_15" />
           <element id="library" level="project" name="Maven: javax.faces:jsf-api:2.0" />
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2" />

@@ -1,24 +1,36 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <parent>
+    <parent>
         <groupId>com.github.wenbo2018</groupId>
         <artifactId>fox-parent</artifactId>
         <version>1.0.0</version>
-  </parent>
+    </parent>
 
-  <name>fox-demo</name>
-  <artifactId>fox-demo</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0.0</version>
-  <url>http://maven.apache.org</url>
-  <properties>
-    <skip_maven_deploy>true</skip_maven_deploy>
-  </properties>
-  <modules>
-    <module>fox-client</module>
-    <module>fox-api</module>
-    <module>fox-server</module>
-  </modules>
+    <name>fox-demo</name>
+    <artifactId>fox-demo</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <url>http://maven.apache.org</url>
+    <properties>
+        <skip_maven_deploy>true</skip_maven_deploy>
+    </properties>
+    <modules>
+        <module>fox-demo-api</module>
+        <module>fox-demo-client</module>
+        <module>fox-demo-server</module>
+    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -190,7 +190,7 @@
           <element id="library" level="project" name="Maven: com.dianping.tuangou:tuangou-deal-api:1.1.18" />
           <element id="library" level="project" name="Maven: com.dianping.tuangou:tuangou-remote-common:0.4.11" />
           <element id="library" level="project" name="Maven: com.dianping:user-base-remote:1.1.5" />
-          <element id="library" level="project" name="Maven: com.dianping:account-api:3.3.2" />
+          <element id="library" level="project" name="Maven: com.dianping:account-api:3.3.4" />
           <element id="library" level="project" name="Maven: com.dianping.mobile:mobile-api-checkin:0.2.7-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.dianping.mobile:mobile-api-base:0.0.2.3" />
           <element id="library" level="project" name="Maven: com.dianping.hawk:hawk-client:0.7.1" />

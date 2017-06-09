@@ -36,6 +36,7 @@
         <option value="$PROJECT_DIR$/../../java/wedding-mobileapi-web/pom.xml" />
         <option value="$PROJECT_DIR$/../redisson/pom.xml" />
         <option value="$PROJECT_DIR$/../rbmap/pom.xml" />
+        <option value="$PROJECT_DIR$/fox-demo/fox-demo-server/pom.xml" />
       </list>
     </option>
   </component>

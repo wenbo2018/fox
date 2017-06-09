@@ -62,6 +62,9 @@
         <module name="fox-cluster" />
         <module name="fox-common" />
         <module name="fox-config" />
+        <module name="fox-demo-api" />
+        <module name="fox-demo-client" />
+        <module name="fox-demo-server" />
         <module name="fox-http" />
         <module name="fox-monitor-api" />
         <module name="fox-monitor-default" />
@@ -181,6 +184,9 @@
       <module name="fox-common" target="1.7" />
       <module name="fox-config" target="1.7" />
       <module name="fox-demo" target="1.7" />
+      <module name="fox-demo-api" target="1.7" />
+      <module name="fox-demo-client" target="1.7" />
+      <module name="fox-demo-server" target="1.7" />
       <module name="fox-http" target="1.7" />
       <module name="fox-monitor" target="1.7" />
       <module name="fox-monitor-api" target="1.7" />
