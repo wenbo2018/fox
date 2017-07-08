@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="wedding-mobileapi-web:war">
-    <output-path>$PROJECT_DIR$/../../java/wedding-mobileapi-web/target</output-path>
-    <root id="archive" name="wedding-mobileapi-web-alpha-0.1.0.war">
-      <element id="artifact" artifact-name="wedding-mobileapi-web:war exploded" />
-    </root>
-  </artifact>
-</component>

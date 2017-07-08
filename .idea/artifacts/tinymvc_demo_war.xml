@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="tinymvc-demo:war">
-    <output-path>$PROJECT_DIR$/../WebS/tinymvc-demo/target</output-path>
-    <root id="archive" name="tinymvc-demo-0.0.1-SNAPSHOT.war">
-      <element id="artifact" artifact-name="tinymvc-demo:war exploded" />
-    </root>
-  </artifact>
-</component>

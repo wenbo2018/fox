@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="webs-demo:war">
-    <output-path>$PROJECT_DIR$/../WebS/webs-demo/target</output-path>
-    <root id="archive" name="webs-demo-0.0.2.war">
-      <element id="artifact" artifact-name="webs-demo:war exploded" />
-    </root>
-  </artifact>
-</component>
