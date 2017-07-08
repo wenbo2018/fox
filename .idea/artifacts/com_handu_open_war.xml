@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="com.handu.open:war">
-    <output-path>$PROJECT_DIR$/../dubbo-monitor/target</output-path>
-    <root id="archive" name="dubbo-monitor.war">
-      <element id="artifact" artifact-name="com.handu.open:war exploded" />
-    </root>
-  </artifact>
-</component>

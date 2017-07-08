@@ -1,0 +1,21 @@
+# ignore Maven generated target folders
+target
+# ignore eclipse files
+.project
+.classpath
+.settings
+.scala_dependencies
+.externalToolBuilders
+.factorypath
+**/.springBeans
+# ignore IDEA files
+*.iml
+*.ipr
+*.iws
+.idea
+.DS_Store
+atlassian-ide-plugin.xml
+maven-ant-tasks.jar
+test-output
+classes
+/bin/
