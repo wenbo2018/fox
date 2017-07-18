@@ -6,4 +6,13 @@ package com.github.wenbo2018.fox.registry;
  */
 public abstract class AbstractRegistry implements Registry{
 
+    @Override
+    public void registerService(URL url) {
+
+    }
+
+    @Override
+    public void unregisterService(URL url) throws Exception {
+
+    }
 }
