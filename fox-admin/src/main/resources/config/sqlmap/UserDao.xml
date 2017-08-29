@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.wenbo2018.jconf.dao.UserDao">
+
+    <resultMap id="user" type="com.github.wenbo2018.jconf.entity.User">
+        <result column="Id" property="id" jdbcType="INTEGER" />
+        <result column="UserId" property="userId" jdbcType="INTEGER" />
+        <result column="UserName" property="userName" jdbcType="VARCHAR" />
+        <result column="UserEmail" property="userEmail" jdbcType="VARCHAR" />
+        <result column="Token" property="token" jdbcType="VARCHAR"/>
+        <result column="AddTime" property="addTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <insert id="addUser"  parameterType="com.github.wenbo2018.jconf.entity.User">
+        <selectKey resultType="int" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID() AS Id
+        </selectKey>
+        insert into User (
+        UserId,
+        UserName,
+        PassWord,
+        UserEmail,
+        Token,
+        AddTime
+        )
+        values (
+        #{user.userId},
+        #{user.userName},
+        #{user.passWord},
+        #{user.userEmail},
+        #{user.token},
+        CURRENT_TIMESTAMP
+        )
+    </insert>
+
+    <select id="loadUserByUserNameAndPassWord"  resultMap="user" >
+        SELECT * FROM User WHERE UserName=#{userName} AND PassWord=#{passWord}
+    </select>
+
+    <select id="loadUserByUserId" resultMap="user" parameterType="int">
+        SELECT *FROM  User WHERE  UserId=#{userId}#
+    </select>
+
+    <select id="loadUserByUserName" parameterType="string" resultMap="user">
+        SELECT * FROM User WHERE UserName=#{userName}
+    </select>
+
+    <select id="loadUserByToken"  parameterType="string" resultMap="user">
+         SELECT * FROM User WHERE Token=#{token}
+    </select>
+
+    <update id="updateUserTokenByUserId" >
+        <selectKey resultType="int" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID() AS Id
+        </selectKey>
+        UPDATE User SET Token=#{token} WHERE UserId=#{userId};
+    </update>
+
+
+
+
+</mapper>
