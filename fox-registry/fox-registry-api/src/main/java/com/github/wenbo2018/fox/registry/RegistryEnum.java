@@ -5,8 +5,8 @@ package com.github.wenbo2018.fox.registry;
  */
 public enum RegistryEnum {
 
-    DEFAULT_REGISTRY("default","默认注册中心"),
-    ZOOKPEEPER_REGISTRY("zk","zk注册中心");
+    DEFAULT_REGISTRY("default", "默认注册中心"),
+    ZOOKPEEPER_REGISTRY("zk", "zk注册中心");
 
     String type;
     String desc;
