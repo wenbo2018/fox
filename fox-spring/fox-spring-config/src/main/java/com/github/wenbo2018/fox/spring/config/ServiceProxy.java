@@ -33,12 +33,12 @@ public class ServiceProxy implements FactoryBean {
     public void init() {
         LOGGER.info("Service Initialized", serviceName);
         if (StringUtils.isBlank(iface)) {
-            throw new IllegalArgumentException("invalid interface:" + iface);
+            throw new IllegalArgumentException("invalid interface:interface is null");
         }
         try {
             this.interfaceClass = ClassUtils.loadClass(classLoader, this.iface.trim());
         } catch (ClassNotFoundException e) {
-            LOGGER.error("class not found:{}" + interfaceClass, e);
+            LOGGER.error("class not found:{},{}", interfaceClass, e);
         }
         InvokerConfig invokerConfig = new InvokerConfig(this.interfaceClass, this.iface, this.serviceName, this.serializer);
         this.service = ServiceFactory.getService(invokerConfig);

@@ -13,14 +13,12 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <url>http://maven.apache.org</url>
-    <properties>
-        <skip_maven_deploy>true</skip_maven_deploy>
-    </properties>
+
     <modules>
-        <module>fox-demo-api</module>
-        <module>fox-demo-client</module>
-        <module>fox-demo-server</module>
+        <module>fox-registry-api</module>
+        <module>fox-registry-default</module>
     </modules>
+
     <build>
         <plugins>
             <plugin>

@@ -12,10 +12,10 @@ public abstract class AbstractRegistryFactory implements RegistryFactory {
 
     @Override
     public Registry getRegistry(URL url) {
-        RegistryEnum registryEnum=url.getRegistryEnum();
-        String key=registryEnum.getType();
-        Registry registry=registryMap.get(key);
-        if (registry!=null) {
+        RegistryEnum registryEnum = url.getRegistryEnum();
+        String key = registryEnum.getType();
+        Registry registry = registryMap.get(key);
+        if (registry != null) {
             return registry;
         }
         registry = createRegistry(url);
