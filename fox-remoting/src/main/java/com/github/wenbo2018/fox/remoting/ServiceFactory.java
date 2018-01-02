@@ -63,7 +63,6 @@ public class ServiceFactory {
                         requestProcessor = server.star(serverConfig);
                         serversMap.put(server.getPort() + "netty", server);
                     } catch (Exception e) {
-                        e.printStackTrace();
                         LOGGER.error("server star error:" + serverConfig, e);
                     }
                 }
@@ -92,7 +91,6 @@ public class ServiceFactory {
                         requestProcessor = server.star(serverConfig);
                         serversMap.put(server.getPort() + "netty", server);
                     } catch (Exception e) {
-                        e.printStackTrace();
                         LOGGER.error("server star error:" + serverConfig, e);
                     }
                 }

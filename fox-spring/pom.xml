@@ -17,4 +17,8 @@
     <encoding>UTF-8</encoding>
   </properties>
 
+  <modules>
+    <module>fox-spring-config</module>
+  </modules>
+
 </project>
