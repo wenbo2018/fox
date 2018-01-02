@@ -13,24 +13,22 @@ import java.util.Map;
 
 public class CommonNamespaceHandler extends NamespaceHandlerSupport {
 
-	private static Logger logger= LoggerFactory.getLogger(CommonNamespaceHandler.class);
+    private static Logger logger = LoggerFactory.getLogger(CommonNamespaceHandler.class);
 
-	@Override
-	public void init() {
-		System.out.println("\n");
-		System.out.println(Constants.FOX_ICON);
-		System.out.println("\n");
-		List<BeanDefinitionParserLoader> loaders = ExtensionServiceLoader.getExtensionList(BeanDefinitionParserLoader.class);
-		if (loaders != null) {
-			for (BeanDefinitionParserLoader loader : loaders) {
-				Map<String, BeanDefinitionParser> parsers = loader.loadBeanDefinitionParsers();
-				if (parsers != null) {
-					for (String key : parsers.keySet()) {
-						registerBeanDefinitionParser(key, parsers.get(key));
-					}
-				}
-			}
-		}
-	}
+    @Override
+    public void init() {
+        System.out.println(Constants.FOX_ICON);
+        List<BeanDefinitionParserLoader> loaders = ExtensionServiceLoader.getExtensionList(BeanDefinitionParserLoader.class);
+        if (loaders != null) {
+            for (BeanDefinitionParserLoader loader : loaders) {
+                Map<String, BeanDefinitionParser> parsers = loader.loadBeanDefinitionParsers();
+                if (parsers != null) {
+                    for (String key : parsers.keySet()) {
+                        registerBeanDefinitionParser(key, parsers.get(key));
+                    }
+                }
+            }
+        }
+    }
 
 }
