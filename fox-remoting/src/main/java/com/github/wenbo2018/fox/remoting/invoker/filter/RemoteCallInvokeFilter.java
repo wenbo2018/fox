@@ -23,8 +23,8 @@ public class RemoteCallInvokeFilter implements Filter {
         InvokeRequest request = createInvokeRequest(invokeContext);
         Client client = ClientManager.getInstance().getClient(invokeContext.getInvokerConfig());
         CallbackFuture callback = new CallbackFuture();
-        InvokeResponse response=null;
-        RemoteServiceCall.requestInvoke(request,callback,client);
+        InvokeResponse response = null;
+        RemoteServiceCall.requestInvoke(request, callback, client);
         response = client.send(request, callback);
         if (response == null) {
             response = callback.get();

@@ -1,5 +1,8 @@
 package com.github.wenbo2018.fox.config.util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,6 +13,9 @@ import java.util.Properties;
  * Created by shenwenbo on 2016/10/17.
  */
 public class FileUtils {
+
+
+    private static final Logger logger = LoggerFactory.getLogger(FileUtils.class);
 
     public static Properties readFile(InputStream is) {
         Properties properties = new Properties();
@@ -27,7 +33,7 @@ public class FileUtils {
                     }
                 }
             } catch (Throwable e) {
-                e.printStackTrace();
+                logger.error("read file error:{}", e);
             } finally {
                 if (br != null) {
                     try {

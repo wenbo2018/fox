@@ -13,18 +13,15 @@ import java.util.List;
  */
 public class InvokerDecoder extends ByteToMessageDecoder {
 
-    private Class<?> genericClass;@Override
+    private Class<?> genericClass;
+
+    @Override
     public void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
-        //获取序列化方式
-        if (in.readableBytes() < 5)
+        if (in.readableBytes() < 5) {
             return;
+        }
         in.markReaderIndex();
         byte b = in.readByte();
-//        //获取消息长度
-//        if (in.readableBytes() < 4) {
-//            return;
-//        }
-//        in.markReaderIndex();
         int dataLength = in.readInt();
         if (in.readableBytes() < dataLength) {
             in.resetReaderIndex();

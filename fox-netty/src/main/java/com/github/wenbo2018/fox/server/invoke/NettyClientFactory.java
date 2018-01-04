@@ -17,13 +17,13 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class NettyClientFactory implements ClientFactory {
 
-    private static Logger LOGGER= LoggerFactory.getLogger(NettyClientFactory.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(NettyClientFactory.class);
 
     EventLoopGroup group;
 
-    Map<String,Channel> channelMap=new ConcurrentHashMap<String, Channel>();
+    Map<String, Channel> channelMap = new ConcurrentHashMap<String, Channel>();
 
-    ConcurrentHashMap<String,Client> clients=new ConcurrentHashMap<String,Client>();
+    ConcurrentHashMap<String, Client> clients = new ConcurrentHashMap<String, Client>();
 
     private static volatile boolean isStartup = false;
 
@@ -38,19 +38,19 @@ public class NettyClientFactory implements ClientFactory {
     @Override
     public Client createClient(ConnectInfo connectInfo) {
         //TODO: 2017/3/23 暂时未测试
-        Client client=new NettyClient(this.group,connectInfo);
+        Client client = new NettyClient(this.group, connectInfo);
         client.connect();
-        clients.put(connectInfo.getHost()+"-"+connectInfo.getPort(),client);
+        clients.put(connectInfo.getHost() + "-" + connectInfo.getPort(), client);
         return client;
     }
 
     @Override
     public Client getClient(ConnectInfo connectInfo) {
-        Client client=clients.get(connectInfo.getHost()+"-"+connectInfo.getPort());
-        if (client==null) {
-            client=new NettyClient(this.group,connectInfo);
+        Client client = clients.get(connectInfo.getHost() + "-" + connectInfo.getPort());
+        if (client == null) {
+            client = new NettyClient(this.group, connectInfo);
             client.connect();
-            clients.put(connectInfo.getHost()+"-"+connectInfo.getPort(),client);
+            clients.put(connectInfo.getHost() + "-" + connectInfo.getPort(), client);
             return client;
         }
         return client;

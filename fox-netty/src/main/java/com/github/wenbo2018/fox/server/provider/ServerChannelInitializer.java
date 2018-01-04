@@ -16,14 +16,14 @@ public class ServerChannelInitializer extends ChannelInitializer<SocketChannel> 
     private NettyServer nettyServer;
 
     public ServerChannelInitializer(NettyServer nettyServer) {
-        this.nettyServer=nettyServer;
+        this.nettyServer = nettyServer;
     }
 
     @Override
     protected void initChannel(SocketChannel channel) throws Exception {
         ChannelPipeline pipeline = channel.pipeline();
-        pipeline.addLast(new ProviderDecoder(InvokeRequest.class)); // 解码 RPC 请求
-        pipeline.addLast(new ProviderEncoder(InvokeResponse.class)); // 编码 RPC 响应
+        pipeline.addLast(new ProviderDecoder(InvokeRequest.class));
+        pipeline.addLast(new ProviderEncoder(InvokeResponse.class));
         pipeline.addLast(new NettyServerHandler(this.nettyServer));
     }
 }

@@ -16,38 +16,42 @@ import java.io.IOException;
  */
 public class HessianSerializer extends AbstractSerializer {
 
-    private static Logger LOGGER= LoggerFactory.getLogger(HessianSerializer.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(HessianSerializer.class);
 
-    private byte serializerType= FoxConstants.HESSIAN_SERIALIEE_byte;
+    private byte serializerType = FoxConstants.HESSIAN_SERIALIEE_byte;
 
     @Override
     public <T> byte[] serialize(T obj) {
-        if(obj==null) throw new NullPointerException();
+        if (obj == null) {
+            throw new NullPointerException();
+        }
         ByteArrayOutputStream os = new ByteArrayOutputStream();
         HessianOutput ho = new HessianOutput(os);
         try {
             ho.writeObject(obj);
         } catch (IOException e) {
-            LOGGER.error("HessianSerializer error:"+e);
+            LOGGER.error("HessianSerializer error:{}", e);
         }
         return os.toByteArray();
     }
 
     @Override
     public <T> T deserialize(byte[] data, Class<T> cls) {
-        if(data==null) throw new NullPointerException();
-
+        if (data == null) {
+            throw new NullPointerException();
+        }
         ByteArrayInputStream is = new ByteArrayInputStream(data);
         HessianInput hi = new HessianInput(is);
-        T object= null;
+        T object = null;
         try {
-            object = (T)hi.readObject();
+            object = (T) hi.readObject();
         } catch (IOException e) {
-            LOGGER.error("HessianSerializer error:" + e);
+            LOGGER.error("HessianSerializer error:{}", e);
         }
         return object;
     }
 
+    @Override
     public byte getSerializerType() {
         return this.serializerType;
     }

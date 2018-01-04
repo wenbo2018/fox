@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by shenwenbo on 2016/9/28.
  */
-public class ThreadPoolRequestProcessor<T> implements RequestProcessor<T>{
+public class ThreadPoolRequestProcessor<T> implements RequestProcessor<T> {
 
     private static int MAX_QUEUE_SIZE;
     private static int CORE_POOL_SIZE;
@@ -21,11 +21,11 @@ public class ThreadPoolRequestProcessor<T> implements RequestProcessor<T>{
 
     private static volatile ThreadPoolExecutor executorService = null;
 
-    private static ConcurrentHashMap<String,ProviderConfig>  cacheServices=new ConcurrentHashMap<String,ProviderConfig>();
+    private static ConcurrentHashMap<String, ProviderConfig> cacheServices = new ConcurrentHashMap<String, ProviderConfig>();
 
-    public ThreadPoolRequestProcessor () {
-        if(executorService == null){
-            if(executorService == null){
+    public ThreadPoolRequestProcessor() {
+        if (executorService == null) {
+            if (executorService == null) {
                 executorService = new ThreadPoolExecutor(5, 5, 600L, TimeUnit.SECONDS,
                         new ArrayBlockingQueue<Runnable>(65536));
             }
@@ -40,14 +40,14 @@ public class ThreadPoolRequestProcessor<T> implements RequestProcessor<T>{
     @Override
     public void processRequest(InvokeRequest invokeRequest, ServiceProviderChannel channel) {
 
-        AsyncServiceRunnable asyncServiceRunnable=new
-                AsyncServiceRunnable(channel,invokeRequest,getServiceConfig(invokeRequest));
+        AsyncServiceRunnable asyncServiceRunnable = new
+                AsyncServiceRunnable(channel, invokeRequest, getServiceConfig(invokeRequest));
         executorService.submit(asyncServiceRunnable);
     }
 
     @Override
     public void addService(ProviderConfig<T> providerConfig) {
-        cacheServices.put(providerConfig.getServiceName(),providerConfig);
+        cacheServices.put(providerConfig.getServiceName(), providerConfig);
     }
 
 
@@ -57,8 +57,8 @@ public class ThreadPoolRequestProcessor<T> implements RequestProcessor<T>{
     }
 
     private ProviderConfig getServiceConfig(InvokeRequest invokeRequest) {
-        if (invokeRequest.getMessageType()== FoxConstants.MESSAGE_TYPE_HEART)
+        if (invokeRequest.getMessageType() == FoxConstants.MESSAGE_TYPE_HEART)
             return null;
-        return  cacheServices.get(invokeRequest.getServiceName());
+        return cacheServices.get(invokeRequest.getServiceName());
     }
 }

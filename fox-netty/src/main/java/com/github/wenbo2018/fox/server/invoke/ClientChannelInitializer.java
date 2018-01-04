@@ -16,15 +16,17 @@ public class ClientChannelInitializer extends ChannelInitializer<SocketChannel> 
     private NettyClient nettyClient;
 
     public ClientChannelInitializer(NettyClient nettyClient) {
-        this.nettyClient=nettyClient;
+        this.nettyClient = nettyClient;
     }
 
     @Override
     protected void initChannel(SocketChannel socketChannel) throws Exception {
         ChannelPipeline pipeline = socketChannel.pipeline();
-        pipeline.addLast(new InvokerEncoder(InvokeRequest.class)); // 编码 RPC 请求
-        pipeline.addLast(new InvokerDecoder(InvokeResponse.class)); // 解码 RPC 响应
-        pipeline.addLast(new NettyClientHandler(this.nettyClient)); // 处
+        // 编码 RPC 请求
+        pipeline.addLast(new InvokerEncoder(InvokeRequest.class));
+        // 解码 RPC 响应
+        pipeline.addLast(new InvokerDecoder(InvokeResponse.class));
+        pipeline.addLast(new NettyClientHandler(this.nettyClient));
     }
 
 }

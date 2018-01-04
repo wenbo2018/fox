@@ -1,6 +1,5 @@
 package com.github.wenbo2018.fox.remoting.common;
 
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Created by shenwenbo on 2017/3/19.

@@ -3,7 +3,7 @@ package com.github.wenbo2018.fox.remoting.exception;
 /**
  * Created by shenwenbo on 2017/3/25.
  */
-public class HeartBeatExcepion extends  RuntimeException {
+public class HeartBeatExcepion extends RuntimeException {
     private static final long serialVersionUID = 2484428054978954524L;
 
     public HeartBeatExcepion() {

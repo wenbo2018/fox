@@ -9,10 +9,13 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class NettyServer extends AbstractServer {
 
-    private static final org.apache.log4j.Logger LOGGER = org.apache.log4j.Logger.getLogger(NettyServer.class);
+
+    private static final Logger logger = LoggerFactory.getLogger(NettyServer.class);
 
     private ServerBootstrap bootstrap;
 
@@ -54,29 +57,29 @@ public class NettyServer extends AbstractServer {
         if (!started) {
             ChannelFuture future = null;
             try {
-                future = this.bootstrap.bind(serverConfig.getIp(),serverConfig.getPort()).sync();
+                future = this.bootstrap.bind(serverConfig.getIp(), serverConfig.getPort()).sync();
                 future.addListener(new ChannelFutureListener() {
                     @Override
                     public void operationComplete(ChannelFuture future) throws Exception {
-                         LOGGER.info("FOX SERVICE SUCCESS STARTED");
+                        logger.info("fox Server success started");
                     }
                 });
                 //future.channel().closeFuture().sync();
             } catch (InterruptedException e) {
-                LOGGER.error("Netty start error:"+e);
+                logger.error("Netty start error:{}", e);
             }
-            this.started=true;
-            LOGGER.debug("server started on port :"+serviceIp+":"+servicePort);
+            this.started = true;
+            logger.info("server started on {}:{}", serviceIp, servicePort);
         }
     }
 
     @Override
     protected void doStop() {
         if (this.started) {
-            if (this.workerGroup!=null) {
+            if (this.workerGroup != null) {
                 this.workerGroup.shutdownGracefully();
             }
-            if (this.bossGroup!=null) {
+            if (this.bossGroup != null) {
                 this.bossGroup.shutdownGracefully();
             }
             this.started = false;

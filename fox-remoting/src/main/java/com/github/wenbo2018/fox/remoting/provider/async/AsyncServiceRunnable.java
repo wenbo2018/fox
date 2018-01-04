@@ -17,7 +17,7 @@ import java.util.concurrent.Callable;
 /**
  * Created by shenwenbo on 16/8/24.
  */
-public class AsyncServiceRunnable<T> implements Callable{
+public class AsyncServiceRunnable<T> implements Callable {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AsyncServiceRunnable.class);
 
@@ -26,31 +26,31 @@ public class AsyncServiceRunnable<T> implements Callable{
     private InvokeRequest request;
     private ProviderConfig providerConfig;
 
-    public AsyncServiceRunnable(ServiceProviderChannel channel, InvokeRequest request,ProviderConfig providerConfig) {
-        this.channel=channel;
-        this.request=request;
-        this.providerConfig=providerConfig;
+    public AsyncServiceRunnable(ServiceProviderChannel channel, InvokeRequest request, ProviderConfig providerConfig) {
+        this.channel = channel;
+        this.request = request;
+        this.providerConfig = providerConfig;
     }
 
     @Override
     public Object call() throws Exception {
         InvokeResponse response = new InvokeResponse();
         response.setRequestId(request.getRequestId());
-        if (this.request.getMessageType()== FoxConstants.MESSAGE_TYPE_HEART) {
-            LOGGER.debug("message type:heart beat");
+        if (this.request.getMessageType() == FoxConstants.MESSAGE_TYPE_HEART) {
+            LOGGER.info("message type:heart beat");
             response.setSerialize(request.getSerialize());
             response.setSeq(request.getSeq());
             channel.write(response);
             return null;
         }
         try {
-            LOGGER.debug("message type:service");
+            LOGGER.info("message type:service");
             Object result = handle(request);
             response.setResult(result);
             response.setSerialize(request.getSerialize());
             response.setReturnType(ReturnEnum.SERVICE.ordinal());
         } catch (Exception e) {
-            LOGGER.error("handle result failure", e);
+            LOGGER.error("handle result failure :{}", e);
             response.setException(e);
             response.setSerialize(request.getSerialize());
             response.setReturnType(ReturnEnum.SERVER_EXCEPTION.ordinal());
@@ -67,7 +67,7 @@ public class AsyncServiceRunnable<T> implements Callable{
             serviceName += "-" + serviceVersion;
         }
         //Object serviceBean = SpringUtil.fetchSpringBean(this.providerConfig);
-        Object serviceBean=this.providerConfig.getService();
+        Object serviceBean = this.providerConfig.getService();
         if (serviceBean == null) {
             throw new RuntimeException(String.format("can not find service bean by key: %s", serviceName));
         }

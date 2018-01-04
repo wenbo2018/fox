@@ -10,12 +10,13 @@ import java.net.UnknownHostException;
  */
 public class NetUtil {
 
-    static Logger LOGGER=Logger.getLogger(NetUtil.class);
+    static Logger LOGGER = Logger.getLogger(NetUtil.class);
+
     public static String getHostIp() {
         try {
-           return InetAddress.getLocalHost().getHostAddress().toString();
+            return InetAddress.getLocalHost().getHostAddress().toString();
         } catch (UnknownHostException e) {
-            LOGGER.error("get host ip erroe"+e);
+            LOGGER.error("get host ip error:{}", e);
         }
         return null;
     }

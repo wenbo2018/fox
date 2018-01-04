@@ -16,6 +16,9 @@ import com.github.wenbo2018.fox.remoting.provider.process.RequestProcessor;
 import com.github.wenbo2018.fox.remoting.invoker.proxy.ServiceProxyLoader;
 import com.github.wenbo2018.fox.remoting.provider.util.NetUtil;
 import com.github.wenbo2018.fox.common.util.CollectionUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,7 +32,8 @@ public class ServiceFactory {
 
     private static ConfigManager configManager;
 
-    private static final org.apache.log4j.Logger LOGGER = org.apache.log4j.Logger.getLogger(ServiceFactory.class);
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ServiceFactory.class);
 
     static volatile Map<String, Server> serversMap = new HashMap<String, Server>();
 
@@ -40,8 +44,7 @@ public class ServiceFactory {
             ProviderBootStrap.init();
             configManager = ConfigManagerLoader.getConfigManager();
         } catch (Throwable e) {
-            e.printStackTrace();
-            LOGGER.error("error while initializing service factory:", e);
+            LOGGER.error("error while initializing service factory:{}", e);
             System.exit(1);
         }
     }
@@ -63,7 +66,7 @@ public class ServiceFactory {
                         requestProcessor = server.star(serverConfig);
                         serversMap.put(server.getPort() + "netty", server);
                     } catch (Exception e) {
-                        LOGGER.error("server star error:" + serverConfig, e);
+                        LOGGER.error("server:{},start error:{}", serverConfig, e);
                     }
                 }
                 //将服务添加到线程池服务处理器中;
@@ -78,8 +81,8 @@ public class ServiceFactory {
 
     public static void startUpServer(ServerConfig serverConfig) {
         String host = configManager.getStringValue(Constants.FOX_REGISTRY_IP);
-        if (host==null) {
-            host=NetUtil.getHostIp();
+        if (host == null) {
+            host = NetUtil.getHostIp();
         }
         serverConfig.setIp(host);
         List<Server> servers = ExtensionServiceLoader.getExtensionList(Server.class);
@@ -91,7 +94,7 @@ public class ServiceFactory {
                         requestProcessor = server.star(serverConfig);
                         serversMap.put(server.getPort() + "netty", server);
                     } catch (Exception e) {
-                        LOGGER.error("server star error:" + serverConfig, e);
+                        LOGGER.error("server:{} start error:{}", serverConfig, e);
                     }
                 }
             }
@@ -123,7 +126,7 @@ public class ServiceFactory {
                 for (ProviderConfig config : providerConfigList) {
                     RegistryManager.getInstance().registerService(config.getServiceName(),
                             config.getServerConfig().getIp() + ":" + config.getServerConfig().getPort());
-                    LOGGER.info("register service success:" + config.getServiceName());
+                    LOGGER.info("register service success:{}", config.getServiceName());
                 }
             } else {
                 LOGGER.error("register center fail");

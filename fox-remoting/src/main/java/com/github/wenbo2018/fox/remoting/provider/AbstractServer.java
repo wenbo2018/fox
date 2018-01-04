@@ -29,12 +29,12 @@ public abstract class AbstractServer implements Server {
     @Override
     public RequestProcessor star(ServerConfig serverConfig) throws Exception {
         if (LOGGER.isInfoEnabled()) {
-            LOGGER.info("server config:" + serverConfig);
+            LOGGER.info("server config:{}", serverConfig);
         }
         doStart(serverConfig);
-        this.port=serverConfig.getPort();
-        this.serverConfig=serverConfig;
-        this.requestProcessor= RequestProcessorFactory.selectProcessor();
+        this.port = serverConfig.getPort();
+        this.serverConfig = serverConfig;
+        this.requestProcessor = RequestProcessorFactory.selectProcessor();
         return this.requestProcessor;
     }
 
@@ -43,8 +43,8 @@ public abstract class AbstractServer implements Server {
     }
 
 
-    public void processRequest(InvokeRequest request, ServiceProviderChannel serviceProviderChannel){
-        this.requestProcessor.processRequest(request,serviceProviderChannel);
+    public void processRequest(InvokeRequest request, ServiceProviderChannel serviceProviderChannel) {
+        this.requestProcessor.processRequest(request, serviceProviderChannel);
     }
 
     @Override

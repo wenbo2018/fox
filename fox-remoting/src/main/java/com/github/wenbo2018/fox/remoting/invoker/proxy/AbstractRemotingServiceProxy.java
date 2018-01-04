@@ -36,7 +36,7 @@ public abstract class AbstractRemotingServiceProxy implements ServiceProxy {
                 service=(T) Proxy.newProxyInstance(config.getClass().getClassLoader(),
                         new Class<?>[]{ config.getInterfaceClass() },serviceInvocationProxy);
             } catch (Throwable e) {
-                throw new RpcException("error while trying to invoke service",e);
+                throw new RpcException("error while trying to invoke service :{}",e);
             }
             services.put(config,service);
         }

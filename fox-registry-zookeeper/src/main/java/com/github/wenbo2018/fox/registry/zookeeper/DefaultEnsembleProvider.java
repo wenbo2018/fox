@@ -11,10 +11,11 @@ public class DefaultEnsembleProvider implements EnsembleProvider {
 
     private String defaultConnectionString;
 
-    DefaultEnsembleProvider() {}
+    DefaultEnsembleProvider() {
+    }
 
     public DefaultEnsembleProvider(String connectionString) {
-        if(connectionString == null) {
+        if (connectionString == null) {
             throw new NullPointerException("connection string is null");
         }
         this.defaultConnectionString = connectionString;

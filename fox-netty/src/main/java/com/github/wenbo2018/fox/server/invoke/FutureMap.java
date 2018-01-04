@@ -9,10 +9,10 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class FutureMap {
 
-    private static ConcurrentHashMap<String,CallFuture> pendingRPC = new ConcurrentHashMap<String,CallFuture>();
+    private static ConcurrentHashMap<String, CallFuture> pendingRPC = new ConcurrentHashMap<String, CallFuture>();
 
-    public static void putFuture(String requestId,CallFuture callFuture) {
-        pendingRPC.put(requestId,callFuture);
+    public static void putFuture(String requestId, CallFuture callFuture) {
+        pendingRPC.put(requestId, callFuture);
     }
 
     public static CallFuture getFuture(String requestId) {

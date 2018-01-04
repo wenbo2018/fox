@@ -18,7 +18,7 @@ public class ServiceProxyLoader {
             serviceProxy = new FilterRemotingServiceProxy();
 //            serviceProxy = new DefaultRemotingServiceProxy();
         }
-        LOGGER.info("serviceProxy:" + serviceProxy);
+        LOGGER.info("serviceProxy:{}", serviceProxy);
         serviceProxy.init();
     }
 
