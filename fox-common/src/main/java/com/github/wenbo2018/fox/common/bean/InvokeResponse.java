@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 封装 RPC 响应
  */
-public class InvokeResponse implements Serializable{
+public class InvokeResponse implements Serializable {
 
     private static final long serialVersionUID = 7581738802316790113L;
     private String requestId;

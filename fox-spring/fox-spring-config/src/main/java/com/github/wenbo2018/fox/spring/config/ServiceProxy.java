@@ -31,7 +31,7 @@ public class ServiceProxy implements FactoryBean {
     private String zkAddress;
 
     public void init() {
-        LOGGER.info("Service Initialized", serviceName);
+        LOGGER.info("Service Initialized {}", serviceName);
         if (StringUtils.isBlank(iface)) {
             throw new IllegalArgumentException("invalid interface:interface is null");
         }

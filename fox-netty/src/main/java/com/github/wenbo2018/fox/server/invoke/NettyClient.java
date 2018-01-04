@@ -68,7 +68,7 @@ public class NettyClient extends AbstractClient {
         channelFuture.addListener(new ChannelFutureListener() {
             @Override
             public void operationComplete(ChannelFuture channelFuture) throws Exception {
-                LOGGER.info("FOX SERVICE SUCCESS CONNECT");
+                LOGGER.info("fox Service success collect");
             }
         });
         if (channelFuture.isSuccess()) {
@@ -111,7 +111,7 @@ public class NettyClient extends AbstractClient {
         channelFuture.addListener(new ChannelFutureListener() {
             @Override
             public void operationComplete(ChannelFuture channelFuture) throws Exception {
-                LOGGER.info("FOX SERVICE SUCCESS RESTART");
+                LOGGER.info("Fox Service success restart");
             }
         });
         if (channelFuture.isSuccess()) {

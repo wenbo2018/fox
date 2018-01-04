@@ -13,11 +13,11 @@ public class InvokerConfig<T> {
     private String appkey;
     private String loadBalance;
 
-    public InvokerConfig(Class<T> interfaceClass, String iface,String serviceName,String serializer) {
+    public InvokerConfig(Class<T> interfaceClass, String iface, String serviceName, String serializer) {
         this.interfaceClass = interfaceClass;
         this.iface = iface;
-        this.serviceName=serviceName;
-        this.serializer=serializer;
+        this.serviceName = serviceName;
+        this.serializer = serializer;
     }
 
     public Class<T> getInterfaceClass() {

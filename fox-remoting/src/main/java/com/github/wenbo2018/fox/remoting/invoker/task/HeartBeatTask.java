@@ -57,7 +57,7 @@ public class HeartBeatTask implements Runnable {
                 }
                 sleep = INTERVAL - (System.currentTimeMillis() - now);
             } catch (InterruptedException e) {
-                LOGGER.info("heartbeat task fail:", e);
+                LOGGER.info("heartbeat task fail:{}", e);
             }
         }
     }

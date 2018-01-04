@@ -7,17 +7,17 @@ import org.apache.log4j.Logger;
 
 public class NettyServerHandler extends SimpleChannelInboundHandler<InvokeRequest> {
 
-    private static Logger LOGGER=Logger.getLogger(NettyServerHandler.class);
+    private final static Logger LOGGER = Logger.getLogger(NettyServerHandler.class);
 
     private NettyServer nettyServer;
 
     public NettyServerHandler(NettyServer nettyServer) {
-        this.nettyServer=nettyServer;
+        this.nettyServer = nettyServer;
     }
 
     @Override
     public void channelRead0(final ChannelHandlerContext ctx, InvokeRequest request) throws Exception {
-        this.nettyServer.processRequest(request,new NettyChannel(ctx.channel()));
+        this.nettyServer.processRequest(request, new NettyChannel(ctx.channel()));
     }
 
     @Override

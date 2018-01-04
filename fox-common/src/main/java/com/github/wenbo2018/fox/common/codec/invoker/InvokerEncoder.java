@@ -21,16 +21,12 @@ public class InvokerEncoder extends MessageToByteEncoder {
     @Override
     public void encode(ChannelHandlerContext ctx, Object in, ByteBuf out) throws Exception {
         if (genericClass.isInstance(in)) {
-            InvokeRequest invokeRequest=(InvokeRequest)in;
-
-            String s=invokeRequest.getSerialize();
-            Serializer serializer= SerializerFactory.getSerializer(s);
+            InvokeRequest invokeRequest = (InvokeRequest) in;
+            String s = invokeRequest.getSerialize();
+            Serializer serializer = SerializerFactory.getSerializer(s);
             byte[] data = serializer.serialize(in);
-            //写入序列化方式
             out.writeByte(serializer.getSerializerType());
-            //写入消息长度
             out.writeInt(data.length);
-            //写入消息体
             out.writeBytes(data);
         }
     }

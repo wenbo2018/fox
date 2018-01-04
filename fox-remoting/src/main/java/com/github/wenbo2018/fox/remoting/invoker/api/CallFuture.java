@@ -28,7 +28,6 @@ public class CallFuture implements Future {
 
 
     public void processResponse(InvokeResponse invokeResponse) {
-        System.out.println("处理回调：" + invokeResponse);
         this.invokeResponse = invokeResponse;
     }
 

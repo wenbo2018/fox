@@ -7,13 +7,13 @@ import java.util.Properties;
  */
 public interface ConfigManager {
 
-    public void init();
+    void init();
 
-    public void init(Properties properties);
+    void init(Properties properties);
 
-    public Properties getRegistryConfig();
+    Properties getRegistryConfig();
 
-    public String getStringValue(String key, String defaultValue);
+    String getStringValue(String key, String defaultValue);
 
-    public String getStringValue(String key);
+    String getStringValue(String key);
 }

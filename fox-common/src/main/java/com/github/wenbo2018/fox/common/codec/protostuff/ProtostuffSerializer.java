@@ -21,7 +21,7 @@ public class ProtostuffSerializer extends AbstractSerializer {
 
     private static Objenesis objenesis = new ObjenesisStd(true);
 
-    private byte serializerType= FoxConstants.PROTOSTUFF_SERIALIEE_byte;
+    private byte serializerType = FoxConstants.PROTOSTUFF_SERIALIEE_byte;
 
 
     @Override
@@ -51,7 +51,7 @@ public class ProtostuffSerializer extends AbstractSerializer {
     }
 
     @SuppressWarnings("unchecked")
-    private  <T> Schema<T> getSchema(Class<T> cls) {
+    private <T> Schema<T> getSchema(Class<T> cls) {
         Schema<T> schema = (Schema<T>) cachedSchema.get(cls);
         if (schema == null) {
             schema = RuntimeSchema.createFrom(cls);

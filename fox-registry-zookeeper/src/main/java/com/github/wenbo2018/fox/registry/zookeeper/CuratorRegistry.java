@@ -2,8 +2,9 @@ package com.github.wenbo2018.fox.registry.zookeeper;
 
 import com.github.wenbo2018.fox.registry.Registry;
 import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
 import org.apache.zookeeper.data.Stat;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,8 +16,8 @@ import java.util.Properties;
  */
 public class CuratorRegistry implements Registry {
 
-    private static Logger LOGGER = Logger.getLogger(CuratorRegistry.class);
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(CuratorRegistry.class);
     private static final String CHARSET = "UTF-8";
 
     private Properties properties;
@@ -38,9 +39,9 @@ public class CuratorRegistry implements Registry {
                         //获取zk地址
                         String zkAddress = properties.getProperty(Constants.KEY_REGISTRY_ADDRESS);
                         if (zkAddress != null) {
-                            LOGGER.info("start to initialize zookeeper curator:" + zkAddress);
+                            LOGGER.info("start to initialize zookeeper curator:{}", zkAddress);
                             zookeeperClient = new CuratorClient(zkAddress);
-                            LOGGER.info("succeed to initialize zookeeper curator:" + zkAddress);
+                            LOGGER.info("succeed to initialize zookeeper curator:{}", zkAddress);
                             isInitialized = true;
                         } else {
                             LOGGER.error("zookeeper server adress is null");
@@ -83,9 +84,9 @@ public class CuratorRegistry implements Registry {
             } else {
                 zookeeperClient.create(serviceAddressPath, serviceAddress);
             }
-            LOGGER.info("service register success:" + serviceName + ":" + serviceAddress);
+            LOGGER.info("service register success:{}:{}", serviceName, serviceAddress);
         } catch (Exception e) {
-            LOGGER.error("service register fail:" + serviceName + ":" + serviceAddress);
+            LOGGER.error("service register fail:{}:{}", serviceName, serviceAddress);
         }
     }
 
@@ -99,7 +100,7 @@ public class CuratorRegistry implements Registry {
     @Override
     public String getServiceAddress(String serviceName) {
         // 获取 service 节点
-        String result=null;
+        String result = null;
         String servicePath = Constants.ZK_REGISTRY_PATH + "/" + serviceName;
         String serviceAddressPath = Constants.ZK_REGISTRY_PATH + "/" + serviceName;
         try {
@@ -118,10 +119,10 @@ public class CuratorRegistry implements Registry {
 //                result=addressList.get(1 + (int)(Math.random()*addressList.size())-1);
 //
             } else {
-                throw new RuntimeException(String.format("can not find any address node on path: %s",serviceAddressPath));
+                throw new RuntimeException(String.format("can not find any address node on path: %s", serviceAddressPath));
             }
         } catch (Exception e) {
-            LOGGER.error("get service address fail:"+e.toString());
+            LOGGER.error("get service address fail:{}", e);
         }
 
         return result;

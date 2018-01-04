@@ -18,9 +18,9 @@ public class SingleServiceBean<T> {
 
     public void init() throws Exception {
         if (serviceImpl == null) {
-            throw new IllegalArgumentException("service not found:" + this);
+            throw new IllegalArgumentException("service not found:{}" + this);
         }
-        ProviderConfig providerConfig=new ProviderConfig();
+        ProviderConfig providerConfig = new ProviderConfig();
         providerConfig.setService(serviceImpl);
         providerConfig.setServiceName(serviceName);
         if (serverBean != null) {
@@ -32,7 +32,6 @@ public class SingleServiceBean<T> {
     }
 
 
-
     public String getServiceName() {
         return serviceName;
     }
@@ -40,7 +39,6 @@ public class SingleServiceBean<T> {
     public void setServiceName(String serviceName) {
         this.serviceName = serviceName;
     }
-
 
 
     public ServerBean getServerBean() {

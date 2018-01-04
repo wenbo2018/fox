@@ -17,7 +17,7 @@ public class AuthorityFilter implements Filter {
 
     private static final ConcurrentHashMap<String, String> appkeys = new ConcurrentHashMap<>();
 
-    private static final boolean APPKEY_ENABLE=false;
+    private static final boolean APPKEY_ENABLE = false;
 
     @Override
     public InvokeResponse invoke(ServiceInvocationHandler handler, InvokeContext invokeContext) throws Throwable {

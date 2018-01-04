@@ -28,7 +28,7 @@ public class InvokerBootStrap {
                     //注册管理初始化
                     RegistryManager.getInstance();
                     ClientManager.getInstance();
-                    isStartup=true;
+                    isStartup = true;
                 }
             }
         }

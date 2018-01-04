@@ -12,11 +12,11 @@ public class ConfigManagerLoader {
 
     private static final Logger logger = Logger.getLogger(ConfigManagerLoader.class);
 
-    public static void init(){
+    public static void init() {
         if (configManager == null) {
             configManager = new PropertiesFileConfigManager();
         }
-        logger.debug("config manager init:" + configManager);
+        logger.info("config manager init");
         configManager.init();
     }
 

@@ -14,12 +14,11 @@ public class InvokerCfg<T> {
 
     private String serviceName;
 
-    public InvokerCfg(Class<T> serviceInterface, String iface,String serviceName) {
+    public InvokerCfg(Class<T> serviceInterface, String iface, String serviceName) {
         this.serviceInterface = serviceInterface;
         this.iface = iface;
-        this.serviceName=serviceName;
+        this.serviceName = serviceName;
     }
-
 
 
     public Class<T> getServiceInterface() {

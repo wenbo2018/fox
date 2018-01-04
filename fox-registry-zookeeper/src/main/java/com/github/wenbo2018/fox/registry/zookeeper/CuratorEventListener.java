@@ -47,7 +47,7 @@ public class CuratorEventListener implements CuratorListener {
         try {
             PathInfo pathInfo = parsePath(event.getPath());
             if (pathInfo == null) {
-                LOGGER.warn("Failed to parse path " + event.getPath());
+                LOGGER.warn("Failed to parse path {}", event.getPath());
                 return;
             }
             if (pathInfo.type == ADDRESS) {
@@ -75,7 +75,7 @@ public class CuratorEventListener implements CuratorListener {
 
     private void addressChanged(PathInfo pathInfo) throws Exception {
         String hosts = client.get(pathInfo.path);
-        LOGGER.info("Service address changed, path " + pathInfo.path + " value " + hosts);
+        LOGGER.info("Service address changed, path:{},value:{}", pathInfo.path, hosts);
         List<String[]> hostDetail = getServiceIpPortList(hosts);
         serviceChangeListener.onServiceHostChange(pathInfo.serviceName, hostDetail);
         client.watch(pathInfo.path);
@@ -85,7 +85,7 @@ public class CuratorEventListener implements CuratorListener {
     private void versionChanged(PathInfo pathInfo) throws RegistryException {
         try {
             String version = client.get(pathInfo.path);
-            LOGGER.info("version changed, path " + pathInfo.path + " value " + version);
+            LOGGER.info("version changed, path {},value:{}", pathInfo.path, version);
             RegistryEventListener.serverVersionChanged(pathInfo.server, version);
             client.watch(pathInfo.path);
         } catch (Exception e) {
@@ -124,13 +124,13 @@ public class CuratorEventListener implements CuratorListener {
                         ip = host.substring(0, idx);
                         port = Integer.parseInt(host.substring(idx + 1));
                     } catch (RuntimeException e) {
-                        LOGGER.warn("invalid host: " + host + ", ignored!");
+                        LOGGER.warn("invalid host: {} ignored!", host);
                     }
                     if (ip != null && port > 0) {
                         result.add(new String[]{ip, port + ""});
                     }
                 } else {
-                    LOGGER.warn("invalid host: " + host + ", ignored!");
+                    LOGGER.warn("invalid host:{} ignored!", host);
                 }
             }
         }

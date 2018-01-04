@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
  */
 public class NettyChannel implements ServiceProviderChannel {
 
-    private  static Logger LOGGER=Logger.getLogger(NettyChannel.class);
+    private final static Logger LOGGER = Logger.getLogger(NettyChannel.class);
 
     private Channel channel = null;
 

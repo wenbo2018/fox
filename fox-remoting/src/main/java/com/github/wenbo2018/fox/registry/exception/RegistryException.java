@@ -3,7 +3,7 @@ package com.github.wenbo2018.fox.registry.exception;
 /**
  * Created by shenwenbo on 2017/3/11.
  */
-public class RegistryException extends  Exception {
+public class RegistryException extends Exception {
 
     private static final long serialVersionUID = -277294587317829825L;
 

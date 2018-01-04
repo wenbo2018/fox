@@ -2,6 +2,8 @@ package com.github.wenbo2018.fox.common.codec.java;
 
 import com.github.wenbo2018.fox.common.codec.AbstractSerializer;
 import com.github.wenbo2018.fox.common.common.FoxConstants;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 
@@ -11,11 +13,15 @@ import java.io.*;
 public class JavaSerializer extends AbstractSerializer {
 
 
-    private byte serializerType= FoxConstants.JAVA_DEFAULT_SERIALIEE_byte;
+    private static final Logger logger = LoggerFactory.getLogger(JavaSerializer.class);
+
+    private byte serializerType = FoxConstants.JAVA_DEFAULT_SERIALIEE_byte;
 
     @Override
     public <T> byte[] serialize(T obj) {
-        if(obj==null) throw new NullPointerException();
+        if (obj == null) {
+            throw new NullPointerException();
+        }
         ByteArrayOutputStream os = new ByteArrayOutputStream();
         try {
             ObjectOutputStream out = new ObjectOutputStream(os);
@@ -28,18 +34,18 @@ public class JavaSerializer extends AbstractSerializer {
 
     @Override
     public <T> T deserialize(byte[] data, Class<T> cls) {
-        if(data==null) throw new NullPointerException();
+        if (data == null) throw new NullPointerException();
 
         ByteArrayInputStream is = new ByteArrayInputStream(data);
         ObjectInputStream in = null;
-        T obj=null;
+        T obj = null;
         try {
             in = new ObjectInputStream(is);
-            obj=(T)in.readObject();
+            obj = (T) in.readObject();
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("IOException:{}",e);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.error("ClassNotFoundException:{}",e);
         }
         return obj;
     }
