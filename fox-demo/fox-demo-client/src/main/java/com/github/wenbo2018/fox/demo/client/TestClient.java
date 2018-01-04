@@ -1,6 +1,8 @@
 package com.github.wenbo2018.fox.demo.client;
 
 import com.github.wenbo2018.fox.demo.api.HelloService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -10,6 +12,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 
 public class TestClient {
+
+
+    private static final Logger logger = LoggerFactory.getLogger(TestClient.class);
+
         static  int i=100000;
         public static void main(String[] args) {
 
@@ -21,6 +27,7 @@ public class TestClient {
                     while (i>0) {
                         System.err.println(helloService.incer());
                         i--;
+                        logger.debug("thread info:{}", Thread.currentThread().getName());
                         try {
                             Thread.sleep(1000);
                         } catch (InterruptedException e) {
