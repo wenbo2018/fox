@@ -3,12 +3,25 @@ package com.github.wenbo2018.fox.remoting.invoker.async;
 import com.github.wenbo2018.fox.common.bean.InvokeRequest;
 import com.github.wenbo2018.fox.common.bean.InvokeResponse;
 import com.github.wenbo2018.fox.common.common.FoxConstants;
+import com.github.wenbo2018.fox.remoting.enums.ReturnEnum;
+import com.github.wenbo2018.fox.remoting.exception.RequestTimeOutException;
 import com.github.wenbo2018.fox.remoting.invoker.api.CallFuture;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Created by shenwenbo on 2017/3/25.
  */
 public class CallbackFuture implements Callback {
+
+
+    private static final Logger logger = LoggerFactory.getLogger(CallbackFuture.class);
+
     private CallFuture future;
     private boolean done = false;
     private boolean concelled = false;
@@ -16,32 +29,53 @@ public class CallbackFuture implements Callback {
     private InvokeResponse response;
     private InvokeRequest request;
 
+    private final Lock lock = new ReentrantLock();
+
+    private final Condition condition = lock.newCondition();
+
+
     @Override
     public void run() {
-        synchronized (this) {
+        lock.lock();
+        try {
             this.done = true;
-            if (this.response.getMessageType() == FoxConstants.MESSAGE_TYPE_SERVICE) {
-                this.success = true;
+            if (condition != null) {
+                condition.signal();
             }
-            this.notifyAll();
+        } finally {
+            lock.unlock();
         }
     }
 
     public InvokeResponse get() throws InterruptedException {
-        return get(Long.MAX_VALUE);
+        return get(2000);
     }
 
     public InvokeResponse get(long timeoutMillis) throws InterruptedException {
-        synchronized (this) {
-            long start = request.getCreateMillisTime();
-            while (!this.done) {
-                long timeoutMillis_ = timeoutMillis - (System.currentTimeMillis() - start);
-                if (timeoutMillis_ <= 0) {
+        if (response != null && response.getReturnType() == ReturnEnum.SERVICE.ordinal()) {
+            return response;
+        }
 
+        lock.lock();
+        try {
+            long start = request.getCreateMillisTime();
+            long timeoutLeft = timeoutMillis;
+            while (!isDone()) {
+                condition.await(timeoutLeft, TimeUnit.MILLISECONDS);
+                long timeoutPassed = System.currentTimeMillis() - start;
+
+                if (isDone() || timeoutPassed >= timeoutMillis) {
+                    break;
                 } else {
-                    this.wait(timeoutMillis_);
+                    timeoutLeft = timeoutMillis - timeoutPassed;
                 }
             }
+        } finally {
+            lock.unlock();
+        }
+        if (!isDone()) {
+            throw new RequestTimeOutException(
+                    "request timeout, current time:" + System.currentTimeMillis() + "\r\nrequest:" + request);
         }
         return response;
     }

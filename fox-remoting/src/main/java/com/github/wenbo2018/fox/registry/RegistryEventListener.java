@@ -48,7 +48,7 @@ public class RegistryEventListener {
         listeners.addAll(serviceProviderChangeListeners);
         for (ServiceProviderChangeListener listener : listeners) {
             ServiceProviderChangeEvent event = new ServiceProviderChangeEvent(serviceName, host, port);
-            listener.serviceProviderAdded(event);
+            listener.serviceProviderRemoved(event);
         }
     }
 

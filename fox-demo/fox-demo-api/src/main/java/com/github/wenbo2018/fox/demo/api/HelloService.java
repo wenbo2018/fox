@@ -7,9 +7,11 @@ import com.github.wenbo2018.fox.demo.api.dto.User;
  */
 public interface HelloService {
 
-    public String hello(String hello,String hello2);
+    public String hello(String hello, String hello2);
 
     public User changeUser(User user);
 
     String incer();
+
+    int count(int cur);
 }

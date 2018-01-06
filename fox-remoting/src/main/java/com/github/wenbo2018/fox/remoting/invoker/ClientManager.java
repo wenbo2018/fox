@@ -18,6 +18,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -26,7 +27,7 @@ import java.util.concurrent.Executors;
  */
 public class ClientManager {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(ClientManager.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(ClientManager.class);
 
     private ServiceProviderChangeListener providerChangeListener = new InnerServiceProviderChangeListener();
 
@@ -35,6 +36,8 @@ public class ClientManager {
     private static volatile boolean isInit = false;
 
     private static Map<InvokerConfig, List<Client>> clientsMap = new ConcurrentHashMap<>();
+
+    private static Map<HostInfo, InvokerConfig> hostInfoInvokerConfigMap = new ConcurrentHashMap<>();
 
     private ClientFactory clientFactory;
 
@@ -68,17 +71,19 @@ public class ClientManager {
     }
 
 
-    public void registerClient(InvokerConfig invokerConfig, String host, int port) {
-        ConnectInfo connectInfo = new ConnectInfo(host, port);
+    public void registerClient(InvokerConfig invokerConfig, HostInfo hostInfo) {
+        ConnectInfo connectInfo = new ConnectInfo(hostInfo.getHost(), hostInfo.getPort());
         Client client = selectConnect(connectInfo);
         List<Client> clientList = clientsMap.get(invokerConfig);
         if (CollectionUtil.isEmpty(clientList)) {
-            if (clientList == null)
+            if (clientList == null) {
                 clientList = new ArrayList<>();
+            }
             clientList.add(client);
         } else {
             clientList.add(client);
         }
+        hostInfoInvokerConfigMap.put(hostInfo, invokerConfig);
         clientsMap.put(invokerConfig, clientList);
     }
 
@@ -96,7 +101,7 @@ public class ClientManager {
                 throw new RuntimeException("service:" + invokerConfig.getServiceName() + ":is not can use");
             }
             for (HostInfo hostInfo : hostInfos) {
-                registerClient(invokerConfig, hostInfo.getHost(), hostInfo.getPort());
+                registerClient(invokerConfig, hostInfo);
             }
             clients = clientsMap.get(invokerConfig);
         }
@@ -114,6 +119,18 @@ public class ClientManager {
         return clients;
     }
 
+    private void removeHost(HostInfo hostInfo) {
+        if (hostInfoInvokerConfigMap.containsKey(hostInfo)) {
+            InvokerConfig invokerConfig = hostInfoInvokerConfigMap.get(hostInfo);
+            if (invokerConfig != null) {
+                clientsMap.remove(invokerConfig);
+                LOGGER.debug("currcet client info:{}", clientsMap.toString());
+                LOGGER.debug("remove host success:{}", hostInfo.toString());
+            }
+        }
+    }
+
+
     //服务变化监控处理
     class InnerServiceProviderChangeListener implements ServiceProviderChangeListener {
 
@@ -124,7 +141,8 @@ public class ClientManager {
 
         @Override
         public void serviceProviderRemoved(ServiceProviderChangeEvent event) {
-
+            HostInfo hostInfo = new HostInfo(event.getHost(), event.getPort());
+            removeHost(hostInfo);
         }
     }
 

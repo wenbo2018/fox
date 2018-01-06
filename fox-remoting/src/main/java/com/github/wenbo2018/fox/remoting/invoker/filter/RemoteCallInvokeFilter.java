@@ -9,6 +9,8 @@ import com.github.wenbo2018.fox.remoting.invoker.api.Client;
 import com.github.wenbo2018.fox.remoting.invoker.handler.ServiceInvocationHandler;
 import com.github.wenbo2018.fox.remoting.invoker.ClientManager;
 import com.github.wenbo2018.fox.remoting.invoker.RemoteServiceCall;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.UUID;
 
@@ -18,6 +20,9 @@ import java.util.UUID;
 public class RemoteCallInvokeFilter implements Filter {
 
 
+    private static final Logger logger = LoggerFactory.getLogger(RemoteCallInvokeFilter.class);
+
+
     @Override
     public InvokeResponse invoke(ServiceInvocationHandler handler, InvokeContext invokeContext) throws Throwable {
         InvokeRequest request = createInvokeRequest(invokeContext);
@@ -25,20 +30,13 @@ public class RemoteCallInvokeFilter implements Filter {
         CallbackFuture callback = new CallbackFuture();
         InvokeResponse response = null;
         RemoteServiceCall.requestInvoke(request, callback, client);
-        response = client.send(request, callback);
+        response = callback.get();
         if (response == null) {
             response = callback.get();
         }
+        logger.debug("response:{}", response);
         long time = System.currentTimeMillis();
-        if (response == null) {
-            throw new RuntimeException("response is null");
-        }
-        // 返回 RPC 响应结果
-        if (response.hasException()) {
-            throw response.getException();
-        } else {
-            return response;
-        }
+        return response;
     }
 
     /***

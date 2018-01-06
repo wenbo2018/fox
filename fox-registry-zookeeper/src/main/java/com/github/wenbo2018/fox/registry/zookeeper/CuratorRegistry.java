@@ -119,12 +119,11 @@ public class CuratorRegistry implements Registry {
 //                result=addressList.get(1 + (int)(Math.random()*addressList.size())-1);
 //
             } else {
-                throw new RuntimeException(String.format("can not find any address node on path: %s", serviceAddressPath));
+                LOGGER.warn("can not find any address node on path:{}",serviceAddressPath);
             }
         } catch (Exception e) {
             LOGGER.error("get service address fail:{}", e);
         }
-
         return result;
     }
 }

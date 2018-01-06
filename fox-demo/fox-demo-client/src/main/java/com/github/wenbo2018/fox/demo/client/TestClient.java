@@ -25,12 +25,12 @@ public class TestClient {
                 @Override
                 public void run() {
                     while (i>0) {
-                        System.err.println(helloService.incer());
+                        try {
+                            System.err.println(helloService.incer());
                         i--;
                         logger.debug("thread info:{}", Thread.currentThread().getName());
-                        try {
-                            Thread.sleep(1000);
-                        } catch (InterruptedException e) {
+                            Thread.sleep(2000);
+                        } catch (Exception e) {
                             e.printStackTrace();
                         }
                     }
