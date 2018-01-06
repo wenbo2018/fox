@@ -46,5 +46,11 @@ public class HostInfo {
         return host.hashCode() + port;
     }
 
-
+    @Override
+    public String toString() {
+        return "HostInfo{" +
+                "host='" + host + '\'' +
+                ", port=" + port +
+                '}';
+    }
 }

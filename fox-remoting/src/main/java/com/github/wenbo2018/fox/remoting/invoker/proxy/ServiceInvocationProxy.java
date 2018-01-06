@@ -2,6 +2,7 @@ package com.github.wenbo2018.fox.remoting.invoker.proxy;
 
 import com.github.wenbo2018.fox.common.bean.InvokeResponse;
 import com.github.wenbo2018.fox.common.bean.InvokeRequest;
+import com.github.wenbo2018.fox.remoting.exception.RpcException;
 import com.github.wenbo2018.fox.remoting.invoker.ClientManager;
 import com.github.wenbo2018.fox.remoting.invoker.RemoteServiceCall;
 import com.github.wenbo2018.fox.remoting.invoker.async.CallbackFuture;
@@ -45,24 +46,29 @@ public class ServiceInvocationProxy<T> implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         InvokeRequest request = createInvokeRequest(method, args);
         Client client = ClientManager.getInstance().getClient(invokerConfig);
-        CallbackFuture callback = new CallbackFuture();
-        InvokeResponse response=null;
-        RemoteServiceCall.requestInvoke(request,callback,client);
-        response = client.send(request, callback);
-        if (response == null) {
-            response = callback.get();
+        if (client == null) {
+            LOGGER.debug("客户端错误");
         }
+        CallbackFuture callback = new CallbackFuture();
+        InvokeResponse response = null;
+        RemoteServiceCall.requestInvoke(request, callback, client);
+        response = callback.get();
+        LOGGER.debug("response:{}", response);
+//        response = client.send(request, callback);
         long time = System.currentTimeMillis();
         LOGGER.debug("time: {}ms", System.currentTimeMillis() - time);
         if (response == null) {
-            throw new RuntimeException("response is null");
+            response = new InvokeResponse();
+            response.setException(new RpcException("返回值为null"));
+//            throw new RuntimeException("response is null");
         }
         // 返回 RPC 响应结果
-        if (response.hasException()) {
-            throw response.getException();
-        } else {
-            return response.getResult();
-        }
+//        if (response.hasException()) {
+//            throw response.getException();
+//        } else {
+//            return response.getResult();
+//        }
+        return response;
     }
 
     /**

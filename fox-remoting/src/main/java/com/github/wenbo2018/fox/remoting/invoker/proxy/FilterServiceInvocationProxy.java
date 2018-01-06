@@ -16,14 +16,14 @@ import java.lang.reflect.Method;
  */
 public class FilterServiceInvocationProxy implements InvocationHandler {
 
-    private static Logger LOGGER= LoggerFactory.getLogger(FilterServiceInvocationProxy.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(FilterServiceInvocationProxy.class);
 
     private InvokerConfig invokerConfig;
     private ServiceInvocationHandler handler;
 
     public FilterServiceInvocationProxy(InvokerConfig invokerConfig, ServiceInvocationHandler serviceInvocationHandler) {
-        this.invokerConfig=invokerConfig;
-        this.handler=serviceInvocationHandler;
+        this.invokerConfig = invokerConfig;
+        this.handler = serviceInvocationHandler;
     }
 
     @Override
@@ -42,17 +42,19 @@ public class FilterServiceInvocationProxy implements InvocationHandler {
         if ("equals".equals(methodName) && parameterTypes.length == 1) {
             return handler.equals(args[0]);
         }
-       return invokeResult(handler.invoke(new DefaultInvokerContext(invokerConfig,methodName,parameterTypes,args)));
+        return invokeResult(handler.invoke(new DefaultInvokerContext(invokerConfig, methodName, parameterTypes, args)));
     }
 
     private Object invokeResult(InvokeResponse response) {
-        if (response.getReturnType()== ReturnEnum.SERVICE.ordinal()) {
+        if (response.getReturnType() == ReturnEnum.SERVICE.ordinal()) {
+            LOGGER.debug("SERVICE result:{}",response.toString());
             return response.getResult();
         }
-        if (response.getReturnType()==ReturnEnum.AUTHORITY_EXCEPTION.ordinal()) {
+        if (response.getReturnType() == ReturnEnum.AUTHORITY_EXCEPTION.ordinal()) {
+            LOGGER.debug("AUTHORITY_EXCEPTION result:{}",response.toString());
             LOGGER.error(response.getException().toString());
         }
-        if (response.getReturnType()==ReturnEnum.TIMEOUT_EXCEPTION.ordinal()) {
+        if (response.getReturnType() == ReturnEnum.TIMEOUT_EXCEPTION.ordinal()) {
             LOGGER.error(response.getException().toString());
         }
         return null;

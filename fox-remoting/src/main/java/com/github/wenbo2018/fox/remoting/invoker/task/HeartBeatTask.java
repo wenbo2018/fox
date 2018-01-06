@@ -21,7 +21,7 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 public class HeartBeatTask implements Runnable {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(HeartBeatTask.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(HeartBeatTask.class);
 
     public static final String HEART_TASK_SERVICE = "HeartbeatService/";
 
@@ -52,6 +52,7 @@ public class HeartBeatTask implements Runnable {
                 List<Client> clients = ClientManager.getInstance().getClients();
                 for (Client client : clients) {
                     if (client != null) {
+                        LOGGER.debug("thread info:{}", Thread.currentThread().getName());
                         sendHeartBeatRequest(client);
                     }
                 }
