@@ -2,7 +2,7 @@
 package com.github.wenbo2018.fox.spring.config.schema;
 
 
-import com.github.wenbo2018.fox.remoting.provider.config.ServerBean;
+import com.github.wenbo2018.fox.remoting.provider.config.ServerConfig;
 import com.github.wenbo2018.fox.remoting.provider.config.SingleServiceBean;
 import com.github.wenbo2018.fox.spring.config.ReferenceBean;
 import org.apache.commons.lang3.StringUtils;
@@ -75,15 +75,15 @@ public class FoxBeanDefinitionParser implements BeanDefinitionParser {
                 if (!parserContext.getRegistry().containsBeanDefinition(server)) {
                     throw new IllegalStateException("service must have a reference to bean:" + server);
                 }
-                properties.addPropertyValue("serverBean", new RuntimeBeanReference(server));
+                properties.addPropertyValue("serverConfig", new RuntimeBeanReference(server));
             }
             String serviceName = null;
             if (element.hasAttribute("serviceName")) {
                 serviceName = element.getAttribute("serviceName");
                 properties.addPropertyValue("serviceName", serviceName);
             }
-        } else if (ServerBean.class.equals(beanClass)) {
-            beanDefinition.setBeanClass(ServerBean.class);
+        } else if (ServerConfig.class.equals(beanClass)) {
+            beanDefinition.setBeanClass(ServerConfig.class);
             beanDefinition.setInitMethodName("init");
             MutablePropertyValues properties = beanDefinition.getPropertyValues();
             if (element.hasAttribute("port")) {

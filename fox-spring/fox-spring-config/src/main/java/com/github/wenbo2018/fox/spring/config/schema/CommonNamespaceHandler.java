@@ -1,7 +1,7 @@
 
 package com.github.wenbo2018.fox.spring.config.schema;
 
-import com.github.wenbo2018.fox.remoting.provider.config.ServerBean;
+import com.github.wenbo2018.fox.remoting.provider.config.ServerConfig;
 import com.github.wenbo2018.fox.remoting.provider.config.SingleServiceBean;
 import com.github.wenbo2018.fox.spring.config.ReferenceBean;
 import com.github.wenbo2018.fox.spring.config.RegistryConfig;
@@ -17,7 +17,7 @@ public class CommonNamespaceHandler extends NamespaceHandlerSupport {
     @Override
     public void init() {
         registerBeanDefinitionParser("register", new FoxBeanDefinitionParser(RegistryConfig.class, false));
-        registerBeanDefinitionParser("server", new FoxBeanDefinitionParser(ServerBean.class, false));
+        registerBeanDefinitionParser("server", new FoxBeanDefinitionParser(ServerConfig.class, false));
         registerBeanDefinitionParser("service", new FoxBeanDefinitionParser(SingleServiceBean.class, true));
         registerBeanDefinitionParser("reference", new FoxBeanDefinitionParser(ReferenceBean.class, false));
     }

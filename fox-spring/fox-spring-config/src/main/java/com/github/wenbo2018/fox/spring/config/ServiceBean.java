@@ -4,8 +4,8 @@ import com.github.wenbo2018.fox.config.ConfigManager;
 import com.github.wenbo2018.fox.config.ConfigManagerLoader;
 import com.github.wenbo2018.fox.remoting.common.Constants;
 import com.github.wenbo2018.fox.remoting.provider.config.ProviderConfig;
-import com.github.wenbo2018.fox.remoting.provider.config.ServerConfig;
 import com.github.wenbo2018.fox.remoting.ServiceFactory;
+import com.github.wenbo2018.fox.remoting.provider.config.ServerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
