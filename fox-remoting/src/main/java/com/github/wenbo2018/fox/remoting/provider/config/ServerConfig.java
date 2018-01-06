@@ -1,9 +1,10 @@
 package com.github.wenbo2018.fox.remoting.provider.config;
 
+import com.github.wenbo2018.fox.remoting.ServiceFactory;
 import com.github.wenbo2018.fox.remoting.common.Constants;
 
 /**
- * Created by shenwenbo on 2016/9/27.
+ * Created by shenwenbo on 2017/3/9.
  */
 public class ServerConfig {
 
@@ -14,8 +15,29 @@ public class ServerConfig {
     private int port = Constants.DEFAULT_PORT;
 
     //服务发布机器ip
-    private String ip="127.0.0.1";
+    private String ip = "127.0.0.1";
 
+    public int getPort() {
+        return port;
+    }
+
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+
+    public ServerConfig init() throws Exception {
+        ServiceFactory.startUpServer(this);
+        return this;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
 
     public int getCorePoolSize() {
         return corePoolSize;
@@ -39,21 +61,5 @@ public class ServerConfig {
 
     public void setWorkQueueSize(int workQueueSize) {
         this.workQueueSize = workQueueSize;
-    }
-
-    public int getPort() {
-        return port;
-    }
-
-    public void setPort(int port) {
-        this.port = port;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
     }
 }

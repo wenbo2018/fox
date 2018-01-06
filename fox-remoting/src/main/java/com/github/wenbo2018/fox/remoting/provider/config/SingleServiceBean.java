@@ -11,10 +11,9 @@ public class SingleServiceBean<T> {
 
     private String serviceName;
 
-    private ServerBean serverBean;
+    private ServerConfig serverConfig;
 
     private Object serviceImpl;
-
 
 
     public void init() throws Exception {
@@ -24,10 +23,10 @@ public class SingleServiceBean<T> {
         ProviderConfig providerConfig = new ProviderConfig();
         providerConfig.setService(serviceImpl);
         providerConfig.setServiceName(serviceName);
-        if (serverBean != null) {
-            providerConfig.setServerConfig(serverBean.init());
+        if (serverConfig != null) {
+            providerConfig.setServerConfig(serverConfig.init());
         } else {
-            providerConfig.setServerConfig(serverBean.getServerConfig());
+            providerConfig.setServerConfig(serverConfig);
         }
         ServiceFactory.addService(providerConfig);
     }
@@ -42,12 +41,12 @@ public class SingleServiceBean<T> {
     }
 
 
-    public ServerBean getServerBean() {
-        return serverBean;
+    public ServerConfig getServerConfig() {
+        return serverConfig;
     }
 
-    public void setServerBean(ServerBean serverBean) {
-        this.serverBean = serverBean;
+    public void setServerConfig(ServerConfig serverConfig) {
+        this.serverConfig = serverConfig;
     }
 
     public Object getServiceImpl() {
