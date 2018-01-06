@@ -88,7 +88,6 @@
         <module>fox-common</module>
         <module>fox-netty</module>
         <module>fox-remoting</module>
-        <module>fox-registry-zookeeper</module>
         <module>fox-demo</module>
         <module>fox-config</module>
         <module>fox</module>
