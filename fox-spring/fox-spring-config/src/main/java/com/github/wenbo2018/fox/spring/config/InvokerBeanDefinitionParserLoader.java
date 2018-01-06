@@ -13,7 +13,7 @@ public class InvokerBeanDefinitionParserLoader implements BeanDefinitionParserLo
     @Override
     public Map<String, BeanDefinitionParser> loadBeanDefinitionParsers() {
         Map<String, BeanDefinitionParser> parsers = new HashMap<String, BeanDefinitionParser>();
-        parsers.put("invoker", new ReferenceBeanDefinitionParser(ServiceProxy.class, false));
+        parsers.put("reference", new ReferenceBeanDefinitionParser(ReferenceConfig.class, false));
         return parsers;
     }
 

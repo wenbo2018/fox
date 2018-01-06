@@ -18,10 +18,10 @@
             <!--<property name="serviceName" value="service.fox.com_helloTestService_helloService_1.0.0"/>-->
             <!--<property name="serializer" value="hessian"/>-->
         <!--</bean>-->
-    <fox:invoker id="helloService"
+    <fox:reference id="helloService"
                  iface="com.github.wenbo2018.fox.demo.api.HelloService"
-            serviceName="service.fox.com_helloTestService_helloService_1.0.0"
-            serializer="hessian"/>
+                 serviceName="service.fox.com_helloTestService_helloService_1.0.0"
+                 serializer="hessian"/>
 
 
 </beans>

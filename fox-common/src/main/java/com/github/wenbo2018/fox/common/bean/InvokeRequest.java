@@ -22,6 +22,7 @@ public class InvokeRequest implements Serializable {
     private int messageType = FoxConstants.MESSAGE_TYPE_SERVICE;
     private long seq;
     private long createMillisTime;
+    private int timeout;
 
     public String getRequestId() {
         return requestId;
@@ -111,6 +112,14 @@ public class InvokeRequest implements Serializable {
         this.createMillisTime = createMillisTime;
     }
 
+    public int getTimeout() {
+        return timeout;
+    }
+
+    public void setTimeout(int timeout) {
+        this.timeout = timeout;
+    }
+
     @Override
     public String toString() {
         return "InvokeRequest{" +
@@ -124,7 +133,8 @@ public class InvokeRequest implements Serializable {
                 ", serviceName='" + serviceName + '\'' +
                 ", messageType=" + messageType +
                 ", seq=" + seq +
+                ", createMillisTime=" + createMillisTime +
+                ", timeout=" + timeout +
                 '}';
     }
-
 }

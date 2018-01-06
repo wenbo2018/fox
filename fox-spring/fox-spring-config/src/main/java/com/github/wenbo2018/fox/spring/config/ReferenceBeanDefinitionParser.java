@@ -39,9 +39,8 @@ public class ReferenceBeanDefinitionParser implements BeanDefinitionParser {
         if (StringUtils.isBlank(id)) {
             id = "foxRef_" + idCounter.incrementAndGet();
         }
-        beanDefinition.setBeanClass(ReferenceProxy.class);
+        beanDefinition.setBeanClass(ReferenceConfig.class);
         beanDefinition.setInitMethodName("init");
-
         MutablePropertyValues properties = beanDefinition.getPropertyValues();
         if (element.hasAttribute("iface")) {
             properties.addPropertyValue("iface", element.getAttribute("iface"));
@@ -49,6 +48,11 @@ public class ReferenceBeanDefinitionParser implements BeanDefinitionParser {
         if (element.hasAttribute("serviceName")) {
             properties.addPropertyValue("serviceName", element.getAttribute("serviceName"));
         }
+
+        if (element.hasAttribute("timeout")) {
+            properties.addPropertyValue("timeout", element.getAttribute("timeout"));
+        }
+
         if (element.hasAttribute("serializer")) {
             properties.addPropertyValue("serializer", element.getAttribute("serializer"));
         }

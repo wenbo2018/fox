@@ -17,7 +17,6 @@ public class CommonNamespaceHandler extends NamespaceHandlerSupport {
 
     @Override
     public void init() {
-        System.out.println(Constants.FOX_ICON);
         List<BeanDefinitionParserLoader> loaders = ExtensionServiceLoader.getExtensionList(BeanDefinitionParserLoader.class);
         if (loaders != null) {
             for (BeanDefinitionParserLoader loader : loaders) {

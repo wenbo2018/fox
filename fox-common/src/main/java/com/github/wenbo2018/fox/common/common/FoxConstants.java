@@ -16,4 +16,10 @@ public class FoxConstants {
     public static int MESSAGE_TYPE_SERVICE = 1;
     public static int MESSAGE_TYPE_HEART = 2;
 
+    /***
+     * 默认超时时间2000ms
+     */
+    public static int TIME_OUT = 2000;
+
+
 }

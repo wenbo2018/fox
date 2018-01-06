@@ -48,14 +48,13 @@ public class CallbackFuture implements Callback {
     }
 
     public InvokeResponse get() throws InterruptedException {
-        return get(2000);
+        return get(request.getTimeout());
     }
 
     public InvokeResponse get(long timeoutMillis) throws InterruptedException {
         if (response != null && response.getReturnType() == ReturnEnum.SERVICE.ordinal()) {
             return response;
         }
-
         lock.lock();
         try {
             long start = request.getCreateMillisTime();

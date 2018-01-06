@@ -4,6 +4,7 @@ import com.github.wenbo2018.fox.common.common.FoxConstants;
 import com.github.wenbo2018.fox.common.util.ClassUtils;
 import com.github.wenbo2018.fox.remoting.ServiceFactory;
 import com.github.wenbo2018.fox.remoting.invoker.config.InvokerConfig;
+import org.apache.commons.lang.math.NumberUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,9 +13,9 @@ import org.springframework.beans.factory.FactoryBean;
 /**
  * Created by shenwenbo on 16/7/21.
  */
-public class ReferenceProxy implements FactoryBean {
+public class ReferenceConfig implements FactoryBean {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ReferenceProxy.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ReferenceConfig.class);
 
     private String serviceName;
 
@@ -24,10 +25,11 @@ public class ReferenceProxy implements FactoryBean {
 
     private Object service;
 
+    private String timeout;
+
     private Class<?> interfaceClass;
 
     private ClassLoader classLoader;
-
 
     private String zkAddress;
 
@@ -41,7 +43,12 @@ public class ReferenceProxy implements FactoryBean {
         } catch (ClassNotFoundException e) {
             LOGGER.error("class:{} not found:{}", interfaceClass, e);
         }
-        InvokerConfig invokerConfig = new InvokerConfig(this.interfaceClass, this.iface, this.serviceName, this.serializer);
+        InvokerConfig invokerConfig = new InvokerConfig(
+                this.interfaceClass,
+                this.iface,
+                this.serviceName,
+                this.serializer,
+                NumberUtils.toInt(timeout) > 0 ? NumberUtils.toInt(timeout) : FoxConstants.TIME_OUT);
         this.service = ServiceFactory.getService(invokerConfig);
     }
 
@@ -115,5 +122,13 @@ public class ReferenceProxy implements FactoryBean {
 
     public void setSerializer(String serializer) {
         this.serializer = serializer;
+    }
+
+    public String getTimeout() {
+        return timeout;
+    }
+
+    public void setTimeout(String timeout) {
+        this.timeout = timeout;
     }
 }
