@@ -1,4 +1,8 @@
 # fox
+
+[![Build Status](https://travis-ci.org/wenbo2018/fox.svg?branch=master)](https://travis-ci.org/wenbo2018/fox) 
+
+
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/wenbo2018/fox/)
 
 
