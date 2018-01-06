@@ -9,12 +9,13 @@
     <xsd:import namespace="http://www.springframework.org/schema/beans"/>
 
 
-    <xsd:element name="invoker">
+    <xsd:element name="reference">
         <xsd:complexType>
             <xsd:complexContent>
                 <xsd:extension base="beans:identifiedType">
-                    <xsd:attribute name="iface" type="xsd:string" use="required" />
-                    <xsd:attribute name="serviceName" type="xsd:string" use="required" />
+                    <xsd:attribute name="iface" type="xsd:string" use="required"/>
+                    <xsd:attribute name="serviceName" type="xsd:string" use="required"/>
+                    <xsd:attribute name="tiomeout" type="xsd:string"/>
                     <xsd:attribute name="serializer" type="xsd:string" default="hessian"/>
                 </xsd:extension>
             </xsd:complexContent>
@@ -26,9 +27,9 @@
         <xsd:complexType>
             <xsd:complexContent>
                 <xsd:extension base="beans:identifiedType">
-                    <xsd:attribute name="serviceName" type="xsd:string" />
-                    <xsd:attribute name="ref" type="xsd:string" use="required" />
-                    <xsd:attribute name="server" type="xsd:string" />
+                    <xsd:attribute name="serviceName" type="xsd:string"/>
+                    <xsd:attribute name="ref" type="xsd:string" use="required"/>
+                    <xsd:attribute name="server" type="xsd:string"/>
                 </xsd:extension>
             </xsd:complexContent>
         </xsd:complexType>
@@ -39,7 +40,7 @@
         <xsd:complexType>
             <xsd:complexContent>
                 <xsd:extension base="beans:identifiedType">
-                    <xsd:attribute name="port" type="xsd:string" default="4040" />
+                    <xsd:attribute name="port" type="xsd:string" default="4040"/>
                 </xsd:extension>
             </xsd:complexContent>
         </xsd:complexType>
@@ -50,8 +51,8 @@
         <xsd:complexType>
             <xsd:complexContent>
                 <xsd:extension base="beans:identifiedType">
-                    <xsd:attribute name="registerAddress" type="xsd:string" use="required" />
-                    <xsd:attribute name="registerPort" type="xsd:string" default="2181" />
+                    <xsd:attribute name="address" type="xsd:string" use="required"/>
+                    <xsd:attribute name="port" type="xsd:string" default="2181"/>
                 </xsd:extension>
             </xsd:complexContent>
         </xsd:complexType>

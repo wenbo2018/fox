@@ -1,2 +1,1 @@
-com.github.wenbo2018.fox.spring.config.ProviderBeanDefinitionParserLoader
-com.github.wenbo2018.fox.spring.config.InvokerBeanDefinitionParserLoader
+com.github.wenbo2018.fox.spring.config.schema.FoxBeanDefinitionParserReigster

@@ -3,7 +3,7 @@ package com.github.wenbo2018.fox.remoting.invoker;
 import com.github.wenbo2018.fox.common.codec.SerializerFactory;
 import com.github.wenbo2018.fox.config.ConfigManagerLoader;
 import com.github.wenbo2018.fox.remoting.invoker.filter.InvokerFilterWrapper;
-import com.github.wenbo2018.fox.registry.RegistryManager;
+import com.github.wenbo2018.fox.registry.api.RegistryManager;
 
 /**
  * Created by wenbo2018 on 2016/8/26.

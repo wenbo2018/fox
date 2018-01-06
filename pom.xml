@@ -8,7 +8,7 @@
     <groupId>com.github.wenbo2018</groupId>
     <artifactId>fox-parent</artifactId>
     <version>1.0.0</version>
-    <description>fox is a distributed RPC framework </description>
+    <description>fox is a distributed RPC framework</description>
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -92,7 +92,6 @@
         <module>fox-demo</module>
         <module>fox-config</module>
         <module>fox</module>
-        <module>fox-admin</module>
         <module>fox-cluster</module>
         <module>fox-monitor</module>
         <module>fox-spring</module>

@@ -34,13 +34,11 @@ public class RemoteCallInvokeFilter implements Filter {
         if (response == null) {
             response = callback.get();
         }
-        logger.debug("response:{}", response);
-        long time = System.currentTimeMillis();
         return response;
     }
 
     /***
-     * 封装RPC请求
+     * RPC request
      * @param ic
      * @return
      */
@@ -55,6 +53,7 @@ public class RemoteCallInvokeFilter implements Filter {
         request.setServiceName(ic.getInvokerConfig().getServiceName());
         request.setSerialize(ic.getInvokerConfig().getSerializer());
         request.setCreateMillisTime(System.currentTimeMillis());
+        request.setTimeout(ic.getInvokerConfig().getTimeout());
         return request;
     }
 }

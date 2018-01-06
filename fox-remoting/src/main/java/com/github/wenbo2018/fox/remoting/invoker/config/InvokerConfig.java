@@ -12,12 +12,14 @@ public class InvokerConfig<T> {
     private String serviceVersion;
     private String appkey;
     private String loadBalance;
+    private int timeout;
 
-    public InvokerConfig(Class<T> interfaceClass, String iface, String serviceName, String serializer) {
+    public InvokerConfig(Class<T> interfaceClass, String iface, String serviceName, String serializer, int timeout) {
         this.interfaceClass = interfaceClass;
         this.iface = iface;
         this.serviceName = serviceName;
         this.serializer = serializer;
+        this.timeout = timeout;
     }
 
     public Class<T> getInterfaceClass() {
@@ -74,5 +76,13 @@ public class InvokerConfig<T> {
 
     public void setLoadBalance(String loadBalance) {
         this.loadBalance = loadBalance;
+    }
+
+    public int getTimeout() {
+        return timeout;
+    }
+
+    public void setTimeout(int timeout) {
+        this.timeout = timeout;
     }
 }

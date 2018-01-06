@@ -16,6 +16,20 @@
         <maven.compiler.target>1.7</maven.compiler.target>
         <encoding>UTF-8</encoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.wenbo2018</groupId>
+            <artifactId>fox-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.wenbo2018</groupId>
+            <artifactId>fox-config</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
