@@ -29,6 +29,13 @@
             <artifactId>fox-config</artifactId>
             <version>${fox.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.wenbo2018</groupId>
+            <artifactId>fox-registry-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
         <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>

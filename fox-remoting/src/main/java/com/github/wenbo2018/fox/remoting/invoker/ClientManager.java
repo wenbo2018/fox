@@ -1,24 +1,23 @@
 package com.github.wenbo2018.fox.remoting.invoker;
 
 import com.github.wenbo2018.fox.common.extension.ExtensionServiceLoader;
+import com.github.wenbo2018.fox.registry.api.listener.RegistryEventListener;
+import com.github.wenbo2018.fox.registry.api.RegistryManager;
+import com.github.wenbo2018.fox.registry.api.listener.ServiceProviderChangeEvent;
+import com.github.wenbo2018.fox.registry.api.listener.ServiceProviderChangeListener;
 import com.github.wenbo2018.fox.remoting.invoker.config.InvokerConfig;
-import com.github.wenbo2018.fox.registry.listener.ServiceProviderChangeListener;
 import com.github.wenbo2018.fox.common.HostInfo;
 import com.github.wenbo2018.fox.remoting.common.ConnectInfo;
 import com.github.wenbo2018.fox.remoting.invoker.api.ClientFactory;
 import com.github.wenbo2018.fox.remoting.invoker.task.HeartBeatTask;
 import com.github.wenbo2018.fox.remoting.invoker.cluster.Route;
 import com.github.wenbo2018.fox.common.util.CollectionUtil;
-import com.github.wenbo2018.fox.registry.RegistryEventListener;
-import com.github.wenbo2018.fox.registry.RegistryManager;
-import com.github.wenbo2018.fox.registry.listener.ServiceProviderChangeEvent;
 import com.github.wenbo2018.fox.remoting.invoker.api.Client;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

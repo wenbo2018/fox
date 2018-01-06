@@ -1,6 +1,6 @@
 package com.github.wenbo2018.fox.demo.client;
 
-import com.github.wenbo2018.fox.demo.api.HelloService;
+import com.github.wenbo2018.fox.config.api.HelloService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;

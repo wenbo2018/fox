@@ -33,7 +33,7 @@ public class ServiceBean {
         ServerConfig serverConfig = new ServerConfig();
         serverConfig.setCorePoolSize(this.getCorePoolSize());
         serverConfig.setPort(this.getPort());
-        serverConfig.setIp(configManager.getStringValue(com.github.wenbo2018.fox.registry.Constants.FOX_REGISTRY_IP));
+        serverConfig.setIp(configManager.getStringValue(com.github.wenbo2018.fox.registry.api.Constants.FOX_REGISTRY_IP));
         serverConfig.setWorkQueueSize(this.getWorkQueueSize());
         serverConfig.setMaxPoolSize(this.getMaxPoolSize());
         LOGGER.info("service begin");

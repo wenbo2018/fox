@@ -16,7 +16,7 @@
 
     <modules>
         <module>fox-registry-api</module>
-        <module>fox-registry-default</module>
+        <module>fox-registry-zookeeper</module>
     </modules>
 
     <build>

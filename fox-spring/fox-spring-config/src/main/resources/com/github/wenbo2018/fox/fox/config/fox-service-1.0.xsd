@@ -16,7 +16,6 @@
                     <xsd:attribute name="iface" type="xsd:string" use="required"/>
                     <xsd:attribute name="serviceName" type="xsd:string" use="required"/>
                     <xsd:attribute name="tiomeout" type="xsd:string"/>
-
                     <xsd:attribute name="serializer" type="xsd:string" default="hessian"/>
                 </xsd:extension>
             </xsd:complexContent>

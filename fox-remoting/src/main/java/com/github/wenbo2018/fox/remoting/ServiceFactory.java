@@ -3,9 +3,10 @@ package com.github.wenbo2018.fox.remoting;
 import com.github.wenbo2018.fox.common.extension.ExtensionServiceLoader;
 import com.github.wenbo2018.fox.config.ConfigManagerLoader;
 import com.github.wenbo2018.fox.config.ConfigManager;
-import com.github.wenbo2018.fox.registry.Constants;
-import com.github.wenbo2018.fox.registry.Registry;
-import com.github.wenbo2018.fox.registry.RegistryManager;
+import com.github.wenbo2018.fox.registry.api.Constants;
+import com.github.wenbo2018.fox.registry.api.Registry;
+import com.github.wenbo2018.fox.registry.api.RegistryManager;
+import com.github.wenbo2018.fox.registry.api.exception.RegistryException;
 import com.github.wenbo2018.fox.remoting.invoker.api.ServiceProxy;
 import com.github.wenbo2018.fox.remoting.invoker.config.InvokerConfig;
 import com.github.wenbo2018.fox.remoting.provider.ProviderBootStrap;
@@ -130,6 +131,8 @@ public class ServiceFactory {
             } else {
                 LOGGER.error("register center fail");
             }
+        } else {
+            throw new RegistryException("not Registry can be found");
         }
     }
 }

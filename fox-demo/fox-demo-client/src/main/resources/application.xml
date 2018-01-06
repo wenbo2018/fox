@@ -11,17 +11,18 @@
          http://www.github.wenbo2018.com/schema/fox
          http://www.github.wenbo2018.com/schema/fox-service-1.0.xsd">
 
-<!-- 打开Spring的Annotation支持 -->
-        <context:annotation-config />
-        <!--<bean id="helloService" class="ServiceProxy" init-method="init">-->
-            <!--<property name="iface" value="HelloService"/>-->
-            <!--<property name="serviceName" value="service.fox.com_helloTestService_helloService_1.0.0"/>-->
-            <!--<property name="serializer" value="hessian"/>-->
-        <!--</bean>-->
+    <!-- 打开Spring的Annotation支持 -->
+    <context:annotation-config/>
+    <!--<bean id="helloService" class="ServiceProxy" init-method="init">-->
+    <!--<property name="iface" value="HelloService"/>-->
+    <!--<property name="serviceName" value="service.fox.com_helloTestService_helloService_1.0.0"/>-->
+    <!--<property name="serializer" value="hessian"/>-->
+    <!--</bean>-->
     <fox:reference id="helloService"
-                 iface="com.github.wenbo2018.fox.demo.api.HelloService"
-                 serviceName="service.fox.com_helloTestService_helloService_1.0.0"
-                 serializer="hessian"/>
+                   iface="com.github.wenbo2018.fox.config.api.HelloService"
+                   serviceName="service.fox.com_helloTestService_helloService_1.0.0"
+                   tiomeout="2000"
+                   serializer="hessian"/>
 
 
 </beans>

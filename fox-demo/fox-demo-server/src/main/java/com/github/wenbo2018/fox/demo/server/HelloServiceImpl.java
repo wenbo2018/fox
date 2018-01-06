@@ -1,8 +1,8 @@
 package com.github.wenbo2018.fox.demo.server;
 
 
-import com.github.wenbo2018.fox.demo.api.HelloService;
-import com.github.wenbo2018.fox.demo.api.dto.User;
+import com.github.wenbo2018.fox.config.api.HelloService;
+import com.github.wenbo2018.fox.config.api.dto.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
