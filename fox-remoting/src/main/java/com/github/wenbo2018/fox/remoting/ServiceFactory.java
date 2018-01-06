@@ -115,7 +115,6 @@ public class ServiceFactory {
             requestProcessor = server.getRequestProcessor();
             requestProcessor.addService(providerConfig);
         }
-
     }
 
 

@@ -54,7 +54,7 @@ fox.registry.ip="your rpc server ip"
 ```xml
         <bean id="helloService" class="com.github.wenbo2018.fox.demo.server.HelloServiceImpl"/>
 
-        <bean id="helloTestService" class="com.github.wenbo2018.fox.spring.config.ServiceRegister" init-method="init">
+        <bean id="helloTestService" class="com.github.wenbo2018.fox.spring.config.ServiceBean" init-method="init">
             <property name="port" value="4080"/>
             <property name="services" >
                 <map>

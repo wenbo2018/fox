@@ -16,6 +16,7 @@ public class SingleServiceBean<T> {
     private Object serviceImpl;
 
 
+
     public void init() throws Exception {
         if (serviceImpl == null) {
             throw new IllegalArgumentException("service not found:{}" + this);

@@ -13,9 +13,9 @@ import org.springframework.beans.factory.FactoryBean;
 /**
  * Created by shenwenbo on 16/7/21.
  */
-public class ReferenceConfig implements FactoryBean {
+public class ReferenceBean implements FactoryBean {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ReferenceConfig.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ReferenceBean.class);
 
     private String serviceName;
 

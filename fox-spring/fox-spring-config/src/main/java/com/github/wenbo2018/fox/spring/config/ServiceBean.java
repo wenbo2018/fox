@@ -16,7 +16,7 @@ import java.util.Map;
 /**
  * Created by shenwenbo on 2016/9/28.
  */
-public class ServiceRegister {
+public class ServiceBean {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ServiceFactory.class);
     private static ConfigManager configManager;
