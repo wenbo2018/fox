@@ -31,6 +31,4 @@
                  serviceName="service.fox.com_helloTestService_userService_1.0.0"
                  ref="userService"/>
 
-
-
 </beans>

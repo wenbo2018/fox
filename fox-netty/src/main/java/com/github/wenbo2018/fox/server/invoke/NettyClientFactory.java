@@ -6,6 +6,7 @@ import com.github.wenbo2018.fox.remoting.invoker.api.Client;
 import com.github.wenbo2018.fox.remoting.invoker.api.ClientFactory;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.util.concurrent.DefaultThreadFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +31,7 @@ public class NettyClientFactory implements ClientFactory {
     @Override
     public void init() {
         if (!isStartup) {
-            this.group = new NioEventLoopGroup(4);
+            this.group = new NioEventLoopGroup(Math.min(Runtime.getRuntime().availableProcessors() + 1, 32), new DefaultThreadFactory("NettyClientWorker", true));
             LOGGER.info("NettyClientFactory is initial");
         }
     }

@@ -15,7 +15,7 @@ public class ProviderBootStrap {
         if (!isInitialized) {
             //初始化配置
             ConfigManagerLoader.init();
-            //系列化工厂初始化
+            //序列列化工厂初始化
             SerializerFactory.init();
             //注册管理初始化
             RegistryManager.getInstance();

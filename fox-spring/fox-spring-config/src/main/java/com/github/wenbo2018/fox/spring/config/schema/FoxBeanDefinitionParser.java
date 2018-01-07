@@ -3,7 +3,7 @@ package com.github.wenbo2018.fox.spring.config.schema;
 
 
 import com.github.wenbo2018.fox.remoting.provider.config.ServerConfig;
-import com.github.wenbo2018.fox.remoting.provider.config.SingleServiceBean;
+import com.github.wenbo2018.fox.remoting.provider.config.ServiceConfig;
 import com.github.wenbo2018.fox.spring.config.ReferenceBean;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.MutablePropertyValues;
@@ -61,8 +61,8 @@ public class FoxBeanDefinitionParser implements BeanDefinitionParser {
             if (element.hasAttribute("serializer")) {
                 properties.addPropertyValue("serializer", element.getAttribute("serializer"));
             }
-        } else if (SingleServiceBean.class.equals(beanClass)) {
-            beanDefinition.setBeanClass(SingleServiceBean.class);
+        } else if (ServiceConfig.class.equals(beanClass)) {
+            beanDefinition.setBeanClass(ServiceConfig.class);
             beanDefinition.setInitMethodName("init");
             MutablePropertyValues properties = beanDefinition.getPropertyValues();
             String ref = element.getAttribute("ref");

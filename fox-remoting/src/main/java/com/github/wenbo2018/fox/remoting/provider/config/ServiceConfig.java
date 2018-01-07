@@ -5,7 +5,7 @@ import com.github.wenbo2018.fox.remoting.ServiceFactory;
 /**
  * Created by shenwenbo on 2017/3/9.
  */
-public class SingleServiceBean<T> {
+public class ServiceConfig<T> {
 
     private String serviceInterface;
 
