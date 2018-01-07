@@ -112,6 +112,7 @@ public class HeartBeatTask implements Runnable {
         invokeRequest.setSeq(heartBeatSeq.getAndIncrement());
         invokeRequest.setRequestId(UUID.randomUUID().toString());
         invokeRequest.setCreateMillisTime(System.currentTimeMillis());
+        invokeRequest.setTimeout(2000);
         return invokeRequest;
     }
 

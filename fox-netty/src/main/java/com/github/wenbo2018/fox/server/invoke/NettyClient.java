@@ -23,7 +23,7 @@ import java.util.concurrent.LinkedBlockingQueue;
  */
 public class NettyClient extends AbstractClient {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(NettyClient.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(NettyClient.class);
 
     private Channel channel;
 
