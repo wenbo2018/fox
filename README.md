@@ -40,35 +40,7 @@ fox.registry.ip="your rpc server ip"
 
 ## Quick Start
 
-### Configurations1:
-
-#### Service invocation
-
-```xml
-         <bean id="helloService" class="com.github.wenbo2018.fox.spring.config.ServiceProxy" init-method="init">
-            <property name="iface" value="com.github.wenbo2018.fox.demo.api"/>
-            <property name="serviceName" value="service.fox.com_helloTestService_helloService_1.0.0"/>
-            <property name="serializer" value="protostuff"/>
-         </bean>
-```
-#### Publish service
-
-```xml
-        <bean id="helloService" class="com.github.wenbo2018.fox.demo.server.HelloServiceImpl"/>
-
-        <bean id="helloTestService" class="com.github.wenbo2018.fox.spring.config.ServiceBean" init-method="init">
-            <property name="port" value="4080"/>
-            <property name="services" >
-                <map>
-                    <entry key="service.fox.com_helloTestService_helloService_1.0.0" value-ref="helloService"/>
-                </map>
-            </property>
-        </bean>
-```
-
-### Configurations2:
-
-#### Service invocation
+#### Service Reference
 
 ```xml
 <fox:reference id="helloService"
@@ -78,7 +50,7 @@ fox.registry.ip="your rpc server ip"
                timeout="2000"/>
 ```
 
-#### Publish service
+#### Publish Service
 
 ```xml
     <bean id="helloService" class="com.github.wenbo2018.fox.demo.server.HelloServiceImpl"/>
