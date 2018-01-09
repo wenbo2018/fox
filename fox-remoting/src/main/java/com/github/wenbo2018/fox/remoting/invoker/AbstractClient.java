@@ -23,9 +23,16 @@ public abstract class AbstractClient implements Client {
 
     protected abstract void doConnect();
 
+    protected abstract void doClose();
+
     @Override
     public void connect() {
         this.doConnect();
+    }
+
+    @Override
+    public void close() {
+        this.doClose();
     }
 
     @Override

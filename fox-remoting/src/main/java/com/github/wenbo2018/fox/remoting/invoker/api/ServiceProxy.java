@@ -8,7 +8,7 @@ import com.github.wenbo2018.fox.remoting.invoker.config.InvokerConfig;
  */
 public interface ServiceProxy {
 
-    public void init();
+    void init();
 
-    public <T> T getProxy(InvokerConfig invokerConfig);
+    <T> T getProxy(InvokerConfig invokerConfig);
 }
