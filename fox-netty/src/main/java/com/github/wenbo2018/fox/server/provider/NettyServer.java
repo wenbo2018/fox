@@ -69,7 +69,7 @@ public class NettyServer extends AbstractServer {
                 logger.error("Netty start error:{}", e);
             }
             this.started = true;
-            logger.info("server started on {}:{}", serviceIp, servicePort);
+            logger.info("Server started on >>>>>>>>>>> {}:{}", serviceIp, servicePort);
         }
     }
 

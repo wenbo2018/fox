@@ -28,9 +28,12 @@ public class TestClient {
                         try {
                             System.err.println(helloService.incer());
                         i--;
-                        logger.debug("thread info:{}", Thread.currentThread().getName());
-                            Thread.sleep(2000);
                         } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                     }

@@ -78,6 +78,11 @@ public class NettyClient extends AbstractClient {
     }
 
     @Override
+    protected void doClose() {
+        this.channel.close();
+    }
+
+    @Override
     protected InvokeResponse doWrite(InvokeRequest request, CallbackFuture callbackFuture) {
         Object[] msg = new Object[]{request, callbackFuture};
         ChannelFuture future = null;
@@ -120,6 +125,11 @@ public class NettyClient extends AbstractClient {
         }
     }
 
+
+    @Override
+    public boolean isAlive() {
+        return this.channel.isActive();
+    }
 
     @Override
     public void setContext(String host, int port) {

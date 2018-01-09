@@ -20,6 +20,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.github.wenbo2018</groupId>
+            <artifactId>fox-registry-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
         <!-- SLF4J -->
         <dependency>
             <groupId>org.slf4j</groupId>

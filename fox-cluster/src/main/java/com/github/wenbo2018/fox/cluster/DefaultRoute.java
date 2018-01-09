@@ -19,11 +19,9 @@ public class DefaultRoute implements Route {
         if (clients != null && clients.size() > 0) {
             String loadBalanceType = invokerConfig.getLoadBalance();
             if (loadBalanceType != null) {
-                loadBalance = ExtensionServiceLoader.getExtensionLoader(LoadBalance.class)
-                        .getExtension(resolveLoadBalance(loadBalanceType));
+                loadBalance = ExtensionServiceLoader.getExtensionLoader(LoadBalance.class).getExtension(resolveLoadBalance(loadBalanceType));
             } else {
-                loadBalance = ExtensionServiceLoader.getExtensionLoader(LoadBalance.class)
-                        .getExtension(ClusterConstants.DEFAULT_LOADBALANCE);
+                loadBalance = ExtensionServiceLoader.getExtensionLoader(LoadBalance.class).getExtension(ClusterConstants.DEFAULT_LOADBALANCE);
             }
         }
         return loadBalance.select(clients, invokerConfig);

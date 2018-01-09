@@ -4,7 +4,6 @@ import com.github.wenbo2018.fox.common.HostInfo;
 import com.github.wenbo2018.fox.registry.api.RegistryManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;

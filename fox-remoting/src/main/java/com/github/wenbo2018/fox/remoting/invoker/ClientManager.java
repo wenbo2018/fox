@@ -92,17 +92,16 @@ public class ClientManager {
     }
 
     public Client getClient(InvokerConfig invokerConfig) {
+        Set<HostInfo> hostInfos = RegistryManager.getInstance()
+                .getServiceHost(invokerConfig.getServiceName());
+        if (CollectionUtil.isEmpty(hostInfos)) {
+            throw new RuntimeException("service:" + invokerConfig.getServiceName() + ":is not can use");
+        }
         List<Client> clients = clientsMap.get(invokerConfig);
         if (CollectionUtil.isEmpty(clients)) {
-            Set<HostInfo> hostInfos = RegistryManager.getInstance()
-                    .getServiceHost(invokerConfig.getServiceName());
-            if (CollectionUtil.isEmpty(hostInfos)) {
-                throw new RuntimeException("service:" + invokerConfig.getServiceName() + ":is not can use");
-            }
             for (HostInfo hostInfo : hostInfos) {
                 registerClient(invokerConfig, hostInfo);
             }
-            clients = clientsMap.get(invokerConfig);
         }
         Route route = ExtensionServiceLoader.getExtension(Route.class);
         return route.route(clients, invokerConfig);
@@ -118,14 +117,27 @@ public class ClientManager {
         return clients;
     }
 
-    private void removeHost(HostInfo hostInfo) {
+    private void removeHost(String serviceName, HostInfo hostInfo) {
         if (hostInfoInvokerConfigMap.containsKey(hostInfo)) {
             InvokerConfig invokerConfig = hostInfoInvokerConfigMap.get(hostInfo);
             if (invokerConfig != null) {
-                clientsMap.remove(invokerConfig);
+                RegistryManager.getInstance().removeServiceAddress(serviceName, hostInfo);
                 LOGGER.debug("currcet client info:{}", clientsMap.toString());
                 LOGGER.debug("remove host success:{}", hostInfo.toString());
             }
+        }
+    }
+
+    private void addHost(String serviceName, HostInfo hostInfo) {
+        InvokerConfig invokerConfig = hostInfoInvokerConfigMap.get(hostInfo);
+        if (invokerConfig != null) {
+            List<Client> clientList = clientsMap.get(invokerConfig);
+            if (CollectionUtil.isNotEmpty(clientList)) {
+                for (Client client : clientList) {
+                    client.reConnect();
+                }
+            }
+            registerClient(invokerConfig, hostInfo);
         }
     }
 
@@ -135,13 +147,15 @@ public class ClientManager {
 
         @Override
         public void serviceProviderAdded(ServiceProviderChangeEvent event) {
+            HostInfo hostInfo = new HostInfo(event.getHost(), event.getPort());
+            addHost(event.getServiceName(), hostInfo);
 
         }
 
         @Override
         public void serviceProviderRemoved(ServiceProviderChangeEvent event) {
             HostInfo hostInfo = new HostInfo(event.getHost(), event.getPort());
-            removeHost(hostInfo);
+            removeHost(event.getServiceName(), hostInfo);
         }
     }
 

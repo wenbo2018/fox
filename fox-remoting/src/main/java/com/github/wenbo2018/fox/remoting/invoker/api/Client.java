@@ -11,6 +11,12 @@ public interface Client {
 
     void connect();
 
+    void close();
+
+    void reConnect();
+
+    boolean isAlive();
+
     CallFuture send(InvokeRequest request) throws Exception;
 
     InvokeResponse send(InvokeRequest request, CallbackFuture callbackFuture) throws Exception;

@@ -71,10 +71,11 @@ fox.registry.ip="your rpc server ip"
 #### Service invocation
 
 ```xml
-<fox:invoker id="helloService"
-                 iface="com.github.wenbo2018.fox.demo.api.HelloService"
-            serviceName="service.fox.com_helloTestService_helloService_1.0.0"
-            serializer="hessian"/>
+<fox:reference id="helloService"
+               iface="com.github.wenbo2018.fox.demo.api.HelloService"
+               serviceName="service.fox.com_helloTestService_helloService_1.0.0"
+               serializer="hessian"
+               timeout="2000"/>
 ```
 
 #### Publish service
