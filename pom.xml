@@ -16,7 +16,7 @@
         <version.spring>3.1.2.RELEASE</version.spring>
         <version.netty>4.0.26.Final</version.netty>
         <version.cglib>3.1</version.cglib>
-        <version.zookeeper>3.4.6</version.zookeeper>
+        <version.zookeeper>3.4.14</version.zookeeper>
         <version.zkclient>0.4</version.zkclient>
         <version.commons-lang>3.3.2</version.commons-lang>
         <version.commons-collections>4.0</version.commons-collections>
